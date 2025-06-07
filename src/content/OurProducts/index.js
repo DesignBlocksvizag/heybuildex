@@ -1,14 +1,12 @@
-"use client"
+"use client";
 import {
   Box,
   Typography,
   Card,
   CardContent,
   CardMedia,
+  Grid,
 } from "@mui/material";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const products = [
   {
@@ -73,37 +71,7 @@ const products = [
   },
 ];
 
-
 const OurProducts = () => {
-
-  const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  // nextArrow: <NextArrow />,
-  // prevArrow: <PrevArrow />,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
-
   return (
     <Box
       sx={{
@@ -112,7 +80,7 @@ const OurProducts = () => {
         background: "linear-gradient(90deg, #1c953f 0%, #465a65 100%)",
       }}
     >
-      {/* Heading & Button */}
+      {/* Heading */}
       <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography
           variant="h4"
@@ -128,18 +96,16 @@ const OurProducts = () => {
         >
           Our Products
         </Typography>
-
-        
       </Box>
 
-      {/* Slider */}
-      <Box  sx={{ maxWidth: "1200px", mx: "auto", mt: 3 }}>
-        <Slider {...settings}>
+      {/* Product Grid */}
+      <Box sx={{ maxWidth: "1200px", mx: "auto" }}>
+        <Grid container spacing={3}>
           {products.map((product, index) => (
-            <Box    key={index} sx={{ padding: "0 10px", minHeight: "400px" }}>
+            <Grid key={index} size={{xs:12,sm:6,md:3}}>
               <Card
                 sx={{
-                  borderRadius: 3,
+                  borderRadius: 0,
                   boxShadow: 3,
                   height: "100%",
                   transition: "transform 0.3s, box-shadow 0.3s",
@@ -148,8 +114,6 @@ const OurProducts = () => {
                     boxShadow: 1,
                   },
                 }}
-                mx={1}
-             
               >
                 <CardMedia
                   component="img"
@@ -158,25 +122,18 @@ const OurProducts = () => {
                   alt={product.title}
                   sx={{ objectFit: "cover" }}
                 />
-                <CardContent>
+                <CardContent sx={{py:"8px!important"}}>
                   <Typography
                     variant="h6"
-                    sx={{ fontWeight: 600, fontFamily: "Poppins", color: "#465a65" }}
+                    sx={{ fontWeight: 600, fontFamily: "Poppins", color: "#465a65" ,textAlign:"center"}}
                   >
                     {product.title}
                   </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ fontFamily: "Open Sans" }}
-                  >
-                    {product.description}
-                  </Typography>
                 </CardContent>
               </Card>
-              </Box>
+            </Grid>
           ))}
-        </Slider>
+        </Grid>
       </Box>
     </Box>
   );
