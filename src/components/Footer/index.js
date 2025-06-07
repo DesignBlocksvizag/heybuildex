@@ -17,7 +17,7 @@ export default function Footer() {
     <Box
       sx={{
         backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/low-angle-view-building-ceiling.jpg')",
+          "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/footer-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -82,7 +82,7 @@ export default function Footer() {
           {/* Social Links */}
           <Grid
             size={{ xs: 12, md: 4 }}
-            textAlign={{ xs: "center", md: "right" }}
+            textAlign={{ xs: "center" }}
           >
             <Typography
               variant="h6"

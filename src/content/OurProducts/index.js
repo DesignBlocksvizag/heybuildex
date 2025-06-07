@@ -89,7 +89,7 @@ const OurProducts = () => {
             display: "inline-block",
             fontWeight: 700,
             fontFamily: "Poppins",
-            color: "#fff",
+            color: "#00000",
             px: 2,
             mb: 1,
           }}
@@ -125,7 +125,7 @@ const OurProducts = () => {
                 <CardContent sx={{py:"8px!important"}}>
                   <Typography
                     variant="h6"
-                    sx={{ fontWeight: 600, fontFamily: "Poppins", color: "#465a65" ,textAlign:"center"}}
+                    sx={{ fontWeight: 600, fontFamily: "Poppins", color: "#0D47A1" ,textAlign:"center"}}
                   >
                     {product.title}
                   </Typography>

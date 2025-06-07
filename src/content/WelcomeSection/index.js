@@ -66,7 +66,8 @@ export default function WelcomeSection() {
             sx={{
               width: "100%",
               height: "auto",
-              borderRadius: 2,
+              borderRadius: 1,
+              border: "6px double #01933e",
               boxShadow: 3,
             }}
           />

@@ -15,10 +15,11 @@ import {
   Container,
 } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
+import CallIcon from "@mui/icons-material/Call"; 
 
 const navItems = [
   { name: "HOME", link: "/" },
-  { name: "ABOUT US", link: "/about" },
+  { name: "ABOUT US", link: "/about-us" },
   { name: "STEEL", link: "/steel" },
   { name: "CEMENT", link: "/cement" },
   { name: "RMC", link: "/rmc" },
@@ -46,57 +47,92 @@ const Header = () => {
         <Container maxWidth="lg">
           <Toolbar sx={{ display: "block", py: 2 }}>
             {/* Logo and Email */}
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: { xs: "center", sm: "space-between" },
-                alignItems: "center",
-                gap: 2,
-              }}
-            >
-              <Box>
-                <Box
-                  component="img"
-                  src="/buildex_logo1.png"
-                  alt="Buildex Logo"
-                  sx={{ height: 60 }}
-                />
-              </Box>
-              <Box
-                sx={{
-                  display: { xs: "none", sm: "flex" },
-                  alignItems: "center",
-                  gap: 1,
-                  flexDirection: "row",
-                  textAlign: "center",
-                }}
-              >
-                <EmailIcon sx={{ color: "#029441", fontSize: 30 }} />
-                <Box sx={{ display: "flex", flexDirection: "column" }}>
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      fontWeight: 500,
-                      fontFamily: "Poppins, sans-serif",
-                      color: "#333",
-                    }}
-                  >
-                    Email us now
-                  </Typography>
-                  <Link
-                    href="mailto:support@heybuildex.com"
-                    underline="hover"
-                    sx={{
-                      fontWeight: 400,
-                      fontFamily: "Poppins, sans-serif",
-                      color: "#029441",
-                    }}
-                  >
-                    support@heybuildex.com
-                  </Link>
-                </Box>
-              </Box>
-            </Box>
+          
+
+<Box
+  sx={{
+    display: "flex",
+    justifyContent: { xs: "center", sm: "space-between" },
+    alignItems: "center",
+    gap: 2,
+  }}
+>
+  <Box>
+    <Box
+      component="img"
+      src="/buildex_logo1.png"
+      alt="Buildex Logo"
+      sx={{ height: 60 }}
+    />
+  </Box>
+
+  <Box
+    sx={{
+      display: { xs: "none", sm: "flex" },
+      alignItems: "center",
+      gap: 3,
+      flexDirection: "row",
+      textAlign: "center",
+    }}
+  >
+    {/* Email Info */}
+    <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+      <EmailIcon sx={{ color: "#029441", fontSize: 30 }} />
+      <Box sx={{ display: "flex", flexDirection: "column" }}>
+        <Typography
+          variant="body2"
+          sx={{
+            fontWeight: 500,
+            fontFamily: "Poppins, sans-serif",
+            color: "#333",
+          }}
+        >
+          Email us now
+        </Typography>
+        <Link
+          href="mailto:support@heybuildex.com"
+          underline="hover"
+          sx={{
+            fontWeight: 400,
+            fontFamily: "Poppins, sans-serif",
+            color: "#029441",
+          }}
+        >
+          support@heybuildex.com
+        </Link>
+      </Box>
+    </Box>
+
+    {/* Phone Info */}
+    <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+      <CallIcon sx={{ color: "#029441", fontSize: 30 }} />
+      <Box sx={{ display: "flex", flexDirection: "column" }}>
+        <Typography
+          variant="body2"
+          sx={{
+            fontWeight: 500,
+            fontFamily: "Poppins, sans-serif",
+            color: "#333",
+          }}
+        >
+          Call us now
+        </Typography>
+        <Link
+          href="tel:+919876543210"
+          underline="hover"
+          sx={{
+            fontWeight: 400,
+            fontFamily: "Poppins, sans-serif",
+            color: "#029441",
+          }}
+        >
+          +91 98765 43210
+        </Link>
+      </Box>
+    </Box>
+  </Box>
+</Box>
+
             <Box sx={{ display: "flex", justifyContent: "center" }}>
               <Box
                 sx={{
@@ -183,7 +219,7 @@ const Header = () => {
             <List>
             {navItems.map((item) => (
               <ListItem key={item.name} component={Link} href={item.link}>
-                <ListItemText primary={item.name} />
+                <ListItemText primary={item.name}  sx={{fontFamily:"Poppins",color:"#000"}}/>
               </ListItem>
             ))}
           </List>
