@@ -20,17 +20,22 @@ import {
 } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import CallIcon from "@mui/icons-material/Call";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import Collapse from "@mui/material/Collapse";
 
 const navItems = [
-  { name: "HOME", link: "/" },
-  { name: "ABOUT US", link: "/about-us" },
-  { name: "STEEL", link: "/steel" },
-  { name: "CEMENT", link: "/cement" },
-  { name: "RMC", link: "/rmc" },
-  { name: "INFRA RENTALS", link: "/infra-rentals" },
-  { name: "SAFETY", link: "/safety" },
-  { name: "BLOG", link: "/blog" },
-  { name: "CONTACT", link: "/contact" },
+  { name: "HOME", link: "/" ,dropDown : false},
+  { name: "ABOUT US", link: "/about-us" ,dropDown : false},
+  { name: "STEEL", link: "/steel" ,dropDown : true},
+  { name: "CEMENT", link: "/cement" ,dropDown : false},
+  { name: "RMC", link: "/rmc" ,dropDown : false},
+  { name: "INFRA RENTALS", link: "/infra-rentals" ,dropDown : false},
+  { name: "SAFETY", link: "/safety" ,dropDown : false},
+  { name: "BLOG", link: "/blog" ,dropDown : false},
+  { name: "CONTACT", link: "/contact" ,dropDown : false},
 ];
 
 const steelCategories = {
@@ -54,20 +59,47 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [hoveredCategory, setHoveredCategory] = useState(null);
+  const [hoverTimeout, setHoverTimeout] = useState(null);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState({
+  STEEL: false,
+});
+
+
+  const toggleMobileDropdown = (name) => {
+  setMobileDropdownOpen((prev) => ({
+    ...prev,
+    [name]: !prev[name],
+  }));
+};
+
+
+const handleMouseEnter = (event, category) => {
+  clearTimeout(hoverTimeout);
+  setAnchorEl(event.currentTarget);
+  setHoveredCategory(category);
+};
+
+const handleMouseLeave = () => {
+  const timeout = setTimeout(() => {
+    setHoveredCategory(null);
+    setAnchorEl(null);
+  }, 150); // delay to allow moving to Popper
+  setHoverTimeout(timeout);
+};
 
   const handleDrawerToggle = () => {
     setOpen(!open);
   };
 
-  const handleMouseEnter = (event, category) => {
-    setAnchorEl(event.currentTarget);
-    setHoveredCategory(category);
-  };
+  // const handleMouseEnter = (event, category) => {
+  //   setAnchorEl(event.currentTarget);
+  //   setHoveredCategory(category);
+  // };
 
-  const handleMouseLeave = () => {
-    setAnchorEl(null);
-    setHoveredCategory(null);
-  };
+  // const handleMouseLeave = () => {
+  //   setAnchorEl(null);
+  //   setHoveredCategory(null);
+  // };
 
   return (
     <>
@@ -182,13 +214,15 @@ const Header = () => {
                 {navItems.map((item) => {
                   if (item.name === "STEEL") {
                     return (
-                      <>
+                      <Box
+                        onMouseEnter={(e) => handleMouseEnter(e, "STEEL")}
+                        onMouseLeave={handleMouseLeave}
+                        key={item.name}
+                        sx={{ position: "relative" }}
+                      >
                         <Button
-                          key={item.name}
                           color="inherit"
                           component={Link}
-                          onMouseEnter={(e) => handleMouseEnter(e, "STEEL")}
-                          onMouseLeave={handleMouseLeave}
                           sx={{
                             fontWeight: 500,
                             fontFamily: "Poppins, sans-serif",
@@ -196,6 +230,11 @@ const Header = () => {
                           }}
                         >
                           {item.name}
+                          {hoveredCategory === "STEEL" ? (
+                            <ExpandLessIcon fontSize="medium" />
+                          ) : (
+                            <ExpandMoreIcon fontSize="medium" />
+                          )}
                         </Button>
                         <Popper
                           open={hoveredCategory === "STEEL"}
@@ -206,6 +245,10 @@ const Header = () => {
                           modifiers={[
                             { name: "offset", options: { offset: [0, 8] } },
                           ]}
+                          sx={{
+                            borderBottomLeftRadius: 1,
+                            borderBottomRightRadius: 1,
+                          }}
                         >
                           {({ TransitionProps }) => (
                             <Fade {...TransitionProps} timeout={200}>
@@ -229,6 +272,7 @@ const Header = () => {
                                           fontFamily: "Poppins",
                                           mb: 1,
                                           color: "#029441",
+                                          fontSize: 14,
                                         }}
                                       >
                                         {category}
@@ -239,7 +283,7 @@ const Header = () => {
                                             key={subItem}
                                             sx={{
                                               fontFamily: "Poppins",
-                                              fontSize: 14,
+                                              fontSize: 12,
                                               color: "#333",
                                               "&:hover": { color: "#029441" },
                                             }}
@@ -255,7 +299,7 @@ const Header = () => {
                             </Fade>
                           )}
                         </Popper>
-                      </>
+                      </Box>
                     );
                   }
                   return (
@@ -294,7 +338,7 @@ const Header = () => {
                   "&:hover": { backgroundColor: "transparent" },
                 }}
               >
-                <Box component="img" src="/menu.png" height="35px" />
+                <Box component="img" src="/menu.png" height="25px" />
               </IconButton>
             </Box>
           </Toolbar>
@@ -313,14 +357,76 @@ const Header = () => {
             />
           </Box>
           <List>
-            {navItems.map((item) => (
-              <ListItem key={item.name} component={Link} href={item.link}>
-                <ListItemText
-                  primary={item.name}
-                  sx={{ fontFamily: "Poppins", color: "#000" }}
-                />
-              </ListItem>
-            ))}
+            {navItems.map((item) => {
+              if (item.dropDown && item.name === "STEEL") {
+                return (
+                  <Box key={item.name}>
+                    <ListItem
+                      onClick={() => toggleMobileDropdown(item.name)}
+                    >
+                      <ListItemText
+                        primary={item.name}
+                        sx={{ fontFamily: "Poppins", color: "#000" }}
+                      />
+                      {mobileDropdownOpen[item.name] ? (
+                        <ExpandLess />
+                      ) : (
+                        <ExpandMore />
+                      )}
+                    </ListItem>
+                    <Collapse
+                      in={mobileDropdownOpen[item.name]}
+                      timeout="auto"
+                      unmountOnExit
+                    >
+                      <List component="div" disablePadding dense>
+                        {Object.entries(steelCategories).map(
+                          ([category, items]) => (
+                            <Box key={category} sx={{ pl: 2 }}>
+                              <Typography
+                                variant="subtitle2"
+                                sx={{
+                                  fontFamily: "Poppins",
+                                  color: "#029441",
+                                  pt: 1,
+                                  fontSize: 13,
+                                  fontWeight: 600,
+                                }}
+                              >
+                                {category}
+                              </Typography>
+                              {items.map((subItem) => (
+                                <ListItemButton
+                                  key={subItem}
+                                  sx={{
+                                    fontFamily: "Poppins",
+                                    fontSize: 12,
+                                    color: "#333",
+                                    "&:hover": { color: "#029441" },
+                                  }}
+                                >
+                                  {subItem}
+                                </ListItemButton>
+                              ))}
+                            </Box>
+                          )
+                        )}
+                      </List>
+                    </Collapse>
+                  </Box>
+                );
+              }
+
+              // default item without dropdown
+              return (
+                <ListItem key={item.name} component={Link} href={item.link}>
+                  <ListItemText
+                    primary={item.name}
+                    sx={{ ".MuiTypography-root": { fontFamily: "Poppins", color: "#000" }}}
+                  />
+                </ListItem>
+              );
+            })}
           </List>
         </Box>
       </Drawer>
