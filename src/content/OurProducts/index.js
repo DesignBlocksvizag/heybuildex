@@ -9,64 +9,52 @@ import {
 } from "@mui/material";
 
 const products = [
-  {
-    title: "MS Flat",
-    description: "High-quality mild steel flats suitable for construction and fabrication.",
-    image: "ms-flat.jpg",
+   {
+    title: "TMT Bars",
+    image: "tmt-bars.jpg",
+  },
+   {
+    title: "Binding Wire",
+    image: "binding-wire.jpg",
   },
   {
     title: "MS Channel",
-    description: "Durable MS channels used for structural applications.",
     image: "ms-channel.jpg",
   },
   {
     title: "MS Plate",
-    description: "Thick mild steel plates ideal for heavy-duty usage.",
     image: "ms-plate.jpg",
+  },
+    {
+    title: "MS Angle",
+    image: "ms-angles.jpg",
+  },
+   {
+    title: "MS Flat",
+    image: "ms-flat.jpg",
   },
   {
     title: "I Beam",
-    description: "Robust I Beams for industrial and structural use.",
     image: "i-beam.jpg",
   },
-  {
-    title: "MS Square Pipe",
-    description: "Versatile MS square pipes for multiple applications.",
-    image: "ms-square-pipe.jpg",
-  },
-  {
-    title: "MS Plates",
-    description: "Premium grade MS plates in various sizes and thicknesses.",
-    image: "ms-plates.jpg",
-  },
-  {
-    title: "MS Angles",
-    description: "Precision-cut MS angles for framing and reinforcements.",
-    image: "ms-angles.jpg",
-  },
-  {
+    {
     title: "MS Round Rod",
-    description: "Solid MS round rods for construction and manufacturing.",
     image: "ms-round-rod.jpg",
   },
   {
+    title: "MS Square Pipe",
+    image: "ms-square-pipe.jpg",
+  },
+   {
+    title: "MS Rectangular Pipe",
+    image: "ms-rectangular-pipe.jpg",
+  },
+  {
     title: "MS Chequered Plate",
-    description: "Anti-skid MS chequered plates used for flooring and industrial platforms.",
     image: "ms-chequered-plate.jpg",
   },
   {
-    title: "Binding Wire",
-    description: "Flexible binding wire for tying and construction needs.",
-    image: "binding-wire.jpg",
-  },
-  {
-    title: "MS Round Pipes",
-    description: "Reliable MS round pipes for general-purpose piping and structure.",
-    image: "ms-round-pipes.jpg",
-  },
-  {
     title: "Roofing Sheets",
-    description: "Sturdy roofing sheets designed for all-weather protection.",
     image: "roofing-sheets.jpg",
   },
 ];
