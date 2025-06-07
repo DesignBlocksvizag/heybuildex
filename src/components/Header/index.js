@@ -389,7 +389,7 @@ const handleMouseLeave = () => {
                                   fontFamily: "Poppins",
                                   color: "#029441",
                                   pt: 1,
-                                  fontSize: 13,
+                                  fontSize: 14,
                                   fontWeight: 600,
                                 }}
                               >
