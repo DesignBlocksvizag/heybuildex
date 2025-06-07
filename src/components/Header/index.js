@@ -181,7 +181,7 @@ const handleMouseLeave = () => {
                       Call us now
                     </Typography>
                     <Link
-                      href="tel:+919876543210"
+                      href="tel:+919281446109"
                       underline="hover"
                       sx={{
                         fontWeight: 400,
@@ -189,7 +189,7 @@ const handleMouseLeave = () => {
                         color: "#029441",
                       }}
                     >
-                      +91 98765 43210
+                      +91 92814 46109
                     </Link>
                   </Box>
                 </Box>
