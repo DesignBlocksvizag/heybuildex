@@ -1,6 +1,6 @@
 import Footer from "@/src/components/Footer";
 import Header from "@/src/components/Header";
-import { SimpleSlider } from "@/src/content/HeroSection";
+import HeroContent from "@/src/content/HeroSection";
 import OurProducts from "@/src/content/OurProducts";
 import ClientSlides from "@/src/content/Sliders/Brands";
 import ProjectSlides from "@/src/content/Sliders/Projects";
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <SimpleSlider />
+      <HeroContent />
       <WelcomeSection />
       <OurProducts />
       <ClientSlides />

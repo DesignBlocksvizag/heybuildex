@@ -77,7 +77,7 @@ const OurProducts = () => {
       sx={{
         px: 2,
         py: 8,
-        background: "linear-gradient(90deg, #1c953f 0%, #465a65 100%)",
+        background: "linear-gradient(90deg, #888888  0%, #6f9bb3  100%)",
       }}
     >
       {/* Heading */}

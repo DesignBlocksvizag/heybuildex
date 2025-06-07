@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, Button } from "@mui/material";
+import { Box, Grid, Typography, Button, Container } from "@mui/material";
 
 export default function WelcomeSection() {
   return (
@@ -9,6 +9,7 @@ export default function WelcomeSection() {
         backgroundColor: "#f5f5f5",
       }}
     >
+      <Container maxWidth="lg">
       <Grid container spacing={4} alignItems="center">
         {/* Text Section */}
         <Grid size={{xs: 12, md: 6}}>
@@ -71,6 +72,7 @@ export default function WelcomeSection() {
           />
         </Grid>
       </Grid>
+      </Container>
     </Box>
   );
 }
