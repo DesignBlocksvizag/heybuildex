@@ -356,7 +356,7 @@ const handleMouseLeave = () => {
               sx={{ height: 60, mb: 2 }}
             />
           </Box>
-          <List>
+          <List component={"div"} disablePadding>
             {navItems.map((item) => {
               if (item.dropDown && item.name === "STEEL") {
                 return (
@@ -366,7 +366,7 @@ const handleMouseLeave = () => {
                     >
                       <ListItemText
                         primary={item.name}
-                        sx={{ fontFamily: "Poppins", color: "#000" }}
+                        sx={{ ".MuiTypography-root": { fontFamily: "Poppins", color: "#333",fontWeight:520 } }}
                       />
                       {mobileDropdownOpen[item.name] ? (
                         <ExpandLess />
@@ -379,7 +379,7 @@ const handleMouseLeave = () => {
                       timeout="auto"
                       unmountOnExit
                     >
-                      <List component="div" disablePadding dense>
+                      <List component="div" disablePadding>
                         {Object.entries(steelCategories).map(
                           ([category, items]) => (
                             <Box key={category} sx={{ pl: 2 }}>
@@ -402,6 +402,7 @@ const handleMouseLeave = () => {
                                     fontFamily: "Poppins",
                                     fontSize: 12,
                                     color: "#333",
+                                    fontWeight: 520,
                                     "&:hover": { color: "#029441" },
                                   }}
                                 >
@@ -422,7 +423,7 @@ const handleMouseLeave = () => {
                 <ListItem key={item.name} component={Link} href={item.link}>
                   <ListItemText
                     primary={item.name}
-                    sx={{ ".MuiTypography-root": { fontFamily: "Poppins", color: "#000" }}}
+                    sx={{ ".MuiTypography-root": { fontFamily: "Poppins", color: "#333",fontWeight:520 }}}
                   />
                 </ListItem>
               );
