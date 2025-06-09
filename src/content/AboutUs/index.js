@@ -247,7 +247,7 @@ const AboutUs = () => {
                 variant="body2"
                 sx={{ color: "#555", fontFamily: "Inter", textAlign: "center" }}
               >
-                Co-Founder & CEO
+                Co-Founder & COO
               </Typography>
             </Grid>
           </Grid>
