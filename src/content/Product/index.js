@@ -12,7 +12,7 @@ import {
   ListItemText,
   ListItemButton,
   Container,
-  Button
+  Button,
 } from "@mui/material";
 import ProductTabs from "@/src/components/TabsPanel";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
@@ -179,25 +179,28 @@ export default function ProductPage() {
                   ))}
                 </Box>
               </Box>
-              <Box sx={{ mt: 3,display: "flex", justifyContent: "center" }}>
+              <Box sx={{ mt: 3, display: "flex", justifyContent: "center" }}>
                 <Button
-      variant="contained"
-      color="success"
-      size="medium"
-      startIcon={<WhatsAppIcon />}
-      sx={{ fontWeight: "bold", fontFamily: "Poppins",display: "flex", justifyContent: "center",maxWidth:"300px" }}
-       href="https://wa.me/919281446109?text=Hi%2C%20I'm%20interested%20in%20your%20construction%20materials.%20Please%20share%20the%20latest%20pricing%20and%20details."
-  target="_blank"
-    >
-      Get Best Price on WhatsApp
-    </Button>
-                </Box>
-
-              
-
+                  variant="contained"
+                  color="success"
+                  size="medium"
+                  startIcon={<WhatsAppIcon />}
+                  sx={{
+                    fontWeight: "bold",
+                    fontFamily: "Poppins",
+                    display: "flex",
+                    justifyContent: "center",
+                    maxWidth: "300px",
+                  }}
+                  href="https://wa.me/919281446109?text=Hi%2C%20I'm%20interested%20in%20your%20construction%20materials.%20Please%20share%20the%20latest%20pricing%20and%20details."
+                  target="_blank"
+                >
+                  Get Best Price on WhatsApp
+                </Button>
+              </Box>
 
               <ProductTabs />
-                      <QuotationForm />
+              <QuotationForm />
             </Paper>
 
             {/* Optionally: Show product list here */}
