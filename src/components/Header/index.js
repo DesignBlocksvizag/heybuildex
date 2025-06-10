@@ -47,7 +47,7 @@ const steelCategories = {
     "MS Flat",
     "I Beam",
     "MS Round rod",
-    "MS Roung pipe",
+    "MS Round pipe",
     "MS Square pipe",
     "MS Rectangle pipe",
     "MS Chequered plate",
