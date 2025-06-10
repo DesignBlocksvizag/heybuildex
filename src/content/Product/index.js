@@ -47,17 +47,53 @@ const images = [
 ];
 
 export default function ProductPage() {
-  const [selectedTab, setSelectedTab] = useState(0);
-  const categoryKeys = Object.keys(steelCategories);
-
   return (
-    <Box sx={{ backgroundColor: "#f5f5f5", py: 8 }}>
+    <Box sx={{ backgroundColor: "#ffffff", pb: 8 }}>
+        <Box
+  sx={{
+    position: "relative",
+    py: { xs: 10, md: 12 ,lg:14},
+    width: "100%",
+    backgroundImage: `url('/tmt-bars.jpg')`, // <-- Update with your image path
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  {/* Black blurred overlay */}
+  <Box
+    sx={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      backgroundColor: "rgba(0,0,0,0.6)",
+      backdropFilter: "blur(0.5px)",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    }}
+  >
+    <Typography
+      variant="h3"
+      sx={{
+        color: "#FFFF00",
+        fontWeight: "bold",
+        fontFamily: "Poppins",
+        textAlign: "center",
+        fontSize: { xs: "28px", md: "32px" },
+      }}
+    >
+      TMT Bars
+    </Typography>
+  </Box>
+  </Box>
       <Container maxWidth="lg">
         <Grid container spacing={2}>
           {/* Left Section – Product Info */}
           <Grid size={{ xs: 12, md: 9 }}>
             <Paper elevation={3} sx={{ borderRadius: 2, p: 2 }}>
-              <Typography
+              {/* <Typography
                 variant="h4"
                 gutterBottom
                 sx={{
@@ -67,7 +103,7 @@ export default function ProductPage() {
                 }}
               >
                 TMT Bars
-              </Typography>
+              </Typography> */}
 
               <Box
                 component="img"

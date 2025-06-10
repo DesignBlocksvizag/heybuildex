@@ -30,7 +30,7 @@ const AboutUs = () => {
     <Typography
       variant="h3"
       sx={{
-        color: "#FFC107",
+        color: "#FFFF00",
         fontWeight: "bold",
         fontFamily: "Poppins",
         textAlign: "center",
