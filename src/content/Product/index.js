@@ -4,8 +4,6 @@ import {
   Box,
   Typography,
   Grid,
-  Tabs,
-  Tab,
   Paper,
   List,
   ListItem,
@@ -88,7 +86,7 @@ export default function ProductPage() {
     </Typography>
   </Box>
   </Box>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{py:6}}>
         <Grid container spacing={2}>
           {/* Left Section – Product Info */}
           <Grid size={{ xs: 12, md: 9 }}>
@@ -235,7 +233,7 @@ export default function ProductPage() {
                 </Button>
               </Box>
 
-              <ProductTabs />
+              <ProductTabs tabData={tabData} />
               <QuotationForm />
             </Paper>
 
@@ -263,7 +261,7 @@ export default function ProductPage() {
                     </Typography>
 
                     {/* Category Items */}
-                    {items.map((item, idx) => (
+                    {items.map((item) => (
                       <ListItem
                         key={item}
                         disablePadding
@@ -279,13 +277,15 @@ export default function ProductPage() {
                         <ListItemButton>
                           <ListItemText
                             primary={item}
-                            primaryTypographyProps={{
-                              sx: {
-                                fontSize: 12,
-                                fontFamily: "Inter",
-                                fontWeight: 500,
-                                color: "#333",
-                              },
+                            slotProps={{
+                              primary:{
+                                sx: {
+                                  fontSize: 13,
+                                  fontFamily: "Inter",
+                                  fontWeight: 500,
+                                  color: "#333",
+                                },
+                              }
                             }}
                           />
                         </ListItemButton>
