@@ -27,33 +27,61 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import Collapse from "@mui/material/Collapse";
 
 const navItems = [
-  { name: "HOME", link: "/" ,dropDown : false},
-  { name: "ABOUT US", link: "/about-us" ,dropDown : false},
-  { name: "STEEL", link: "/steel" ,dropDown : true},
-  { name: "CEMENT", link: "/cement" ,dropDown : false},
-  { name: "RMC", link: "/rmc" ,dropDown : false},
-  { name: "INFRA RENTALS", link: "/infra-rentals" ,dropDown : false},
-  { name: "SAFETY", link: "/safety" ,dropDown : false},
-  { name: "BLOG", link: "/blog" ,dropDown : false},
-  { name: "CONTACT", link: "/contact" ,dropDown : false},
+  { name: "HOME", link: "/", dropDown: false },
+  { name: "ABOUT US", link: "/about-us", dropDown: false },
+  {
+    name: "STEEL",
+    link: "/steel",
+    dropDown: true,
+    subMenu: [
+      {
+        category: "Construction Steel",
+        items: [
+          { name: "TMT Bars", link: "/steel/tmt-bars" },
+          { name: "Binding Wire", link: "/steel/binding-wire" },
+        ],
+      },
+      {
+        category: "Structural Steel",
+        items: [
+          { name: "MS Channel", link: "/steel/ms-channel" },
+          { name: "MS Plate", link: "/steel/ms-plate" },
+          { name: "MS Angle", link: "/steel/ms-angle" },
+          { name: "MS Flat", link: "/steel/ms-flat" },
+          { name: "I Beam", link: "/steel/i-beam" },
+          { name: "MS Round rod", link: "/steel/ms-round-rod" },
+          { name: "MS Round pipe", link: "/steel/ms-round-pipe" },
+          { name: "MS Square pipe", link: "/steel/ms-square-pipe" },
+          { name: "MS Rectangle pipe", link: "/steel/ms-rectangle-pipe" },
+          { name: "MS Chequered plate", link: "/steel/ms-chequered-plate" },
+          { name: "Roofing sheet", link: "/steel/roofing-sheet" },
+        ],
+      },
+    ],
+  },
+  {
+    name: "CEMENT",
+    link: "/cement",
+    dropDown: true,
+    subMenu: [
+      {
+        category: "Cement Brands",
+        items: [
+          { name: "ULTRATECH CEMENT", link: "/cement/ultratech-cement" },
+          { name: "MAHA CEMENT", link: "/cement/maha-cement" },
+          { name: "Ramco CEMENT", link: "/cement/ramco-cement" },
+          { name: "SAGAR CEMENT", link: "/cement/sagar-cement" },
+        ],
+      },
+    ],
+  },
+  { name: "RMC", link: "/rmc", dropDown: false },
+  { name: "INFRA RENTALS", link: "/infra-rentals", dropDown: false },
+  { name: "SAFETY", link: "/safety", dropDown: false },
+  { name: "BLOG", link: "/blog", dropDown: false },
+  { name: "CONTACT", link: "/contact", dropDown: false },
 ];
 
-const steelCategories = {
-  "Construction Steel": ["TMT Bars", "Binding Wire"],
-  "Structural Steel": [
-    "MS Channel",
-    "MS Plate",
-    "MS Angle",
-    "MS Flat",
-    "I Beam",
-    "MS Round rod",
-    "MS Round pipe",
-    "MS Square pipe",
-    "MS Rectangle pipe",
-    "MS Chequered plate",
-    "Roofing sheet",
-  ],
-};
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -212,10 +240,10 @@ const handleMouseLeave = () => {
                 }}
               >
                 {navItems.map((item) => {
-                  if (item.name === "STEEL") {
+                  if (item.dropDown === true && item.subMenu) {
                     return (
                       <Box
-                        onMouseEnter={(e) => handleMouseEnter(e, "STEEL")}
+                        onMouseEnter={(e) => handleMouseEnter(e, item.name)}
                         onMouseLeave={handleMouseLeave}
                         key={item.name}
                         sx={{ position: "relative" }}
@@ -230,14 +258,14 @@ const handleMouseLeave = () => {
                           }}
                         >
                           {item.name}
-                          {hoveredCategory === "STEEL" ? (
+                          {hoveredCategory === item.name ? (
                             <ExpandLessIcon fontSize="medium" />
                           ) : (
                             <ExpandMoreIcon fontSize="medium" />
                           )}
                         </Button>
                         <Popper
-                          open={hoveredCategory === "STEEL"}
+                          open={hoveredCategory === item.name}
                           anchorEl={anchorEl}
                           placement="bottom-start"
                           transition
@@ -262,39 +290,40 @@ const handleMouseLeave = () => {
                                   gap: 2,
                                 }}
                               >
-                                {Object.entries(steelCategories).map(
-                                  ([category, items]) => (
-                                    <Box key={category} sx={{ minWidth: 200 }}>
-                                      <Typography
-                                        variant="subtitle2"
-                                        sx={{
-                                          fontWeight: 600,
-                                          fontFamily: "Poppins",
-                                          mb: 1,
-                                          color: "#029441",
-                                          fontSize: 14,
-                                        }}
-                                      >
-                                        {category}
-                                      </Typography>
-                                      <List dense>
-                                        {items.map((subItem) => (
-                                          <ListItemButton
-                                            key={subItem}
-                                            sx={{
-                                              fontFamily: "Poppins",
-                                              fontSize: 12,
-                                              color: "#333",
-                                              "&:hover": { color: "#029441" },
-                                            }}
-                                          >
-                                            {subItem}
-                                          </ListItemButton>
-                                        ))}
-                                      </List>
-                                    </Box>
-                                  )
-                                )}
+                                 {item.subMenu.map((group) => (
+                  <Box key={group.category} sx={{ minWidth: 200 }}>
+                    <Typography
+                      variant="subtitle2"
+                      sx={{
+                        fontWeight: 600,
+                        fontFamily: "Poppins",
+                        mb: 1,
+                        color: "#029441",
+                        fontSize: 14,
+                      }}
+                    >
+                      {group.category}
+                    </Typography>
+                    <List dense>
+                      {group.items.map((subItem) => (
+                        <ListItemButton
+                          key={subItem.name}
+                          component={Link}
+                          href={subItem.link}
+                          sx={{
+                            fontFamily: "Poppins",
+                            fontSize: 12,
+                            color: "#333",
+                            "&:hover": { color: "#029441" },
+                          }}
+                        >
+                          {subItem.name}
+                        </ListItemButton>
+                      ))}
+                    </List>
+                  </Box>
+                ))}
+                               
                               </Paper>
                             </Fade>
                           )}
@@ -356,79 +385,83 @@ const handleMouseLeave = () => {
               sx={{ height: 60, mb: 2 }}
             />
           </Box>
-          <List component={"div"} disablePadding>
-            {navItems.map((item) => {
-              if (item.dropDown && item.name === "STEEL") {
-                return (
-                  <Box key={item.name}>
-                    <ListItem
-                      onClick={() => toggleMobileDropdown(item.name)}
-                    >
-                      <ListItemText
-                        primary={item.name}
-                        sx={{ ".MuiTypography-root": { fontFamily: "Poppins", color: "#333",fontWeight:520 } }}
-                      />
-                      {mobileDropdownOpen[item.name] ? (
-                        <ExpandLess />
-                      ) : (
-                        <ExpandMore />
-                      )}
-                    </ListItem>
-                    <Collapse
-                      in={mobileDropdownOpen[item.name]}
-                      timeout="auto"
-                      unmountOnExit
-                    >
-                      <List component="div" disablePadding>
-                        {Object.entries(steelCategories).map(
-                          ([category, items]) => (
-                            <Box key={category} sx={{ pl: 2 }}>
-                              <Typography
-                                variant="subtitle2"
-                                sx={{
-                                  fontFamily: "Poppins",
-                                  color: "#029441",
-                                  pt: 1,
-                                  fontSize: 14,
-                                  fontWeight: 600,
-                                }}
-                              >
-                                {category}
-                              </Typography>
-                              {items.map((subItem) => (
-                                <ListItemButton
-                                  key={subItem}
-                                  sx={{
-                                    fontFamily: "Poppins",
-                                    fontSize: 12,
-                                    color: "#333",
-                                    fontWeight: 520,
-                                    "&:hover": { color: "#029441" },
-                                  }}
-                                >
-                                  {subItem}
-                                </ListItemButton>
-                              ))}
-                            </Box>
-                          )
-                        )}
-                      </List>
-                    </Collapse>
-                  </Box>
-                );
-              }
+          <List component="div" disablePadding>
+  {navItems.map((item) => {
+    if (item.dropDown && item.subMenu) {
+      return (
+        <Box key={item.name}>
+          <ListItem onClick={() => toggleMobileDropdown(item.name)}>
+            <ListItemText
+              primary={item.name}
+              sx={{
+                ".MuiTypography-root": {
+                  fontFamily: "Poppins",
+                  color: "#333",
+                  fontWeight: 520,
+                },
+              }}
+            />
+            {mobileDropdownOpen[item.name] ? <ExpandLess /> : <ExpandMore />}
+          </ListItem>
 
-              // default item without dropdown
-              return (
-                <ListItem key={item.name} component={Link} href={item.link}>
-                  <ListItemText
-                    primary={item.name}
-                    sx={{ ".MuiTypography-root": { fontFamily: "Poppins", color: "#333",fontWeight:520 }}}
-                  />
-                </ListItem>
-              );
-            })}
-          </List>
+          <Collapse in={mobileDropdownOpen[item.name]} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              {item.subMenu.map((group) => (
+                <Box key={group.category} sx={{ pl: 2 }}>
+                  <Typography
+                    variant="subtitle2"
+                    sx={{
+                      fontFamily: "Poppins",
+                      color: "#029441",
+                      pt: 1,
+                      fontSize: 14,
+                      fontWeight: 600,
+                    }}
+                  >
+                    {group.category}
+                  </Typography>
+                  {group.items.map((subItem) => (
+                    <ListItemButton
+                      key={subItem.name}
+                      component={Link}
+                      href={subItem.link}
+                      sx={{
+                        fontFamily: "Poppins",
+                        fontSize: 12,
+                        color: "#333",
+                        fontWeight: 520,
+                        "&:hover": { color: "#029441" },
+                      }}
+                    >
+                      {subItem.name}
+                    </ListItemButton>
+                  ))}
+                </Box>
+              ))}
+            </List>
+          </Collapse>
+        </Box>
+      );
+    }
+
+    // default item without dropdown
+    return (
+      <ListItem key={item.name} component={Link} href={item.link}>
+        <ListItemText
+          primary={item.name}
+          sx={{
+            ".MuiTypography-root": {
+              fontFamily: "Poppins",
+              color: "#333",
+              fontWeight: 520,
+            },
+          }}
+        />
+      </ListItem>
+    );
+  })}
+</List>
+
         </Box>
       </Drawer>
     </>
