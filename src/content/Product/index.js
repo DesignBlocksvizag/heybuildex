@@ -238,8 +238,8 @@ export default function SteelProductPage({ product }) {
                   if (navItem.dropDown === true) {
                     return (
                       <Box key={navItem.name} sx={{ mb: 2 }}>
-                        {navItem.subMenu.map((item) => (
-                          <React.Fragment>
+                        {navItem.subMenu.map((item, index) => (
+                          <React.Fragment key={`${item.category}-${index}`}>
                             <Typography
                               variant="subtitle1"
                               sx={{
