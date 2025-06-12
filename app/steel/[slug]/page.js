@@ -16,7 +16,7 @@ export default async function SteelPage({ params }) {
   return (
     <>
       <Header />
-      <SteelProductPage product={steelItem} />
+      <SteelProductPage product={steelItem} brands={true}/>
       <Footer />
     </>
   );

@@ -640,6 +640,7 @@ export const CementData = [
     category: "Construction Cement",
     name: "Ultratech Cement",
     link: "ultratech-cement",
+    image : "/ultratech-cement.jpeg",
     description: [
       "Ultratech Cement is one of the most trusted brands in India.",
       "Ideal for residential, commercial, and industrial construction.",
@@ -684,6 +685,7 @@ export const CementData = [
     category: "Construction Cement",
     name: "Maha Cement",
     link: "maha-cement",
+    image : "/maha-cement.png",
     description: [
       "Maha Cement is known for its premium quality and consistent performance.",
       "Widely used in residential, commercial, and infrastructure projects.",
@@ -728,6 +730,7 @@ export const CementData = [
     category: "Construction Cement",
     name: "Ramco Cement",
     link: "ramco-cement",
+    image : "/ramco-cement.png",
     description: [
       "Ramco Cement is a premium cement brand known for its high quality.",
       "Ideal for residential, commercial, and industrial construction.",
@@ -770,6 +773,7 @@ export const CementData = [
     category: "Construction Cement",
     name: "Sagar Cement",
     link: "sagar-cement",
+    image : "/sagar-cement.png",
     description: [
       "Sagar Cement delivers reliable strength and durability for all types of construction.",
       "Used widely in housing, roads, bridges, and industrial projects.",

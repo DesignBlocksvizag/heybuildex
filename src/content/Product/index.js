@@ -16,6 +16,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import ProductTabs from "@/src/components/TabsPanel";
 import QuotationForm from "@/src/components/Form";
 import { navItems } from "@/src/components/Header";
+import { useRouter } from "next/navigation";
 
 const brandImages = [
   { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
@@ -28,7 +29,8 @@ const brandImages = [
   { src: "/clients/simhadri.png", alt: "Simhadri" },
 ];
 
-export default function SteelProductPage({ product }) {
+export default function SteelProductPage({ product ,brands}) {
+  const router = useRouter();
   const {
     name,
     description,
@@ -93,7 +95,7 @@ export default function SteelProductPage({ product }) {
                   width: "100%",
                   height: "300px",
                   borderRadius: 2,
-                  objectFit: "cover",
+                  objectFit: "contain",
                   mb: 2,
                 }}
               />
@@ -113,7 +115,7 @@ export default function SteelProductPage({ product }) {
                 </Typography>
               ))}
 
-              <Typography
+             {brands && (<><Typography
                 variant="h6"
                 sx={{
                   color: "#000",
@@ -153,7 +155,7 @@ export default function SteelProductPage({ product }) {
                     />
                   </Box>
                 ))}
-              </Box>
+              </Box></>)}
 
               {sizes?.length > 0 && (
                 <Box sx={{ mt: 2 }}>
@@ -265,10 +267,11 @@ export default function SteelProductPage({ product }) {
                                   },
                                 }}
                               >
-                                <ListItemButton>
+                                <ListItemButton onClick={()=>{
+                                  router.push(subItem.link)
+                                }}>
                                   <ListItemText
                                     primary={subItem.name}
-                                    href={subItem.link}
                                     slotProps={{
                                       primary: {
                                         sx: {
