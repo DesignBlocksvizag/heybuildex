@@ -3,7 +3,7 @@ export const SteelData = [
     category: "Construction Steel",
     name: "TMT Bars",
     link: "tmt-bars",
-    image : "/tmt-bars.jpg",
+    image: "/tmt-bars.jpg",
     description: [
       "TMT bars are essential for construction due to their strength.",
       "They are used in residential, commercial, and infrastructure projects.",
@@ -44,7 +44,7 @@ export const SteelData = [
   {
     name: "Binding Wire",
     link: "binding-wire",
-    image : "/binding-wire.jpg",
+    image: "/binding-wire.jpg",
     description: [
       "Binding wire is used to tie rebars at joints to keep the structure intact.",
       "It ensures the correct positioning of steel bars before and during concreting.",
@@ -88,7 +88,7 @@ export const SteelData = [
   {
     name: "MS Channel",
     link: "ms-channel",
-    image : "/ms-channel.jpg",
+    image: "/ms-channel.jpg",
     description: [
       "MS Channel, also known as C-Channel or ISMC (Indian Standard Medium Channel), is widely used in construction and structural applications.",
       "It provides excellent load-bearing support and is commonly used in building frames, machinery, and heavy equipment.",
@@ -133,7 +133,7 @@ export const SteelData = [
   {
     name: "MS Plate",
     link: "ms-plate",
-    image : "/ms-plate.jpg",
+    image: "/ms-plate.jpg",
     description: [
       "MS Plate (Mild Steel Plate) is a flat structural steel product widely used in fabrication and construction.",
       "It offers good weldability, machinability, and high tensile strength.",
@@ -178,7 +178,7 @@ export const SteelData = [
   {
     name: "MS Angle",
     link: "ms-angle",
-    image : "/ms-angles.jpg",
+    image: "/ms-angles.jpg",
     description: [
       "MS Angle (Mild Steel Angle) is a structural steel product with an 'L' shaped cross-section, commonly used in construction and engineering applications.",
       "It provides strength, stability, and resistance to bending, making it ideal for structural frameworks and support systems.",
@@ -223,7 +223,7 @@ export const SteelData = [
   {
     name: "MS Flat",
     link: "ms-flat",
-    image : "/ms-flat.jpg",
+    image: "/ms-flat.jpg",
     description: [
       "MS Flat (Mild Steel Flat Bar) is a rectangular section steel product widely used in fabrication, construction, and industrial applications.",
       "It is known for its high tensile strength, durability, and excellent weldability.",
@@ -268,7 +268,7 @@ export const SteelData = [
   {
     name: "MS I Beam",
     link: "ms-i-beam",
-    image : "/i-beam.jpg",
+    image: "/i-beam.jpg",
     description: [
       "MS I Beam (Mild Steel I Beam) is a structural steel product shaped like the letter 'I', designed to bear heavy loads and provide excellent structural support.",
       "Its design efficiently distributes weight and resists bending, making it ideal for heavy-duty structural applications.",
@@ -322,7 +322,7 @@ export const SteelData = [
   {
     name: "MS Round Rod",
     link: "ms-round-rod",
-    image : "/ms-round-rod.jpg",
+    image: "/ms-round-rod.jpg",
     description: [
       "MS Round Rod (Mild Steel Round Bar) is a cylindrical steel product commonly used in construction, fabrication, and manufacturing.",
       "It offers excellent strength, ductility, and weldability, making it suitable for a wide range of industrial applications.",
@@ -377,7 +377,7 @@ export const SteelData = [
   {
     name: "MS Round Pipe",
     link: "ms-round-pipe",
-    image : "/ms-round-pipes.jpg",
+    image: "/ms-round-pipes.jpg",
     description: [
       "MS Round Pipe (Mild Steel Round Pipe) is a hollow circular steel section widely used in structural, mechanical, and general engineering applications.",
       "It provides good strength, weldability, and durability, making it suitable for transporting fluids, fabrication, and construction.",
@@ -432,7 +432,7 @@ export const SteelData = [
   {
     name: "MS Square Pipe",
     link: "ms-square-pipe",
-    image : "/ms-square-pipe.jpg",
+    image: "/ms-square-pipe.jpg",
     description: [
       "MS Square Pipe is a hollow structural section made from mild steel with equal-width sides, commonly used in construction and fabrication.",
       "These pipes are known for their high strength, uniformity, and excellent weldability, making them ideal for load-bearing and structural applications.",
@@ -485,7 +485,7 @@ export const SteelData = [
   {
     name: "MS Rectangular Pipe",
     link: "ms-rectangular-pipe",
-    image:"/ms-rectangular-pipe.jpg",
+    image: "/ms-rectangular-pipe.jpg",
     description: [
       "MS Rectangular Pipe (Mild Steel Rectangular Hollow Section) is a steel structural component with a rectangular cross-section, widely used in construction and fabrication.",
       "It offers high structural strength, smooth finish, and excellent weldability.",
@@ -539,7 +539,7 @@ export const SteelData = [
   {
     name: "MS Chequered Plate",
     link: "ms-chequered-plate",
-    image : "/ms-chequered-plate.jpg",
+    image: "/ms-chequered-plate.jpg",
     description: [
       "MS Chequered Plate (Mild Steel Chequered Plate) is a steel plate with a regular pattern of raised diamonds or lines on one side, providing excellent anti-slip properties.",
       "It is widely used in industrial flooring, staircases, walkways, and ramps due to its high durability and grip.",
@@ -584,7 +584,7 @@ export const SteelData = [
   {
     name: "Roofing Sheet",
     link: "roofing-sheet",
-    image : "/roofing-sheets.jpg",
+    image: "/roofing-sheets.jpg",
     description: [
       "Roofing Sheets are corrugated or profiled metal sheets used to cover roofs and provide protection against weather elements.",
       "They are made from materials like galvanized iron (GI), aluminum, or color-coated steel and are widely used in industrial, commercial, and residential roofing.",
@@ -640,7 +640,7 @@ export const CementData = [
     category: "Construction Cement",
     name: "Ultratech Cement",
     link: "ultratech-cement",
-    image : "/ultratech-cement.jpeg",
+    image: "/ultratech-cement.jpeg",
     description: [
       "Ultratech Cement is one of the most trusted brands in India.",
       "Ideal for residential, commercial, and industrial construction.",
@@ -685,7 +685,7 @@ export const CementData = [
     category: "Construction Cement",
     name: "Maha Cement",
     link: "maha-cement",
-    image : "/maha-cement.png",
+    image: "/maha-cement.png",
     description: [
       "Maha Cement is known for its premium quality and consistent performance.",
       "Widely used in residential, commercial, and infrastructure projects.",
@@ -730,7 +730,7 @@ export const CementData = [
     category: "Construction Cement",
     name: "Ramco Cement",
     link: "ramco-cement",
-    image : "/ramco-cement.png",
+    image: "/ramco-cement.png",
     description: [
       "Ramco Cement is a premium cement brand known for its high quality.",
       "Ideal for residential, commercial, and industrial construction.",
@@ -773,7 +773,7 @@ export const CementData = [
     category: "Construction Cement",
     name: "Sagar Cement",
     link: "sagar-cement",
-    image : "/sagar-cement.png",
+    image: "/sagar-cement.png",
     description: [
       "Sagar Cement delivers reliable strength and durability for all types of construction.",
       "Used widely in housing, roads, bridges, and industrial projects.",
@@ -811,5 +811,166 @@ export const CementData = [
       },
     ],
     pageLink: "/cement/sagar-cement",
+  },
+];
+export const OtherData = [
+  {
+    category: "Construction Concrete",
+    name: "Ready Mix Concrete (RMC)",
+    link: "ready-mix-concrete",
+    image: "/rmc.jpg",
+    description: [
+      "Ready Mix Concrete (RMC) is a pre-mixed, high-quality concrete.",
+      "It is tailored to meet specific construction project requirements.",
+      "Ensures uniform quality and consistent performance.",
+      "Reduces on-site labor, material waste, and mixing time.",
+      "Speeds up project timelines and enhances construction efficiency.",
+    ],
+    sizes: ["M20", "M25", "M30", "M35", "M40"],
+    overview:
+      "Ready Mix Concrete (RMC) is manufactured in batching plants and delivered to site in transit mixers. It offers superior strength, workability, and durability for a wide range of construction applications. Ideal for modern, large-scale, and time-sensitive projects.",
+    features: [
+      "Consistent mix quality",
+      "High strength and durability",
+      "Reduces labor and material handling",
+      "Faster project completion",
+      "Eco-friendly with minimal site pollution",
+    ],
+    faqs: [
+      {
+        question: "What grades of RMC are available?",
+        answer: "Common grades include M20, M25, M30, M35, and M40.",
+      },
+      {
+        question: "Can RMC be customized for project needs?",
+        answer:
+          "Yes, RMC is designed based on specific strength and workability requirements.",
+      },
+      {
+        question: "How is RMC delivered to the site?",
+        answer:
+          "It is transported in specialized transit mixers to ensure quality and consistency.",
+      },
+      {
+        question: "Is RMC suitable for all types of construction?",
+        answer:
+          "Yes, it's ideal for residential, commercial, and infrastructure projects.",
+      },
+    ],
+    pageLink: "/concrete/ready-mix-concrete",
+  },
+  {
+    category: "Construction Services",
+    name: "Infra Equipment Rentals",
+    link: "infra-equipment-rentals",
+    image : "/infra-rentals.jpg",
+    description: [
+      "Reliable infra equipment rentals for all types of construction projects.",
+      "Includes piling rigs, transit mixers, concrete batching plants, scaffolding, and shuttering systems.",
+      "Ideal for residential buildings, commercial developments, and infrastructure-scale projects.",
+      "Reduces capital investment while ensuring efficiency and quality execution.",
+      "Supported by timely delivery, maintenance, and operational assistance.",
+    ],
+    sizes: [
+      "Piling Rigs",
+      "Transit Mixers",
+      "Batching Plants",
+      "Scaffolding",
+      "Shuttering Systems",
+    ],
+    overview:
+      "At HeyBuildex, we provide top-quality infra equipment on rent to meet diverse construction needs. From foundation works to structural support systems, our rental fleet is maintained for reliability, safety, and performance—enabling your project to progress smoothly and on time.",
+    features: [
+      "Wide range of infra and construction equipment",
+      "Flexible rental terms for different project durations",
+      "Regularly serviced and safety-inspected machines",
+      "Expert support and on-site logistics available",
+      "Cost-effective alternative to equipment purchase",
+    ],
+    faqs: [
+      {
+        question: "What infra equipment do you offer for rent?",
+        answer:
+          "We provide piling rigs, batching plants, transit mixers, scaffolding, and shuttering systems.",
+      },
+      {
+        question: "Can I rent equipment for a short-term project?",
+        answer:
+          "Yes, we offer flexible daily, weekly, and monthly rental options.",
+      },
+      {
+        question: "Do you provide transportation and setup support?",
+        answer:
+          "Yes, we handle delivery, setup, and removal as part of our service.",
+      },
+      {
+        question: "Is the equipment maintained and certified?",
+        answer:
+          "Absolutely. All our equipment is well-maintained, regularly serviced, and safety certified.",
+      },
+    ],
+    pageLink: "/services/infra-equipment-rentals",
+  },
+  {
+    category: "Construction Safety",
+    name: "Safety Equipment",
+    link: "safety-equipment",
+    image : "/safety.jpg",
+    description: [
+      "High-quality safety equipment for complete on-site protection.",
+      "Ideal for construction, industrial, and infrastructure environments.",
+      "Includes personal protective gear and fire safety essentials.",
+      "Ensures worker safety, compliance, and reduced onsite risk.",
+      "Tested and certified to meet industry safety standards.",
+    ],
+    sizes: [
+      "Hand Gloves",
+      "Safety Helmets",
+      "Face Shields",
+      "Safety Masks",
+      "Ear Protection",
+      "Reflective Jackets",
+      "Safety Belts",
+      "Industrial Fall Arresters",
+      "Safety Aprons",
+      "Hand Sleeves",
+      "PVC Chemical Suits",
+      "Boiler Suits",
+      "Industrial Safety Shoes",
+      "Fire Extinguishers",
+    ],
+    overview:
+      "At HeyBuildex, we offer a wide range of certified safety equipment designed to protect workers in hazardous environments. From head-to-toe protective gear to fire safety tools, our products ensure compliance, minimize injury risks, and foster a culture of safety across all construction and industrial sites.",
+    features: [
+      "Comprehensive personal protection range",
+      "Certified and industry-compliant gear",
+      "Durable materials for rugged conditions",
+      "Comfortable and ergonomic designs",
+      "Ideal for daily use on active job sites",
+    ],
+    faqs: [
+      {
+        question: "What types of safety equipment do you provide?",
+        answer:
+          "We offer helmets, gloves, face shields, safety shoes, reflective jackets, fire extinguishers, and more.",
+      },
+      {
+        question: "Are your products certified?",
+        answer:
+          "Yes, all our safety equipment meets national and international safety standards.",
+      },
+      {
+        question: "Can I place a bulk order for a construction site?",
+        answer:
+          "Absolutely! We support bulk orders with quick delivery options.",
+      },
+      {
+        question:
+          "Do you supply protective gear for chemical and high-risk environments?",
+        answer:
+          "Yes, we provide chemical suits, industrial fall arresters, and other high-risk protective gear.",
+      },
+    ],
+    pageLink: "/safety/safety-equipment",
   },
 ];

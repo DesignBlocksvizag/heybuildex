@@ -168,7 +168,7 @@ export default function SteelProductPage({ product ,brands}) {
                       color: "#000",
                     }}
                   >
-                    Sizes Available
+                    Product Variants
                   </Typography>
                   <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
                     {sizes.map((size) => (
