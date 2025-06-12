@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import {
   Box,
   Typography,
@@ -12,101 +12,83 @@ import {
   Container,
   Button,
 } from "@mui/material";
-import ProductTabs from "@/src/components/TabsPanel";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import ProductTabs from "@/src/components/TabsPanel";
 import QuotationForm from "@/src/components/Form";
+import { navItems } from "@/src/components/Header";
 
-const steelCategories = {
-  "Construction Steel": ["TMT Bars", "Binding Wire"],
-  "Structural Steel": [
-    "MS Channel",
-    "MS Plate",
-    "MS Angle",
-    "MS Flat",
-    "I Beam",
-    "MS Round rod",
-    "MS Round pipe",
-    "MS Square pipe",
-    "MS Rectangle pipe",
-    "MS Chequered plate",
-    "Roofing sheet",
-  ],
-};
-
-const images = [
+const brandImages = [
   { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
   { src: "/clients/sail.png", alt: "Sail" },
   { src: "/clients/tata.png", alt: "Tata" },
-  { src: "/clients/jsw.png", alt: "jsw" },
-  { src: "/clients/jindal-1.png", alt: "jindal" },
-  { src: "/clients/radha.png", alt: "radha" },
-  { src: "/clients/mangal.png", alt: "mangal" },
-  { src: "/clients/simhadri.png", alt: "simhadri" },
+  { src: "/clients/jsw.png", alt: "JSW" },
+  { src: "/clients/jindal-1.png", alt: "Jindal" },
+  { src: "/clients/radha.png", alt: "Radha" },
+  { src: "/clients/mangal.png", alt: "Mangal" },
+  { src: "/clients/simhadri.png", alt: "Simhadri" },
 ];
 
-export default function ProductPage() {
+export default function SteelProductPage({ product }) {
+  const {
+    name,
+    description,
+    sizes,
+    overview,
+    features,
+    faqs,
+    image = "/default.jpg",
+  } = product;
+
   return (
     <Box sx={{ backgroundColor: "#ffffff", pb: 8 }}>
+      {/* Header Banner */}
+      <Box
+        sx={{
+          position: "relative",
+          py: { xs: 10, md: 12, lg: 14 },
+          backgroundImage: `url(${image})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <Box
-  sx={{
-    position: "relative",
-    py: { xs: 10, md: 12 ,lg:14},
-    width: "100%",
-    backgroundImage: `url('/tmt-bars.jpg')`, // <-- Update with your image path
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  {/* Black blurred overlay */}
-  <Box
-    sx={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      backgroundColor: "rgba(0,0,0,0.6)",
-      backdropFilter: "blur(0.5px)",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    }}
-  >
-    <Typography
-      variant="h3"
-      sx={{
-        color: "#FFFF00",
-        fontWeight: "bold",
-        fontFamily: "Poppins",
-        textAlign: "center",
-        fontSize: { xs: "28px", md: "32px" },
-      }}
-    >
-      TMT Bars
-    </Typography>
-  </Box>
-  </Box>
-      <Container maxWidth="lg" sx={{py:6}}>
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0,0,0,0.6)",
+            backdropFilter: "blur(0.5px)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Typography
+            variant="h3"
+            sx={{
+              color: "#FFFF00",
+              fontWeight: "bold",
+              fontFamily: "Poppins",
+              textAlign: "center",
+              fontSize: { xs: "28px", md: "32px" },
+            }}
+          >
+            {name}
+          </Typography>
+        </Box>
+      </Box>
+
+      <Container maxWidth="lg" sx={{ py: 6 }}>
         <Grid container spacing={2}>
-          {/* Left Section – Product Info */}
+          {/* Left Section */}
           <Grid size={{ xs: 12, md: 9 }}>
             <Paper elevation={3} sx={{ borderRadius: 2, p: 2 }}>
-              {/* <Typography
-                variant="h4"
-                gutterBottom
-                sx={{
-                  color: "#01933e",
-                  fontFamily: "Poppins, sans-serif",
-                  fontWeight: "bold",
-                }}
-              >
-                TMT Bars
-              </Typography> */}
-
               <Box
                 component="img"
-                src="/tmt-bars.jpg"
-                alt="TMT Bars"
+                src={image}
+                alt={name}
                 sx={{
                   width: "100%",
                   height: "300px",
@@ -116,37 +98,35 @@ export default function ProductPage() {
                 }}
               />
 
-              <Typography
-                variant="body1"
-                sx={{ fontSize: 14, color: "#333", fontFamily: "Inter", mb: 3 }}
-              >
-                At HeyBuildex, we are proud to be one of the leading suppliers
-                of TMT (Thermo-Mechanically Treated) bars in India, catering to
-                both premium and secondary brands. We understand the importance
-                of quality and durability in construction, which is why we bring
-                you the finest TMT bars from trusted manufacturers that meet
-                industry standards and project specifications.
-              </Typography>
+              {description?.map((line, idx) => (
+                <Typography
+                  key={idx}
+                  variant="body1"
+                  sx={{
+                    fontSize: 14,
+                    color: "#333",
+                    fontFamily: "Inter",
+                    mb: 2,
+                  }}
+                >
+                  {line}
+                </Typography>
+              ))}
+
               <Typography
                 variant="h6"
-                gutterBottom
                 sx={{
                   color: "#000",
-                  fontFamily: "Poppins, sans-serif",
+                  fontFamily: "Poppins",
                   fontWeight: 600,
+                  mt: 3,
+                  mb: 1,
                 }}
               >
                 Brands Available
               </Typography>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "center",
-                  gap: 2,
-                }}
-              >
-                {images.map((img, index) => (
+              <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
+                {brandImages.map((img, index) => (
                   <Box
                     key={index}
                     sx={{
@@ -174,45 +154,42 @@ export default function ProductPage() {
                   </Box>
                 ))}
               </Box>
-              <Box sx={{ mt: 2 }}>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontWeight: 600,
-                    mb: 1,
-                    fontFamily: "Poppins",
-                    color: "#000",
-                  }}
-                >
-                  Sizes Available
-                </Typography>
 
-                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
-                  {["8mm", "10mm", "12mm", "16mm", "20mm"].map((size) => (
-                    <Box
-                      key={size}
-                      sx={{
-                        px: 2,
-                        py: 0.8,
-                        borderRadius: "999px",
-                        backgroundColor: "#e0f2f1",
-                        color: "#00695c",
-                        fontWeight: 500,
-                        fontFamily: "Inter",
-                        fontSize: 14,
-                        cursor: "pointer",
-                        transition: "0.3s",
-                        "&:hover": {
-                          backgroundColor: "#b2dfdb",
-                          transform: "scale(1.05)",
-                        },
-                      }}
-                    >
-                      {size}
-                    </Box>
-                  ))}
+              {sizes?.length > 0 && (
+                <Box sx={{ mt: 2 }}>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 600,
+                      mb: 1,
+                      fontFamily: "Poppins",
+                      color: "#000",
+                    }}
+                  >
+                    Sizes Available
+                  </Typography>
+                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
+                    {sizes.map((size) => (
+                      <Box
+                        key={size}
+                        sx={{
+                          px: 2,
+                          py: 0.8,
+                          borderRadius: "999px",
+                          backgroundColor: "#e0f2f1",
+                          color: "#00695c",
+                          fontWeight: 500,
+                          fontFamily: "Inter",
+                          fontSize: 14,
+                        }}
+                      >
+                        {size}
+                      </Box>
+                    ))}
+                  </Box>
                 </Box>
-              </Box>
+              )}
+
               <Box sx={{ mt: 3, display: "flex", justifyContent: "center" }}>
                 <Button
                   variant="contained"
@@ -233,66 +210,85 @@ export default function ProductPage() {
                 </Button>
               </Box>
 
-              <ProductTabs tabData={tabData} />
+              <ProductTabs
+                tabData={[
+                  {
+                    label: "Overview",
+                    content: [overview], // Wrap string as array
+                  },
+                  {
+                    label: "Features",
+                    content: features, // Already an array of strings
+                  },
+                  {
+                    label: "FAQs",
+                    content: faqs, // Array of objects with question & answer
+                  },
+                ]}
+              />
               <QuotationForm />
             </Paper>
-
-            {/* Optionally: Show product list here */}
           </Grid>
 
-          {/* Right Section – Categories Card */}
+          {/* Right Section */}
           <Grid size={{ xs: 12, md: 3 }}>
             <Paper elevation={3} sx={{ borderRadius: 2, p: 2 }}>
               <List dense>
-                {Object.entries(steelCategories).map(([category, items]) => (
-                  <Box key={category} sx={{ mb: 2 }}>
-                    {/* Category Heading */}
-                    <Typography
-                      variant="subtitle1"
-                      sx={{
-                        fontWeight: "bold",
-                        color: "#1976D2",
-                        fontFamily: "Poppins",
-                        mb: 1,
-                        fontSize: 14,
-                      }}
-                    >
-                      {category}
-                    </Typography>
-
-                    {/* Category Items */}
-                    {items.map((item) => (
-                      <ListItem
-                        key={item}
-                        disablePadding
-                        sx={{
-                          borderRadius: 1,
-                          transition: "0.3s",
-                          "&:hover": {
-                            backgroundColor: "#e0f2f1",
-                            transform: "translateX(4px)",
-                          },
-                        }}
-                      >
-                        <ListItemButton>
-                          <ListItemText
-                            primary={item}
-                            slotProps={{
-                              primary:{
-                                sx: {
-                                  fontSize: 13,
-                                  fontFamily: "Inter",
-                                  fontWeight: 500,
-                                  color: "#333",
-                                },
-                              }
-                            }}
-                          />
-                        </ListItemButton>
-                      </ListItem>
-                    ))}
-                  </Box>
-                ))}
+                {navItems.map((navItem) => {
+                  if (navItem.dropDown === true) {
+                    return (
+                      <Box key={navItem.name} sx={{ mb: 2 }}>
+                        {navItem.subMenu.map((item) => (
+                          <React.Fragment>
+                            <Typography
+                              variant="subtitle1"
+                              sx={{
+                                fontWeight: "bold",
+                                color: "#1976D2",
+                                fontFamily: "Poppins",
+                                mb: 1,
+                                fontSize: 14,
+                              }}
+                            >
+                              {item.category}
+                            </Typography>
+                            {item.items.map((subItem) => (
+                              <ListItem
+                                key={subItem.name}
+                                disablePadding
+                                sx={{
+                                  borderRadius: 1,
+                                  transition: "0.3s",
+                                  "&:hover": {
+                                    backgroundColor: "#e0f2f1",
+                                    transform: "translateX(4px)",
+                                  },
+                                }}
+                              >
+                                <ListItemButton>
+                                  <ListItemText
+                                    primary={subItem.name}
+                                    href={subItem.link}
+                                    slotProps={{
+                                      primary: {
+                                        sx: {
+                                          fontSize: 13,
+                                          fontFamily: "Inter",
+                                          fontWeight: 500,
+                                          color: "#333",
+                                        },
+                                      },
+                                    }}
+                                  />
+                                </ListItemButton>
+                              </ListItem>
+                            ))}
+                          </React.Fragment>
+                        ))}
+                      </Box>
+                    );
+                  }
+                })}
               </List>
             </Paper>
           </Grid>

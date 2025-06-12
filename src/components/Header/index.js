@@ -26,7 +26,7 @@ import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import Collapse from "@mui/material/Collapse";
 
-const navItems = [
+export const navItems = [
   { name: "HOME", link: "/", dropDown: false },
   { name: "ABOUT US", link: "/about-us", dropDown: false },
   {
@@ -48,11 +48,11 @@ const navItems = [
           { name: "MS Plate", link: "/steel/ms-plate" },
           { name: "MS Angle", link: "/steel/ms-angle" },
           { name: "MS Flat", link: "/steel/ms-flat" },
-          { name: "I Beam", link: "/steel/i-beam" },
+          { name: "MS I Beam", link: "/steel/ms-i-beam" },
           { name: "MS Round rod", link: "/steel/ms-round-rod" },
           { name: "MS Round pipe", link: "/steel/ms-round-pipe" },
           { name: "MS Square pipe", link: "/steel/ms-square-pipe" },
-          { name: "MS Rectangle pipe", link: "/steel/ms-rectangle-pipe" },
+          { name: "MS Rectangular Pipe", link: "/steel/ms-rectangular-pipe" },
           { name: "MS Chequered plate", link: "/steel/ms-chequered-plate" },
           { name: "Roofing sheet", link: "/steel/roofing-sheet" },
         ],

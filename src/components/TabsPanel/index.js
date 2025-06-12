@@ -1,18 +1,14 @@
-"use client"
+"use client";
 import React from "react";
 import { Box, Tabs, Tab, Typography } from "@mui/material";
 
-// TabPanel Component
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
+function TabPanel({ children, value, index }) {
   return (
     <Box
       role="tabpanel"
       hidden={value !== index}
       id={`custom-tabpanel-${index}`}
       aria-labelledby={`custom-tab-${index}`}
-      {...other}
       sx={{ pt: 2 }}
     >
       {value === index && <Box>{children}</Box>}
@@ -20,23 +16,47 @@ function TabPanel(props) {
   );
 }
 
-// Main Component
-export default function ProductTabs() {
+export default function ReusableTabs({ tabData}) {
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+  const handleChange = (_, newValue) => setValue(newValue);
+
+  // Render logic for JSON content
+  const renderContent = (content) => {
+    if (!Array.isArray(content)) return null;
+
+    if (typeof content[0] === "string") {
+      // Array of plain strings
+      return content.map((text, idx) => (
+        <Typography key={idx} variant="body2" sx={{ mb: 1, fontFamily: "Inter", color: "#444" }}>
+          {text}
+        </Typography>
+      ));
+    }
+
+    if (typeof content[0] === "object") {
+      // Array of question-answer objects
+      return content.map((item, idx) => (
+        <Box key={idx} sx={{ mb: 2 }}>
+          <Typography variant="subtitle2" sx={{ fontWeight: 600, fontFamily: "Poppins" }}>
+            Q: {item.question}
+          </Typography>
+          <Typography variant="body2" sx={{ fontFamily: "Inter", color: "#444" }}>
+            {item.answer}
+          </Typography>
+        </Box>
+      ));
+    }
+
+    return null;
   };
 
   return (
     <Box sx={{ mt: 4 }}>
-      {/* Tabs */}
       <Tabs
         value={value}
         onChange={handleChange}
         variant="fullWidth"
-        textColor="primary"
-        indicatorColor="primary"
         sx={{
           borderBottom: "1px solid #ccc",
           "& .MuiTab-root": {
@@ -56,58 +76,16 @@ export default function ProductTabs() {
           },
         }}
       >
-        <Tab label="Overview" />
-        <Tab label="Features" />
-        <Tab label="FAQs" />
+        {tabData.map((tab, index) => (
+          <Tab key={index} label={tab.label} />
+        ))}
       </Tabs>
 
-      {/* Tab Panels */}
-      <TabPanel value={value} index={0}>
-        <Typography variant="body2" sx={{ fontFamily: "Inter", color: "#444" }}>
-          Our TMT bars are manufactured using state-of-the-art technology,
-          offering excellent strength and ductility. They are ideal for
-          residential, commercial, and industrial construction projects.
-        </Typography>
-      </TabPanel>
-
-      <TabPanel value={value} index={1}>
-        <ul
-          style={{ paddingLeft: "1.5rem", color: "#444", fontFamily: "Inter" }}
-        >
-          <li>High tensile strength</li>
-          <li>Corrosion resistant</li>
-          <li>Earthquake resistant</li>
-          <li>Easy to weld and bend</li>
-          <li>Certified by leading standards</li>
-        </ul>
-      </TabPanel>
-
-      <TabPanel value={value} index={2}>
-        <Typography
-          variant="subtitle2"
-          sx={{ fontWeight: 600, mb: 1, fontFamily: "Poppins" }}
-        >
-          Q: Are these TMT bars ISI certified?
-        </Typography>
-        <Typography
-          variant="body2"
-          sx={{ mb: 2, fontFamily: "Inter", color: "#444" }}
-        >
-          Yes, all our TMT bars come with ISI certification and meet national
-          quality standards.
-        </Typography>
-
-        <Typography
-          variant="subtitle2"
-          sx={{ fontWeight: 600, mb: 1, fontFamily: "Poppins" }}
-        >
-          Q: Can I order in bulk for a construction site?
-        </Typography>
-        <Typography variant="body2" sx={{ fontFamily: "Inter", color: "#444" }}>
-          Absolutely! We provide bulk supplies with transportation and site
-          delivery options.
-        </Typography>
-      </TabPanel>
+      {tabData.map((tab, index) => (
+        <TabPanel key={index} value={value} index={index}>
+          {renderContent(tab.content)}
+        </TabPanel>
+      ))}
     </Box>
   );
 }
