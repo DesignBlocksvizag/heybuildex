@@ -3,6 +3,7 @@ export const SteelData = [
     category: "Construction Steel",
     name: "TMT Bars",
     link: "tmt-bars",
+    image : "/tmt-bars.jpg",
     description: [
       "TMT bars are essential for construction due to their strength.",
       "They are used in residential, commercial, and infrastructure projects.",
@@ -43,6 +44,7 @@ export const SteelData = [
   {
     name: "Binding Wire",
     link: "binding-wire",
+    image : "/binding-wire.jpg",
     description: [
       "Binding wire is used to tie rebars at joints to keep the structure intact.",
       "It ensures the correct positioning of steel bars before and during concreting.",
@@ -86,6 +88,7 @@ export const SteelData = [
   {
     name: "MS Channel",
     link: "ms-channel",
+    image : "/ms-channel.jpg",
     description: [
       "MS Channel, also known as C-Channel or ISMC (Indian Standard Medium Channel), is widely used in construction and structural applications.",
       "It provides excellent load-bearing support and is commonly used in building frames, machinery, and heavy equipment.",
@@ -130,6 +133,7 @@ export const SteelData = [
   {
     name: "MS Plate",
     link: "ms-plate",
+    image : "/ms-plate.jpg",
     description: [
       "MS Plate (Mild Steel Plate) is a flat structural steel product widely used in fabrication and construction.",
       "It offers good weldability, machinability, and high tensile strength.",
@@ -174,6 +178,7 @@ export const SteelData = [
   {
     name: "MS Angle",
     link: "ms-angle",
+    image : "/ms-angles.jpg",
     description: [
       "MS Angle (Mild Steel Angle) is a structural steel product with an 'L' shaped cross-section, commonly used in construction and engineering applications.",
       "It provides strength, stability, and resistance to bending, making it ideal for structural frameworks and support systems.",
@@ -218,6 +223,7 @@ export const SteelData = [
   {
     name: "MS Flat",
     link: "ms-flat",
+    image : "/ms-flat.jpg",
     description: [
       "MS Flat (Mild Steel Flat Bar) is a rectangular section steel product widely used in fabrication, construction, and industrial applications.",
       "It is known for its high tensile strength, durability, and excellent weldability.",
@@ -262,6 +268,7 @@ export const SteelData = [
   {
     name: "MS I Beam",
     link: "ms-i-beam",
+    image : "/i-beam.jpg",
     description: [
       "MS I Beam (Mild Steel I Beam) is a structural steel product shaped like the letter 'I', designed to bear heavy loads and provide excellent structural support.",
       "Its design efficiently distributes weight and resists bending, making it ideal for heavy-duty structural applications.",
@@ -315,6 +322,7 @@ export const SteelData = [
   {
     name: "MS Round Rod",
     link: "ms-round-rod",
+    image : "/ms-round-rod.jpg",
     description: [
       "MS Round Rod (Mild Steel Round Bar) is a cylindrical steel product commonly used in construction, fabrication, and manufacturing.",
       "It offers excellent strength, ductility, and weldability, making it suitable for a wide range of industrial applications.",
@@ -369,6 +377,7 @@ export const SteelData = [
   {
     name: "MS Round Pipe",
     link: "ms-round-pipe",
+    image : "/ms-round-pipes.jpg",
     description: [
       "MS Round Pipe (Mild Steel Round Pipe) is a hollow circular steel section widely used in structural, mechanical, and general engineering applications.",
       "It provides good strength, weldability, and durability, making it suitable for transporting fluids, fabrication, and construction.",
@@ -422,59 +431,8 @@ export const SteelData = [
   },
   {
     name: "MS Square Pipe",
-    link: "/steel/ms-square-pipe",
-    description: [
-      "MS Square Pipe is a hollow structural section made from mild steel with equal-width sides, commonly used in construction and fabrication.",
-      "These pipes are known for their high strength, uniformity, and excellent weldability, making them ideal for load-bearing and structural applications.",
-      "They are used in a variety of industries including construction, furniture, automotive, and general engineering.",
-      "MS Square Pipes come in a wide range of sizes and thicknesses to meet specific application requirements.",
-      "They offer good corrosion resistance and are often used in frameworks, fences, gates, and supports.",
-    ],
-    sizes: [
-      "20x20 mm",
-      "25x25 mm",
-      "32x32 mm",
-      "40x40 mm",
-      "50x50 mm",
-      "75x75 mm",
-      "100x100 mm",
-    ],
-    overview:
-      "MS Square Pipes are versatile and durable steel sections that provide excellent strength and dimensional accuracy. They are essential in structural and architectural projects due to their form, strength, and adaptability.",
-    features: [
-      "High structural strength",
-      "Uniform shape and dimension",
-      "Excellent weldability and machinability",
-      "Available in a range of sizes and thicknesses",
-      "Ideal for frames, supports, and fabrication work",
-    ],
-    faqs: [
-      {
-        question: "Where are MS Square Pipes commonly used?",
-        answer:
-          "They are used in construction, structural supports, furniture manufacturing, railings, gates, and engineering projects.",
-      },
-      {
-        question: "What are the advantages of using MS Square Pipes?",
-        answer:
-          "They offer high strength, ease of welding, corrosion resistance, and uniform dimensions for reliable fabrication.",
-      },
-      {
-        question: "Are MS Square Pipes rust-proof?",
-        answer:
-          "MS Square Pipes are not rust-proof by default but can be coated or painted for enhanced corrosion resistance.",
-      },
-      {
-        question: "Can MS Square Pipes be used for load-bearing structures?",
-        answer:
-          "Yes, they are widely used in load-bearing and structural frameworks due to their strength and durability.",
-      },
-    ],
-    pageLink: "/steel/ms-square-pipe",
-  },
-  {
-    name: "MS Square Pipe",
-    link: "/steel/ms-square-pipe",
+    link: "ms-square-pipe",
+    image : "/ms-square-pipe.jpg",
     description: [
       "MS Square Pipe is a hollow structural section made from mild steel with equal-width sides, commonly used in construction and fabrication.",
       "These pipes are known for their high strength, uniformity, and excellent weldability, making them ideal for load-bearing and structural applications.",
@@ -527,6 +485,7 @@ export const SteelData = [
   {
     name: "MS Rectangular Pipe",
     link: "ms-rectangular-pipe",
+    image:"/ms-rectangular-pipe.jpg",
     description: [
       "MS Rectangular Pipe (Mild Steel Rectangular Hollow Section) is a steel structural component with a rectangular cross-section, widely used in construction and fabrication.",
       "It offers high structural strength, smooth finish, and excellent weldability.",
@@ -580,6 +539,7 @@ export const SteelData = [
   {
     name: "MS Chequered Plate",
     link: "ms-chequered-plate",
+    image : "/ms-chequered-plate.jpg",
     description: [
       "MS Chequered Plate (Mild Steel Chequered Plate) is a steel plate with a regular pattern of raised diamonds or lines on one side, providing excellent anti-slip properties.",
       "It is widely used in industrial flooring, staircases, walkways, and ramps due to its high durability and grip.",
@@ -624,6 +584,7 @@ export const SteelData = [
   {
     name: "Roofing Sheet",
     link: "roofing-sheet",
+    image : "/roofing-sheets.jpg",
     description: [
       "Roofing Sheets are corrugated or profiled metal sheets used to cover roofs and provide protection against weather elements.",
       "They are made from materials like galvanized iron (GI), aluminum, or color-coated steel and are widely used in industrial, commercial, and residential roofing.",

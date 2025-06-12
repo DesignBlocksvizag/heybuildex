@@ -46,7 +46,7 @@ export default function SteelProductPage({ product }) {
         sx={{
           position: "relative",
           py: { xs: 10, md: 12, lg: 14 },
-          backgroundImage: `url(${image})`,
+          background : "url('/product-bg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -58,7 +58,7 @@ export default function SteelProductPage({ product }) {
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundColor: "rgba(0,0,0,0.6)",
+            // backgroundColor: "rgba(0,0,0,0.6)",
             backdropFilter: "blur(0.5px)",
             display: "flex",
             justifyContent: "center",
