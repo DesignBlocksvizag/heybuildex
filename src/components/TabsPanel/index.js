@@ -28,7 +28,7 @@ export default function ReusableTabs({ tabData}) {
     if (typeof content[0] === "string") {
       // Array of plain strings
       return content.map((text, idx) => (
-        <Typography key={idx} variant="body2" sx={{ mb: 1, fontFamily: "Inter", color: "#444" }}>
+        <Typography key={idx} variant="body2" sx={{ mb: 1, fontFamily: "Inter", color: "#444",fontSize: 13,fontWeight:400 }}>
           {text}
         </Typography>
       ));
@@ -38,10 +38,10 @@ export default function ReusableTabs({ tabData}) {
       // Array of question-answer objects
       return content.map((item, idx) => (
         <Box key={idx} sx={{ mb: 2 }}>
-          <Typography variant="subtitle2" sx={{ fontWeight: 600, fontFamily: "Poppins" }}>
+          <Typography variant="subtitle2" sx={{ fontWeight: 600, fontFamily: "Poppins",fontSize: 13, color: "#333", mb: 0.5 }}>
             Q: {item.question}
           </Typography>
-          <Typography variant="body2" sx={{ fontFamily: "Inter", color: "#444" }}>
+          <Typography variant="body2" sx={{ fontFamily: "Inter", color: "#444",fontSize: 12,fontWeight:400 }}>
             {item.answer}
           </Typography>
         </Box>

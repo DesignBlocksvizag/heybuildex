@@ -674,3 +674,177 @@ export const SteelData = [
     pageLink: "/steel/roofing-sheet",
   },
 ];
+export const CementData = [
+  {
+    category: "Construction Cement",
+    name: "Ultratech Cement",
+    link: "ultratech-cement",
+    description: [
+      "Ultratech Cement is one of the most trusted brands in India.",
+      "Ideal for residential, commercial, and industrial construction.",
+      "Offers superior strength, durability, and workability.",
+      "Resists cracking and provides high bonding strength.",
+      "Suitable for RCC, plastering, and masonry works.",
+    ],
+    sizes: ["50kg Bag"],
+    overview:
+      "Ultratech Cement is known for its high-performance formulation, ensuring strength and durability in all construction applications. It is engineered for both large-scale infrastructure and individual home-building needs.",
+    features: [
+      "High compressive strength",
+      "Quick setting time",
+      "Smooth workability",
+      "Low heat of hydration",
+      "Resistant to moisture and corrosion",
+    ],
+    faqs: [
+      {
+        question: "Is Ultratech Cement suitable for RCC work?",
+        answer:
+          "Yes, Ultratech Cement is perfect for RCC and other structural applications.",
+      },
+      {
+        question: "What is the packaging size available?",
+        answer: "Ultratech Cement is commonly available in 50kg bags.",
+      },
+      {
+        question: "Can I use it for plastering and masonry?",
+        answer:
+          "Absolutely! It offers smooth finish and good bonding for masonry and plastering.",
+      },
+      {
+        question: "Is this cement weather resistant?",
+        answer:
+          "Yes, it is designed to withstand harsh environmental conditions.",
+      },
+    ],
+    pageLink: "/cement/ultratech-cement",
+  },
+  {
+    category: "Construction Cement",
+    name: "Maha Cement",
+    link: "maha-cement",
+    description: [
+      "Maha Cement is known for its premium quality and consistent performance.",
+      "Widely used in residential, commercial, and infrastructure projects.",
+      "Offers excellent compressive strength and workability.",
+      "Provides smooth finish and better water retention.",
+      "Suitable for both load-bearing and non-load-bearing applications.",
+    ],
+    sizes: ["50kg Bag"],
+    overview:
+      "Maha Cement is a trusted brand delivering superior quality cement ideal for various construction needs. It is engineered to provide strong bonding, reduced shrinkage, and long-lasting durability for all types of structures.",
+    features: [
+      "High early strength",
+      "Superior workability",
+      "Weather-resistant formulation",
+      "Uniform particle size for smooth finish",
+      "ISI certified and eco-friendly",
+    ],
+    faqs: [
+      {
+        question: "What is Maha Cement commonly used for?",
+        answer:
+          "It is widely used for foundations, columns, slabs, plastering, and masonry.",
+      },
+      {
+        question: "Does Maha Cement offer good water retention?",
+        answer:
+          "Yes, it ensures better curing and water retention for optimal strength.",
+      },
+      {
+        question: "Is it suitable for hot and humid regions?",
+        answer:
+          "Yes, it is formulated to perform well in diverse climates, including hot and humid areas.",
+      },
+      {
+        question: "What sizes are available?",
+        answer: "Maha Cement is available in standard 50kg bags.",
+      },
+    ],
+    pageLink: "/cement/maha-cement",
+  },
+  {
+    category: "Construction Cement",
+    name: "Ramco Cement",
+    link: "ramco-cement",
+    description: [
+      "Ramco Cement is a premium cement brand known for its high quality.",
+      "Ideal for residential, commercial, and industrial construction.",
+      "Provides excellent strength and long-term durability.",
+      "Ensures smooth application and high bonding strength.",
+      "Resistant to sulfate attack and ideal for coastal areas.",
+    ],
+    sizes: ["50kg Bag"],
+    overview:
+      "Ramco Cement offers superior performance in construction with high strength and quick setting properties. It is perfect for building structures that demand longevity and structural stability.",
+    features: [
+      "Quick setting and high early strength",
+      "Sulfate and corrosion resistant",
+      "Smooth and workable mix",
+      "ISI and BIS certified",
+      "Suitable for RCC, plastering, and masonry",
+    ],
+    faqs: [
+      {
+        question: "Can Ramco Cement be used for RCC structures?",
+        answer: "Yes, it is highly suitable for RCC, foundations, and slabs.",
+      },
+      {
+        question: "Is Ramco Cement resistant to coastal weather?",
+        answer:
+          "Yes, its sulfate-resistant formulation makes it ideal for coastal and damp regions.",
+      },
+      {
+        question: "What packaging is available?",
+        answer: "Ramco Cement is typically available in 50kg bags.",
+      },
+      {
+        question: "Is it ISI certified?",
+        answer: "Yes, Ramco Cement complies with ISI standards.",
+      },
+    ],
+    pageLink: "/cement/ramco-cement",
+  },
+  {
+    category: "Construction Cement",
+    name: "Sagar Cement",
+    link: "sagar-cement",
+    description: [
+      "Sagar Cement delivers reliable strength and durability for all types of construction.",
+      "Used widely in housing, roads, bridges, and industrial projects.",
+      "Blended for better workability and reduced cracks.",
+      "Provides consistent performance in all weather conditions.",
+      "Environment-friendly production process.",
+    ],
+    sizes: ["50kg Bag"],
+    overview:
+      "Sagar Cement is engineered for excellence with high compressive strength and superior finish. It is a reliable choice for quality construction across diverse applications, from homes to infrastructure.",
+    features: [
+      "Consistent strength and setting time",
+      "Improved workability and finish",
+      "Eco-friendly and low carbon footprint",
+      "Suitable for both RCC and non-structural works",
+      "ISI and BIS compliant",
+    ],
+    faqs: [
+      {
+        question: "Where can I use Sagar Cement?",
+        answer:
+          "It is ideal for all general construction including RCC, plastering, and brickwork.",
+      },
+      {
+        question: "What is the curing time for Sagar Cement?",
+        answer: "It offers standard setting and curing time as per ISI norms.",
+      },
+      {
+        question: "Is this cement suitable for hot climates?",
+        answer: "Yes, it performs well under various temperature conditions.",
+      },
+      {
+        question: "Is it eco-friendly?",
+        answer: "Yes, Sagar Cement is produced using sustainable practices.",
+      },
+    ],
+    pageLink: "/cement/sagar-cement",
+  },
+];

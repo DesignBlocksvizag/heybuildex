@@ -106,7 +106,7 @@ export default function SteelProductPage({ product }) {
                     fontSize: 14,
                     color: "#333",
                     fontFamily: "Inter",
-                    mb: 2,
+                    mb: "4px",
                   }}
                 >
                   {line}
