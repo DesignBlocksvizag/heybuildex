@@ -3,12 +3,14 @@ import { SteelData } from "@/src/data";
 import SteelProductPage from "@/src/content/Product";
 import Header from "@/src/components/Header";
 import Footer from "@/src/components/Footer";
-export default function SteelPage({ params }) {
-  const { slug } = params;
+import { notFound } from "next/navigation";
+export default async function SteelPage({ params }) {
+  const resolvedParams = await params;
+  const { slug } = resolvedParams;
   const steelItem = SteelData.find((item) => item.link === slug);
 
   if (!steelItem) {
-    return <div>Steel item not found</div>;
+    return notFound();
   }
 
   return (
