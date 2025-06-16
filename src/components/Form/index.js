@@ -41,17 +41,15 @@ export default function QuotationForm() {
       const now = new Date().toLocaleString(); // adds date and time
       const data = {
         name: values.name,
-        email: "",
-        toMail: "sales@heybuildex.com",
-        toName: "Hey Build Ex Landing Form",
         phone: values.phone,
-        subject: `${values.steelType} - ${values.material} [${now}]`,
+        steelType: values.steelType,
+        material: values.material,
         message: values.message,
       };
 
       try {
         const response = await fetch(
-          "https://api.qrdcard.com/api/url/sendmail",
+          "https://heybuildex.com/submit-lead.php",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
