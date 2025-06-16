@@ -66,7 +66,9 @@ const AboutUs = () => {
             mb: 4,
           }}
         >
-          Hey BuildEX
+          Hey Build<Typography variant="span" sx={{ color: "#01933e",
+    position: "relative",
+}}>EX</Typography>
         </Typography>
 
         {/* Section 1: Introduction */}
