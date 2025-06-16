@@ -18,7 +18,7 @@ const contactInfo = [
   {
     icon: <LocationOn sx={{ fontSize: 40, color: "#01933e" }} />,
     title: "Our Location",
-    detail: "Andhra Pradesh, Telangana",
+    detail: "2nd Floor, D.No.2-151/3/1, Plot No.719A, near Gandhi Statue, Midhilapuri Vuda Colony, Madhurawada, Visakhapatnam, Andhra Pradesh 530041, India",
   },
 ];
 

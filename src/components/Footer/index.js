@@ -58,11 +58,11 @@ export default function Footer() {
               Quick Links
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>
-              {["Home", "About Us", "Products", "Contact Us", "Careers"].map(
+              {[{name : "Home",link : "/"}, {name : "About Us",link:"/about-us"}, {name:"Products",link:"/steel/tmt-bars"}, {name : "Contact Us",link:"/contact"},].map(
                 (link, i) => (
                   <Link
                     key={i}
-                    href={`/${link.replace(/\s+/g, "").toLowerCase()}`}
+                    href={link.link}
                     underline="hover"
                     color="inherit"
                     sx={{
@@ -72,7 +72,7 @@ export default function Footer() {
                       "&:hover": { color: "#1c953f" },
                     }}
                   >
-                    {link}
+                    {link.name}
                   </Link>
                 )
               )}
