@@ -13,19 +13,19 @@ const slides = [
     image: "/slides/bnr-1.jpg",
     title: "Reliable Construction Materials & Equipment Rentals",
     text: "Delivering top-grade structural steel and infrastructure equipment — always on time, always within budget, with expert support at every step.",
-    link: "/about-us",
+    link: "/steel/tmt-bars",
   },
   {
     image: "/slides/bnr-2.jpg",
     title: "ISO-Certified Quality, Built to Last",
     text: "Our structural steel meets ISO standards for strength, durability, and consistency — ensuring your projects stand strong for years to come.",
-    link: "/certifications",
+    link: "/steel/tmt-bars",
   },
   {
     image: "/slides/bnr-3.jpg",
     title: "Transparent. Affordable. Expert-Backed.",
     text: "Enjoy 100% weighment transparency, competitive pricing, and guidance from experienced professionals — all tailored to your project’s needs.",
-    link: "/services",
+    link: "/steel/tmt-bars",
   },
 ];
 

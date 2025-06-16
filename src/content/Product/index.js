@@ -87,6 +87,8 @@ export default function SteelProductPage({ product ,brands}) {
           {/* Left Section */}
           <Grid size={{ xs: 12, md: 9 }}>
             <Paper elevation={3} sx={{ borderRadius: 2, p: 2 }}>
+              <Grid container  spacing={2}>
+                <Grid  size={{xs:12,md:6}}>
               <Box
                 component="img"
                 src={image}
@@ -95,11 +97,12 @@ export default function SteelProductPage({ product ,brands}) {
                   width: "100%",
                   height: "300px",
                   borderRadius: 2,
-                  objectFit: "contain",
-                  mb: 2,
+                  objectFit: "cover",
+                  mb: 1,
                 }}
               />
-
+              </Grid>
+              <Grid size={{xs:12,md:6}}>
               {description?.map((line, idx) => (
                 <Typography
                   key={idx}
@@ -114,6 +117,8 @@ export default function SteelProductPage({ product ,brands}) {
                   {line}
                 </Typography>
               ))}
+              </Grid>
+              </Grid>
 
              {brands && (<><Typography
                 variant="h6"

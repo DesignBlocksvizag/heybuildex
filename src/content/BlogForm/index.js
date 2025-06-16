@@ -53,7 +53,7 @@ const BlogFormDialog = ({
     <Dialog open={open} onClose={handleClose} fullWidth maxWidth="sm">
       <Card sx={{ py: 3 }}>
         <CardContent>
-          <Typography variant="h5" align="center" mb={2}>
+          <Typography variant="h5" align="center" mb={2} sx={{color:"#029441",fontFamily:"Poppins"}}>
             {editStatus ? "Edit Blog" : "Add Blog"}
           </Typography>
           <Formik
@@ -102,10 +102,11 @@ const BlogFormDialog = ({
                     onClick={handleClose}
                     variant="outlined"
                     color="error"
+                    sx={{fontFamily:"Poppins"}}
                   >
                     Cancel
                   </Button>
-                  <Button type="submit" variant="contained" color="primary">
+                  <Button type="submit" variant="contained" color="primary"    sx={{fontFamily:"Poppins"}}>
                     {editStatus ? "Update" : "Create"}
                   </Button>
                 </Box>
@@ -160,8 +161,8 @@ export default function BlogTable() {
     if (values.image) formData.append("image", values.image);
 
     const url = editStatus
-      ? `${API_BASE}/update.php`
-      : `${API_BASE}/create.php`;
+      ? `${API_BASE}/blog-api/update.php`
+      : `${API_BASE}/blog-api/create.php`;
     if (editStatus) formData.append("id", editData.id);
 
     try {
@@ -188,7 +189,7 @@ export default function BlogTable() {
     try {
       const form = new FormData();
       form.append("id", deleteId);
-      const res = await fetch(`${API_BASE}/delete.php`, {
+      const res = await fetch(`${API_BASE}/blog-api/delete.php`, {
         method: "POST",
         body: form,
       });
@@ -209,6 +210,11 @@ export default function BlogTable() {
         <Button
           startIcon={<AddCircleRoundedIcon />}
           variant="contained"
+          sx={{
+            background:"#029441",
+            fontFamily:"Poppins"
+            
+          }}
           onClick={() => setOpen(true)}
         >
           Add Blog
@@ -248,7 +254,7 @@ export default function BlogTable() {
                     <TableCell>
                       {blog.image && (
                         <img
-                          src={`https://heybuildex.com/blog-api/${blog.image}`}
+                          src={`${API_BASE}/blog-api/${blog.image}`}
                           alt=""
                           width={100}
                         />
