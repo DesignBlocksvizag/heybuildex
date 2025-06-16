@@ -1,9 +1,44 @@
 import React from "react";
-import { SteelData } from "@/src/data";
+import { SteelData,SteelMetaData } from "@/src/data";
 import SteelProductPage from "@/src/content/Product";
 import Header from "@/src/components/Header";
 import Footer from "@/src/components/Footer";
 import { notFound } from "next/navigation";
+
+
+
+export async function generateMetadata({ params }) {
+   const resolvedParams = await params;
+  const { slug } = resolvedParams;
+  const data =  SteelMetaData.find((item) => item.link === slug);
+  const baseUrl = 'https://heybuildex.netlify.app'
+
+  return {
+    title: data.title,
+    description: data.description,
+    openGraph: {
+      title: data.title,
+      description: data.description,
+      images: [
+        {
+          url: new URL(data.image, baseUrl).href,
+          // alt: data.imageAlt,
+        },
+      ],
+    },
+    twitter: {
+      title: data.title,
+      description: data.description,
+      images: [
+        {
+          url: new URL(data.image, baseUrl).href,
+          // alt: data.imageAlt,
+        },
+      ],
+    },
+    keywords: data.keywords,
+  };
+}
 export default async function SteelPage({ params }) {
   const resolvedParams = await params;
   const { slug } = resolvedParams;

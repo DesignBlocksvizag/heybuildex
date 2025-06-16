@@ -863,7 +863,7 @@ export const OtherData = [
     category: "Construction Services",
     name: "Infra Equipment Rentals",
     link: "infra-equipment-rentals",
-    image : "/infra-rentals.jpg",
+    image: "/infra-rentals.jpg",
     description: [
       "Reliable infra equipment rentals for all types of construction projects.",
       "Includes piling rigs, transit mixers, concrete batching plants, scaffolding, and shuttering systems.",
@@ -915,7 +915,7 @@ export const OtherData = [
     category: "Construction Safety",
     name: "Safety Equipment",
     link: "safety-equipment",
-    image : "/safety.jpg",
+    image: "/safety.jpg",
     description: [
       "High-quality safety equipment for complete on-site protection.",
       "Ideal for construction, industrial, and infrastructure environments.",
@@ -972,5 +972,172 @@ export const OtherData = [
       },
     ],
     pageLink: "/safety/safety-equipment",
+  },
+];
+export const SteelMetaData = [
+  {
+    title: "TMT Bars",
+    link: "tmt-bars",
+    image: "/tmt-bars.jpg",
+    description:
+      "High-strength TMT bars ideal for construction, providing superior bendability and earthquake resistance.",
+    imageUrl: "/images/steel-products/tmt-bars.jpg",
+    keywords: [
+      "TMT bars",
+      "construction steel",
+      "reinforcement bars",
+      "steel rods",
+    ],
+  },
+  {
+    title: "Binding Wire",
+    link: "binding-wire",
+    image: "/binding-wire.jpg",
+    description:
+      "Durable and flexible binding wire used for tying TMT bars and reinforcing structures.",
+    imageUrl: "/images/steel-products/binding-wire.jpg",
+    keywords: ["binding wire", "tie wire", "construction wire", "steel wire"],
+  },
+  {
+    title: "MS Channel",
+    link: "ms-channel",
+    image: "/ms-channel.jpg",
+    description:
+      "Mild Steel channels used in structural applications like frames, supports, and construction projects.",
+    imageUrl: "/images/steel-products/ms-channel.jpg",
+    keywords: [
+      "MS channel",
+      "mild steel channel",
+      "steel u channel",
+      "structural steel",
+    ],
+  },
+  {
+    title: "MS Plate",
+    link: "ms-plate",
+    image: "/ms-plate.jpg",
+    description:
+      "Flat Mild Steel plates for construction, fabrication, and industrial use with high strength and durability.",
+    imageUrl: "/images/steel-products/ms-plate.jpg",
+    keywords: [
+      "MS plate",
+      "mild steel plate",
+      "flat steel sheet",
+      "steel plate",
+    ],
+  },
+  {
+    title: "MS Angle",
+    link: "ms-angle",
+    image: "/ms-angles.jpg",
+    description:
+      "L-shaped MS angles used for support structures, frames, and brackets in fabrication and construction.",
+    imageUrl: "/images/steel-products/ms-angle.jpg",
+    keywords: ["MS angle", "steel angle", "mild steel angle", "L angle"],
+  },
+  {
+    title: "MS Flat",
+    link: "ms-flat",
+    image: "/ms-flat.jpg",
+    description:
+      "Rectangular MS flat bars suitable for construction, fabrication, and industrial applications.",
+    imageUrl: "/images/steel-products/ms-flat.jpg",
+    keywords: ["MS flat", "flat bar", "mild steel flat", "steel strip"],
+  },
+  {
+    title: "MS I-Beam",
+    link: "ms-i-beam",
+    image: "/i-beam.jpg",
+    description:
+      "Strong and durable I-beams made of Mild Steel, ideal for heavy structural support.",
+    imageUrl: "/images/steel-products/ms-i-beam.jpg",
+    keywords: [
+      "MS I-beam",
+      "steel beam",
+      "mild steel I section",
+      "structural beam",
+    ],
+  },
+  {
+    title: "MS Round Rod",
+    link: "ms-round-rod",
+    image: "/ms-round-rod.jpg",
+    description:
+      "Circular MS rods used in construction, manufacturing, and machining industries.",
+    keywords: [
+      "MS round rod",
+      "mild steel rod",
+      "steel round bar",
+      "circular steel rod",
+    ],
+  },
+  {
+    title: "MS Round Pipe",
+    link: "ms-round-pipe",
+    image: "/ms-round-pipes.jpg",
+    description:
+      "Hollow round MS pipes for plumbing, fabrication, and structural use.",
+    keywords: [
+      "MS round pipe",
+      "mild steel pipe",
+      "steel tube",
+      "round steel pipe",
+    ],
+  },
+  {
+    title: "MS Square Pipe",
+    link: "ms-square-pipe",
+    image: "/ms-square-pipe.jpg",
+    description:
+      "Square cross-section MS pipes used in construction and structural fabrication.",
+    imageUrl: "/images/steel-products/ms-square-pipe.jpg",
+    keywords: [
+      "MS square pipe",
+      "square tube",
+      "mild steel square pipe",
+      "steel hollow section",
+    ],
+  },
+  {
+    title: "MS Rectangular Pipe",
+    link: "ms-rectangular-pipe",
+    image: "/ms-rectangular-pipe.jpg",
+    description:
+      "Rectangular MS pipes used for frame construction, railing, and industrial purposes.",
+    imageUrl: "/images/steel-products/ms-rectangular-pipe.jpg",
+    keywords: [
+      "MS rectangular pipe",
+      "rectangular tube",
+      "mild steel rectangular pipe",
+      "steel hollow section",
+    ],
+  },
+  {
+    title: "MS Chequered Plate",
+    link: "ms-chequered-plate",
+    image: "/ms-chequered-plate.jpg",
+    description:
+      "Chequered MS plates with anti-skid surface ideal for flooring, ramps, and industrial platforms.",
+    imageUrl: "/images/steel-products/ms-chequered-plate.jpg",
+    keywords: [
+      "MS chequered plate",
+      "checkered steel plate",
+      "anti-slip plate",
+      "mild steel pattern plate",
+    ],
+  },
+  {
+    title: "Roofing Sheet",
+    link: "roofing-sheet",
+    image: "/roofing-sheets.jpg",
+    description:
+      "Durable and weather-resistant steel roofing sheets for industrial and residential buildings.",
+    imageUrl: "/images/steel-products/roofing-sheet.jpg",
+    keywords: [
+      "roofing sheet",
+      "steel roofing",
+      "metal sheet roof",
+      "color coated sheet",
+    ],
   },
 ];
