@@ -10,6 +10,7 @@ import ProjectSlides from "@/src/content/Sliders/Projects";
 import SectorsWeServe from "@/src/content/Sliders/SectorsWeServe";
 import TestimonialSlider from "@/src/content/Testimonials";
 import WelcomeSection from "@/src/content/WelcomeSection";
+import Clients from "@/src/content/Sliders/Clients";
 export default function Home() {
   return (
     <>
@@ -20,6 +21,7 @@ export default function Home() {
       <ClientSlides />
       <ProjectSlides />
       <SectorsWeServe />
+      <Clients />
       <TestimonialSlider />
       <Box sx={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/quote-bg.jpg')`,
