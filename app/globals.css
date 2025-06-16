@@ -6,6 +6,10 @@ body {
   overflow-x: hidden;
   padding: 0!important;
 }
+::selection {
+  background-color: #029441;
+  color: #ffffff; /* Optional: sets the text color when selected */
+}
 
 body {
   color: var(--foreground);
