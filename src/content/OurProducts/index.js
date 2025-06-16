@@ -77,7 +77,7 @@ const OurProducts = () => {
             display: "inline-block",
             fontWeight: 700,
             fontFamily: "Poppins",
-            color: "#00000",
+            color: "#ffffff",
             px: 2,
             mb: 1,
           }}
