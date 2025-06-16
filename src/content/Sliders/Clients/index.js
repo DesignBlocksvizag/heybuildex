@@ -3,15 +3,15 @@ import React, { useRef, useEffect } from "react";
 import { Box, Typography } from "@mui/material";
 
 const Clients = () => {
-  const images = [
-    { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
-    { src: "/clients/sail.png", alt: "Sail" },
-    { src: "/clients/tata.png", alt: "Tata" },
-    { src: "/clients/jsw.png", alt: "jsw" },
-    { src: "/clients/jindal-1.png", alt: "jindal" },
-    { src: "/clients/radha.png", alt: "radha" },
-    { src: "/clients/mangal.png", alt: "mangal" },
-    { src: "/clients/simhadri.png", alt: "simhadri" },
+    const images = [
+    { src: "/clients/kims.png", alt: "Kims" },
+    { src: "/clients/aurobindo.png", alt: "aurobindo" },
+    { src: "/clients/pavilion.png", alt: "pavilion" },
+    { src: "/clients/vpr.png", alt: "vpr" },
+    { src: "/clients/mama-home.png", alt: "mama-home" },
+    { src: "/clients/sri-chakra.png", alt: "sri-chakra" },
+    { src: "/clients/pv.png", alt: "pv" },
+    { src: "/clients/vaishno.png", alt: "vaishno" },
   ];
 
   const marqueeRef = useRef(null);

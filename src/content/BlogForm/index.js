@@ -42,6 +42,8 @@ const BlogFormDialog = ({
     description: Yup.string().required("Description is required"),
     image: editStatus ? Yup.mixed() : Yup.mixed().required("Image is required"),
   });
+  console.log(editStatus)
+  console.log(editData);
 
   const initialValues = {
     heading: editStatus ? editData.heading : "",
@@ -65,13 +67,14 @@ const BlogFormDialog = ({
               handleClose();
             }}
           >
-            {({ errors, touched, handleChange, setFieldValue }) => (
+            {({ errors, touched, handleChange, setFieldValue,values }) => (
               <Form>
                 <TextField
                   fullWidth
                   label="Heading"
                   name="heading"
                   margin="normal"
+                  value={values.heading}
                   onChange={handleChange}
                   error={touched.heading && Boolean(errors.heading)}
                   helperText={touched.heading && errors.heading}
@@ -83,6 +86,7 @@ const BlogFormDialog = ({
                   label="Description"
                   name="description"
                   margin="normal"
+                  value={values.description}
                   onChange={handleChange}
                   error={touched.description && Boolean(errors.description)}
                   helperText={touched.description && errors.description}

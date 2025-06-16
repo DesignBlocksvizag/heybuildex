@@ -113,7 +113,7 @@ const OurProducts = () => {
                 <CardContent sx={{py:"8px!important"}}>
                   <Typography
                     variant="h6"
-                    sx={{ fontWeight: 600, fontFamily: "Poppins", color: "#0D47A1" ,textAlign:"center"}}
+                    sx={{ fontWeight: 600, fontFamily: "Poppins", color: "#1976D2" ,textAlign:"center"}}
                   >
                     {product.title}
                   </Typography>

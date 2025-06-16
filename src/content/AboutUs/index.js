@@ -71,7 +71,7 @@ const AboutUs = () => {
 
         {/* Section 1: Introduction */}
         <Grid container spacing={4} alignItems="center">
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid size={{ xs: 12 }}>
             <Typography
               variant="body1"
               sx={{ fontSize: 15,fontWeight:400, color: "#333", fontFamily: "Inter" }}
@@ -81,15 +81,6 @@ const AboutUs = () => {
               infrastructure project, we’re here to make your construction
               journey easier, more efficient, and cost-effective.
             </Typography>
-          </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
-            {/* Replace with actual image */}
-            <Box
-              component="img"
-              src="/tmt-bars.jpg"
-              alt="Construction"
-              sx={{ width: "100%", borderRadius: 0,height:180,objectFit:"cover"}}
-            />
           </Grid>
         </Grid>
 
@@ -111,7 +102,7 @@ const AboutUs = () => {
               {/* Replace with actual image */}
               <Box
                 component="img"
-                src="/construction-industry-image.jpg"
+                src="/heybuildex.jpg"
                 alt="Equipment"
                 sx={{ width: "100%", borderRadius: 2 }}
               />
