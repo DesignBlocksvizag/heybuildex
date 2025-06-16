@@ -51,6 +51,7 @@ export default function WelcomeSection() {
                   "linear-gradient(to right, #1c953f 0%, #465a65 100%)",
               },
             }}
+            href="/steel/tmt-bars"
           >
             Explore Products
           </Button>

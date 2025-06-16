@@ -41,7 +41,7 @@ const AboutUs = () => {
     </Typography>
   </Box>
   </Box>
-    <Box sx={{ backgroundColor: "#f5f5f5", py: 6 }}>
+    <Box sx={{ backgroundColor: "#ffffff", py: 6 }}>
       <Container maxWidth="lg">
         {/* Welcome Title */}
         <Typography
@@ -86,7 +86,7 @@ const AboutUs = () => {
             {/* Replace with actual image */}
             <Box
               component="img"
-              src="/tmt-bars-real.jpg"
+              src="/tmt-bars.jpg"
               alt="Construction"
               sx={{ width: "100%", borderRadius: 0,height:180,objectFit:"cover"}}
             />
@@ -214,7 +214,7 @@ const AboutUs = () => {
               </Typography>
               <Typography
                 variant="body2"
-                sx={{ color: "#555", fontFamily: "Inter", textAlign: "center" }}
+                sx={{ color: "#555", fontFamily: "Inter", textAlign: "center",fontWeight:"bold" }}
               >
                 Co-Founder & CEO
               </Typography>
@@ -245,7 +245,7 @@ const AboutUs = () => {
               </Typography>
               <Typography
                 variant="body2"
-                sx={{ color: "#555", fontFamily: "Inter", textAlign: "center" }}
+                sx={{ color: "#555", fontFamily: "Inter", textAlign: "center",fontWeight:"bold" }}
               >
                 Co-Founder & COO
               </Typography>
@@ -281,20 +281,6 @@ const AboutUs = () => {
             cost-effective platform for materials and machinery—helping you save
             time, reduce costs, and build successfully.
           </Typography>
-          <Button
-            variant="contained"
-            sx={{
-              mt: 2,
-              backgroundColor: "#029441",
-              fontWeight: 600,
-              px: 4,
-              py: 1.5,
-              fontFamily: "Poppins, sans-serif",
-              "&:hover": { backgroundColor: "#026c34" },
-            }}
-          >
-            Get Started Today
-          </Button>
         </Box>
       </Container>
     </Box></>
