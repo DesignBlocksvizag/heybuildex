@@ -78,3 +78,36 @@ a {
     transform: translate(-50%, -50%);
   }
 }
+/* .slick-next:before{
+  color: #1c953f!important;
+}
+.slick-prev:before{
+  color: #1c953f!important;
+}
+.slick-dots li button:before {
+  color: #1c953f !important;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #1c953f !important;
+  opacity: 1;
+} */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes reversemarquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

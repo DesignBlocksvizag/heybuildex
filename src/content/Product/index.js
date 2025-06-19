@@ -132,7 +132,7 @@ export default function SteelProductPage({ product ,brands}) {
               >
                 Brands Available
               </Typography>
-              <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
+              <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2,justifyContent:"center",alignItems:"center" }}>
                 {brandImages.map((img, index) => (
                   <Box
                     key={index}

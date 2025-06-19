@@ -2,14 +2,13 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-const SectorsWeServe = () => {
+const ProjectSlides = () => {
   const images = [
-    { src: "/clients/roads.png", alt: "roads" },
-    { src: "/clients/railways.png", alt: "railways" },
-    { src: "/clients/airports.png", alt: "airports" },
-    { src: "/clients/real-estate.png", alt: "real-estate" },
-    { src: "/clients/industries.jpg", alt: "industries" },
-    { src: "/clients/ports.png", alt: "ports" },
+    { src: "/imagesclients/indian-navy.png", alt: "indian-navy" },
+    { src: "/imagesclients/vizag-port.png", alt: "vizag-port" },
+    { src: "/imagesclients/vo-port.jpg", alt: "vo-port" },
+    { src: "/imagesclients/kp-port.png", alt: "kp-port" },
+    { src: "/imagesclients/jsw-port.png", alt: "jsw-port" },
   ];
 
   return (
@@ -21,7 +20,7 @@ const SectorsWeServe = () => {
           textAlign="center"
           sx={{ color: "#000", fontFamily: "Poppins", mb: 3 }}
         >
-          Sectors We Serve
+          Trusted by Leading Projects
         </Typography>
 
         <Box
@@ -37,14 +36,14 @@ const SectorsWeServe = () => {
               key={index}
               sx={{
                 width: { xs: "120px", sm: "150px" },
-                height: { xs: "80px", sm: "100px" },
+                height: { xs: "100px", sm: "100px" },
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 background: "#fff",
                 boxShadow: 1,
                 borderRadius: 2,
-                p: 1,
+                p: 0.5,
               }}
             >
               <Box
@@ -65,4 +64,4 @@ const SectorsWeServe = () => {
   );
 };
 
-export default SectorsWeServe;
+export default ProjectSlides;

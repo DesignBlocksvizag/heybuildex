@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Slider from "react-slick";
 import { Box, Typography } from "@mui/material";
 import "slick-carousel/slick/slick.css";
@@ -40,7 +40,27 @@ const sliderSettings = {
 
 export default function TestimonialSlider() {
   return (
-    <Box sx={{ maxWidth: 900, mx: "auto", py: 6, px: 2 }}>
+    <Box
+      className="testimonial-slider"
+      sx={{
+        maxWidth: 900,
+        mx: "auto",
+        py: 6,
+        px: 2,
+        "& .slick-prev:before, & .slick-next:before": {
+          color: "#1c953f!important",
+        },
+        "& .slick-dots li button:before": {
+          color: "#1c953f!important",
+          fontSize: "7px",
+          opacity: 0.75,
+        },
+        "& .slick-dots li.slick-active button:before": {
+          color: "#1c953f!important",
+          opacity: 1,
+        },
+      }}
+    >
       <Typography
         variant="h5"
         fontWeight="bold"
@@ -72,7 +92,7 @@ export default function TestimonialSlider() {
               fontSize={14}
               fontFamily="Poppins"
               fontWeight="medium"
-              sx={{ color: "#1c953f " }}
+              sx={{ color: "#1c953f" }}
             >
               — {testimonial.author}
             </Typography>

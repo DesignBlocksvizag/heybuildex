@@ -40,7 +40,18 @@ const sliderSettings = {
 
 export default function TestimonialSlider() {
   return (
-    <Box sx={{  py: 6, px: 2,background:"#ffffff" }}>
+    <Box sx={{  py: 6, px: 2,background:"#ffffff","& .slick-prev:before, & .slick-next:before": {
+          color: "#1c953f!important",
+        },
+        "& .slick-dots li button:before": {
+          color: "#1c953f!important",
+          fontSize: "7px",
+          opacity: 0.75,
+        },
+        "& .slick-dots li.slick-active button:before": {
+          color: "#1c953f!important",
+          opacity: 1,
+        },}}>
       <Container maxWidth="md">
       <Typography
         variant="h5"

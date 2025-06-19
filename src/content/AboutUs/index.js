@@ -52,6 +52,7 @@ const AboutUs = () => {
             textAlign: "center",
             fontFamily: "Poppins, sans-serif",
             mb: 1,
+              fontSize: { xs: "15px"}
           }}
         >
           WELCOME TO
@@ -60,10 +61,11 @@ const AboutUs = () => {
           variant="h3"
           sx={{
             fontWeight: 800,
-            color: "#0D47A1",
+            color: "#465a65",
             textAlign: "center",
             fontFamily: "Poppins, sans-serif",
             mb: 4,
+             fontSize: { xs: "27px", md: "29px" },
           }}
         >
           Hey Build<Typography variant="span" sx={{ color: "#01933e",
@@ -92,7 +94,7 @@ const AboutUs = () => {
             variant="h5"
             sx={{
               fontWeight: 700,
-              color: "#0D47A1",
+              color: "#1976D2",
               mb: 2,
               fontFamily: "Poppins, sans-serif",
             }}
@@ -137,7 +139,7 @@ const AboutUs = () => {
             variant="h5"
             sx={{
               fontWeight: 700,
-              color: "#0D47A1",
+              color: "#1976D2",
               mb: 2,
               fontFamily: "Poppins, sans-serif",
             }}
@@ -165,7 +167,7 @@ const AboutUs = () => {
             variant="h5"
             sx={{
               fontWeight: 700,
-              color: "#0D47A1",
+              color: "#1976D2",
               mb: 2,
               fontFamily: "Poppins, sans-serif",
             }}
@@ -198,7 +200,7 @@ const AboutUs = () => {
                 variant="subtitle1"
                 sx={{
                   fontWeight: 600,
-                  color: "#0D47A1",
+                  color: "#1976D2",
                   fontFamily: "Poppins, sans-serif",
                   textAlign: "center",
                 }}
@@ -229,7 +231,7 @@ const AboutUs = () => {
                 variant="subtitle1"
                 sx={{
                   fontWeight: 600,
-                  color: "#0D47A1",
+                  color: "#1976D2",
                   fontFamily: "Poppins, sans-serif",
                   textAlign: "center",
                 }}
@@ -252,7 +254,7 @@ const AboutUs = () => {
             variant="h5"
             sx={{
               fontWeight: 700,
-              color: "#0D47A1",
+              color: "#1976D2",
               mb: 2,
               fontFamily: "Poppins, sans-serif",
             }}
