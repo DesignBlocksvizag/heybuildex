@@ -14,7 +14,7 @@ export default async function InfraRentalsPage() {
   return (
     <>
       <Header />
-      <SteelProductPage product={cementItem} brands={false} />
+      <SteelProductPage product={cementItem} brands={false} breadcrumbs={false}/>
       <Footer />
     </>
   );

@@ -11,12 +11,15 @@ import {
   ListItemButton,
   Container,
   Button,
+  Breadcrumbs,
+  Link
 } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import ProductTabs from "@/src/components/TabsPanel";
 import QuotationForm from "@/src/components/Form";
 import { navItems } from "@/src/components/Header";
 import { useRouter } from "next/navigation";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 const brandImages = [
   { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
@@ -29,7 +32,7 @@ const brandImages = [
   { src: "/clients/simhadri.png", alt: "Simhadri" },
 ];
 
-export default function SteelProductPage({ product ,brands}) {
+export default function SteelProductPage({ product ,brands,breadcrumbs}) {
   const router = useRouter();
   const {
     name,
@@ -44,43 +47,59 @@ export default function SteelProductPage({ product ,brands}) {
   return (
     <Box sx={{ backgroundColor: "#ffffff", pb: 8 }}>
       {/* Header Banner */}
-      <Box
-        sx={{
-          position: "relative",
-          py: { xs: 10, md: 12, lg: 14 },
-          background : "url('/product-bg.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <Box
-          sx={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            // backgroundColor: "rgba(0,0,0,0.6)",
-            backdropFilter: "blur(0.5px)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Typography
-            variant="h3"
-            sx={{
-              color: "#FFFF00",
-              fontWeight: "bold",
-              fontFamily: "Poppins",
-              textAlign: "center",
-              fontSize: { xs: "28px", md: "32px" },
-            }}
-          >
-            {name}
-          </Typography>
-        </Box>
-      </Box>
+    <Box 
+  sx={{
+    position: "relative",
+    py: { xs: 10, md: 12, lg: 14 },
+    background: "url('/product-bg.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  <Box
+    sx={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      backdropFilter: "blur(0.5px)",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      flexDirection: "column", // To stack breadcrumbs and title vertically
+    }}
+  >
+
+    {/* Title */}
+    <Typography
+      variant="h3"
+      sx={{
+        color: "#FFFF00",
+        fontWeight: "bold",
+        fontFamily: "Poppins",
+        textAlign: "center",
+        fontSize: { xs: "28px", md: "32px" },
+      }}
+    >
+      {name}
+    </Typography>
+    <Breadcrumbs
+      separator={<NavigateNextIcon fontSize="small" />}
+      aria-label="breadcrumb"
+      sx={{ color: "#fff", mt: 2 ,"& .MuiBreadcrumbs-ol":{
+        justifyContent:"center"
+      }}}
+    >
+      <Link underline="hover" color="inherit" href="/">
+        Home
+      </Link>
+      {product.category !== "Cement" && breadcrumbs !== false && <Typography  color="inherit">{"Steel"}</Typography>}
+     {breadcrumbs && (<Typography  color="inherit">{product.category}</Typography>)}
+      <Typography color="#FFFF00">{name}</Typography>
+    </Breadcrumbs>
+  </Box>
+</Box>
 
       <Container maxWidth="lg" sx={{ py: 6 }}>
         <Grid container spacing={2}>

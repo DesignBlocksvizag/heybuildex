@@ -17,7 +17,7 @@ export default function WelcomeSection() {
             WELCOME TO
           </Typography>
           <Typography variant="h4" fontWeight="bold" gutterBottom sx={{fontFamily:"Poppins",color:"#333"}}>
-            Hey Build <Typography variant="span" sx={{color:"#01933e",position:"relative",left:"-5px"}}>EX</Typography>
+            HeyBuild <Typography variant="span" sx={{color:"#01933e",position:"relative",left:"-5px"}}>EX</Typography>
           </Typography>
           <Typography variant="body1" sx={{mb: 2, fontFamily:"Inter", color:"#333"}}>
             Hey Buildex is your go-to online source for high-quality steel and

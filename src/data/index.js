@@ -11,7 +11,7 @@ export const SteelData = [
       "They undergo thermo-mechanical treatment for durability.",
       "Perfect for withstanding seismic and dynamic loads.",
     ],
-    sizes: ["8mm", "10mm", "12mm", "16mm", "20mm"],
+    sizes: ["8mm", "10mm", "12mm", "16mm", "20mm","25mm","32mm"],
     overview:
       "Our TMT bars are manufactured using state-of-the-art technology. They offer excellent strength and ductility for various projects. Our TMT bars are ideal for construction that requires long-lasting, earthquake-resistant reinforcement solutions.",
     features: [
@@ -42,6 +42,7 @@ export const SteelData = [
     pageLink: "/steel/tmt-bars",
   },
   {
+    category: "Construction Steel",
     name: "Binding Wire",
     link: "binding-wire",
     image: "/binding-wire.jpg",
@@ -86,6 +87,7 @@ export const SteelData = [
     pageLink: "/steel/binding-wire",
   },
   {
+    category :"Structural Steel",
     name: "MS Channel",
     link: "ms-channel",
     image: "/ms-channel.jpg",
@@ -131,6 +133,7 @@ export const SteelData = [
     pageLink: "/steel/ms-channel",
   },
   {
+       category :"Structural Steel",
     name: "MS Plate",
     link: "ms-plate",
     image: "/ms-plate.jpg",
@@ -176,6 +179,7 @@ export const SteelData = [
     pageLink: "/steel/ms-plate",
   },
   {
+       category :"Structural Steel",
     name: "MS Angle",
     link: "ms-angle",
     image: "/ms-angles.jpg",
@@ -221,6 +225,7 @@ export const SteelData = [
     pageLink: "/steel/ms-angle",
   },
   {
+       category :"Structural Steel",
     name: "MS Flat",
     link: "ms-flat",
     image: "/ms-flat.jpg",
@@ -266,6 +271,7 @@ export const SteelData = [
     pageLink: "/steel/ms-flat",
   },
   {
+       category :"Structural Steel",
     name: "MS I Beam",
     link: "ms-i-beam",
     image: "/i-beam.jpg",
@@ -320,6 +326,7 @@ export const SteelData = [
     pageLink: "/steel/ms-i-beam",
   },
   {
+       category :"Structural Steel",
     name: "MS Round Rod",
     link: "ms-round-rod",
     image: "/ms-round-rod.jpg",
@@ -375,6 +382,7 @@ export const SteelData = [
     pageLink: "/steel/ms-round-rod",
   },
   {
+       category :"Structural Steel",
     name: "MS Round Pipe",
     link: "ms-round-pipe",
     image: "/ms-round-pipes.jpg",
@@ -430,6 +438,7 @@ export const SteelData = [
     pageLink: "/steel/ms-round-pipe",
   },
   {
+       category :"Structural Steel",
     name: "MS Square Pipe",
     link: "ms-square-pipe",
     image: "/ms-square-pipe.jpg",
@@ -483,6 +492,7 @@ export const SteelData = [
     pageLink: "/steel/ms-square-pipe",
   },
   {
+       category :"Structural Steel",
     name: "MS Rectangular Pipe",
     link: "ms-rectangular-pipe",
     image: "/ms-rectangular-pipe.jpg",
@@ -537,6 +547,7 @@ export const SteelData = [
     pageLink: "/steel/ms-rectangular-pipe",
   },
   {
+       category :"Structural Steel",
     name: "MS Chequered Plate",
     link: "ms-chequered-plate",
     image: "/ms-chequered-plate.jpg",
@@ -582,6 +593,7 @@ export const SteelData = [
     pageLink: "/steel/ms-chequered-plate",
   },
   {
+       category :"Structural Steel",
     name: "Roofing Sheet",
     link: "roofing-sheet",
     image: "/roofing-sheets.jpg",
@@ -637,7 +649,7 @@ export const SteelData = [
 ];
 export const CementData = [
   {
-    category: "Construction Cement",
+    category: "Cement",
     name: "Ultratech Cement",
     link: "ultratech-cement",
     image: "/ultratech-cement.jpeg",
@@ -682,7 +694,7 @@ export const CementData = [
     pageLink: "/cement/ultratech-cement",
   },
   {
-    category: "Construction Cement",
+    category: "Cement",
     name: "Maha Cement",
     link: "maha-cement",
     image: "/maha-cement.png",
@@ -727,7 +739,7 @@ export const CementData = [
     pageLink: "/cement/maha-cement",
   },
   {
-    category: "Construction Cement",
+    category: "Cement",
     name: "Ramco Cement",
     link: "ramco-cement",
     image: "/ramco-cement.png",
@@ -770,7 +782,7 @@ export const CementData = [
     pageLink: "/cement/ramco-cement",
   },
   {
-    category: "Construction Cement",
+    category: "Cement",
     name: "Sagar Cement",
     link: "sagar-cement",
     image: "/sagar-cement.png",

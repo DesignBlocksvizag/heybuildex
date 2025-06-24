@@ -205,7 +205,7 @@ const AboutUs = () => {
                   textAlign: "center",
                 }}
               >
-                S. CHAITANYA VARMA
+                CHAITANYA VARMA
               </Typography>
               <Typography
                 variant="body2"

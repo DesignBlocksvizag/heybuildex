@@ -29,30 +29,30 @@ const products = [
     title: "MS Angle",
     image: "ms-angles.jpg",
   },
-   {
-    title: "MS Flat",
-    image: "ms-flat.jpg",
-  },
+  //  {
+  //   title: "MS Flat",
+  //   image: "ms-flat.jpg",
+  // },
   {
     title: "I Beam",
     image: "i-beam.jpg",
   },
-    {
-    title: "MS Round Rod",
-    image: "ms-round-rod.jpg",
-  },
+  //   {
+  //   title: "MS Round Rod",
+  //   image: "ms-round-rod.jpg",
+  // },
   {
     title: "MS Square Pipe",
     image: "ms-square-pipe.jpg",
   },
-   {
-    title: "MS Rectangular Pipe",
-    image: "ms-rectangular-pipe.jpg",
-  },
-  {
-    title: "MS Chequered Plate",
-    image: "ms-chequered-plate.jpg",
-  },
+  //  {
+  //   title: "MS Rectangular Pipe",
+  //   image: "ms-rectangular-pipe.jpg",
+  // },
+  // {
+  //   title: "MS Chequered Plate",
+  //   image: "ms-chequered-plate.jpg",
+  // },
   {
     title: "Roofing Sheets",
     image: "roofing-sheets.jpg",

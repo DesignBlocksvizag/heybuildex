@@ -19,7 +19,7 @@ export default async function CementPage({ params }) {
   return (
     <>
       <Header />
-      <SteelProductPage product={cementItem} brands={false} />
+      <SteelProductPage product={cementItem} brands={false} breadcrumbs={true} />
       <Footer />
     </>
   );
