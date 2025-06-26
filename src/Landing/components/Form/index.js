@@ -134,7 +134,7 @@ export default function QuotationForm() {
           color: "#333",
         }}
       >
-        Request a Free Quotation
+       {`Get Today’s Price`}
       </Typography>
 
       <form onSubmit={formik.handleSubmit}>
@@ -324,7 +324,7 @@ export default function QuotationForm() {
               },
             }}
           >
-            Submit Request
+            Get Price
           </Button>
         </Box>
       </form>

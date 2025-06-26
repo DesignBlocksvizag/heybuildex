@@ -57,6 +57,22 @@ const products = [
     title: "Roofing Sheets",
     image: "roofing-sheets.jpg",
   },
+    {
+    title: "Cement",
+    image: "cement.png",
+  },
+    {
+    title: "RMC",
+    image: "rmc.jpg",
+  },
+    {
+    title: "Piling Ring",
+    image: "infra-rentals.jpg",
+  },
+   {
+    title: "Safety",
+    image: "safety.jpg",
+  },
 ];
 
 const OurProducts = () => {
@@ -88,7 +104,7 @@ const OurProducts = () => {
 
       {/* Product Grid */}
       <Box sx={{ maxWidth: "1200px", mx: "auto" }}>
-        <Grid container spacing={3}>
+        <Grid container spacing={3} justifyContent={"center"} alignItems={"center"}>
           {products.map((product, index) => (
             <Grid key={index} size={{xs:12,sm:6,md:3}}>
               <Card
