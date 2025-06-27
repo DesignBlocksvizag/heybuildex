@@ -40,16 +40,20 @@ const sliderSettings = {
 
 export default function TestimonialSlider() {
   return (
-    <Box sx={{  py: 6, px: 2,background:"#ffffff","& .slick-prev:before, & .slick-next:before": {
-          color: "#1c953f!important",
+    <Box sx={{  py: 6, px: 2,   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url('/client-bg.jpg')`,
+         backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      "& .slick-prev:before, & .slick-next:before": {
+          color: "#fff!important",
         },
         "& .slick-dots li button:before": {
-          color: "#1c953f!important",
+          color: "#fff!important",
           fontSize: "7px",
           opacity: 0.75,
         },
         "& .slick-dots li.slick-active button:before": {
-          color: "#1c953f!important",
+          color: "#fff!important",
           opacity: 1,
         },}}>
       <Container maxWidth="md">
@@ -58,7 +62,7 @@ export default function TestimonialSlider() {
         fontWeight="bold"
         textAlign="center"
         mb={4}
-        color="#333"
+        color="#fff"
         fontFamily="Poppins"
       >
         What Our Clients Say?
@@ -73,7 +77,7 @@ export default function TestimonialSlider() {
               fontStyle="italic"
               fontFamily="Poppins"
               textAlign="center"
-              sx={{ color: "#333" }}
+              sx={{ color: "#fff" }}
             >
               “{testimonial.text}”
             </Typography>
@@ -84,7 +88,7 @@ export default function TestimonialSlider() {
               fontSize={14}
               fontFamily="Poppins"
               fontWeight="medium"
-              sx={{ color: "#1c953f " }}
+              sx={{ color: "#fff " }}
             >
               — {testimonial.author}
             </Typography>

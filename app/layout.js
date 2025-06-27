@@ -59,6 +59,18 @@ export default function RootLayout({ children }) {
       </head>
       <body>{children}
         {/* Google Tag Manager */}
+           <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=AW-17164106962"
+      />
+      <Script id="google-ads" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17164106962');
+        `}
+      </Script>
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-ZLFD84G5G3"

@@ -32,7 +32,7 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 //   { src: "/clients/simhadri.png", alt: "Simhadri" },
 // ];
 
-export default function SteelProductPage({ product ,brands,breadcrumbs}) {
+export default function CementProductPage({ product ,brands,breadcrumbs}) {
   const router = useRouter();
   const {
     name,
@@ -42,6 +42,7 @@ export default function SteelProductPage({ product ,brands,breadcrumbs}) {
     features,
     faqs,
     brandImages,
+    types,
     image = "/default.jpg",
   } = product;
 
@@ -182,40 +183,71 @@ export default function SteelProductPage({ product ,brands,breadcrumbs}) {
                 ))}
               </Box></>)}
 
-              {sizes?.length > 0 && (
-                <Box sx={{ mt: 2 }}>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontWeight: 600,
-                      mb: 1,
-                      fontFamily: "Poppins",
-                      color: "#000",
-                    }}
-                  >
-                    Product Variants
-                  </Typography>
-                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
-                    {sizes.map((size) => (
-                      <Box
-                        key={size}
-                        sx={{
-                          px: 2,
-                          py: 0.8,
-                          borderRadius: "999px",
-                          backgroundColor: "#e0f2f1",
-                          color: "#00695c",
-                          fontWeight: 500,
-                          fontFamily: "Inter",
-                          fontSize: 14,
-                        }}
-                      >
-                        {size}
-                      </Box>
-                    ))}
-                  </Box>
-                </Box>
-              )}
+             
+              <Typography
+  variant="h6"
+  sx={{
+    mt: 3,
+    mb: 2,
+    fontWeight: 600,
+    fontFamily: "Poppins",
+    color: "#000",
+  }}
+>
+  Cement Types Available
+</Typography>
+
+<Grid container spacing={2}>
+  {types.map((item, index) => (
+    <Grid size={{xs:12,sm:6,md:4}} key={index}>
+      <Paper
+        elevation={4}
+        sx={{
+          borderRadius: 3,
+          overflow: "hidden",
+          transition: "0.3s",
+          height:"100%",
+          "&:hover": { transform: "translateY(-4px)", boxShadow: 6 },
+        }}
+      >
+        {/* <Box
+          component="img"
+          src={item.image}
+          alt={item.type}
+          sx={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+          }}
+        /> */}
+        <Box sx={{ p: 2 }}>
+          <Typography
+            variant="subtitle1"
+            sx={{
+              fontWeight: 700,
+              fontFamily: "Poppins",
+              color: "#1976D2",
+              mb: 1,
+            }}
+          >
+            {item.fullForm}
+          </Typography>
+          <Typography
+            variant="body2"
+            sx={{
+              fontFamily: "Inter",
+              color: "#444",
+              fontSize: 14,
+            }}
+          >
+            {item.description}
+          </Typography>
+        </Box>
+      </Paper>
+    </Grid>
+  ))}
+</Grid>
+
 
               <Box sx={{ mt: 3, display: "flex", justifyContent: "center" }}>
                 <Button

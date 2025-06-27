@@ -24,7 +24,8 @@ export default function Home() {
       <Clients />
       <TestimonialSlider />
       <Box sx={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/quote-bg.jpg')`,
+          // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/quote-bg.jpg')`,
+          background:"#fff",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

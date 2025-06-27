@@ -66,7 +66,7 @@ const products = [
     image: "rmc.jpg",
   },
     {
-    title: "Piling Ring",
+    title: "Piling Rigs",
     image: "infra-rentals.jpg",
   },
    {

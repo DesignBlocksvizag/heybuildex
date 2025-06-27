@@ -11,7 +11,17 @@ export const SteelData = [
       "They undergo thermo-mechanical treatment for durability.",
       "Perfect for withstanding seismic and dynamic loads.",
     ],
-    sizes: ["8mm", "10mm", "12mm", "16mm", "20mm","25mm","32mm"],
+    sizes: ["8mm", "10mm", "12mm", "16mm", "20mm", "25mm", "32mm"],
+    brandImages: [
+      { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
+      { src: "/clients/sail.png", alt: "Sail" },
+      { src: "/clients/tata.png", alt: "Tata" },
+      { src: "/clients/jsw.png", alt: "JSW" },
+      { src: "/clients/jindal-1.png", alt: "Jindal" },
+      { src: "/clients/radha.png", alt: "Radha" },
+      { src: "/clients/mangal.png", alt: "Mangal" },
+      { src: "/clients/simhadri.png", alt: "Simhadri" },
+    ],
     overview:
       "Our TMT bars are manufactured using state-of-the-art technology. They offer excellent strength and ductility for various projects. Our TMT bars are ideal for construction that requires long-lasting, earthquake-resistant reinforcement solutions.",
     features: [
@@ -53,6 +63,7 @@ export const SteelData = [
       "It is widely used in RCC construction and various fabrication works.",
       "Available in various gauges to suit different construction requirements.",
     ],
+    brandImages: [{ src: "/clients/simhadri.png", alt: "Simhadri" },{ src: "/clients/tata-wiron.jpg", alt: "Tata wiron" },],
     sizes: ["0.91mm", "1.22mm", "1.52mm"],
     overview:
       "Our binding wire offers the perfect balance of flexibility and strength. It is extensively used to fasten TMT bars at joints, ensuring the structural integrity of concrete frameworks. Ideal for both residential and industrial construction sites.",
@@ -87,7 +98,7 @@ export const SteelData = [
     pageLink: "/steel/binding-wire",
   },
   {
-    category :"Structural Steel",
+    category: "Structural Steel",
     name: "MS Channel",
     link: "ms-channel",
     image: "/ms-channel.jpg",
@@ -97,6 +108,12 @@ export const SteelData = [
       "MS Channels have a C-shaped cross-section with two parallel flanges connected by a web.",
       "They are ideal for frames requiring rigidity and durability.",
       "Available in various sizes and thicknesses for different structural requirements.",
+    ],
+    brandImages: [
+      { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
+      { src: "/clients/sail.png", alt: "Sail" },
+      { src: "/clients/jindal-1.png", alt: "Jindal" },
+          { src: "/clients/tata.png", alt: "Tata" },
     ],
     sizes: ["75x40 mm", "100x50 mm", "125x65 mm", "150x75 mm", "200x75 mm"],
     overview:
@@ -133,7 +150,7 @@ export const SteelData = [
     pageLink: "/steel/ms-channel",
   },
   {
-       category :"Structural Steel",
+    category: "Structural Steel",
     name: "MS Plate",
     link: "ms-plate",
     image: "/ms-plate.jpg",
@@ -145,6 +162,16 @@ export const SteelData = [
       "MS Plates provide a solid foundation and support for large-scale construction and manufacturing projects.",
     ],
     sizes: ["3mm", "5mm", "6mm", "8mm", "10mm", "12mm", "16mm", "25mm"],
+       brandImages: [
+      { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
+      { src: "/clients/sail.png", alt: "Sail" },
+      { src: "/clients/tata.png", alt: "Tata" },
+      { src: "/clients/jsw.png", alt: "JSW" },
+      { src: "/clients/jindal-1.png", alt: "Jindal" },
+      { src: "/clients/radha.png", alt: "Radha" },
+      { src: "/clients/mangal.png", alt: "Mangal" },
+      { src: "/clients/simhadri.png", alt: "Simhadri" },
+    ],
     overview:
       "MS Plates are versatile and durable steel sheets used across various industries for their excellent mechanical properties. They form the backbone of numerous structures, offering stability, strength, and reliability in both heavy and light construction.",
     features: [
@@ -179,7 +206,7 @@ export const SteelData = [
     pageLink: "/steel/ms-plate",
   },
   {
-       category :"Structural Steel",
+    category: "Structural Steel",
     name: "MS Angle",
     link: "ms-angle",
     image: "/ms-angles.jpg",
@@ -191,6 +218,11 @@ export const SteelData = [
       "MS Angles are cost-effective, easy to fabricate, and compatible with welding, drilling, and cutting processes.",
     ],
     sizes: ["25x25", "40x40", "50x50", "65x65", "75x75", "90x90", "100x100"],
+    brandImages: [
+      { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
+      { src: "/clients/sail.png", alt: "Sail" },
+         { src: "/clients/jindal.png", alt: "Jindal" },
+    ],
     overview:
       "MS Angles are essential components in steel structures, offering versatile use in both commercial and industrial sectors. Their angular shape provides superior load-bearing capacity and is commonly used for bracing, framing, and reinforcement.",
     features: [
@@ -225,7 +257,7 @@ export const SteelData = [
     pageLink: "/steel/ms-angle",
   },
   {
-       category :"Structural Steel",
+    category: "Structural Steel",
     name: "MS Flat",
     link: "ms-flat",
     image: "/ms-flat.jpg",
@@ -237,6 +269,16 @@ export const SteelData = [
       "MS Flats offer ease of cutting, drilling, and forming, making them suitable for a wide range of engineering purposes.",
     ],
     sizes: ["25x3", "25x5", "32x5", "40x6", "50x6", "65x6", "75x8", "100x10"],
+      brandImages: [
+      { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
+      { src: "/clients/sail.png", alt: "Sail" },
+      { src: "/clients/tata.png", alt: "Tata" },
+      { src: "/clients/jsw.png", alt: "JSW" },
+      { src: "/clients/jindal-1.png", alt: "Jindal" },
+      { src: "/clients/radha.png", alt: "Radha" },
+      { src: "/clients/mangal.png", alt: "Mangal" },
+      { src: "/clients/simhadri.png", alt: "Simhadri" },
+    ],
     overview:
       "MS Flats are versatile steel bars with a rectangular cross-section used in a wide variety of fabrication and structural projects. Their strength and formability make them an essential choice for engineers, fabricators, and contractors.",
     features: [
@@ -271,7 +313,7 @@ export const SteelData = [
     pageLink: "/steel/ms-flat",
   },
   {
-       category :"Structural Steel",
+    category: "Structural Steel",
     name: "MS I Beam",
     link: "ms-i-beam",
     image: "/i-beam.jpg",
@@ -291,6 +333,11 @@ export const SteelData = [
       "250x125",
       "300x140",
       "400x140",
+    ],
+      brandImages: [
+      { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
+      { src: "/clients/sail.png", alt: "Sail" },
+      { src: "/clients/jindal.png", alt: "Jindal" },
     ],
     overview:
       "MS I Beams are essential load-bearing members used in both commercial and industrial construction. Their unique shape provides maximum strength with minimal material, making them a cost-effective solution for supporting large structures.",
@@ -326,7 +373,7 @@ export const SteelData = [
     pageLink: "/steel/ms-i-beam",
   },
   {
-       category :"Structural Steel",
+    category: "Structural Steel",
     name: "MS Round Rod",
     link: "ms-round-rod",
     image: "/ms-round-rod.jpg",
@@ -357,6 +404,16 @@ export const SteelData = [
       "Ideal for structural and mechanical use",
       "Corrosion-resistant with appropriate coating",
     ],
+      brandImages: [
+      { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
+      { src: "/clients/sail.png", alt: "Sail" },
+      { src: "/clients/tata.png", alt: "Tata" },
+      { src: "/clients/jsw.png", alt: "JSW" },
+      { src: "/clients/jindal-1.png", alt: "Jindal" },
+      { src: "/clients/radha.png", alt: "Radha" },
+      { src: "/clients/mangal.png", alt: "Mangal" },
+      { src: "/clients/simhadri.png", alt: "Simhadri" },
+    ],
     faqs: [
       {
         question: "What are MS Round Rods used for?",
@@ -382,7 +439,7 @@ export const SteelData = [
     pageLink: "/steel/ms-round-rod",
   },
   {
-       category :"Structural Steel",
+    category: "Structural Steel",
     name: "MS Round Pipe",
     link: "ms-round-pipe",
     image: "/ms-round-pipes.jpg",
@@ -403,6 +460,16 @@ export const SteelData = [
       "65mm",
       "80mm",
       "100mm",
+    ],
+      brandImages: [
+      { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
+      { src: "/clients/sail.png", alt: "Sail" },
+      { src: "/clients/tata.png", alt: "Tata" },
+      { src: "/clients/jsw.png", alt: "JSW" },
+      { src: "/clients/jindal-1.png", alt: "Jindal" },
+      { src: "/clients/radha.png", alt: "Radha" },
+      { src: "/clients/mangal.png", alt: "Mangal" },
+      { src: "/clients/simhadri.png", alt: "Simhadri" },
     ],
     overview:
       "MS Round Pipes are strong and versatile hollow steel tubes used for conveying fluids and as structural components in various sectors. Their uniform shape and mechanical properties make them essential in construction, agriculture, and industrial applications.",
@@ -438,7 +505,7 @@ export const SteelData = [
     pageLink: "/steel/ms-round-pipe",
   },
   {
-       category :"Structural Steel",
+    category: "Structural Steel",
     name: "MS Square Pipe",
     link: "ms-square-pipe",
     image: "/ms-square-pipe.jpg",
@@ -457,6 +524,16 @@ export const SteelData = [
       "50x50 mm",
       "75x75 mm",
       "100x100 mm",
+    ],
+      brandImages: [
+      { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
+      { src: "/clients/sail.png", alt: "Sail" },
+      { src: "/clients/tata.png", alt: "Tata" },
+      { src: "/clients/jsw.png", alt: "JSW" },
+      { src: "/clients/jindal-1.png", alt: "Jindal" },
+      { src: "/clients/radha.png", alt: "Radha" },
+      { src: "/clients/mangal.png", alt: "Mangal" },
+      { src: "/clients/simhadri.png", alt: "Simhadri" },
     ],
     overview:
       "MS Square Pipes are versatile and durable steel sections that provide excellent strength and dimensional accuracy. They are essential in structural and architectural projects due to their form, strength, and adaptability.",
@@ -492,7 +569,7 @@ export const SteelData = [
     pageLink: "/steel/ms-square-pipe",
   },
   {
-       category :"Structural Steel",
+    category: "Structural Steel",
     name: "MS Rectangular Pipe",
     link: "ms-rectangular-pipe",
     image: "/ms-rectangular-pipe.jpg",
@@ -512,6 +589,16 @@ export const SteelData = [
       "100x50",
       "120x60",
       "150x75",
+    ],
+      brandImages: [
+      { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
+      { src: "/clients/sail.png", alt: "Sail" },
+      { src: "/clients/tata.png", alt: "Tata" },
+      { src: "/clients/jsw.png", alt: "JSW" },
+      { src: "/clients/jindal-1.png", alt: "Jindal" },
+      { src: "/clients/radha.png", alt: "Radha" },
+      { src: "/clients/mangal.png", alt: "Mangal" },
+      { src: "/clients/simhadri.png", alt: "Simhadri" },
     ],
     overview:
       "MS Rectangular Pipes are robust and versatile hollow steel sections used across construction, fabrication, and industrial sectors. Their rectangular shape offers strength and aesthetics, making them ideal for both functional and design-based applications.",
@@ -547,7 +634,7 @@ export const SteelData = [
     pageLink: "/steel/ms-rectangular-pipe",
   },
   {
-       category :"Structural Steel",
+    category: "Structural Steel",
     name: "MS Chequered Plate",
     link: "ms-chequered-plate",
     image: "/ms-chequered-plate.jpg",
@@ -559,6 +646,16 @@ export const SteelData = [
       "MS Chequered Plates are strong, easy to fabricate, and provide both functionality and aesthetics.",
     ],
     sizes: ["3mm", "4mm", "5mm", "6mm", "8mm", "10mm"],
+      brandImages: [
+      { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
+      { src: "/clients/sail.png", alt: "Sail" },
+      { src: "/clients/tata.png", alt: "Tata" },
+      { src: "/clients/jsw.png", alt: "JSW" },
+      { src: "/clients/jindal-1.png", alt: "Jindal" },
+      { src: "/clients/radha.png", alt: "Radha" },
+      { src: "/clients/mangal.png", alt: "Mangal" },
+      { src: "/clients/simhadri.png", alt: "Simhadri" },
+    ],
     overview:
       "MS Chequered Plates are robust and anti-slip steel plates used extensively in flooring, platforms, and stairways. Their patterned surface enhances safety while offering the structural integrity required in high-traffic industrial environments.",
     features: [
@@ -593,7 +690,7 @@ export const SteelData = [
     pageLink: "/steel/ms-chequered-plate",
   },
   {
-       category :"Structural Steel",
+    category: "Structural Steel",
     name: "Roofing Sheet",
     link: "roofing-sheet",
     image: "/roofing-sheets.jpg",
@@ -612,6 +709,16 @@ export const SteelData = [
       "0.60mm",
       "0.80mm",
       "1.00mm",
+    ],
+      brandImages: [
+      { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
+      { src: "/clients/sail.png", alt: "Sail" },
+      { src: "/clients/tata.png", alt: "Tata" },
+      { src: "/clients/jsw.png", alt: "JSW" },
+      { src: "/clients/jindal-1.png", alt: "Jindal" },
+      { src: "/clients/radha.png", alt: "Radha" },
+      { src: "/clients/mangal.png", alt: "Mangal" },
+      { src: "/clients/simhadri.png", alt: "Simhadri" },
     ],
     overview:
       "Roofing Sheets are essential for modern roofing solutions, offering strength, weather resistance, and aesthetic value. Their versatility and ease of installation make them a popular choice in both industrial and residential construction.",
@@ -670,6 +777,26 @@ export const CementData = [
       "Low heat of hydration",
       "Resistant to moisture and corrosion",
     ],
+    types: [
+      {
+        type: "OPC",
+        fullForm: "Ordinary Portland Cement",
+        image: "/ultratech-opc.jpeg",
+        description: "Ultratech OPC (Ordinary Portland Cement) is best suited for high-strength structural work, including slabs, beams, and columns in commercial and residential projects."
+      },
+      {
+        type: "PPC",
+        fullForm: "Portland Pozzolana Cement",
+        image: "/ultratech-ppc.jpeg",
+        description: "Ultratech PPC (Portland Pozzolana Cement) offers better workability and resistance to chemicals, making it ideal for plastering, masonry, and environmental exposure."
+      },
+      {
+        type: "PSC",
+        fullForm: "Portland Slag Cement",
+        image: "/ultratech-psc.jpeg",
+        description: "Ultratech PSC (Portland Slag Cement) is durable, eco-friendly, and perfect for marine and industrial construction with excellent sulfate resistance."
+      }
+    ],
     faqs: [
       {
         question: "Is Ultratech Cement suitable for RCC work?",
@@ -714,6 +841,26 @@ export const CementData = [
       "Weather-resistant formulation",
       "Uniform particle size for smooth finish",
       "ISI certified and eco-friendly",
+    ],
+     types: [
+      {
+        type: "HD",
+        fullForm: "High Durability Cement",
+        image: "/maha-hd.jpeg",
+        description: "Maha HD (High Durability) Cement is engineered for strength and durability, ideal for large-scale construction and infrastructure projects."
+      },
+      {
+        type: "PPC",
+        fullForm: "Portland Pozzolana Cement",
+        image: "/maha-ppc.jpeg",
+        description: "Maha PPC provides better workability, reduced heat of hydration, and long-term strength – suitable for brickwork and plastering."
+      },
+      {
+        type: "Solid Slag",
+        fullForm: "Solid Slag Cement",
+        image: "/maha-slag.jpeg",
+        description: "Maha Solid Slag Cement enhances corrosion resistance and is ideal for coastal and chemical-exposed environments."
+      }
     ],
     faqs: [
       {
@@ -760,6 +907,20 @@ export const CementData = [
       "ISI and BIS certified",
       "Suitable for RCC, plastering, and masonry",
     ],
+     types: [
+      {
+        type: "PPC",
+        fullForm: "Portland Pozzolana Cement",
+        image: "/ramco-ppc.jpeg",
+        description: "Ramco PPC is perfect for general construction, offering improved durability and low permeability in harsh weather conditions."
+      },
+      {
+        type: "Supercrete",
+        fullForm: "Supercrete High-Performance Cement",
+        image: "/ramco-supercrete.jpeg",
+        description: "Ramco Supercrete is a high-performance concrete cement with superior finish, workability, and strength for RCC and high-rise buildings."
+      }
+    ],
     faqs: [
       {
         question: "Can Ramco Cement be used for RCC structures?",
@@ -802,6 +963,26 @@ export const CementData = [
       "Eco-friendly and low carbon footprint",
       "Suitable for both RCC and non-structural works",
       "ISI and BIS compliant",
+    ],
+     types: [
+      {
+        type: "PPC",
+        fullForm: "Portland Pozzolana Cement",
+        image: "/sagar-ppc.jpeg",
+        description: "Sagar PPC offers better long-term strength and is highly suitable for plastering, masonry, and all general-purpose applications."
+      },
+      {
+        type: "OPC",
+        fullForm: "Ordinary Portland Cement",
+        image: "/sagar-opc.jpeg",
+        description: "Sagar OPC is ideal for structural and load-bearing applications, delivering high early strength for beams, slabs, and columns."
+      },
+      {
+        type: "Slag",
+        fullForm: "Slag Cement",
+        image: "/sagar-slag.jpeg",
+        description: "Sagar Slag Cement enhances durability, reduces thermal cracking, and performs well in marine and industrial construction projects."
+      }
     ],
     faqs: [
       {
@@ -988,168 +1169,161 @@ export const OtherData = [
 ];
 export const SteelMetaData = [
   {
-    title: "TMT Bars",
+    title: "TMT Bars for Construction – Vizag Steel, Tata Tiscon, JSW & Jindal | HeyBuildex",
     link: "tmt-bars",
     image: "/tmt-bars.jpg",
     description:
-      "High-strength TMT bars ideal for construction, providing superior bendability and earthquake resistance.",
+      "Get high-quality TMT Bars from top brands like Vizag Steel, SAIL, Jindal Panther, JSW, Tata Tiscon, Simhadri, Kamdhenu, and more. Competitive prices and fast delivery across India.",
     imageUrl: "/images/steel-products/tmt-bars.jpg",
-    keywords: [
-      "TMT bars",
-      "construction steel",
-      "reinforcement bars",
-      "steel rods",
-    ],
+    keywords: [ 
+  "TMT bars",
+  "buy TMT bars online",
+  "Vizag Steel TMT bars",
+  "SAIL TMT bars",
+  "Jindal Panther TMT bars",
+  "JSW TMT bars",
+  "Tata Tiscon",
+  "Simhadri TMT",
+  "Kamdhenu TMT",
+  "Radha TMT",
+  "Mangal TMT",
+  "construction steel",
+  "reinforcement bars",
+  "steel rods"
+],
   },
   {
-    title: "Binding Wire",
+    title: "Buy Binding Wire Online – High-Quality Steel Wire for Construction | HeyBuildex",
     link: "binding-wire",
     image: "/binding-wire.jpg",
     description:
-      "Durable and flexible binding wire used for tying TMT bars and reinforcing structures.",
+      "Order high-quality binding wire for construction projects from HeyBuildex. Strong, flexible, and corrosion-resistant binding wires available at competitive prices.",
     imageUrl: "/images/steel-products/binding-wire.jpg",
-    keywords: ["binding wire", "tie wire", "construction wire", "steel wire"],
+   keywords: [
+  "binding wire",
+  "tie wire",
+  "construction wire",
+  "steel wire",
+  "buy binding wire online",
+  "construction binding wire",
+  "galvanized binding wire",
+  "steel binding wire",
+  "binding wire suppliers",
+  "binding wire for construction",
+  "bulk binding wire",
+  "binding wire prices",
+  "high-quality binding wire",
+  "black annealed wire",
+  "rebar binding wire",
+  "steel wire for construction",
+  "HeyBuildex"
+]
+
   },
   {
-    title: "MS Channel",
+    title: "MS Channel Supplier | Mild Steel Channels Price & Sizes",
     link: "ms-channel",
     image: "/ms-channel.jpg",
     description:
-      "Mild Steel channels used in structural applications like frames, supports, and construction projects.",
+      "Buy MS Channels at best price from trusted supplier. Wide range of mild steel channels for construction and fabrication. Request a quote from HeyBuildEx today!",
     imageUrl: "/images/steel-products/ms-channel.jpg",
-    keywords: [
-      "MS channel",
-      "mild steel channel",
-      "steel u channel",
-      "structural steel",
-    ],
+   keywords: [
+  "MS channel",
+  "mild steel channel",
+  "MS channel supplier",
+  "MS channel price",
+  "steel channels",
+  "buy MS channel",
+  "structural steel channel"
+]
+
   },
   {
-    title: "MS Plate",
+    title: "MS Plate Supplier | Mild Steel Plates Price & Sizes",
     link: "ms-plate",
     image: "/ms-plate.jpg",
     description:
-      "Flat Mild Steel plates for construction, fabrication, and industrial use with high strength and durability.",
+      "Buy high-quality MS Plates at best prices from trusted supplier. Wide range of mild steel plates for construction and fabrication. Request a quote today!",
     imageUrl: "/images/steel-products/ms-plate.jpg",
-    keywords: [
-      "MS plate",
-      "mild steel plate",
-      "flat steel sheet",
-      "steel plate",
-    ],
+    keywords: ["add MS plate", "mild steel plate", "MS plate supplier", "MS plate price", "steel plates", "buy MS plate", "structural steel plates"]
   },
   {
-    title: "MS Angle",
+    title: "MS Angle Supplier | Mild Steel Angles Price & Sizes",
     link: "ms-angle",
     image: "/ms-angles.jpg",
     description:
-      "L-shaped MS angles used for support structures, frames, and brackets in fabrication and construction.",
+      "Get premium MS Angles at best prices from trusted suppliers. Wide range of mild steel angles for construction and fabrication. Request your quote today!",
     imageUrl: "/images/steel-products/ms-angle.jpg",
-    keywords: ["MS angle", "steel angle", "mild steel angle", "L angle"],
+    keywords: ["MS angle", "mild steel angle", "MS angle supplier", "MS angle price", "structural steel angles", "buy MS angle", "steel angle supplier"]
   },
   {
-    title: "MS Flat",
+    title: "MS Flat Supplier | Mild Steel Flat Bars Price & Sizes",
     link: "ms-flat",
     image: "/ms-flat.jpg",
     description:
-      "Rectangular MS flat bars suitable for construction, fabrication, and industrial applications.",
+    "Buy high-quality MS Flats at best prices from trusted supplier. Wide range of mild steel flat bars for construction and fabrication. Request a quote today!",
     imageUrl: "/images/steel-products/ms-flat.jpg",
-    keywords: ["MS flat", "flat bar", "mild steel flat", "steel strip"],
+    keywords: ["MS flat", "mild steel flat", "MS flat bar", "MS flat supplier", "MS flat price", "steel flat bars", "buy MS flat", "structural steel flats"]
   },
   {
-    title: "MS I-Beam",
+    title: "I Beam Supplier | Mild Steel I Beams Price & Sizes",
     link: "ms-i-beam",
     image: "/i-beam.jpg",
     description:
-      "Strong and durable I-beams made of Mild Steel, ideal for heavy structural support.",
+      "Buy high-quality I Beams at the best price from a trusted supplier. Wide range of mild steel I beams for structural and construction use. Request a quote today!",
     imageUrl: "/images/steel-products/ms-i-beam.jpg",
-    keywords: [
-      "MS I-beam",
-      "steel beam",
-      "mild steel I section",
-      "structural beam",
-    ],
+    keywords: ["I beam", "mild steel I beam", "I beam supplier", "I beam price", "MS I beam", "steel beams", "buy I beam", "structural steel beams"]
   },
   {
-    title: "MS Round Rod",
+    title: "MS Round Rod Supplier | Mild Steel Round Bars Price & Sizes",
     link: "ms-round-rod",
     image: "/ms-round-rod.jpg",
     description:
-      "Circular MS rods used in construction, manufacturing, and machining industries.",
-    keywords: [
-      "MS round rod",
-      "mild steel rod",
-      "steel round bar",
-      "circular steel rod",
-    ],
+      "Buy high-quality MS Round Rods at competitive prices. Wide range of mild steel round bars for construction and fabrication. Request a quote from trusted supplier!",
+    keywords: ["MS round rod", "mild steel round rod", "MS round bar", "MS round rod supplier", "MS round rod price", "structural steel rods", "buy MS round rod"]
   },
   {
-    title: "MS Round Pipe",
+    title: "MS Round Pipe Supplier | Mild Steel Round Pipes Price & Sizes",
     link: "ms-round-pipe",
     image: "/ms-round-pipes.jpg",
     description:
-      "Hollow round MS pipes for plumbing, fabrication, and structural use.",
-    keywords: [
-      "MS round pipe",
-      "mild steel pipe",
-      "steel tube",
-      "round steel pipe",
-    ],
+      "Buy MS Round Pipes at best price from trusted supplier. Wide range of mild steel round pipes for construction and industrial use. Request a quote today!",
+    keywords: ["MS round pipe", "mild steel round pipe", "MS round pipe supplier", "MS round pipe price", "steel pipes", "buy MS round pipe", "structural steel pipes"]
   },
   {
-    title: "MS Square Pipe",
+    title: "MS Square Pipe Supplier | Mild Steel Square Pipes Price",
     link: "ms-square-pipe",
     image: "/ms-square-pipe.jpg",
     description:
-      "Square cross-section MS pipes used in construction and structural fabrication.",
+      "Buy high-quality MS Square Pipes at best price from trusted supplier. Wide range of mild steel square pipes for construction & fabrication. Get a quote today!",
     imageUrl: "/images/steel-products/ms-square-pipe.jpg",
-    keywords: [
-      "MS square pipe",
-      "square tube",
-      "mild steel square pipe",
-      "steel hollow section",
-    ],
+    keywords:["MS square pipe", "mild steel square pipe", "MS square pipe supplier", "MS square pipe price", "structural steel pipes", "buy MS square pipe", "steel square tubes"]
   },
   {
-    title: "MS Rectangular Pipe",
+    title: "MS Rectangle Pipe Supplier | Mild Steel Rectangular Pipes Price",
     link: "ms-rectangular-pipe",
     image: "/ms-rectangular-pipe.jpg",
     description:
-      "Rectangular MS pipes used for frame construction, railing, and industrial purposes.",
+      "Buy MS Rectangle Pipes at best price from top supplier. Wide range of mild steel rectangular pipes for structural use. Request a quote from HeyBuildEx now!",
     imageUrl: "/images/steel-products/ms-rectangular-pipe.jpg",
-    keywords: [
-      "MS rectangular pipe",
-      "rectangular tube",
-      "mild steel rectangular pipe",
-      "steel hollow section",
-    ],
+    keywords: ["MS rectangle pipe", "mild steel rectangular pipe", "MS rectangular pipe supplier", "MS rectangle pipe price", "structural steel pipes", "buy MS rectangle pipe", "HeyBuildEx"]
   },
   {
-    title: "MS Chequered Plate",
+    title: "MS Chequered Plate Supplier | Mild Steel Chequered Plates Price",
     link: "ms-chequered-plate",
     image: "/ms-chequered-plate.jpg",
     description:
-      "Chequered MS plates with anti-skid surface ideal for flooring, ramps, and industrial platforms.",
+      "Buy MS Chequered Plates at best price from trusted supplier. Wide range of mild steel chequered plates for flooring and structural use. Request a quote now!",
     imageUrl: "/images/steel-products/ms-chequered-plate.jpg",
-    keywords: [
-      "MS chequered plate",
-      "checkered steel plate",
-      "anti-slip plate",
-      "mild steel pattern plate",
-    ],
+    keywords: ["MS chequered plate", "mild steel chequered plate", "MS chequered plate supplier", "MS chequered plate price", "steel chequered plate", "buy MS chequered plate", "structural steel plates"]
   },
   {
-    title: "Roofing Sheet",
+    title: "Roofing Sheets Supplier | Steel Roofing Sheet Price & Types",
     link: "roofing-sheet",
     image: "/roofing-sheets.jpg",
     description:
-      "Durable and weather-resistant steel roofing sheets for industrial and residential buildings.",
+      "Buy roofing sheets at best price from top supplier. Wide range of steel roofing sheets for all applications. Request a quote from HeyBuildEx today!",
     imageUrl: "/images/steel-products/roofing-sheet.jpg",
-    keywords: [
-      "roofing sheet",
-      "steel roofing",
-      "metal sheet roof",
-      "color coated sheet",
-    ],
+    keywords: ["roofing sheets", "steel roofing sheets", "color coated roofing sheet", "galvanized roofing sheet", "PPGI roofing sheet", "roofing sheet supplier", "roofing sheet price", "HeyBuildEx"]
   },
 ];

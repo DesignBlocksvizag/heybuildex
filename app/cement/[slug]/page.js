@@ -1,9 +1,9 @@
 import React from "react";
 import { CementData } from "@/src/data";
-import SteelProductPage from "@/src/content/Product";
 import Header from "@/src/components/Header";
 import Footer from "@/src/components/Footer";
 import { notFound } from "next/navigation";
+import CementProductPage from "@/src/content/CementProduct";
 export async function generateStaticParams() {
   return CementData.map((cement)=>({slug: cement.link}))
 }
@@ -19,7 +19,7 @@ export default async function CementPage({ params }) {
   return (
     <>
       <Header />
-      <SteelProductPage product={cementItem} brands={false} breadcrumbs={true} />
+      <CementProductPage product={cementItem} brands={false} breadcrumbs={true} />
       <Footer />
     </>
   );
