@@ -777,26 +777,20 @@ export const CementData = [
       "Low heat of hydration",
       "Resistant to moisture and corrosion",
     ],
-    types: [
-      {
-        type: "OPC",
-        fullForm: "Ordinary Portland Cement",
-        image: "/ultratech-opc.jpeg",
-        description: "Ultratech OPC (Ordinary Portland Cement) is best suited for high-strength structural work, including slabs, beams, and columns in commercial and residential projects."
-      },
-      {
-        type: "PPC",
-        fullForm: "Portland Pozzolana Cement",
-        image: "/ultratech-ppc.jpeg",
-        description: "Ultratech PPC (Portland Pozzolana Cement) offers better workability and resistance to chemicals, making it ideal for plastering, masonry, and environmental exposure."
-      },
-      {
-        type: "PSC",
-        fullForm: "Portland Slag Cement",
-        image: "/ultratech-psc.jpeg",
-        description: "Ultratech PSC (Portland Slag Cement) is durable, eco-friendly, and perfect for marine and industrial construction with excellent sulfate resistance."
-      }
-    ],
+   types: [
+  {
+    type: "PPC",
+    fullForm: "Portland Pozzolana Cement",
+    image: "/products/ultratech-ppc.jpg",
+    description: "Ultratech PPC (Portland Pozzolana Cement) offers better workability and resistance to chemicals, making it ideal for plastering, masonry, and environmental exposure."
+  },
+  {
+    type: "Super",
+    fullForm: "Super Cement",
+    image: "/products/ultratech-super.jpg", // Update with actual image path if different
+    description: "Ultratech Super Cement is designed for superior strength and durability, making it perfect for high-performance structures and long-lasting constructions."
+  }
+],
     faqs: [
       {
         question: "Is Ultratech Cement suitable for RCC work?",
@@ -842,26 +836,26 @@ export const CementData = [
       "Uniform particle size for smooth finish",
       "ISI certified and eco-friendly",
     ],
-     types: [
-      {
-        type: "HD",
-        fullForm: "High Durability Cement",
-        image: "/maha-hd.jpeg",
-        description: "Maha HD (High Durability) Cement is engineered for strength and durability, ideal for large-scale construction and infrastructure projects."
-      },
-      {
-        type: "PPC",
-        fullForm: "Portland Pozzolana Cement",
-        image: "/maha-ppc.jpeg",
-        description: "Maha PPC provides better workability, reduced heat of hydration, and long-term strength – suitable for brickwork and plastering."
-      },
-      {
-        type: "Solid Slag",
-        fullForm: "Solid Slag Cement",
-        image: "/maha-slag.jpeg",
-        description: "Maha Solid Slag Cement enhances corrosion resistance and is ideal for coastal and chemical-exposed environments."
-      }
-    ],
+    types: [
+  {
+    type: "PPC",
+    fullForm: "Portland Pozzolana Cement",
+    image: "/products/maha-ppc.jpg",
+    description: "Maha PPC provides better workability, reduced heat of hydration, and long-term strength – suitable for brickwork and plastering."
+  },
+  {
+    type: "OPC",
+    fullForm: "Ordinary Portland Cement",
+    image: "/products/maha-opc.jpg", // Make sure this image exists
+    description: "Maha OPC (Ordinary Portland Cement) is ideal for structural applications such as beams, slabs, and columns due to its high early strength."
+  },
+  {
+    type: "Slag",
+    fullForm: "Portland Slag Cement",
+    image: "/products/maha-slag.jpg",
+    description: "Maha Slag Cement enhances corrosion resistance and is ideal for coastal and chemical-exposed environments."
+  }
+],
     faqs: [
       {
         question: "What is Maha Cement commonly used for?",
@@ -907,20 +901,20 @@ export const CementData = [
       "ISI and BIS certified",
       "Suitable for RCC, plastering, and masonry",
     ],
-     types: [
-      {
-        type: "PPC",
-        fullForm: "Portland Pozzolana Cement",
-        image: "/ramco-ppc.jpeg",
-        description: "Ramco PPC is perfect for general construction, offering improved durability and low permeability in harsh weather conditions."
-      },
-      {
-        type: "Supercrete",
-        fullForm: "Supercrete High-Performance Cement",
-        image: "/ramco-supercrete.jpeg",
-        description: "Ramco Supercrete is a high-performance concrete cement with superior finish, workability, and strength for RCC and high-rise buildings."
-      }
-    ],
+    types: [
+  {
+    type: "PPC",
+    fullForm: "Portland Pozzolana Cement",
+    image: "/products/ramco-ppc.jpg",
+    description: "Ramco PPC is perfect for general construction, offering improved durability and low permeability in harsh weather conditions."
+  },
+  {
+    type: "Slag",
+    fullForm: "Portland Slag Cement",
+    image: "/products/ramco-slag.jpg", // Ensure this image exists
+    description: "Ramco Slag Cement is ideal for coastal and marine structures, offering high resistance to sulfate and chloride attacks for long-term durability."
+  }
+],
     faqs: [
       {
         question: "Can Ramco Cement be used for RCC structures?",
@@ -964,26 +958,14 @@ export const CementData = [
       "Suitable for both RCC and non-structural works",
       "ISI and BIS compliant",
     ],
-     types: [
-      {
-        type: "PPC",
-        fullForm: "Portland Pozzolana Cement",
-        image: "/sagar-ppc.jpeg",
-        description: "Sagar PPC offers better long-term strength and is highly suitable for plastering, masonry, and all general-purpose applications."
-      },
-      {
-        type: "OPC",
-        fullForm: "Ordinary Portland Cement",
-        image: "/sagar-opc.jpeg",
-        description: "Sagar OPC is ideal for structural and load-bearing applications, delivering high early strength for beams, slabs, and columns."
-      },
-      {
-        type: "Slag",
-        fullForm: "Slag Cement",
-        image: "/sagar-slag.jpeg",
-        description: "Sagar Slag Cement enhances durability, reduces thermal cracking, and performs well in marine and industrial construction projects."
-      }
-    ],
+   types: [
+  {
+    type: "Slag",
+    fullForm: "Slag Cement",
+    image: "/products/sagar-slag.jpg",
+    description: "Sagar Slag Cement enhances durability, reduces thermal cracking, and performs well in marine and industrial construction projects."
+  }
+],
     faqs: [
       {
         question: "Where can I use Sagar Cement?",

@@ -66,8 +66,8 @@ const products = [
     image: "rmc.jpg",
   },
     {
-    title: "Piling Rigs",
-    image: "infra-rentals.jpg",
+    title: "Infra Equipment Rental",
+    image: "infra-rental.jpg",
   },
    {
     title: "Safety",

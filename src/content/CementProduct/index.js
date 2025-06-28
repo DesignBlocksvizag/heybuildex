@@ -210,7 +210,7 @@ export default function CementProductPage({ product ,brands,breadcrumbs}) {
           "&:hover": { transform: "translateY(-4px)", boxShadow: 6 },
         }}
       >
-        {/* <Box
+        <Box
           component="img"
           src={item.image}
           alt={item.type}
@@ -219,7 +219,7 @@ export default function CementProductPage({ product ,brands,breadcrumbs}) {
             height: "200px",
             objectFit: "cover",
           }}
-        /> */}
+        />
         <Box sx={{ p: 2 }}>
           <Typography
             variant="subtitle1"

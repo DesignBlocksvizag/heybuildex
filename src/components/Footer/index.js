@@ -208,7 +208,7 @@ export default function Footer() {
             variant="body2"
             sx={{ fontFamily: "Poppins", opacity: 0.7 }}
           >
-            © {new Date().getFullYear()} HeyBuildEX. All rights reserved.
+            © {new Date().getFullYear()} Kalight Global Pvt. Ltd. All rights reserved.
           </Typography>
         </Box>
       </Container>
