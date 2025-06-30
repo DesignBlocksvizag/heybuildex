@@ -222,6 +222,10 @@ export default function ConstructionPage() {
                 label="Your Name"
                 variant="outlined"
                 fullWidth
+                name="name"
+                value={formik.values.name}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
                 size="small"
                 required
                 sx={{
@@ -243,6 +247,10 @@ export default function ConstructionPage() {
                 label="Phone Number"
                 variant="outlined"
                 fullWidth
+                name="phone"
+                value={formik.values.phone}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
                 size="small"
                 required
                 sx={{
@@ -264,6 +272,10 @@ export default function ConstructionPage() {
                 label="Material Required"
                 variant="outlined"
                 fullWidth
+                name="message"
+                value={formik.values.message}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
                 size="small"
                 sx={{
                   fontFamily: "Poppins",
@@ -284,6 +296,8 @@ export default function ConstructionPage() {
                 variant="contained"
                 color="success"
                 sx={{ fontWeight: "bold", fontFamily: "Poppins" }}
+                type="submit"
+                onClick={formik.handleSubmit}
               >
                 {`Get Today’s Best Price`}
               </Button>
@@ -292,7 +306,7 @@ export default function ConstructionPage() {
         </Box>
         <Box
           sx={{
-            backgroundColor: "#1ba553",
+            backgroundColor: "#1c953f",
             py: 2,
             px: 2,
             mt: 2,
