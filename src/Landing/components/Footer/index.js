@@ -89,7 +89,7 @@ export default function Footer() {
 
         <Box sx={{ textAlign: "center", mt: 4 }}>
           <Typography variant="body2" sx={{ fontFamily: "Poppins" }}>
-            © {new Date().getFullYear()} HeyBuildEX. All rights reserved.
+            © {new Date().getFullYear()} Kalight Global Pvt. Ltd. All rights reserved.
           </Typography>
         </Box>
       </Container>
