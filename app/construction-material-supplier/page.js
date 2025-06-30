@@ -109,6 +109,7 @@ export default function ConstructionPage() {
             component={"img"}
             src={"/buildex_logo1.png"}
             height={"80px"}
+            width={"200px"}
             alt="HeyBuildEx"
           />
         </Box>
