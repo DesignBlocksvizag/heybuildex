@@ -20,7 +20,6 @@ import ApartmentIcon from "@mui/icons-material/Apartment";
 import ClientSlides from "@/src/Landing/components/Slider";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
-import ProjectSlides from "@/src/Landing/components/Projects";
 import TestimonialSlider from "@/src/Landing/components/Testimonials";
 import Footer from "@/src/Landing/components/Footer";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
@@ -209,7 +208,7 @@ export default function ConstructionPage() {
               mb={3}
               sx={{ fontFamily: "Poppins", color: "#000" }}
             >
-              Fill in your details to get today’s best price on WhatsApp!
+              Fill in your details to get today’s best price
             </Typography>
 
             {/* Form Fields */}
@@ -296,8 +295,7 @@ export default function ConstructionPage() {
               />
               <Button
                 variant="contained"
-                color="success"
-                sx={{ fontWeight: "bold", fontFamily: "Poppins" }}
+                sx={{ fontWeight: "bold", fontFamily: "Poppins",background:"#1c953f" }}
                 type="submit"
                 onClick={formik.handleSubmit}
               >
@@ -374,7 +372,6 @@ export default function ConstructionPage() {
         <OurProducts />
         </Box>
         <ClientSlides />
-        <ProjectSlides />
         <Box
           sx={{
             background: "linear-gradient(90deg, #465a65 0%, #1c953f 100%)",
