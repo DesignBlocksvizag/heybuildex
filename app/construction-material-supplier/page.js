@@ -1,12 +1,20 @@
-"use client"
+"use client";
+import { useState } from "react";
 import {
   Box,
   Typography,
   Button,
   Stack,
   Container,
+  TextField,
+  Grid,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Snackbar,
+  Alert,
 } from "@mui/material";
-import QuotationForm from "@/src/Landing/components/Form";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 import ClientSlides from "@/src/Landing/components/Slider";
@@ -15,11 +23,78 @@ import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
 import ProjectSlides from "@/src/Landing/components/Projects";
 import TestimonialSlider from "@/src/Landing/components/Testimonials";
 import Footer from "@/src/Landing/components/Footer";
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
-
+import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { useFormik } from "formik";
+import { useRouter } from "next/navigation";
+import * as Yup from "yup";
+import FaqSection from "@/src/Landing/components/Faq";
+const benefits = [
+  "Direct-from-Manufacturer Rates",
+  "Delivery in 24–48 Hours",
+  "Transparent Weighment & Billing",
+  "Support for Bulk & Retail Orders",
+  "Trusted by Builders Across AP, Telangana & Odisha",
+];
 
 export default function ConstructionPage() {
+  const [loading, setLoading] = useState(false);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const router = useRouter();
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      phone: "",
+      message: "",
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required("Required"),
+      phone: Yup.string().required("Required"),
+      message: Yup.string().required("Required"),
+    }),
+    onSubmit: async (values, { resetForm }) => {
+      setLoading(true);
+      const now = new Date().toLocaleString(); // adds date and time
+      const data = {
+        name: values.name,
+        phone: values.phone,
+        steelType: "",
+        material: "",
+        message: values.message,
+      };
+
+      try {
+        const response = await fetch("https://heybuildex.com/submit-lead.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+
+        const result = await response.json(); // assuming it returns JSON
+
+        if (response.ok) {
+          resetForm();
+          router.push("/thank-you");
+        } else {
+          // Handle Kylas API error format
+          if (result?.details) {
+            const parsedDetails = JSON.parse(result.details);
+            setErrorMessage(parsedDetails.message || "Something went wrong.");
+          } else {
+            setErrorMessage("Submission failed. Please try again.");
+          }
+          setOpenSnackbar(true);
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        setErrorMessage("Network or server error. Please try again.");
+        setOpenSnackbar(true);
+      } finally {
+        setLoading(false);
+      }
+    },
+  });
   return (
     <Box
       sx={{
@@ -29,7 +104,12 @@ export default function ConstructionPage() {
     >
       <Container maxWidth="lg">
         <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <Box component={"img"} src={"/buildex_logo1.png"} height={"80px"} />
+          <Box
+            component={"img"}
+            src={"/buildex_logo1.png"}
+            height={"80px"}
+            alt="HeyBuildEx"
+          />
         </Box>
         <Typography
           variant="h5"
@@ -56,273 +136,224 @@ export default function ConstructionPage() {
         >
           On-Time Delivery | Budget-Friendly | Expert Support
         </Typography>
-        {/* <Box
+        <Box
           sx={{
-            p: 2,
+            px: 3,
+            py: 5,
             borderTopLeftRadius: "10px",
             borderTopRightRadius: "10px",
             backgroundImage:
-              "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/steel-1.jpg')",
+              "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/steel-bg.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            textAlign: "center",
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: 4,
           }}
         >
-          <Typography
-            variant="h4"
-            fontWeight="bold"
-            sx={{ fontFamily: "Poppins", color: "#fff" }}
-          >
-            Top Quality TMT Bars for All Your Construction Needs
-          </Typography>
-          <Typography
-            variant="h6"
-            sx={{ fontWeight: 500, mb: 2, fontFamily: "Poppins" }}
-          >
-            Strong. Durable. Reliable.
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{
-              fontSize: "1.1rem",
-              mb: 2,
-              fontFamily: "Poppins",
-              color: "#fff",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: 0.5,
-              fontWeight: 600,
-            }}
-          >
-            <ConstructionIcon sx={{ color: "#fff" }} />
-            Get Direct Factory Prices | Bulk Orders Available | Fast Delivery
-          </Typography>
+          {/* Left text section */}
+          <Box sx={{ color: "#fff", maxWidth: 500 }}>
+            <Typography
+              variant="h5"
+              fontWeight="bold"
+              gutterBottom
+              sx={{ fontFamily: "Poppins" }}
+            >
+              Buy Construction Materials at Lowest Prices in AP & Telangana!
+            </Typography>
+            <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
+              Construction Steel & Structural Steel Delivered Fast. Trusted by
+              150+ Builders
+            </Typography>
+          </Box>
 
-          <Stack spacing={1.5} alignItems="center" mb={2}>
-            <Typography
-              sx={{
-                fontFamily: "Poppins",
-                color: "#fff",
-                display: "flex",
-                alignItems: "center",
-                gap: 1,
-                fontWeight: 600,
-              }}
-            >
-              <CheckCircleIcon color="white"  />
-              Fe500 / Fe500D / Fe550 / Fe550D Grades
-            </Typography>
-            <Typography
-              sx={{
-                fontFamily: "Poppins",
-                color: "#fff",
-                display: "flex",
-                alignItems: "center",
-                gap: 1,
-                fontWeight: 600,
-              }}
-            >
-              <CheckCircleIcon color="white"  />
-              ISI Certified & Trusted Brands
-            </Typography>
-            <Typography
-              sx={{
-                fontFamily: "Poppins",
-                color: "#fff",
-                display: "flex",
-                alignItems: "center",
-                gap: 1,
-                fontWeight: 600,
-              }}
-            >
-              <CheckCircleIcon color="white"  />
-              Best Prices for Builders, Contractors, & Retailers
-            </Typography>
-            <Typography
-              sx={{
-                fontFamily: "Poppins",
-                color: "#fff",
-                display: "flex",
-                alignItems: "center",
-                gap: 1,
-                fontWeight: 600,
-              }}
-            >
-              <CheckCircleIcon color="white"  />
-              Available in All Sizes (8mm to 32mm)
-            </Typography>
-          </Stack>
-
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
+          {/* Right box section */}
+          <Box
             sx={{
-              px: 4,
-              py: 1.5,
-              fontWeight: 600,
-              borderRadius: "8px",
-              boxShadow: 2,
-              background: "linear-gradient(90deg, #465a65 0%, #1c953f 100%)",
-              backgroundSize: "200% 100%",
-              backgroundPosition: "0% 50%",
-              fontFamily: "Poppins",
-              animation: "moveGradient 3s ease infinite",
-              color: "#fff",
-              textTransform: "none",
-              "@keyframes moveGradient": {
-                "0%": { backgroundPosition: "0% 50%" },
-                "50%": { backgroundPosition: "100% 50%" },
-                "100%": { backgroundPosition: "0% 50%" },
-              },
+              p: 4,
+              background: "#f5f5f5",
+              textAlign: "center",
+              borderRadius: 2,
+              boxShadow: 3,
+              maxWidth: 500,
+              flexShrink: 0,
+              mx: "auto",
             }}
-            href="#quote"
+            id="quote"
           >
-            Get a Free Quote Now
-          </Button>
-            <Stack direction="row" spacing={2} justifyContent="center" mt={2}>
-    <Button
-      variant="contained"
-      sx={{
-        backgroundColor: "#25D366",
-        color: "#fff",
-        fontWeight: 600,
-        fontFamily: "Poppins",
-        px: 3,
-        "&:hover": { backgroundColor: "#1ebd5a" },
-      }}
-      href="https://wa.me/9281446109" // Replace with your WhatsApp number
-      target="_blank"
-    >
-      WhatsApp
-    </Button>
-    <Button
-      variant="contained"
-      sx={{
-        backgroundColor: "#fff",
-     ,fontSize:"20px"   color: "#fff",
-        fontWeight: 600,
-        fontFamily: "Poppins",
-        px: 3,
-        "&:hover": { backgroundColor: "#155fa0" },
-      }}
-      href="tel:9281446109" // Replace with your phone number
-    >
-      Call Now
-    </Button>
-    </Stack>
-        </Box> */}
+            {/* Header */}
+            <Box
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              mb={2}
+            >
+              <LocalOfferIcon sx={{ color: "#1c953f", fontSize: 25, mr: 1 }} />
+              <Typography
+                variant="h5"
+                fontWeight="bold"
+                sx={{ fontFamily: "Poppins", color: "#333" }}
+              >
+                Get a Free Quote
+              </Typography>
+            </Box>
+
+            {/* Subheading */}
+            <Typography
+              variant="body1"
+              mb={3}
+              sx={{ fontFamily: "Poppins", color: "#000" }}
+            >
+              Fill in your details to get today’s best price on WhatsApp!
+            </Typography>
+
+            {/* Form Fields */}
+            <Box
+              component="form"
+              display="flex"
+              flexDirection="column"
+              gap={2}
+              mb={3}
+            >
+              <TextField
+                label="Your Name"
+                variant="outlined"
+                fullWidth
+                size="small"
+                required
+                sx={{
+                  fontFamily: "Poppins",
+                  "& .MuiInputLabel-root": {
+                    fontFamily: "Poppins",
+                  },
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "#1c953f",
+                  },
+                  "& .MuiOutlinedInput-root": {
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#1c953f",
+                    },
+                  },
+                }}
+              />
+              <TextField
+                label="Phone Number"
+                variant="outlined"
+                fullWidth
+                size="small"
+                required
+                sx={{
+                  fontFamily: "Poppins",
+                  "& .MuiInputLabel-root": {
+                    fontFamily: "Poppins",
+                  },
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "#1c953f",
+                  },
+                  "& .MuiOutlinedInput-root": {
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#1c953f",
+                    },
+                  },
+                }}
+              />
+              <TextField
+                label="Material Required"
+                variant="outlined"
+                fullWidth
+                size="small"
+                sx={{
+                  fontFamily: "Poppins",
+                  "& .MuiInputLabel-root": {
+                    fontFamily: "Poppins",
+                  },
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "#1c953f",
+                  },
+                  "& .MuiOutlinedInput-root": {
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#1c953f",
+                    },
+                  },
+                }}
+              />
+              <Button
+                variant="contained"
+                color="success"
+                sx={{ fontWeight: "bold", fontFamily: "Poppins" }}
+              >
+                {`Get Today’s Best Price`}
+              </Button>
+            </Box>
+          </Box>
+        </Box>
         <Box
-  sx={{
-    px: 3,
-    py:5,
-    borderTopLeftRadius: "10px",
-    borderTopRightRadius: "10px",
-    backgroundImage:
-      "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/steel-bg.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    display: "flex",
-    flexDirection: { xs: "column", md: "row" },
-    justifyContent: "space-between",
-    alignItems: "center",
-    gap: 4,
-  }}
->
-  {/* Left text section */}
- <Box sx={{ color: "#fff", maxWidth: 500 }}>
-  <Typography
-    variant="h5"
-    fontWeight="bold"
-    gutterBottom
-    sx={{ fontFamily: "Poppins" }}
-  >
-    Build Strong with Our Construction & Structural Steel – On Time, Every Time
-  </Typography>
+          sx={{
+            backgroundColor: "#1ba553",
+            py: 2,
+            px: 2,
+            mt: 2,
+            borderRadius: 2,
+          }}
+        >
+          <Grid container spacing={4} alignItems="center">
+            {/* Left Side: Text Content */}
+            <Grid size={{ xs: 12, sm: 6 }}>
+              <Typography
+                variant="h4"
+                sx={{
+                  fontFamily: "Poppins",
+                  fontWeight: 700,
+                  color: "#fff",
+                  mb: 3,
+                }}
+              >
+                Trust & Benefits
+              </Typography>
 
-  <Box display="flex" alignItems="center" mb={1}>
-  <ArrowRightAltIcon sx={{ color: "#fff", mr: 1,fontSize:"20px" }} />
-  <Typography variant="body1" sx={{ fontFamily: "Poppins" }}>
-    ISO-Certified Quality Steel
-  </Typography>
-</Box>
+              <List>
+                {benefits.map((text, index) => (
+                  <ListItem key={index} disableGutters>
+                    <ListItemIcon sx={{ minWidth: 0, pr: "10px" }}>
+                      <CheckCircleIcon sx={{ color: "#fff" }} />
+                    </ListItemIcon>
+                    <ListItemText
+                      primary={text}
+                      slotProps={{
+                        primary: {
+                          sx: {
+                            fontFamily: "Inter",
+                            color: "#fff",
+                            fontSize: "1rem",
+                          },
+                        },
+                      }}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+            </Grid>
 
-<Box display="flex" alignItems="center" mb={1}>
-  <ArrowRightAltIcon sx={{ color: "#fff", mr: 1,fontSize:"20px" }} />
-  <Typography variant="body1" sx={{ fontFamily: "Poppins" }}>
-    Tailored Solutions for Your Project
-  </Typography>
-</Box>
-
-<Box display="flex" alignItems="center" mb={1}>
-  <ArrowRightAltIcon sx={{ color: "#fff", mr: 1,fontSize:"20px" }} />
-  <Typography variant="body1" sx={{ fontFamily: "Poppins" }}>
-    100% Weighment Transparency
-  </Typography>
-</Box>
-  <Typography
-    variant="body1"
-    sx={{ fontFamily: "Poppins", mb: 1 }}
-  >
-    • Quality Steel • Best Price • Quick Delivery • Expert Support
-  </Typography>
-</Box>
-
-
-  {/* Right box section */}
-  <Box
-    sx={{
-      p: 4,
-      background: "#f5f5f5",
-      textAlign: "center",
-      borderRadius: 2,
-      boxShadow: 3,
-      maxWidth: 500,
-      flexShrink: 0,
-    }}
-  >
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      mb={2}
-    >
-      <LocalOfferIcon sx={{ color: "#1c953f", fontSize: 25, mr: 1 }} />
-      <Typography
-        variant="h5"
-        fontWeight="bold"
-        sx={{ fontFamily: "Poppins", color: "#333" }}
-      >
-        Get a Free Quote
-      </Typography>
-    </Box>
-
-    <Typography
-      variant="body1"
-      mb={2}
-      sx={{ fontFamily: "Poppins", color: "#000" }}
-    >
-        Get today’s best price on WhatsApp. Just click the button below and send us a message!
-    </Typography>
-
-   <a
-  href="https://wa.me/919281446109?text=Hi%2C%20I'm%20interested%20in%20your%20construction%20materials.%20Please%20share%20the%20latest%20pricing%20and%20details."
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Box
-    component={"img"}
-    src="/whatsapp.png" // Replace with your image path
-    alt="WhatsApp"
-    sx={{ width: {xs:170,md:200}, height: {xs:70,md:80}, cursor: "pointer",objectFit:"contain",mixBlendMode:"multiply" }}
-  />
-</a>
-
-  </Box>
-</Box>
+            {/* Right Side: Image Placeholder */}
+            <Grid size={{ xs: 12, sm: 6 }}>
+              <Box
+                sx={{
+                  width: "100%",
+                  height: { xs: 320, md: 350 },
+                  backgroundColor: "transparent",
+                  borderRadius: 2,
+                  backgroundImage: 'url("/trust.png")', // replace with your image
+                  backgroundSize: "contain",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              />
+            </Grid>
+          </Grid>
+        </Box>
 
         <ClientSlides />
         <ProjectSlides />
@@ -347,157 +378,112 @@ export default function ConstructionPage() {
           </Typography>
 
           <Stack
-  direction={{ xs: "column", md: "row" }}
-  spacing={4}
-  justifyContent="center"
-  alignItems="center"
->
-   <Stack
-    direction="column"
-    spacing={1.5}
-    alignItems="center"
-    maxWidth={250}
-  >
-   <CurrencyRupeeIcon sx={{ fontSize: 40, color: "#fff" }} />
-    <Typography fontFamily="Poppins" fontWeight={600} align="center" fontSize={16}>
-      Budget-Friendly Solutions
-    </Typography>
-    <Typography fontFamily="Poppins" fontWeight={400} fontSize={13} align="center">
-      Quality steel that fits your project and your budget.
-    </Typography>
-  </Stack>
+            direction={{ xs: "column", md: "row" }}
+            spacing={4}
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Stack
+              direction="column"
+              spacing={1.5}
+              alignItems="center"
+              maxWidth={250}
+            >
+              <CurrencyRupeeIcon sx={{ fontSize: 40, color: "#fff" }} />
+              <Typography
+                fontFamily="Poppins"
+                fontWeight={600}
+                align="center"
+                fontSize={16}
+              >
+                Budget-Friendly Solutions
+              </Typography>
+              <Typography
+                fontFamily="Poppins"
+                fontWeight={400}
+                fontSize={13}
+                align="center"
+              >
+                Quality steel that fits your project and your budget.
+              </Typography>
+            </Stack>
 
-  <Stack
-    direction="column"
-    spacing={1.5}
-    alignItems="center"
-    maxWidth={250}
-  >
-    <ApartmentIcon sx={{ fontSize: 40, color: "#fff" }} />
-    <Typography fontFamily="Poppins" fontWeight={600} align="center" fontSize={16}>
-      Ideal for All Projects
-    </Typography>
-    <Typography fontFamily="Poppins" fontWeight={400} fontSize={13} align="center">
-      Residential, Commercial & Industrial.
-    </Typography>
-  </Stack>
+            <Stack
+              direction="column"
+              spacing={1.5}
+              alignItems="center"
+              maxWidth={250}
+            >
+              <ApartmentIcon sx={{ fontSize: 40, color: "#fff" }} />
+              <Typography
+                fontFamily="Poppins"
+                fontWeight={600}
+                align="center"
+                fontSize={16}
+              >
+                Ideal for All Projects
+              </Typography>
+              <Typography
+                fontFamily="Poppins"
+                fontWeight={400}
+                fontSize={13}
+                align="center"
+              >
+                Residential, Commercial & Industrial.
+              </Typography>
+            </Stack>
 
-  <Stack
-    direction="column"
-    spacing={1.5}
-    alignItems="center"
-    maxWidth={250}
-  >
-    <LocalShippingIcon sx={{ fontSize: 40, color: "#fff" }} />
-    <Typography fontFamily="Poppins" fontWeight={600} align="center" fontSize={16}>
-      Fast, On-Time Delivery
-    </Typography>
-    <Typography fontFamily="Poppins" fontWeight={400} fontSize={13} align="center">
-      We respect your project timelines.
-    </Typography>
-  </Stack>
+            <Stack
+              direction="column"
+              spacing={1.5}
+              alignItems="center"
+              maxWidth={250}
+            >
+              <LocalShippingIcon sx={{ fontSize: 40, color: "#fff" }} />
+              <Typography
+                fontFamily="Poppins"
+                fontWeight={600}
+                align="center"
+                fontSize={16}
+              >
+                Fast, On-Time Delivery
+              </Typography>
+              <Typography
+                fontFamily="Poppins"
+                fontWeight={400}
+                fontSize={13}
+                align="center"
+              >
+                We respect your project timelines.
+              </Typography>
+            </Stack>
 
-  <Stack
-    direction="column"
-    spacing={1.5}
-    alignItems="center"
-    maxWidth={250}
-  >
-    <PhoneInTalkIcon sx={{ fontSize: 40, color: "#fff" }} />
-    <Typography fontFamily="Poppins" fontWeight={600} align="center" fontSize={16}>
-      24/7 Expert Support
-    </Typography>
-    <Typography fontFamily="Poppins" fontWeight={400} fontSize={13} align="center">
-      Guidance whenever you need it.
-    </Typography>
-  </Stack>
-</Stack>
+            <Stack
+              direction="column"
+              spacing={1.5}
+              alignItems="center"
+              maxWidth={250}
+            >
+              <PhoneInTalkIcon sx={{ fontSize: 40, color: "#fff" }} />
+              <Typography
+                fontFamily="Poppins"
+                fontWeight={600}
+                align="center"
+                fontSize={16}
+              >
+                24/7 Expert Support
+              </Typography>
+              <Typography
+                fontFamily="Poppins"
+                fontWeight={400}
+                fontSize={13}
+                align="center"
+              >
+                Guidance whenever you need it.
+              </Typography>
+            </Stack>
+          </Stack>
         </Box>
-        {/* <Box
-          sx={{
-            overflow: "hidden",
-            py: 6,
-            background: "linear-gradient(90deg, #1c953f 0%, #465a65 100%)",
-          }}
-        >
-          <Typography
-            variant="h5"
-            fontWeight="bold"
-            textAlign="center"
-            sx={{ color: "#fff", fontFamily: "Poppins", mb: 3 }}
-          >
-            Brands We Supply:
-          </Typography>
-
-          <Box
-            sx={{
-              display: "flex",
-              width: "200%",
-              animation: "scroll 5s linear infinite",
-              "@keyframes scroll": {
-                "0%": { transform: "translateX(0)" },
-                "100%": { transform: "translateX(-50%)" },
-              },
-            }}
-          >
-            {[...Array(2)].map((_, loopIndex) => (
-              <Box key={loopIndex} sx={{ display: "flex", gap: 6, px: 4 }}>
-                {[
-                  { name: "Tata Tiscon", logo: "/logos/tata-tiscon.png" },
-                  { name: "JSW Neosteel", logo: "/logos/jsw-neosteel.png" },
-                  { name: "Vizag Steel", logo: "/logos/vizag-steel.png" },
-                  { name: "Shyam Steel", logo: "/logos/shyam-steel.png" },
-                  { name: "Kamdhenu", logo: "/logos/kamdhenu.png" },
-                ].map((brand, i) => (
-                  <Box
-                    key={i}
-                    sx={{
-                      minWidth: 150,
-                      textAlign: "center",
-                      backgroundColor: "rgba(255, 255, 255, 0.1)",
-                      borderRadius: 2,
-                      boxShadow: 1,
-                      px: 2,
-                      py: 2,
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        height: 60,
-                        mb: 1,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <img
-                        src={brand.logo}
-                        alt={brand.name}
-                        style={{
-                          maxHeight: "100%",
-                          maxWidth: "100%",
-                          objectFit: "contain",
-                          filter: "brightness(0) invert(1)",
-                        }}
-                      />
-                    </Box>
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        fontFamily: "Poppins",
-                        fontWeight: 500,
-                        color: "#fff",
-                      }}
-                    >
-                      {brand.name}
-                    </Typography>
-                  </Box>
-                ))}
-              </Box>
-            ))}
-          </Box>
-        </Box> */}
-
         <Box
           sx={{
             py: { xs: 6, md: 8 },
@@ -508,37 +494,9 @@ export default function ConstructionPage() {
             my: 2,
           }}
         >
-          {/* <Stack
-            spacing={3}
-            alignItems="center"
-            justifyContent="center"
-            direction={{ xs: "column", md: "row" }}
-          >
-            <Stack direction="row" spacing={2} alignItems="center">
-              <VerifiedIcon sx={{ color: "#1c953f", fontSize: 40 }} />
-              <Typography
-                variant="h6"
-                fontWeight="bold"
-                sx={{ fontFamily: "Poppins", color: "#465a65" }}
-              >
-                🎯 Trusted by 1000+ Builders & Contractors
-              </Typography>
-            </Stack>
-
-            <Stack direction="row" spacing={2} alignItems="center">
-              <TrendingUpIcon sx={{ color: "#1c953f", fontSize: 40 }} />
-              <Typography
-                variant="h6"
-                fontWeight="bold"
-                sx={{ fontFamily: "Poppins", color: "#465a65" }}
-              >
-                📈 {`Boost Your Project's Durability with Our Premium Steel`}
-              </Typography>
-            </Stack>
-          </Stack> */}
           <TestimonialSlider />
         </Box>
-        <QuotationForm />
+        {/* <QuotationForm /> */}
 
         <Box
           sx={{
@@ -609,8 +567,51 @@ export default function ConstructionPage() {
               CALL NOW
             </Button>
           </Stack>
+          {/* WhatsApp CTA */}
+          <Typography
+            variant="body2"
+            mt={2}
+            sx={{ fontFamily: "Poppins", color: "#fff" }}
+          >
+            Or contact us directly on WhatsApp:
+          </Typography>
+
+          <a
+            href="https://wa.me/919281446109?text=Hi%2C%20I'm%20interested%20in%20your%20construction%20materials.%20Please%20share%20the%20latest%20pricing%20and%20details."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Box
+              component={"img"}
+              src="/image.png" // Replace with your image path
+              alt="WhatsApp"
+              sx={{
+                width: { xs: 170, md: 200 },
+                height: { xs: 70, md: 80 },
+                cursor: "pointer",
+                objectFit: "contain",
+                marginTop: "10px",
+              }}
+            />
+          </a>
         </Box>
+        <FaqSection />
       </Container>
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={6000}
+        onClose={() => setOpenSnackbar(false)}
+        sx={{ position: "fixed", top: 20, right: 20, zIndex: 1300 }}
+      >
+        <Alert
+          onClose={() => setOpenSnackbar(false)}
+          severity={errorMessage ? "error" : "success"}
+          sx={{ width: "100%", fontFamily: "Poppins" }}
+        >
+          {errorMessage || "Your message has been sent successfully!"}
+        </Alert>
+      </Snackbar>
+
       <Footer />
     </Box>
   );
