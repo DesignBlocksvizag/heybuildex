@@ -29,6 +29,7 @@ import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
 import * as Yup from "yup";
 import FaqSection from "@/src/Landing/components/Faq";
+import OurProducts from "@/src/content/OurProducts";
 const benefits = [
   "Direct-from-Manufacturer Rates",
   "Delivery in 24–48 Hours",
@@ -368,7 +369,9 @@ export default function ConstructionPage() {
             </Grid>
           </Grid>
         </Box>
-
+        <Box sx={{mt:3}}>
+        <OurProducts />
+        </Box>
         <ClientSlides />
         <ProjectSlides />
         <Box
