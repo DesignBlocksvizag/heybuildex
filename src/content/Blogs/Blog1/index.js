@@ -1,5 +1,5 @@
 "use client";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography,Link } from "@mui/material";
 
 const SteelStructuresBlog = () => {
   return (
@@ -166,13 +166,10 @@ const SteelStructuresBlog = () => {
           variant="h5"
           sx={{ fontFamily: "Poppins, sans-serif", color: "#333", mb: 1 }}
         >
-          From Industries to Homes
+          Applications: From Industries to Homes
         </Typography>
         <Typography sx={{ color: "#333", fontFamily: "Inter" }}>
-          Whether you're building a skyscraper or a modern home, structural
-          steel offers unmatched reliability. From beams and columns to roofing
-          and staircases, it's used everywhere construction demands strength and
-          longevity.
+          <Link href="https://en.wikipedia.org/wiki/Structural_steel">MS Channels</Link> Structural steel is not just for skyscrapers and factories. It is equally important in home construction, providing strong frameworks, reliable roofing, and durable supports for modern homes. In industries, structural steel is used to build warehouses, manufacturing plants, bridges, towers, and machinery, ensuring that every structure stands the test of time.
         </Typography>
       </Box>
 
@@ -193,7 +190,7 @@ const SteelStructuresBlog = () => {
         </Typography>
         <Typography sx={{ color: "#333", fontFamily: "Inter" }}>
           <strong>Looking to buy high-quality structural steel?</strong> Visit{" "}
-          <a href="#" style={{ color: "#333", textDecoration: "underline" }}>
+          <a href="/" style={{ color: "#333", textDecoration: "underline" }}>
             Heybuildex
           </a>{" "}
           for a wide selection of products at unbeatable prices. Whether you
