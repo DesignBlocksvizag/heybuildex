@@ -121,7 +121,7 @@ export default function ConstructionPage() {
             fontFamily: "Poppins",
           }}
         >
-          Construction material Supplier and Infra Equipment Rentals
+          Construction Materials & Infra Equipment Rentals Online
         </Typography>
         <Typography
           variant="subtitle1"
@@ -155,20 +155,36 @@ export default function ConstructionPage() {
           }}
         >
           {/* Left text section */}
-          <Box sx={{ color: "#fff", maxWidth: 500 }}>
-            <Typography
-              variant="h5"
-              fontWeight="bold"
-              gutterBottom
-              sx={{ fontFamily: "Poppins" }}
-            >
-              Buy Construction Materials at Lowest Prices in AP & Telangana!
-            </Typography>
-            <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
-              Construction Steel & Structural Steel Delivered Fast. Trusted by
-              150+ Builders
-            </Typography>
-          </Box>
+         <Box sx={{ color: "#fff", maxWidth: 500 }}>
+  <Typography
+    variant="h5"
+    fontWeight="bold"
+    gutterBottom
+    sx={{ fontFamily: "Poppins" }}
+  >
+    Buy Construction Materials at Lowest Prices in AP & Telangana!
+  </Typography>
+  <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
+    Construction Steel & Structural Steel 
+  </Typography>
+<Box sx={{pl:3}}>
+  <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
+    ✅ Branded TMT Bars
+  </Typography>
+  <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
+    ✅ 24–48 Hrs Delivery
+  </Typography>
+  <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
+    ✅ Transparent Pricing
+  </Typography>
+  <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 2 }}>
+    ✅ Trusted by 150+ Top Builders
+  </Typography>
+  <Typography variant="body1" sx={{ fontFamily: "Poppins", fontWeight: 500 }}>
+    🎯 Still planning? Let us help you get the right quote.
+  </Typography>
+  </Box>
+</Box>
 
           {/* Right box section */}
           <Box
