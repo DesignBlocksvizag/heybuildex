@@ -5,11 +5,7 @@ export const SteelData = [
     link: "tmt-bars",
     image: "/tmt-bars.jpg",
     description: [
-      "TMT bars are essential for construction due to their strength.",
-      "They are used in residential, commercial, and infrastructure projects.",
-      "TMT bars offer high strength-to-weight ratio and flexibility.",
-      "They undergo thermo-mechanical treatment for durability.",
-      "Perfect for withstanding seismic and dynamic loads.",
+    "TMT bars (Thermo-Mechanically Treated bars) are high-strength reinforcement bars with a tough outer core and a soft inner core, offering excellent strength, flexibility, and corrosion resistance. Ideal for all types of construction, they ensure durability and safety in residential, commercial, and infrastructure projects"
     ],
     sizes: ["8mm", "10mm", "12mm", "16mm", "20mm", "25mm", "32mm"],
     brandImages: [
@@ -22,33 +18,93 @@ export const SteelData = [
       { src: "/clients/mangal.png", alt: "Mangal" },
       { src: "/clients/simhadri.png", alt: "Simhadri" },
     ],
-    overview:
-      "Our TMT bars are manufactured using state-of-the-art technology. They offer excellent strength and ductility for various projects. Our TMT bars are ideal for construction that requires long-lasting, earthquake-resistant reinforcement solutions.",
-    features: [
-      "High tensile strength",
-      "Corrosion resistant",
-      "Earthquake resistant",
-      "Easy to weld and bend",
-    ],
+    overview:`<div>
+  <h3>Product Description:</h3>
+  <p>
+    <strong>TMT Bars</strong> (Thermo-Mechanically Treated Bars) are high-strength steel rods with a tough outer core and a ductile inner core.
+    Manufactured through advanced quenching and tempering, they offer superior strength, flexibility, and corrosion resistance—ideal for all types of construction.
+  </p>
+
+  <h4>Key Features:</h4>
+  <ul>
+    <li>High tensile strength and ductility</li>
+    <li>Corrosion and earthquake resistant</li>
+    <li>Excellent thermal stability</li>
+  </ul>
+
+  <h4>Available Grades:</h4>
+  <p>Fe 500, Fe 500D, Fe 550D</p>
+
+  <h4>Variants:</h4>
+  <p>Straight bars, bent bars, and corrosion-resistant bars</p>
+
+  <p>
+    TMT bars ensure <strong>safety</strong>, <strong>durability</strong>, and <strong>long-lasting performance</strong> in every build.
+  </p>
+</div>
+`,
+   features: [
+  "Multiple Brands",
+  "Competitive Pricing",
+  "High-quality certified steel",
+  "Project-specific supply solutions",
+  "Customized Solutions",
+  "100% weighment transparency",
+  "On-time, reliable delivery",
+  "Budget-friendly pricing",
+  "Expert support from order to site"
+   ],
     faqs: [
-      {
-        question: "Are these TMT bars ISI certified?",
-        answer: "Yes, all our TMT bars come with ISI certification.",
-      },
-      {
-        question: "Can I order in bulk?",
-        answer: "Absolutely! We offer bulk supplies with delivery options.",
-      },
-      {
-        question: "What sizes are available?",
-        answer: "We offer TMT bars in sizes ranging from 8mm to 20mm.",
-      },
-      {
-        question: "Are they suitable for earthquake-prone areas?",
-        answer:
-          "Yes, our TMT bars are designed to withstand seismic activities.",
-      },
-    ],
+  {
+    question: "What brands of TMT bars are available at HeyBuildex?",
+    answer: 
+      "We supply premium brands like Vizag Steel, SAIL, Jindal Panther, JSW, Tata Tiscon, as well as secondary brands such as Simhadri, Kamdhenu, Mangal, Beekay, Radha, Jindal, Shree TMT, Sangam TMT, and many more."
+  },
+  {
+    question: "Can I compare different TMT bar brands before buying?",
+    answer: 
+      "Yes, our platform allows you to compare various brands, grades, and prices so you can make an informed decision."
+  },
+  {
+    question: "Do you supply TMT bars for both small and large projects?",
+    answer: 
+      "Absolutely! We cater to both small-scale residential projects and large infrastructure developments."
+  },
+  {
+    question: "Are your TMT bars compliant with industry standards?",
+    answer: 
+      "Yes, all our TMT bars meet IS 1786:2008 standards, ensuring top-grade strength and reliability."
+  },
+  {
+    question: "Can I place a bulk order for TMT bars?",
+    answer: 
+      "Yes, HeyBuildex supports bulk ordering for large projects at competitive rates."
+  },
+  {
+    question: "Do you deliver TMT bars to multiple locations?",
+    answer: 
+      "Yes, we provide pan-India delivery, ensuring timely and safe transportation to your construction site."
+  },
+  {
+    question: "What grades of TMT bars do you supply?",
+    answer: 
+      "We offer standard grades including Fe 500, Fe 500D, Fe 550, and Fe 550D."
+  },
+  {
+    question: "Are your TMT bars suitable for earthquake-prone areas?",
+    answer: 
+      "Yes, we provide high ductility grades like Fe 500D and Fe 550D, ideal for seismic zones."
+  },
+  {
+    question: "How do I place an order for TMT bars?",
+    answer: 
+      "You can easily place an order online through our website or request a quote for bulk purchases."
+  },
+  {
+    question: "Can I get customized quantities of TMT bars?",
+    answer: 
+      "Yes, we fulfill custom quantity requests based on your specific project needs."
+  }],
     pageLink: "/steel/tmt-bars",
   },
   {
@@ -57,44 +113,73 @@ export const SteelData = [
     link: "binding-wire",
     image: "/binding-wire.jpg",
     description: [
-      "Binding wire is used to tie rebars at joints to keep the structure intact.",
-      "It ensures the correct positioning of steel bars before and during concreting.",
-      "Binding wire is known for its flexibility and strong grip.",
-      "It is widely used in RCC construction and various fabrication works.",
-      "Available in various gauges to suit different construction requirements.",
+      "Binding Wire is a thin, flexible wire primarily used for tying rebar (reinforcement bars) in construction projects to hold them in place during the concrete setting process. It is made from mild steel and is soft, which allows for easy twisting and strong knotting without breaking.",
     ],
     brandImages: [{ src: "/clients/simhadri.png", alt: "Simhadri" },{ src: "/clients/tata-wiron.jpg", alt: "Tata wiron" },],
     sizes: ["0.91mm", "1.22mm", "1.52mm"],
-    overview:
-      "Our binding wire offers the perfect balance of flexibility and strength. It is extensively used to fasten TMT bars at joints, ensuring the structural integrity of concrete frameworks. Ideal for both residential and industrial construction sites.",
+    overview: `<div>
+  <h3>Product Description:</h3>
+  <p>
+    <strong>Binding Wire</strong> is a vital component in the construction industry, primarily used for tying and holding reinforcement bars (rebars) in position before and during concrete pouring. 
+    Made from high-quality mild steel and available in various gauges, it plays a key role in maintaining structural alignment and integrity.
+  </p>
+
+  <h4>Applications:</h4>
+  <ul>
+    <li>Construction: Tying rebars to ensure structural stability in concrete work</li>
+    <li>Fencing and Mesh Binding: Securing wire meshes and fence structures</li>
+    <li>Bundling and Packaging: Tying pipes, rods, and other materials for transport</li>
+    <li>Agriculture: Supporting plants and agricultural setups</li>
+  </ul>
+
+  <h4>Specifications:</h4>
+  <ul>
+    <li><strong>Material:</strong> Mild Steel (MS)</li>
+    <li><strong>Gauge Sizes:</strong> 16 SWG to 20 SWG (custom sizes available on request)</li>
+    <li><strong>Packaging:</strong> Coils in 25kg or 50kg rolls</li>
+  </ul>
+
+  <h4>Key Features:</h4>
+  <ul>
+    <li>🔩 <strong>High Flexibility</strong> – Easily bends and ties without breaking, offering secure fastening</li>
+    <li>🔧 <strong>Optimal Strength</strong> – Uniform diameter ensures consistent performance and durability</li>
+    <li>🌧 <strong>Corrosion Resistant</strong> – Special coating ensures long-lasting performance in varied conditions</li>
+    <li>⚙️ <strong>Smooth Finish</strong> – Prevents damage to rebars or hands during handling</li>
+  </ul>
+</div>`,
     features: [
-      "Strong grip and durability",
-      "Flexible and easy to handle",
-      "Rust-resistant coating",
-      "Available in multiple gauges",
-    ],
+  "🔩 High Flexibility – Easily bends and ties without breaking, ensuring a tight and secure fit around TMT bars and rebars.",
+  "🔧 Optimal Strength – Made from premium quality mild steel with a uniform diameter for consistent performance.",
+  "🌧 Corrosion Resistant – Special surface treatment ensures longer life and durability in all weather conditions.",
+  "⚙️ Smooth Finish – Prevents damage to surrounding materials and ensures easy handling.",
+],
     faqs: [
-      {
-        question: "What is the purpose of binding wire?",
-        answer:
-          "It is used to tie steel bars together during reinforcement work in construction.",
-      },
-      {
-        question: "Is the wire rust-resistant?",
-        answer:
-          "Yes, our binding wire has a rust-resistant coating for longevity.",
-      },
-      {
-        question: "What sizes are available?",
-        answer:
-          "We provide binding wire in gauges like 0.91mm, 1.22mm, and 1.52mm.",
-      },
-      {
-        question: "Can it be used for heavy construction?",
-        answer:
-          "Yes, our binding wire is suitable for both light and heavy-duty construction work.",
-      },
-    ],
+  {
+    question: "What is the standard size of binding wire?",
+    answer:
+      "Binding wires are commonly available in sizes ranging from 0.90mm to 1.24mm in diameter, depending on the application.",
+  },
+  {
+    question: "Is galvanized binding wire better for outdoor projects?",
+    answer:
+      "Yes, galvanized binding wire is highly recommended for outdoor use due to its superior resistance to rust and weather conditions.",
+  },
+  {
+    question: "Can binding wire be used for purposes other than construction?",
+    answer:
+      "Absolutely! Binding wire is versatile and can be used for fencing, bundling materials, and even in agricultural applications.",
+  },
+  {
+    question: "How much binding wire is required for a ton of steel?",
+    answer:
+      "Typically, around 8 to 10 kg of binding wire is required to tie one ton of steel reinforcement.",
+  },
+  {
+    question: "How do I place an order for binding wire with HeyBuildex?",
+    answer:
+      "You can place an order online through our website or request a quote for bulk purchases. We ensure fast and reliable delivery to your site.",
+  },
+],
     pageLink: "/steel/binding-wire",
   },
   {
