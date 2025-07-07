@@ -343,7 +343,7 @@ export default function ConstructionPage() {
                 Trust & Benefits
               </Typography>
 
-              <List>
+              <List sx={{pl:2}}>
                 {benefits.map((text, index) => (
                   <ListItem key={index} disableGutters>
                     <ListItemIcon sx={{ minWidth: 0, pr: "10px" }}>

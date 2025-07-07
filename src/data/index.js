@@ -19,7 +19,6 @@ export const SteelData = [
       { src: "/clients/simhadri.png", alt: "Simhadri" },
     ],
     overview:`<div>
-  <h3>Product Description:</h3>
   <p>
     <strong>TMT Bars</strong> (Thermo-Mechanically Treated Bars) are high-strength steel rods with a tough outer core and a ductile inner core.
     Manufactured through advanced quenching and tempering, they offer superior strength, flexibility, and corrosion resistance—ideal for all types of construction.
@@ -118,7 +117,6 @@ export const SteelData = [
     brandImages: [{ src: "/clients/simhadri.png", alt: "Simhadri" },{ src: "/clients/tata-wiron.jpg", alt: "Tata wiron" },],
     sizes: ["0.91mm", "1.22mm", "1.52mm"],
     overview: `<div>
-  <h3>Product Description:</h3>
   <p>
     <strong>Binding Wire</strong> is a vital component in the construction industry, primarily used for tying and holding reinforcement bars (rebars) in position before and during concrete pouring. 
     Made from high-quality mild steel and available in various gauges, it plays a key role in maintaining structural alignment and integrity.
@@ -137,14 +135,6 @@ export const SteelData = [
     <li><strong>Material:</strong> Mild Steel (MS)</li>
     <li><strong>Gauge Sizes:</strong> 16 SWG to 20 SWG (custom sizes available on request)</li>
     <li><strong>Packaging:</strong> Coils in 25kg or 50kg rolls</li>
-  </ul>
-
-  <h4>Key Features:</h4>
-  <ul>
-    <li>🔩 <strong>High Flexibility</strong> – Easily bends and ties without breaking, offering secure fastening</li>
-    <li>🔧 <strong>Optimal Strength</strong> – Uniform diameter ensures consistent performance and durability</li>
-    <li>🌧 <strong>Corrosion Resistant</strong> – Special coating ensures long-lasting performance in varied conditions</li>
-    <li>⚙️ <strong>Smooth Finish</strong> – Prevents damage to rebars or hands during handling</li>
   </ul>
 </div>`,
     features: [
@@ -202,36 +192,61 @@ export const SteelData = [
     ],
     sizes: ["75x40 mm", "100x50 mm", "125x65 mm", "150x75 mm", "200x75 mm"],
     overview:
-      "MS Channels are essential structural steel components known for their strength and versatility. Their C-shaped profile provides stability and load distribution, making them ideal for construction, equipment frames, and infrastructure projects.",
-    features: [
-      "High load-bearing capacity",
-      "Corrosion-resistant with appropriate coating",
-      "Uniform thickness and dimensional accuracy",
-      "Easy to weld, cut, and fabricate",
-      "Suitable for both light and heavy structures",
-    ],
-    faqs: [
-      {
-        question: "What are MS Channels used for?",
-        answer:
-          "MS Channels are used in structural applications such as building frames, support structures, and industrial machinery.",
-      },
-      {
-        question: "Are MS Channels available in different sizes?",
-        answer:
-          "Yes, MS Channels come in multiple sizes like 75x40 mm, 100x50 mm, and more, to suit varied applications.",
-      },
-      {
-        question: "Is MS Channel easy to weld?",
-        answer:
-          "Yes, MS Channel is made of mild steel, which is easy to cut, weld, and fabricate.",
-      },
-      {
-        question: "Can MS Channels be used outdoors?",
-        answer:
-          "Yes, they can be used outdoors, preferably with anti-rust coating or painting to enhance durability.",
-      },
-    ],
+    `<div>
+  <p>
+    <strong>Mild Steel Channels (MS Channels)</strong>, also known as C Channels or ISMC, are essential structural steel components recognized for their C-shaped cross-section. They provide robust support in frameworks, beams, columns, and bracing systems across residential, commercial, and industrial projects. Their versatility makes them ideal for use in construction, fabrication, machinery, and infrastructure development.
+  </p>
+
+  <h4>Applications:</h4>
+  <ul>
+    <li>Structural Support: Used in frameworks, columns, and beams</li>
+    <li>Construction: Integral in building bracing systems and infrastructure</li>
+    <li>Fabrication: Ideal for machinery frames and equipment bases</li>
+    <li>Industrial Projects: Used in warehouses, factories, and sheds</li>
+  </ul>
+
+  <h4>Specifications:</h4>
+  <ul>
+    <li><strong>Available Sizes:</strong> ISMC 75, 100, 125, 150, 200, 250, 300, 400</li>
+    <li><strong>Web Heights:</strong> 75mm to 400mm</li>
+    <li><strong>Standards:</strong> Conforms to ISI specifications for quality and durability</li>
+    <li><strong>Material:</strong> High-quality Mild Steel (MS)</li>
+  </ul>
+</div>`,
+   features: [
+  "Wide Inventory: All popular ISMC sizes and weights available for immediate dispatch.",
+  "Quality Assurance: Sourced from reputed mills for consistent quality and performance.",
+  "Competitive Pricing: Get the best MS Channel price per kg, with transparent quotes.",
+  "Timely Delivery: Fast, reliable supply chain for on-time project completion.",
+  "Expert Support: Our team helps you select the right MS Channel for your needs.",
+],
+faqs: [
+  {
+    question: "What is the standard length of an MS Channel?",
+    answer:
+      "Most MS Channels are supplied in standard lengths of 6 or 12 meters, but custom lengths are available on request.",
+  },
+  {
+    question: "Can I order MS Channels in bulk for my project?",
+    answer:
+      "Yes! HeyBuildEx specializes in bulk supply for contractors, builders, and fabricators.",
+  },
+  {
+    question: "Do you provide test certificates for the supplied MS Channels?",
+    answer:
+      "Absolutely. All our MS Channels come with mill test certificates ensuring quality and compliance.",
+  },
+  {
+    question: "How do I get the latest MS Channel price per kg?",
+    answer:
+      "Simply request a quote online or contact our sales team for the most competitive and updated pricing.",
+  },
+  {
+    question: "Are HeyBuildEx MS Channels suitable for heavy-duty applications?",
+    answer:
+      "Yes, our channels meet IS:2062 standards and are ideal for heavy structural and industrial uses.",
+  },
+],
     pageLink: "/steel/ms-channel",
   },
   {
@@ -240,11 +255,7 @@ export const SteelData = [
     link: "ms-plate",
     image: "/ms-plate.jpg",
     description: [
-      "MS Plate (Mild Steel Plate) is a flat structural steel product widely used in fabrication and construction.",
-      "It offers good weldability, machinability, and high tensile strength.",
-      "MS Plates are used in structural frameworks, heavy machinery, industrial platforms, and shipbuilding.",
-      "They are available in various thicknesses and dimensions to suit different applications.",
-      "MS Plates provide a solid foundation and support for large-scale construction and manufacturing projects.",
+      "Searching for reliable MS Plate suppliers for your next construction or industrial project? At HeyBuildEx, we specialize in supplying a comprehensive range of Mild Steel (MS) Plates that meet the highest standards for quality, durability, and performance. Our extensive inventory ensures you get the right MS plate-in the grade, thickness, and dimensions you need-for any structural or fabrication requirement.",
     ],
     sizes: ["3mm", "5mm", "6mm", "8mm", "10mm", "12mm", "16mm", "25mm"],
        brandImages: [
@@ -258,36 +269,65 @@ export const SteelData = [
       { src: "/clients/simhadri.png", alt: "Simhadri" },
     ],
     overview:
-      "MS Plates are versatile and durable steel sheets used across various industries for their excellent mechanical properties. They form the backbone of numerous structures, offering stability, strength, and reliability in both heavy and light construction.",
-    features: [
-      "Excellent strength and durability",
-      "Good weldability and machinability",
-      "Available in multiple thicknesses",
-      "Ideal for structural and industrial use",
-      "Can be easily cut and customized",
-    ],
-    faqs: [
-      {
-        question: "What are MS Plates commonly used for?",
-        answer:
-          "MS Plates are used in construction, fabrication, shipbuilding, automotive, and heavy equipment manufacturing.",
-      },
-      {
-        question: "Are MS Plates suitable for welding?",
-        answer:
-          "Yes, MS Plates have good weldability and are commonly used in welding applications.",
-      },
-      {
-        question: "In what thicknesses are MS Plates available?",
-        answer:
-          "We offer MS Plates in various thicknesses ranging from 3mm to 25mm.",
-      },
-      {
-        question: "Can MS Plates be used outdoors?",
-        answer:
-          "Yes, but for outdoor use, applying anti-rust coating or painting is recommended to prevent corrosion.",
-      },
-    ],
+      `<div>
+  <p>
+    <strong>MS Plates</strong>, or Mild Steel Plates, are flat-rolled steel sheets known for their excellent weldability, machinability, and strength. With low carbon content (0.05–0.30%), these plates offer superior ductility, malleability, and resistance to stress, making them ideal for a wide range of industrial and construction applications. Available in hot-rolled, cold-rolled, and polished finishes, MS plates are versatile and easy to fabricate.
+  </p>
+
+  <h4>Applications:</h4>
+  <ul>
+    <li>Construction: Used in buildings, bridges, and warehouses</li>
+    <li>Manufacturing: Ideal for machine parts and fabrication work</li>
+    <li>Shipbuilding: Structural components and hull plating</li>
+    <li>Automotive: Body and chassis components</li>
+    <li>Oil & Gas: Platforms, pipelines, and storage tanks</li>
+    <li>Power Generation: Used in power plant structures and components</li>
+  </ul>
+
+  <h4>Specifications:</h4>
+  <ul>
+    <li><strong>Grades Available:</strong> IS 2062 GR A & GR B, ASTM A36, SS 400, A283 GR.C, A285 GR.C, DSQ Plates</li>
+    <li><strong>Carbon Content:</strong> 0.05–0.30%</li>
+    <li><strong>Finishes:</strong> Hot-rolled, Cold-rolled, and Polished</li>
+    <li><strong>Features:</strong> High ductility, malleability, and stress resistance</li>
+  </ul>
+</div>
+`,
+   features: [
+  "Wide Range of Sizes & Grades: From 5mm to 100mm thickness, cut to your specifications.",
+  "Assured Quality: Sourced from trusted mills, meeting IS and ASTM standards.",
+  "Competitive MS Plate Price: Transparent pricing and bulk order discounts.",
+  "Prompt Delivery: Fast shipping to keep your project on schedule.",
+  "Expert Support: Guidance to select the right plate for your application.",
+],
+
+faqs: [
+  {
+    question: "What thicknesses and sizes of MS Plates do you supply?",
+    answer:
+      "We offer MS plates from 5mm to 100mm thickness, in standard and custom sizes.",
+  },
+  {
+    question: "Can I order MS Plates in bulk for my project?",
+    answer:
+      "Yes! We specialize in bulk supply for construction, fabrication, and industrial needs.",
+  },
+  {
+    question: "Do you provide test certificates with your MS Plates?",
+    answer:
+      "Absolutely. All plates come with mill test certificates ensuring quality and compliance.",
+  },
+  {
+    question: "How do I get the best MS Plate price per kg?",
+    answer:
+      "Request a quote online or call our sales team for the most competitive, up-to-date pricing.",
+  },
+  {
+    question: "Are your MS Plates suitable for heavy structural applications?",
+    answer:
+      "Yes, our plates meet IS 2062 and ASTM standards, perfect for demanding structural uses.",
+  },
+],
     pageLink: "/steel/ms-plate",
   },
   {
@@ -296,11 +336,7 @@ export const SteelData = [
     link: "ms-angle",
     image: "/ms-angles.jpg",
     description: [
-      "MS Angle (Mild Steel Angle) is a structural steel product with an 'L' shaped cross-section, commonly used in construction and engineering applications.",
-      "It provides strength, stability, and resistance to bending, making it ideal for structural frameworks and support systems.",
-      "MS Angles are widely used in building frames, shelves, brackets, towers, and bridges.",
-      "They are available in various sizes and thicknesses to suit light to heavy-duty structural requirements.",
-      "MS Angles are cost-effective, easy to fabricate, and compatible with welding, drilling, and cutting processes.",
+      "Are you searching for a trusted MS Angle supplier for your construction or fabrication project? At HeyBuildEx, we supply a wide range of Mild Steel Angles (MS Angles), perfect for structural, engineering, and industrial applications. Our MS angles are sourced from leading steel mills, ensuring you receive only the best in terms of quality, durability, and performance."
     ],
     sizes: ["25x25", "40x40", "50x50", "65x65", "75x75", "90x90", "100x100"],
     brandImages: [
@@ -309,36 +345,62 @@ export const SteelData = [
          { src: "/clients/jindal.png", alt: "Jindal" },
     ],
     overview:
-      "MS Angles are essential components in steel structures, offering versatile use in both commercial and industrial sectors. Their angular shape provides superior load-bearing capacity and is commonly used for bracing, framing, and reinforcement.",
-    features: [
-      "High structural strength",
-      "Corrosion-resistant with proper coating",
-      "Versatile for various fabrication uses",
-      "Easy to weld, cut, and drill",
-      "Available in multiple size options",
-    ],
-    faqs: [
-      {
-        question: "What are MS Angles commonly used for?",
-        answer:
-          "MS Angles are used in construction frameworks, support structures, shelves, brackets, and industrial platforms.",
-      },
-      {
-        question: "Can MS Angles be welded easily?",
-        answer:
-          "Yes, MS Angles have good weldability and are suitable for various fabrication needs.",
-      },
-      {
-        question: "What sizes are MS Angles available in?",
-        answer:
-          "We offer MS Angles in sizes ranging from 25x25mm to 100x100mm.",
-      },
-      {
-        question: "Are MS Angles suitable for outdoor use?",
-        answer:
-          "Yes, but applying a protective coating or paint is recommended to prevent rusting in outdoor conditions.",
-      },
-    ],
+      `<div>
+  <p>
+    <strong>MS Angles</strong> are L-shaped structural steel sections known for their versatility and strength. Manufactured as per IS 2062 standards, MS angles are widely used in the construction of buildings, bridges, towers, frames, supports, and brackets. Their robust design and excellent mechanical properties make them ideal for both heavy-duty and general fabrication needs.
+  </p>
+
+  <h4>Applications:</h4>
+  <ul>
+    <li>Construction: Used in buildings, bridges, and tower frameworks</li>
+    <li>Fabrication: Ideal for general and heavy-duty structural fabrication</li>
+    <li>Support Structures: Commonly used for frames, supports, and brackets</li>
+    <li>Infrastructure: Utilized in warehouses, factories, and utility towers</li>
+  </ul>
+
+  <h4>Specifications:</h4>
+  <ul>
+    <li><strong>Available Sizes:</strong> From 19x19x3mm to 150x150x20mm</li>
+    <li><strong>Thickness Range:</strong> 3mm to 20mm</li>
+    <li><strong>Standard Lengths:</strong> 5.5 to 13 meters (custom lengths available)</li>
+    <li><strong>Standards:</strong> IS 2062 compliant with ISI and mill test certificates upon request</li>
+  </ul>
+</div>
+`,features: [
+  "Extensive Inventory: All popular sizes and thicknesses available for immediate supply.",
+  "Competitive MS Angle Price: Get the best MS angle price per kg or ton, with transparent quotes and bulk discounts.",
+  "Quality Assurance: Sourced from reputed mills, ensuring compliance with IS 2062 and consistent mechanical properties.",
+  "Prompt Delivery: Fast, reliable supply chain to keep your project on track.",
+  "Expert Support: Our team helps you select the right angle for your application.",
+],
+
+faqs: [
+  {
+    question: "What sizes and thicknesses of MS Angles do you supply?",
+    answer:
+      "We supply MS angles from 19x19x3mm to 150x150x20mm, with custom lengths available.",
+  },
+  {
+    question: "Can I order MS Angles in bulk for my project?",
+    answer:
+      "Yes, we specialize in bulk supply for construction, fabrication, and industrial use.",
+  },
+  {
+    question: "Do you provide test certificates with your MS Angles?",
+    answer:
+      "Absolutely. All our angles come with ISI and mill test certificates for quality assurance.",
+  },
+  {
+    question: "How do I get the latest MS Angle price per kg or ton?",
+    answer:
+      "Request a quote online or contact our sales team for the most competitive, up-to-date pricing.",
+  },
+  {
+    question: "Are HeyBuildEx MS Angles suitable for heavy-duty structural applications?",
+    answer:
+      "Yes, our MS angles meet IS 2062 standards and are ideal for demanding structural projects.",
+  },
+],
     pageLink: "/steel/ms-angle",
   },
   {
@@ -347,11 +409,7 @@ export const SteelData = [
     link: "ms-flat",
     image: "/ms-flat.jpg",
     description: [
-      "MS Flat (Mild Steel Flat Bar) is a rectangular section steel product widely used in fabrication, construction, and industrial applications.",
-      "It is known for its high tensile strength, durability, and excellent weldability.",
-      "MS Flats are commonly used in frames, support structures, gates, grills, ladders, and base plates.",
-      "They are available in various widths and thicknesses to suit different structural and fabrication needs.",
-      "MS Flats offer ease of cutting, drilling, and forming, making them suitable for a wide range of engineering purposes.",
+      "Looking for a reliable MS Flat supplier for your next construction, fabrication, or industrial project? At HeyBuildEx, we supply a comprehensive range of Mild Steel Flats (MS Flats), ensuring quality, precision, and timely delivery for all your structural steel requirements. Our MS flats are sourced from leading steel mills and conform to IS 2062 standards, guaranteeing strength, durability, and versatility for every application.",
     ],
     sizes: ["25x3", "25x5", "32x5", "40x6", "50x6", "65x6", "75x8", "100x10"],
       brandImages: [
@@ -365,36 +423,64 @@ export const SteelData = [
       { src: "/clients/simhadri.png", alt: "Simhadri" },
     ],
     overview:
-      "MS Flats are versatile steel bars with a rectangular cross-section used in a wide variety of fabrication and structural projects. Their strength and formability make them an essential choice for engineers, fabricators, and contractors.",
-    features: [
-      "High strength and durability",
-      "Good machinability and weldability",
-      "Available in multiple sizes and thicknesses",
-      "Suitable for both structural and decorative uses",
-      "Easy to cut, drill, and fabricate",
-    ],
-    faqs: [
-      {
-        question: "What are the typical uses of MS Flat bars?",
-        answer:
-          "MS Flat bars are used in construction, fabrication, gates, grills, brackets, and base frames.",
-      },
-      {
-        question: "Are MS Flats easy to weld?",
-        answer:
-          "Yes, MS Flats are highly weldable and ideal for fabrication and structural work.",
-      },
-      {
-        question: "In what sizes are MS Flats available?",
-        answer:
-          "MS Flats are available in a range of sizes from 25x3mm to 100x10mm to suit various applications.",
-      },
-      {
-        question: "Can MS Flats be used outdoors?",
-        answer:
-          "Yes, but it is recommended to use anti-rust coatings or paints for outdoor applications to prevent corrosion.",
-      },
-    ],
+     `<div>
+  <p>
+    <strong>MS Flats</strong> are rectangular-shaped steel bars known for their robust construction and excellent load-bearing capacity. Available in a variety of sizes and thicknesses, MS flats are widely used in construction, engineering, manufacturing, and infrastructure projects. Their flat, smooth surface makes them ideal for fabrication, frames, supports, grills, gates, and base plates.
+  </p>
+
+  <h4>Applications:</h4>
+  <ul>
+    <li>Construction of buildings, bridges, and industrial sheds</li>
+    <li>Fabrication of frames, racks, and structural supports</li>
+    <li>Manufacturing of gates, grills, and railings</li>
+    <li>Heavy machinery and equipment base plates</li>
+  </ul>
+
+  <h4>Specifications:</h4>
+  <ul>
+    <li><strong>Width:</strong> 25 mm to 300 mm</li>
+    <li><strong>Thickness:</strong> 4 mm to 16 mm</li>
+    <li><strong>Length:</strong> Custom lengths available as per project requirements</li>
+    <li><strong>Finish:</strong> Smooth surface for easy fabrication and assembly</li>
+  </ul>
+</div>
+`,
+  features: [
+  "Extensive Inventory: Wide range of sizes and thicknesses in stock for immediate supply.",
+  "Quality Assurance: Sourced from reputed mills, conforming to IS 2062 Grade A standards.",
+  "Best MS Flat Price: Competitive MS flat price per kg with transparent quotes and bulk order discounts.",
+  "Prompt Delivery: Fast and reliable logistics to keep your project on schedule.",
+  "Expert Guidance: Professional support to help you choose the right MS flat for your needs.",
+],
+
+faqs: [
+  {
+    question: "What sizes and thicknesses of MS Flats do you supply?",
+    answer:
+      "We offer MS flats from 25 mm x 4 mm up to 300 mm x 16 mm, with custom lengths available.",
+  },
+  {
+    question: "Are your MS Flats suitable for heavy-duty structural applications?",
+    answer:
+      "Yes, our MS flats conform to IS 2062 standards and are ideal for demanding structural and fabrication uses.",
+  },
+  {
+    question: "Can I order MS Flats in bulk for my project?",
+    answer:
+      "Absolutely! We specialize in bulk supply for construction, fabrication, and industrial buyers.",
+  },
+  {
+    question: "Do you provide test certificates with your MS Flats?",
+    answer:
+      "Yes, all our MS flats come with mill test certificates ensuring quality and compliance.",
+  },
+  {
+    question: "How do I get the latest MS Flat price per kg?",
+    answer:
+      "Request a quote online or contact our sales team for the most competitive and up-to-date pricing.",
+  },
+],
+
     pageLink: "/steel/ms-flat",
   },
   {
@@ -403,11 +489,7 @@ export const SteelData = [
     link: "ms-i-beam",
     image: "/i-beam.jpg",
     description: [
-      "MS I Beam (Mild Steel I Beam) is a structural steel product shaped like the letter 'I', designed to bear heavy loads and provide excellent structural support.",
-      "Its design efficiently distributes weight and resists bending, making it ideal for heavy-duty structural applications.",
-      "MS I Beams are widely used in construction of buildings, bridges, industrial sheds, and structural frameworks.",
-      "They are available in various sizes and weights to meet the demands of different construction projects.",
-      "MS I Beams offer high strength-to-weight ratio, durability, and ease of fabrication.",
+     "Looking for a trusted I Beam supplier for your construction or industrial project? At HeyBuildEx, we supply a comprehensive range of structural steel I Beams (also known as MS Beams or Universal Beams), sourced from the most reputable mills in India. Our I Beams are engineered for superior strength, stability, and durability, making them ideal for a wide variety of structural applications."
     ],
     sizes: [
       "100x75",
@@ -425,36 +507,63 @@ export const SteelData = [
       { src: "/clients/jindal.png", alt: "Jindal" },
     ],
     overview:
-      "MS I Beams are essential load-bearing members used in both commercial and industrial construction. Their unique shape provides maximum strength with minimal material, making them a cost-effective solution for supporting large structures.",
+      `<div>
+  <p>
+    <strong>I Beams</strong> are steel sections with an “I” or “H” shaped cross-section, featuring wide flanges and a central web. This design provides excellent load-bearing capacity and resistance to bending, making I Beams essential for supporting floors, roofs, bridges, columns, and other structural frameworks. Manufactured to IS 2062, ASTM A36, A992, and A572 standards, our I Beams deliver consistent performance and reliability.
+  </p>
+
+  <h4>Applications:</h4>
+  <ul>
+    <li>Building construction (residential, commercial, industrial)</li>
+    <li>Bridge and flyover structures</li>
+    <li>Warehouse and factory frameworks</li>
+    <li>Heavy equipment and machinery supports</li>
+  </ul>
+
+  <h4>Specifications:</h4>
+  <ul>
+    <li><strong>Depth:</strong> 100 mm to 600 mm</li>
+    <li><strong>Flange Width:</strong> 50 mm to 250 mm</li>
+    <li><strong>Grades:</strong> IS 2062, ASTM A36, A572, A992</li>
+    <li><strong>Length:</strong> Custom lengths and sizes available on request</li>
+  </ul>
+</div>
+`,
     features: [
-      "Superior load-bearing capacity",
-      "Efficient weight distribution",
-      "Excellent structural integrity",
-      "Available in multiple sizes and weights",
-      "Easy to weld, bolt, and fabricate",
-    ],
-    faqs: [
-      {
-        question: "Where are MS I Beams typically used?",
-        answer:
-          "MS I Beams are used in building structures, bridges, warehouses, industrial frameworks, and other heavy-load applications.",
-      },
-      {
-        question: "Why is the I shape beneficial?",
-        answer:
-          "The I shape provides maximum strength while using minimal material, offering excellent support and weight distribution.",
-      },
-      {
-        question: "Are MS I Beams customizable in size?",
-        answer:
-          "Yes, MS I Beams are available in various standard sizes, and custom lengths can be cut as per project requirements.",
-      },
-      {
-        question: "Can MS I Beams be used in outdoor structures?",
-        answer:
-          "Yes, but applying anti-corrosive coatings or paints is recommended to prevent rust and extend their lifespan outdoors.",
-      },
-    ],
+  "Extensive Inventory: Wide range of sizes and grades for immediate supply",
+  "Competitive I Beam Price: Transparent MS I Beam price per kg or ton, with bulk order discounts",
+  "Quality Assurance: Sourced from leading mills, meeting national and international standards",
+  "Prompt Delivery: Reliable logistics for on-time project completion",
+  "Expert Support: Professional guidance to select the right I Beam for your application",
+],
+
+faqs: [
+  {
+    question: "What sizes and grades of I Beams do you supply?",
+    answer:
+      "We offer I Beams from 100 mm to 600 mm depth, in IS 2062, ASTM A36, A572, and A992 grades.",
+  },
+  {
+    question: "Are your I Beams suitable for heavy-duty structural applications?",
+    answer:
+      "Yes, our I Beams meet stringent standards and are ideal for demanding construction and industrial uses.",
+  },
+  {
+    question: "Can I order I Beams in bulk for my project?",
+    answer:
+      "Absolutely! We specialize in bulk supply for contractors, builders, and fabricators.",
+  },
+  {
+    question: "Do you provide test certificates with your I Beams?",
+    answer:
+      "Yes, all I Beams are supplied with mill test certificates for quality assurance.",
+  },
+  {
+    question: "How do I get the latest I Beam price per kg or ton?",
+    answer:
+      "Request a quote online or contact our sales team for the most competitive and up-to-date pricing.",
+  },
+],
     pageLink: "/steel/ms-i-beam",
   },
   {
@@ -463,11 +572,7 @@ export const SteelData = [
     link: "ms-round-rod",
     image: "/ms-round-rod.jpg",
     description: [
-      "MS Round Rod (Mild Steel Round Bar) is a cylindrical steel product commonly used in construction, fabrication, and manufacturing.",
-      "It offers excellent strength, ductility, and weldability, making it suitable for a wide range of industrial applications.",
-      "MS Round Rods are used in shafts, supports, foundation bolts, pins, and various machine components.",
-      "They are available in multiple diameters to cater to both light and heavy-duty applications.",
-      "These rods can be easily machined, drilled, and welded, making them highly versatile in engineering works.",
+      "Are you searching for a trusted MS Round Rod supplier for your construction, fabrication, or industrial needs? At HeyBuildEx, we supply premium Mild Steel (MS) Round Rods in a wide range of sizes and grades, ensuring you get the right product for every application. Our MS round rods are sourced from top manufacturers and conform to IS 2062 standards, guaranteeing strength, versatility, and durability for your projects."
     ],
     sizes: [
       "6mm",
@@ -481,15 +586,29 @@ export const SteelData = [
       "40mm",
     ],
     overview:
-      "MS Round Rods are solid cylindrical steel bars used extensively across construction and industrial sectors for their mechanical strength and ease of fabrication. Their versatility makes them a go-to choice in machinery, frameworks, and structural reinforcement.",
-    features: [
-      "High tensile strength and ductility",
-      "Excellent weldability and machinability",
-      "Wide range of diameters available",
-      "Ideal for structural and mechanical use",
-      "Corrosion-resistant with appropriate coating",
-    ],
-      brandImages: [
+      `<div>
+  <p>
+    <strong>MS Round Rods</strong>, also known as MS Round Bars, are cylindrical steel bars made from low-carbon mild steel. They are widely used in construction, engineering, manufacturing, and fabrication due to their excellent weldability, machinability, and tensile strength. MS round rods are essential for reinforcing concrete, making fasteners, shafts, supports, and various machine components.
+  </p>
+
+  <h4>Applications:</h4>
+  <ul>
+    <li>Construction of buildings, bridges, and infrastructure</li>
+    <li>Fabrication of machinery parts, shafts, and fasteners</li>
+    <li>Manufacturing of grills, gates, and railings</li>
+    <li>Engineering and automotive components</li>
+  </ul>
+
+  <h4>Specifications:</h4>
+  <ul>
+    <li><strong>Available Diameters:</strong> 10 mm to 125 mm</li>
+    <li><strong>Length:</strong> Custom lengths available as per project requirements</li>
+    <li><strong>Grades:</strong> IS 2062 Grade A, EN8, EN8D, EN9, EN16 (on request)</li>
+    <li><strong>Tolerances:</strong> Strict rolling and ovality tolerances for dimensional accuracy</li>
+  </ul>
+</div>
+`,
+   brandImages: [
       { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
       { src: "/clients/sail.png", alt: "Sail" },
       { src: "/clients/tata.png", alt: "Tata" },
@@ -499,28 +618,41 @@ export const SteelData = [
       { src: "/clients/mangal.png", alt: "Mangal" },
       { src: "/clients/simhadri.png", alt: "Simhadri" },
     ],
-    faqs: [
-      {
-        question: "What are MS Round Rods used for?",
-        answer:
-          "They are used in manufacturing shafts, fasteners, supports, machine parts, and construction reinforcements.",
-      },
-      {
-        question: "Can MS Round Rods be welded easily?",
-        answer:
-          "Yes, MS Round Rods have excellent weldability and are commonly used in welding applications.",
-      },
-      {
-        question: "What diameters are available for MS Round Rods?",
-        answer:
-          "We offer MS Round Rods in sizes ranging from 6mm to 40mm to suit various needs.",
-      },
-      {
-        question: "Are MS Round Rods corrosion-resistant?",
-        answer:
-          "Mild steel is prone to rust, so it is recommended to apply anti-rust coatings or paints for outdoor or moisture-exposed use.",
-      },
-    ],
+    features: [
+  "Wide Range: Extensive inventory of sizes and grades for immediate supply",
+  "Competitive MS Round Rod Price: Best price per kg with transparent quotes and bulk order discounts",
+  "Quality Assurance: Sourced from reputed mills, meeting IS 2062 and international standards",
+  "Prompt Delivery: Reliable logistics for on-time project completion",
+  "Expert Guidance: Professional support to help you select the right MS round rod",
+],
+
+faqs: [
+  {
+    question: "What sizes of MS Round Rods do you supply?",
+    answer:
+      "We supply MS round rods from 10 mm to 125 mm in diameter, with custom lengths available.",
+  },
+  {
+    question: "Are your MS Round Rods suitable for heavy-duty applications?",
+    answer:
+      "Yes, our rods conform to IS 2062 and are ideal for demanding structural and engineering uses.",
+  },
+  {
+    question: "Can I order MS Round Rods in bulk for my project?",
+    answer:
+      "Absolutely! We specialize in bulk supply for contractors, builders, and fabricators.",
+  },
+  {
+    question: "Do you provide test certificates with your MS Round Rods?",
+    answer:
+      "Yes, all our products come with mill test certificates for quality assurance.",
+  },
+  {
+    question: "How do I get the latest MS Round Rod price per kg?",
+    answer:
+      "Request a quote online or contact our sales team for the most competitive and up-to-date pricing.",
+  },
+],
     pageLink: "/steel/ms-round-rod",
   },
   {
@@ -529,11 +661,7 @@ export const SteelData = [
     link: "ms-round-pipe",
     image: "/ms-round-pipes.jpg",
     description: [
-      "MS Round Pipe (Mild Steel Round Pipe) is a hollow circular steel section widely used in structural, mechanical, and general engineering applications.",
-      "It provides good strength, weldability, and durability, making it suitable for transporting fluids, fabrication, and construction.",
-      "MS Pipes are commonly used in water supply systems, fencing, scaffolding, automotive frames, and furniture.",
-      "Available in various diameters and wall thicknesses, they cater to both light and heavy-duty requirements.",
-      "These pipes can be easily cut, bent, and welded, offering flexibility across diverse industries.",
+      "Looking for a reliable MS Round Pipe supplier for your construction, plumbing, or industrial project? HeyBuildEx delivers a comprehensive range of Mild Steel (MS) Round Pipes in various sizes, thicknesses, and grades, all sourced from top manufacturers. Our MS round pipes are known for their strength, durability, and versatility, making them ideal for a wide range of structural and engineering applications.",
     ],
     sizes: [
       "15mm",
@@ -557,36 +685,65 @@ export const SteelData = [
       { src: "/clients/simhadri.png", alt: "Simhadri" },
     ],
     overview:
-      "MS Round Pipes are strong and versatile hollow steel tubes used for conveying fluids and as structural components in various sectors. Their uniform shape and mechanical properties make them essential in construction, agriculture, and industrial applications.",
+     `<div>
+  <p>
+    <strong>MS Round Pipes</strong> are cylindrical pipes made from low-carbon mild steel. Available in seamless and welded variants, these pipes are easy to fabricate, weld, and install. With excellent tensile strength and corrosion resistance, MS round pipes are widely used in plumbing, water supply, fire fighting systems, scaffolding, fencing, and general engineering.
+  </p>
+
+  <h4>Applications:</h4>
+  <ul>
+    <li>Construction and infrastructure projects</li>
+    <li>Plumbing and water supply lines</li>
+    <li>Fire fighting and HVAC systems</li>
+    <li>Structural frameworks and handrails</li>
+    <li>Industrial machinery and fabrication</li>
+  </ul>
+
+  <h4>Specifications:</h4>
+  <ul>
+    <li><strong>Outer Diameter:</strong> 10 mm to 610 mm</li>
+    <li><strong>Thickness:</strong> 1.5 mm to 17.5 mm</li>
+    <li><strong>Length:</strong> Standard and custom lengths available</li>
+    <li><strong>Grades:</strong> IS 1239, IS 3589, ASTM A53, A106</li>
+    <li><strong>Finishes:</strong> Black, galvanized, seamless, and welded</li>
+  </ul>
+</div>
+`,
     features: [
-      "High strength and durability",
-      "Smooth surface finish",
-      "Excellent weldability and formability",
-      "Available in multiple diameters and thicknesses",
-      "Ideal for both structural and fluid conveyance applications",
-    ],
-    faqs: [
-      {
-        question: "What are MS Round Pipes typically used for?",
-        answer:
-          "They are used for water pipelines, structural frameworks, scaffolding, fencing, and automotive applications.",
-      },
-      {
-        question: "Are MS Round Pipes suitable for welding?",
-        answer:
-          "Yes, MS Round Pipes have good weldability and are frequently used in fabrication and pipe welding works.",
-      },
-      {
-        question: "What sizes are available in MS Round Pipes?",
-        answer:
-          "MS Round Pipes are available in a wide range of diameters from 15mm to 100mm, with various wall thicknesses.",
-      },
-      {
-        question: "Do MS Round Pipes require protection from rust?",
-        answer:
-          "Yes, applying a protective coating, paint, or galvanization is recommended, especially for outdoor or exposed use.",
-      },
-    ],
+  "Extensive Inventory: Wide range of sizes and grades in stock for immediate dispatch",
+  "Competitive MS Round Pipe Price: Transparent price per kg with bulk order discounts",
+  "Quality Assurance: Sourced from reputed mills, meeting IS and ASTM standards",
+  "Prompt Delivery: Fast and reliable logistics for on-time project completion",
+  "Expert Support: Professional guidance to help you select the right pipe for your needs",
+],
+
+faqs: [
+  {
+    question: "What sizes and thicknesses of MS Round Pipes do you supply?",
+    answer:
+      "We supply MS round pipes from 10 mm to 610 mm in diameter and 1.5 mm to 17.5 mm in thickness.",
+  },
+  {
+    question: "Are your MS Round Pipes suitable for plumbing and structural applications?",
+    answer:
+      "Yes, our pipes meet IS and ASTM standards, making them ideal for both plumbing and structural uses.",
+  },
+  {
+    question: "Can I order MS Round Pipes in bulk for my project?",
+    answer:
+      "Absolutely! We specialize in bulk supply for contractors, builders, and industrial buyers.",
+  },
+  {
+    question: "Do you provide test certificates with your MS Round Pipes?",
+    answer:
+      "Yes, all our pipes come with mill test certificates for quality assurance.",
+  },
+  {
+    question: "How do I get the latest MS Round Pipe price per kg?",
+    answer:
+      "Request a quote online or contact our sales team for the most competitive and up-to-date pricing.",
+  },
+],
     pageLink: "/steel/ms-round-pipe",
   },
   {
@@ -595,11 +752,7 @@ export const SteelData = [
     link: "ms-square-pipe",
     image: "/ms-square-pipe.jpg",
     description: [
-      "MS Square Pipe is a hollow structural section made from mild steel with equal-width sides, commonly used in construction and fabrication.",
-      "These pipes are known for their high strength, uniformity, and excellent weldability, making them ideal for load-bearing and structural applications.",
-      "They are used in a variety of industries including construction, furniture, automotive, and general engineering.",
-      "MS Square Pipes come in a wide range of sizes and thicknesses to meet specific application requirements.",
-      "They offer good corrosion resistance and are often used in frameworks, fences, gates, and supports.",
+     "Looking for a reliable MS Square Pipe supplier for your construction, fabrication, or industrial project? HeyBuildEx offers a comprehensive range of Mild Steel (MS) Square Pipes in various sizes, thicknesses, and grades, sourced from leading brands like Apollo, TATA, Jindal, Surya, and Kamdhenu. Our MS square pipes are known for their exceptional strength, durability, and cost-effectiveness, making them the preferred choice for a wide range of structural and engineering applications."
     ],
     sizes: [
       "20x20 mm",
@@ -621,36 +774,65 @@ export const SteelData = [
       { src: "/clients/simhadri.png", alt: "Simhadri" },
     ],
     overview:
-      "MS Square Pipes are versatile and durable steel sections that provide excellent strength and dimensional accuracy. They are essential in structural and architectural projects due to their form, strength, and adaptability.",
+   `<div>
+  <p>
+    <strong>MS Square Pipes</strong> are hollow steel sections with a square cross-section, manufactured from high-quality mild steel. These pipes offer excellent load-bearing capacity, uniformity, and corrosion resistance. Their smooth finish and dimensional accuracy make them ideal for structural frameworks, fabrication, fencing, furniture, and general engineering.
+  </p>
+
+  <h4>Applications:</h4>
+  <ul>
+    <li>Building frameworks and columns</li>
+    <li>Industrial sheds and warehouses</li>
+    <li>Fencing, railings, and gates</li>
+    <li>Furniture and automotive structures</li>
+    <li>Water, gas, and chemical handling</li>
+  </ul>
+
+  <h4>Specifications:</h4>
+  <ul>
+    <li><strong>Width:</strong> 12 mm to 300 mm</li>
+    <li><strong>Thickness:</strong> 1 mm to 12 mm</li>
+    <li><strong>Length:</strong> Standard 6 meters and custom lengths available</li>
+    <li><strong>Grades:</strong> IS 4923, IS 1161, ASTM A500</li>
+    <li><strong>Surface Finish:</strong> Black, galvanized, polished, anodized</li>
+  </ul>
+</div>
+`,
     features: [
-      "High structural strength",
-      "Uniform shape and dimension",
-      "Excellent weldability and machinability",
-      "Available in a range of sizes and thicknesses",
-      "Ideal for frames, supports, and fabrication work",
-    ],
-    faqs: [
-      {
-        question: "Where are MS Square Pipes commonly used?",
-        answer:
-          "They are used in construction, structural supports, furniture manufacturing, railings, gates, and engineering projects.",
-      },
-      {
-        question: "What are the advantages of using MS Square Pipes?",
-        answer:
-          "They offer high strength, ease of welding, corrosion resistance, and uniform dimensions for reliable fabrication.",
-      },
-      {
-        question: "Are MS Square Pipes rust-proof?",
-        answer:
-          "MS Square Pipes are not rust-proof by default but can be coated or painted for enhanced corrosion resistance.",
-      },
-      {
-        question: "Can MS Square Pipes be used for load-bearing structures?",
-        answer:
-          "Yes, they are widely used in load-bearing and structural frameworks due to their strength and durability.",
-      },
-    ],
+  "Extensive Inventory: Wide range of sizes and grades for immediate supply",
+  "Best MS Square Pipe Price: Competitive price per kg with transparent quotes and bulk discounts",
+  "Quality Assurance: Pipes sourced from reputed mills, meeting IS and ASTM standards",
+  "Prompt Delivery: Reliable logistics for on-time project completion",
+  "Expert Support: Professional guidance to select the right pipe for your application",
+],
+
+faqs: [
+  {
+    question: "What sizes and thicknesses of MS Square Pipes do you supply?",
+    answer:
+      "We offer square pipes from 12 mm to 300 mm width and 1 mm to 12 mm thickness, with custom lengths available.",
+  },
+  {
+    question: "Are your MS Square Pipes suitable for heavy-duty structural applications?",
+    answer:
+      "Yes, our pipes meet IS and ASTM standards, making them ideal for demanding structural and industrial uses.",
+  },
+  {
+    question: "Can I order MS Square Pipes in bulk for my project?",
+    answer:
+      "Absolutely! We specialize in bulk supply for contractors, builders, and fabricators.",
+  },
+  {
+    question: "Do you provide test certificates with your MS Square Pipes?",
+    answer:
+      "Yes, all our pipes come with mill test certificates for quality assurance.",
+  },
+  {
+    question: "How do I get the latest MS Square Pipe price per kg?",
+    answer:
+      "Request a quote online or contact our sales team for the most competitive and up-to-date pricing.",
+  },
+],
     pageLink: "/steel/ms-square-pipe",
   },
   {
@@ -659,11 +841,7 @@ export const SteelData = [
     link: "ms-rectangular-pipe",
     image: "/ms-rectangular-pipe.jpg",
     description: [
-      "MS Rectangular Pipe (Mild Steel Rectangular Hollow Section) is a steel structural component with a rectangular cross-section, widely used in construction and fabrication.",
-      "It offers high structural strength, smooth finish, and excellent weldability.",
-      "MS Rectangular Pipes are commonly used in building frames, architectural structures, support beams, furniture, and automotive components.",
-      "They are available in various sizes and thicknesses to suit both light and heavy-duty applications.",
-      "These pipes are easy to cut, bend, and fabricate, making them versatile for both structural and decorative purposes.",
+      "Are you looking for a trusted MS Rectangle Pipe supplier for your construction, fabrication, or industrial project? At HeyBuildEx, we supply a comprehensive range of Mild Steel (MS) Rectangular Pipes in various sizes, thicknesses, and grades, all sourced from top manufacturers and mills. Our MS rectangle pipes are renowned for their strength, dimensional accuracy, and versatility, making them the preferred choice for a wide array of structural and engineering applications.",
     ],
     sizes: [
       "40x20",
@@ -686,36 +864,66 @@ export const SteelData = [
       { src: "/clients/simhadri.png", alt: "Simhadri" },
     ],
     overview:
-      "MS Rectangular Pipes are robust and versatile hollow steel sections used across construction, fabrication, and industrial sectors. Their rectangular shape offers strength and aesthetics, making them ideal for both functional and design-based applications.",
+    `<div>
+  <p>
+    <strong>MS Rectangular Pipes</strong> are hollow steel sections with a rectangular cross-section, manufactured from high-quality mild steel. These pipes offer excellent load-bearing capacity, high tensile strength, and resistance to corrosion. Their smooth surface finish and precise dimensions make them ideal for architectural, structural, and general engineering projects.
+  </p>
+
+  <h4>Applications:</h4>
+  <ul>
+    <li>Building frameworks and columns</li>
+    <li>Industrial sheds and warehouses</li>
+    <li>Solar panel structures and glazing</li>
+    <li>Conveyor galleries and foot over bridges</li>
+    <li>Fencing, gates, and fabrication work</li>
+  </ul>
+
+  <h4>Specifications:</h4>
+  <ul>
+    <li><strong>Width:</strong> 20 mm to 300 mm</li>
+    <li><strong>Height:</strong> 10 mm to 200 mm</li>
+    <li><strong>Thickness:</strong> 1.2 mm to 12 mm</li>
+    <li><strong>Length:</strong> Standard 6 meters, custom lengths available</li>
+    <li><strong>Grades:</strong> IS 4923, IS 1161, ASTM A500</li>
+    <li><strong>Surface Finish:</strong> Black, galvanized, polished</li>
+  </ul>
+</div>
+`,
     features: [
-      "Strong and durable rectangular profile",
-      "Excellent weldability and formability",
-      "Available in multiple dimensions and thicknesses",
-      "Ideal for structural, architectural, and industrial use",
-      "Easy to fabricate, cut, and install",
-    ],
-    faqs: [
-      {
-        question: "What are MS Rectangular Pipes used for?",
-        answer:
-          "They are used in construction, structural supports, furniture manufacturing, gates, grills, and architectural frameworks.",
-      },
-      {
-        question: "Are MS Rectangular Pipes suitable for welding?",
-        answer:
-          "Yes, they have excellent weldability and are ideal for structural and fabrication purposes.",
-      },
-      {
-        question: "What sizes are available for MS Rectangular Pipes?",
-        answer:
-          "MS Rectangular Pipes come in sizes ranging from 40x20mm to 150x75mm, with various thicknesses.",
-      },
-      {
-        question: "Can MS Rectangular Pipes be used outdoors?",
-        answer:
-          "Yes, but it is recommended to apply anti-corrosive coatings or paint to protect against rust when used in outdoor environments.",
-      },
-    ],
+  "Extensive Inventory: Wide range of sizes and grades for immediate supply",
+  "Best MS Rectangle Pipe Price: Competitive price per kg with transparent quotes and bulk order discounts",
+  "Quality Assurance: Pipes sourced from reputed mills, meeting IS and ASTM standards",
+  "Prompt Delivery: Reliable logistics for on-time project completion",
+  "Expert Support: Professional guidance to help you select the right pipe for your application",
+],
+
+faqs: [
+  {
+    question: "What sizes and thicknesses of MS Rectangle Pipes do you supply?",
+    answer:
+      "We offer rectangle pipes from 20x10 mm up to 300x200 mm, with thicknesses from 1.2 mm to 12 mm and custom lengths available.",
+  },
+  {
+    question: "Are your MS Rectangle Pipes suitable for heavy-duty structural applications?",
+    answer:
+      "Yes, our pipes meet IS and ASTM standards, making them ideal for demanding structural and industrial uses.",
+  },
+  {
+    question: "Can I order MS Rectangle Pipes in bulk for my project?",
+    answer:
+      "Absolutely! We specialize in bulk supply for contractors, builders, and fabricators.",
+  },
+  {
+    question: "Do you provide test certificates with your MS Rectangle Pipes?",
+    answer:
+      "Yes, all our pipes come with mill test certificates for quality assurance.",
+  },
+  {
+    question: "How do I get the latest MS Rectangle Pipe price per kg?",
+    answer:
+      "Request a quote online or contact our sales team for the most competitive and up-to-date pricing.",
+  },
+],
     pageLink: "/steel/ms-rectangular-pipe",
   },
   {
@@ -724,11 +932,7 @@ export const SteelData = [
     link: "ms-chequered-plate",
     image: "/ms-chequered-plate.jpg",
     description: [
-      "MS Chequered Plate (Mild Steel Chequered Plate) is a steel plate with a regular pattern of raised diamonds or lines on one side, providing excellent anti-slip properties.",
-      "It is widely used in industrial flooring, staircases, walkways, and ramps due to its high durability and grip.",
-      "The chequered surface reduces the risk of slipping, even in wet or oily conditions.",
-      "These plates are available in various thicknesses and dimensions to suit different safety and structural applications.",
-      "MS Chequered Plates are strong, easy to fabricate, and provide both functionality and aesthetics.",
+      "Looking for a reliable MS Chequered Plate supplier for your construction, industrial, or flooring needs? At HeyBuildEx, we supply high-quality Mild Steel Chequered Plates sourced from leading brands like SAIL, JSW, ESSAR, and Bhushan. Our extensive inventory ensures you get the right chequered plate in the thickness, size, and grade you need, delivered promptly and at competitive prices."
     ],
     sizes: ["3mm", "4mm", "5mm", "6mm", "8mm", "10mm"],
       brandImages: [
@@ -742,36 +946,65 @@ export const SteelData = [
       { src: "/clients/simhadri.png", alt: "Simhadri" },
     ],
     overview:
-      "MS Chequered Plates are robust and anti-slip steel plates used extensively in flooring, platforms, and stairways. Their patterned surface enhances safety while offering the structural integrity required in high-traffic industrial environments.",
-    features: [
-      "Anti-slip patterned surface",
-      "High strength and durability",
-      "Available in various thicknesses",
-      "Ideal for industrial and commercial flooring",
-      "Easy to weld, cut, and fabricate",
-    ],
-    faqs: [
-      {
-        question: "What are MS Chequered Plates used for?",
-        answer:
-          "They are used in industrial flooring, walkways, stair treads, truck beds, and ramps where anti-slip surfaces are required.",
-      },
-      {
-        question: "Why choose chequered plates over plain plates?",
-        answer:
-          "Chequered plates provide better grip and safety in slippery or high-traffic areas compared to plain plates.",
-      },
-      {
-        question: "What sizes are available for MS Chequered Plates?",
-        answer:
-          "We offer MS Chequered Plates in thicknesses ranging from 3mm to 10mm.",
-      },
-      {
-        question: "Can MS Chequered Plates be painted or coated?",
-        answer:
-          "Yes, they can be painted or coated for enhanced corrosion resistance and aesthetic purposes.",
-      },
-    ],
+    `<div>
+  <p>
+    <strong>MS Chequered Plates</strong> are mild steel sheets featuring a raised diamond or tear-drop pattern, providing excellent anti-slip properties. These plates are widely used for flooring in factories, walkways, staircases, ramps, and vehicle bodies due to their sturdy construction, rust resistance, and high tensile strength. Manufactured as per IS 3502 standards, our chequered plates guarantee safety, durability, and superior finish.
+  </p>
+
+  <h4>Applications:</h4>
+  <ul>
+    <li>Industrial flooring</li>
+    <li>Mezzanine structures</li>
+    <li>PEB sheds</li>
+    <li>Truck and bus flooring</li>
+    <li>Railway platforms</li>
+    <li>Walkways and stair treads</li>
+  </ul>
+
+  <h4>Specifications:</h4>
+  <ul>
+    <li><strong>Available Thickness:</strong> 2.5 mm – 10 mm</li>
+    <li><strong>Standard Sizes:</strong> 1250 mm & 1500 mm width, length as per requirement</li>
+    <li><strong>Material Grade:</strong> IS 3502</li>
+    <li><strong>Pattern:</strong> Diamond shape for enhanced grip and safety</li>
+  </ul>
+</div>
+`,
+   features: [
+  "Wide Range: All popular sizes and thicknesses available for immediate supply",
+  "Quality Assurance: Plates sourced from reputed mills, ensuring consistent quality",
+  "Competitive Pricing: Get the best MS Chequered Plate price per kg with transparent quotes",
+  "Bulk Supply: Ideal for contractors, builders, and industrial buyers",
+  "Expert Support: Assistance in selecting the right plate for your application",
+],
+
+faqs: [
+  {
+    question: "What thicknesses of MS Chequered Plates do you supply?",
+    answer:
+      "We supply chequered plates from 2.5 mm up to 10 mm thickness.",
+  },
+  {
+    question: "Are your MS Chequered Plates suitable for heavy-duty flooring?",
+    answer:
+      "Yes, our plates are designed for high load-bearing and anti-slip applications.",
+  },
+  {
+    question: "Can I order custom sizes for my project?",
+    answer:
+      "Absolutely. We offer plates in standard widths and custom lengths as per your requirement.",
+  },
+  {
+    question: "Do you provide test certificates with your plates?",
+    answer:
+      "Yes, all our plates come with mill test certificates for quality assurance.",
+  },
+  {
+    question: "How do I get the latest MS Chequered Plate price per kg?",
+    answer:
+      "Simply request a quote online or contact our sales team for the best, up-to-date pricing.",
+  },
+],
     pageLink: "/steel/ms-chequered-plate",
   },
   {
@@ -780,11 +1013,7 @@ export const SteelData = [
     link: "roofing-sheet",
     image: "/roofing-sheets.jpg",
     description: [
-      "Roofing Sheets are corrugated or profiled metal sheets used to cover roofs and provide protection against weather elements.",
-      "They are made from materials like galvanized iron (GI), aluminum, or color-coated steel and are widely used in industrial, commercial, and residential roofing.",
-      "Roofing sheets are lightweight, durable, and easy to install, offering excellent resistance to corrosion and harsh weather.",
-      "Available in various profiles, colors, and thicknesses, they enhance the aesthetic appeal and functionality of buildings.",
-      "These sheets are also used for wall cladding, sheds, warehouses, and temporary structures.",
+      "Are you searching for a reliable roofing sheets supplier for your next construction or renovation project? At HeyBuildEx, we offer a wide range of high-quality steel roofing sheets from leading brands like JSW, Jindal, and Bhushan, ensuring maximum durability, superior weather resistance, and aesthetic appeal for residential, commercial, and industrial roofing needs."
     ],
     sizes: [
       "0.30mm",
@@ -805,37 +1034,63 @@ export const SteelData = [
       { src: "/clients/mangal.png", alt: "Mangal" },
       { src: "/clients/simhadri.png", alt: "Simhadri" },
     ],
-    overview:
-      "Roofing Sheets are essential for modern roofing solutions, offering strength, weather resistance, and aesthetic value. Their versatility and ease of installation make them a popular choice in both industrial and residential construction.",
-    features: [
-      "Corrosion-resistant and weatherproof",
-      "Lightweight yet strong",
-      "Available in various profiles and colors",
-      "Quick and easy to install",
-      "Low maintenance with long service life",
-    ],
-    faqs: [
-      {
-        question: "Where are Roofing Sheets commonly used?",
-        answer:
-          "Roofing sheets are used in residential homes, industrial sheds, warehouses, garages, farmhouses, and temporary shelters.",
-      },
-      {
-        question: "What materials are Roofing Sheets made from?",
-        answer:
-          "They are typically made from galvanized iron (GI), aluminum, or pre-painted galvanized steel (PPGI).",
-      },
-      {
-        question: "Are Roofing Sheets rust-resistant?",
-        answer:
-          "Yes, especially GI and color-coated sheets are treated to resist rust and corrosion in harsh climates.",
-      },
-      {
-        question: "Can Roofing Sheets be used for side cladding?",
-        answer:
-          "Yes, they are also commonly used for wall cladding in addition to roofing applications.",
-      },
-    ],
+    overview:`<div>
+  <p>
+    <strong>Roofing Sheets</strong> are available in a variety of types to suit different industrial, commercial, and residential needs. We supply high-quality sheets with excellent durability, corrosion resistance, and aesthetic appeal, designed to provide long-term protection and performance in various weather conditions.
+  </p>
+
+  <h4>Types of Roofing Sheets:</h4>
+  <ul>
+    <li><strong>Color Coated Roofing Sheets:</strong> Vibrant, corrosion-resistant, and available in multiple profiles and thicknesses.</li>
+    <li><strong>Galvanized Roofing Sheets:</strong> Enhanced with zinc coating for superior rust protection and longevity.</li>
+    <li><strong>PPGI Roofing Sheets:</strong> Pre-painted galvanized iron sheets for excellent finish and durability.</li>
+    <li><strong>Stainless Steel Roofing Sheets:</strong> Ideal for demanding environments needing extra strength and corrosion resistance.</li>
+  </ul>
+
+  <h4>Features & Benefits:</h4>
+  <ul>
+    <li><strong>All-Weather Protection:</strong> Withstands heavy rain, intense heat, humidity, and coastal conditions.</li>
+    <li><strong>High Strength & Lightweight:</strong> Made from pure, high-tensile steel to reduce structural load and ease transport.</li>
+    <li><strong>Superior Paint Technology:</strong> Advanced coatings ensure lasting color, shine, and resistance to cracking or peeling.</li>
+    <li><strong>ISI Certified & Quality Tested:</strong> Sourced from top brands and tested for consistency, safety, and performance.</li>
+    <li><strong>Custom Sizes & Profiles:</strong> Available in standard and custom lengths, widths, and thicknesses (0.3mm to 1.2mm).</li>
+  </ul>
+</div>
+`,
+   features: [
+  "Extensive Inventory: Immediate supply of popular sizes and profiles",
+  "Best Roofing Sheet Price: Competitive price per kg or per sheet, with bulk order discounts",
+  "Expert Guidance: Professional support to help you select the right roofing solution",
+  "Prompt Delivery: Reliable logistics for on-time project completion",
+],
+
+faqs: [
+  {
+    question: "What types of roofing sheets do you supply?",
+    answer:
+      "We supply color coated, galvanized, PPGI, and stainless steel roofing sheets from top brands.",
+  },
+  {
+    question: "What thicknesses and sizes are available?",
+    answer:
+      "Our roofing sheets are available from 0.3mm to 1.2mm thickness and can be cut to custom lengths.",
+  },
+  {
+    question: "Are your roofing sheets suitable for coastal or industrial areas?",
+    answer:
+      "Yes, our sheets are designed for maximum corrosion resistance and durability in harsh environments.",
+  },
+  {
+    question: "Can I order roofing sheets in bulk?",
+    answer:
+      "Absolutely! We specialize in bulk supply for contractors, builders, and industrial projects.",
+  },
+  {
+    question: "How do I get the latest roofing sheet price per kg or per sheet?",
+    answer:
+      "Request a quote online or contact our sales team for competitive, up-to-date pricing.",
+  },
+],
     pageLink: "/steel/roofing-sheet",
   },
 ];
@@ -1394,3 +1649,94 @@ export const SteelMetaData = [
     keywords: ["roofing sheets", "steel roofing sheets", "color coated roofing sheet", "galvanized roofing sheet", "PPGI roofing sheet", "roofing sheet supplier", "roofing sheet price", "HeyBuildEx"]
   },
 ];
+export const CementMetaData = [
+  {
+    title:
+      "Buy Ultratech Cement Online – PPC, Super Cement for All Construction | HeyBuildex",
+    link: "ultratech-cement",
+    image: "/ultratech-cement.jpeg",
+    description:
+      "Get Ultratech Cement online at best prices. Ideal for RCC, plastering, and masonry with high strength, durability, and smooth finish. Available in PPC and Super variants.",
+    imageUrl: "/products/ultratech-cement.jpg",
+    keywords: [
+      "Ultratech Cement",
+      "buy Ultratech Cement online",
+      "Ultratech PPC",
+      "Ultratech Super Cement",
+      "cement for RCC",
+      "cement for plastering",
+      "construction cement",
+      "best cement for building",
+      "50kg cement bag",
+      "Durable cement",
+      "cement delivery India",
+    ],
+  },
+  {
+    title:
+      "Maha Cement – High Strength OPC, PPC & Slag Cement Online | HeyBuildex",
+    link: "maha-cement",
+    image: "/maha-cement.png",
+    description:
+      "Order Maha Cement for strong, long-lasting construction. Available in OPC, PPC, and Slag variants for residential, commercial, and infrastructure use.",
+    imageUrl: "/products/maha-cement.jpg",
+    keywords: [
+      "Maha Cement",
+      "buy Maha Cement online",
+      "Maha OPC",
+      "Maha PPC",
+      "Maha Slag Cement",
+      "best cement for slab",
+      "strong cement",
+      "50kg cement bag",
+      "cement for brickwork",
+      "premium cement brands",
+      "construction materials",
+    ],
+  },
+  {
+    title:
+      "Ramco Cement – Durable PPC & Slag Cement for Coastal & RCC Projects | HeyBuildex",
+    link: "ramco-cement",
+    image: "/ramco-cement.png",
+    description:
+      "Shop Ramco Cement online – perfect for RCC, coastal and industrial projects. Available in PPC and Slag variants with sulfate resistance and fast setting.",
+    imageUrl: "/products/ramco-cement.jpg",
+    keywords: [
+      "Ramco Cement",
+      "buy Ramco Cement online",
+      "Ramco PPC",
+      "Ramco Slag Cement",
+      "cement for coastal areas",
+      "cement for RCC",
+      "cement with sulfate resistance",
+      "construction grade cement",
+      "premium cement brands",
+      "fast setting cement",
+      "50kg cement bag",
+    ],
+  },
+  {
+    title:
+      "Sagar Cement – Reliable Slag Cement for Marine & Industrial Construction | HeyBuildex",
+    link: "sagar-cement",
+    image: "/sagar-cement.png",
+    description:
+      "Order Sagar Cement online – strong and eco-friendly slag cement for all-weather construction. Ideal for RCC, marine, and industrial structures.",
+    imageUrl: "/products/sagar-cement.jpg",
+    keywords: [
+      "Sagar Cement",
+      "buy Sagar Cement online",
+      "Sagar Slag Cement",
+      "marine construction cement",
+      "cement for industrial projects",
+      "slag cement India",
+      "durable construction cement",
+      "eco-friendly cement",
+      "ISI certified cement",
+      "50kg cement bag",
+      "low heat cement",
+    ],
+  },
+];
+

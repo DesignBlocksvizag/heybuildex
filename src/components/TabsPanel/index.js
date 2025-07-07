@@ -22,8 +22,26 @@ export default function ReusableTabs({ tabData}) {
   const handleChange = (_, newValue) => setValue(newValue);
 
   // Render logic for JSON content
-  const renderContent = (content) => {
+  const renderContent = (content,label) => {
     if (!Array.isArray(content)) return null;
+     if (label === "Overview") {
+    return (
+      <Box
+         sx={{
+    fontFamily: "Inter",
+    color: "#444",
+    fontSize: 13,
+    fontWeight: 400,
+    "& h3": { fontFamily: "Poppins", fontSize: 18, fontWeight: 600, mb: 1 },
+    "& h4": { fontFamily: "Poppins", fontSize: 16, fontWeight: 600, mt: 2, mb: 1 },
+    "& ul": { pl: 2, mb: 2 },
+    "& li": { mb: 0.5 },
+    "& p": { mb: 1.5 },
+  }}
+  dangerouslySetInnerHTML={{ __html: content }}
+      />
+    );
+  }
 
     if (typeof content[0] === "string") {
       // Array of plain strings
@@ -83,7 +101,7 @@ export default function ReusableTabs({ tabData}) {
 
       {tabData.map((tab, index) => (
         <TabPanel key={index} value={value} index={index}>
-          {renderContent(tab.content)}
+          {renderContent(tab.content,tab.label)}
         </TabPanel>
       ))}
     </Box>
