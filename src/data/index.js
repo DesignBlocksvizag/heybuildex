@@ -138,10 +138,10 @@ export const SteelData = [
   </ul>
 </div>`,
     features: [
-  "🔩 High Flexibility – Easily bends and ties without breaking, ensuring a tight and secure fit around TMT bars and rebars.",
-  "🔧 Optimal Strength – Made from premium quality mild steel with a uniform diameter for consistent performance.",
-  "🌧 Corrosion Resistant – Special surface treatment ensures longer life and durability in all weather conditions.",
-  "⚙️ Smooth Finish – Prevents damage to surrounding materials and ensures easy handling.",
+  " High Flexibility – Easily bends and ties without breaking, ensuring a tight and secure fit around TMT bars and rebars.",
+  " Optimal Strength – Made from premium quality mild steel with a uniform diameter for consistent performance.",
+  " Corrosion Resistant – Special surface treatment ensures longer life and durability in all weather conditions.",
+  " Smooth Finish – Prevents damage to surrounding materials and ensures easy handling.",
 ],
     faqs: [
   {

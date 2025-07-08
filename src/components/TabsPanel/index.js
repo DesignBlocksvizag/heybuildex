@@ -24,7 +24,7 @@ export default function ReusableTabs({ tabData}) {
   // Render logic for JSON content
   const renderContent = (content,label) => {
     if (!Array.isArray(content)) return null;
-     if (label === "Overview") {
+     if (label === "Description") {
     return (
       <Box
          sx={{

@@ -1,285 +1,234 @@
-import { Box, Typography, Container, Grid, Button } from "@mui/material";
+import { Box, Typography, Container, Grid } from "@mui/material";
 
 const AboutUs = () => {
-  return (<>
+  return (
+    <>
+      {/* Hero Banner */}
       <Box
-  sx={{
-    position: "relative",
-    py: { xs: 10, md: 12 ,lg:14},
-    width: "100%",
-    backgroundImage: `url('/about-us-bg.jpg')`, // <-- Update with your image path
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  {/* Black blurred overlay */}
-  <Box
-    sx={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      backgroundColor: "rgba(0,0,0,0.6)",
-      backdropFilter: "blur(0.5px)",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    }}
-  >
-    <Typography
-      variant="h3"
-      sx={{
-        color: "#FFFF00",
-        fontWeight: "bold",
-        fontFamily: "Poppins",
-        textAlign: "center",
-        fontSize: { xs: "28px", md: "32px" },
-      }}
-    >
-      About Us
-    </Typography>
-  </Box>
-  </Box>
-    <Box sx={{ backgroundColor: "#ffffff", py: 6 }}>
-      <Container maxWidth="lg">
-        {/* Welcome Title */}
-        <Typography
-          variant="h4"
+        sx={{
+          position: "relative",
+          py: { xs: 10, md: 14 },
+          width: "100%",
+          backgroundImage: `url('/about-us-bg.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <Box
           sx={{
-            fontWeight: 700,
-            color: "#029441",
-            textAlign: "center",
-            fontFamily: "Poppins, sans-serif",
-            mb: 1,
-              fontSize: { xs: "15px"}
+            position: "absolute",
+            inset: 0,
+            backgroundColor: "rgba(0, 0, 0, 0.65)",
+            backdropFilter: "blur(1px)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
-          WELCOME TO
-        </Typography>
-        <Typography
-          variant="h3"
-          sx={{
-            fontWeight: 800,
-            color: "#465a65",
-            textAlign: "center",
-            fontFamily: "Poppins, sans-serif",
-            mb: 4,
-             fontSize: { xs: "27px", md: "29px" },
-          }}
-        >
-          Hey Build<Typography variant="span" sx={{ color: "#01933e",
-    position: "relative",
-}}>EX</Typography>
-        </Typography>
-
-        {/* Section 1: Introduction */}
-        <Grid container spacing={4} alignItems="center">
-          <Grid size={{ xs: 12 }}>
-            <Typography
-              variant="body1"
-              sx={{ fontSize: 15,fontWeight:400, color: "#333", fontFamily: "Inter" }}
-            >
-              Your trusted partner for all things construction. Whether you're
-              working on a dream home, commercial building, or large
-              infrastructure project, we’re here to make your construction
-              journey easier, more efficient, and cost-effective.
-            </Typography>
-          </Grid>
-        </Grid>
-
-        {/* Section 2: What is HeyBuildEX */}
-        <Box sx={{ mt: 6 }}>
           <Typography
-            variant="h5"
+            variant="h3"
             sx={{
-              fontWeight: 700,
-              color: "#1976D2",
-              mb: 2,
-              fontFamily: "Poppins, sans-serif",
+              color: "#FFFF00",
+              fontWeight: "bold",
+              fontFamily: "Poppins",
+              textAlign: "center",
+              fontSize: { xs: "28px", md: "36px" },
             }}
           >
-            WHAT IS Hey BuildEX
+            About Us
           </Typography>
+        </Box>
+      </Box>
+
+      {/* Main Content */}
+      <Box sx={{ backgroundColor: "#ffffff", py: 8 }}>
+        <Container maxWidth="lg">
+          {/* Welcome Title */}
+          <Box textAlign="center" mb={5}>
+            <Typography
+              variant="h5"
+              sx={{
+                color: "#029441",
+                fontWeight: 600,
+                fontFamily: "Poppins",
+                fontSize: { xs: 16, md: 18 },
+              }}
+            >
+              WELCOME TO
+            </Typography>
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: 800,
+                color: "#465a65",
+                fontFamily: "Poppins",
+                fontSize: { xs: 28, md: 34 },
+              }}
+            >
+              Hey Build
+              <Box component="span" sx={{ color: "#01933e" }}>
+                EX
+              </Box>
+            </Typography>
+          </Box>
+
+          {/* Introduction */}
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: 16,
+              color: "#333",
+              fontFamily: "Inter",
+              mb: 6,
+              textAlign: "center",
+              maxWidth: "800px",
+              mx: "auto",
+              lineHeight: 1.7,
+              fontWeight:500
+            }}
+          >
+            Your trusted partner for all things construction. Whether you're
+            working on a dream home, commercial building, or large infrastructure
+            project, we make your construction journey easier, more efficient,
+            and cost-effective.
+          </Typography>
+
+          {/* What is HeyBuildEX */}
+          <SectionHeading title="WHAT IS Hey BuildEX" />
           <Grid container spacing={4} alignItems="center">
-            <Grid size={{ xs: 12, md: 6 }}>
-              {/* Replace with actual image */}
+            <Grid size={{xs:12,md:6}}>
               <Box
                 component="img"
                 src="/heybuildex.jpg"
-                alt="Equipment"
+                alt="Hey BuildEX"
                 sx={{ width: "100%", borderRadius: 2 }}
               />
             </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
-              <Typography
-                variant="body1"
-                sx={{ fontSize: 15,fontWeight:400, color: "#333", fontFamily: "Inter" }}
-              >
+            <Grid size={{xs:12,md:6}}>
+              <Typography variant="body1" sx={bodyTextStyle}>
                 HeyBuildex is a one-stop online platform that connects builders,
                 contractors, and developers with high-quality construction
                 materials and rental equipment.
-                <br />
-                <br />
-                We offer a wide range of products—cement, steel, infra
-                equipment, and more—all available for purchase or rental.
-                <br />
-                <br />
+                <br /><br />
+                We offer a wide range of products—cement, steel, infra equipment,
+                and more—all available for purchase or rental.
+                <br /><br />
                 In addition to materials, we provide rental services for heavy
                 machinery such as piling rigs, transit mixers, and concrete
                 batching plants.
               </Typography>
             </Grid>
           </Grid>
-        </Box>
 
-        {/* Section 3: Why Choose Us */}
-        <Box sx={{ mt: 6 }}>
-          <Typography
-            variant="h5"
-            sx={{
-              fontWeight: 700,
-              color: "#1976D2",
-              mb: 2,
-              fontFamily: "Poppins, sans-serif",
-            }}
-          >
-            WHY CHOOSE US
+          {/* Why Choose Us */}
+          <SectionHeading title="WHY CHOOSE US" />
+          <Typography variant="body1" sx={bodyTextStyle}>
+            <b>Variety & Quality:</b> We bring you the best brands and materials in one place. <br />
+            <b>Convenience:</b> Compare products, check prices, and place orders online—no hassle. <br />
+            <b>Competitive Prices:</b> We offer unbeatable rates, ensuring the best value for your investment. <br />
+            <b>Timely Delivery:</b> We deliver on time, helping you stay on schedule and on budget.
           </Typography>
-          <Typography
-            variant="body1"
-            sx={{ fontSize: 15,fontWeight:400, color: "#333", mb: 3, fontFamily: "Inter" }}
-          >
-            Variety & Quality: We bring you the best brands and materials for
-            your project in one place. <br />
-            Convenience: Compare products, check prices, and place orders
-            online—no hassle. <br />
-            Competitive Prices: We offer unbeatable rates, ensuring the best
-            value for your investment. <br />
-            Timely Delivery: We deliver on time, helping you stay on schedule
-            and on budget.
-          </Typography>
-        </Box>
 
-        {/* Section 4: Who is Behind */}
-        <Box sx={{ mt: 6 }}>
-          <Typography
-            variant="h5"
-            sx={{
-              fontWeight: 700,
-              color: "#1976D2",
-              mb: 2,
-              fontFamily: "Poppins, sans-serif",
-            }}
-          >
-            WHO IS BEHIND Hey BuildEX
+          {/* Who is Behind */}
+          <SectionHeading title="WHO IS BEHIND Hey BuildEX" />
+          <Typography variant="body1" sx={{ ...bodyTextStyle, mb: 4 }}>
+            Founded by experienced professionals in construction, procurement, and technology, our team is committed to simplifying your building process.
           </Typography>
-          <Typography
-            variant="body1"
-            sx={{ fontSize: 15,fontWeight:400, color: "#333", mb: 4, fontFamily: "Inter" }}
-          >
-            Founded by experienced professionals in construction, procurement,
-            and technology, our team is committed to simplifying your building
-            process.
-          </Typography>
-          <Grid container spacing={1} justifyContent={"center"} alignItems={"center"}>
-            <Grid size={{ xs: 6, md: 4 }} >
-              <Box
-                component="img"
-                src="/chaitanya.jpg"
-                alt="S. Chaitanya Varma"
-                sx={{
-                  width: "100%",
-                  borderRadius: 2,
-                  mb: 1,
-                  maxHeight:300,
-                  objectFit: "contain",
-                }}
-              />
-              <Typography
-                variant="subtitle1"
-                sx={{
-                  fontWeight: 600,
-                  color: "#1976D2",
-                  fontFamily: "Poppins, sans-serif",
-                  textAlign: "center",
-                }}
-              >
-                CHAITANYA VARMA
-              </Typography>
-              <Typography
-                variant="body2"
-                sx={{ color: "#555", fontFamily: "Inter", textAlign: "center",fontWeight:"bold" }}
-              >
-                Co-Founder & CEO
-              </Typography>
-            </Grid>
-            <Grid size={{ xs: 6, md: 4 }} >
-              <Box
-                component="img"
-                src="/srinivas.png"
-                alt="Srinivas Satapathi"
-                sx={{
-                  width: "100%",
-                  borderRadius: 2,
-                  mb: 1,
-                  maxHeight:300,
-                  objectFit: "contain",
-                }}
-              />
-              <Typography
-                variant="subtitle1"
-                sx={{
-                  fontWeight: 600,
-                  color: "#1976D2",
-                  fontFamily: "Poppins, sans-serif",
-                  textAlign: "center",
-                }}
-              >
-                SRINIVAS SATAPATHI
-              </Typography>
-              <Typography
-                variant="body2"
-                sx={{ color: "#555", fontFamily: "Inter", textAlign: "center",fontWeight:"bold" }}
-              >
-                Co-Founder & COO
-              </Typography>
-            </Grid>
+          <Grid container spacing={4} justifyContent="center">
+            {[
+              {
+                name: "CHAITANYA VARMA",
+                role: "Co-Founder & CEO",
+                img: "/chaitanya.jpg",
+              },
+              {
+                name: "SRINIVAS SATAPATHI",
+                role: "Co-Founder & COO",
+                img: "/srinivas.png",
+              },
+            ].map((person, i) => (
+              <Grid size={{xs:12,sm:6,md:4}} key={i}>
+                <Box
+                  component="img"
+                  src={person.img}
+                  alt={person.name}
+                  sx={{
+                    width: "100%",
+                    height: 280,
+                    objectFit: "contain",
+                    borderRadius: 2,
+                    mb: 2,
+                  }}
+                />
+                <Typography
+                  variant="subtitle1"
+                  sx={{
+                    fontWeight: 600,
+                    color: "#1976D2",
+                    fontFamily: "Poppins",
+                    textAlign: "center",
+                  }}
+                >
+                  {person.name}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    fontFamily: "Inter",
+                    color: "#555",
+                    fontWeight: "bold",
+                    textAlign: "center",
+                  }}
+                >
+                  {person.role}
+                </Typography>
+              </Grid>
+            ))}
           </Grid>
-        </Box>
 
-        {/* Mission */}
-        <Box sx={{ mt: 6, textAlign: "center" }}>
-          <Typography
-            variant="h5"
-            sx={{
-              fontWeight: 700,
-              color: "#1976D2",
-              mb: 2,
-              fontFamily: "Poppins, sans-serif",
-            }}
-          >
-            OUR MISSION
-          </Typography>
+          {/* Mission */}
+          <SectionHeading title="OUR MISSION" />
           <Typography
             variant="body1"
             sx={{
-              fontSize: 15,fontWeight:400,
-              color: "#333",
-              mb: 3,
+              ...bodyTextStyle,
               maxWidth: 800,
               mx: "auto",
-              fontFamily: "Inter",
+              textAlign: "center",
             }}
           >
             To simplify construction by offering a transparent, efficient, and
             cost-effective platform for materials and machinery—helping you save
             time, reduce costs, and build successfully.
           </Typography>
-        </Box>
-      </Container>
-    </Box></>
+        </Container>
+      </Box>
+    </>
   );
+};
+
+const SectionHeading = ({ title }) => (
+  <Typography
+    variant="h5"
+    sx={{
+      fontWeight: 700,
+      color: "#1976D2",
+      mb: 3,
+      mt: 8,
+      fontFamily: "Poppins",
+      textAlign: "center",
+    }}
+  >
+    {title}
+  </Typography>
+);
+
+const bodyTextStyle = {
+  fontSize: 15,
+  color: "#333",
+  fontFamily: "Inter",
+  lineHeight: 1.7,
+     fontWeight:400
 };
 
 export default AboutUs;

@@ -240,7 +240,7 @@ export default function SteelProductPage({ product ,brands,breadcrumbs}) {
               <ProductTabs
                 tabData={[
                   {
-                    label: "Overview",
+                    label: "Description",
                     content: [overview], // Wrap string as array
                   },
                   {
