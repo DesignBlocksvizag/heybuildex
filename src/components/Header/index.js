@@ -366,7 +366,7 @@ const Header = () => {
                   "&:hover": { backgroundColor: "transparent" },
                 }}
               >
-                <Box component="img" src="/menu.png" height="25px" />
+                <Box component="img" src="/menu.png" height="25px" alt="M"/>
               </IconButton>
             </Box>
           </Toolbar>

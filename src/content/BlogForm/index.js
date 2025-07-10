@@ -42,8 +42,6 @@ const BlogFormDialog = ({
     description: Yup.string().required("Description is required"),
     image: editStatus ? Yup.mixed() : Yup.mixed().required("Image is required"),
   });
-  console.log(editStatus)
-  console.log(editData);
 
   const initialValues = {
     heading: editStatus ? editData.heading : "",

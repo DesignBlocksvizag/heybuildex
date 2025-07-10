@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://heybuildex.com/sitemap.xml
