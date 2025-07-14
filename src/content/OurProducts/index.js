@@ -7,71 +7,68 @@ import {
   CardMedia,
   Grid,
 } from "@mui/material";
+import Link from "next/link";
 
 const products = [
-   {
+  {
     title: "TMT Bars",
     image: "tmt-bars.jpg",
+    link: "/steel/tmt-bars",
   },
-   {
+  {
     title: "Binding Wire",
     image: "binding-wire.jpg",
+    link: "/steel/binding-wire",
   },
   {
     title: "MS Channel",
     image: "ms-channel.jpg",
+    link: "/steel/ms-channel",
   },
   {
     title: "MS Plate",
     image: "ms-plate.jpg",
+    link: "/steel/ms-plate",
   },
-    {
+  {
     title: "MS Angle",
     image: "ms-angles.jpg",
+    link: "/steel/ms-angle",
   },
-  //  {
-  //   title: "MS Flat",
-  //   image: "ms-flat.jpg",
-  // },
   {
     title: "I Beam",
     image: "i-beam.jpg",
+    link: "/steel/ms-i-beam",
   },
-  //   {
-  //   title: "MS Round Rod",
-  //   image: "ms-round-rod.jpg",
-  // },
   {
     title: "MS Square Pipe",
     image: "ms-square-pipe.jpg",
+    link: "/steel/ms-square-pipe",
   },
-  //  {
-  //   title: "MS Rectangular Pipe",
-  //   image: "ms-rectangular-pipe.jpg",
-  // },
-  // {
-  //   title: "MS Chequered Plate",
-  //   image: "ms-chequered-plate.jpg",
-  // },
   {
     title: "Roofing Sheets",
     image: "roofing-sheets.jpg",
+    link: "/steel/roofing-sheet",
   },
-    {
+  {
     title: "Cement",
     image: "cement.png",
+    link: "/cement", // or redirect to a default cement page
   },
-    {
+  {
     title: "RMC",
     image: "rmc.jpg",
+    link: "/rmc",
   },
-    {
+  {
     title: "Infra Equipment Rental",
     image: "infra-rental.jpg",
+    link: "/infra-rentals",
   },
-   {
+  {
     title: "Safety",
     image: "safety.jpg",
+    link: "/safety",
   },
 ];
 
@@ -107,6 +104,12 @@ const OurProducts = () => {
         <Grid container spacing={3} justifyContent={"center"} alignItems={"center"}>
           {products.map((product, index) => (
             <Grid key={index} size={{xs:12,sm:6,md:3}}>
+                <Link
+    href={product.link || "#"}
+    style={{ textDecoration: "none" }}
+    passHref
+  >
+
               <Card
                 sx={{
                   borderRadius: 0,
@@ -135,6 +138,7 @@ const OurProducts = () => {
                   </Typography>
                 </CardContent>
               </Card>
+              </Link>
             </Grid>
           ))}
         </Grid>

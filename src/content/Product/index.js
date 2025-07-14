@@ -14,7 +14,6 @@ import {
   Breadcrumbs,
   Link
 } from "@mui/material";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import ProductTabs from "@/src/components/TabsPanel";
 import QuotationForm from "@/src/components/Form";
 import { navItems } from "@/src/components/Header";
@@ -182,7 +181,7 @@ export default function SteelProductPage({ product ,brands,breadcrumbs}) {
                 ))}
               </Box></>)}
 
-              {sizes?.length > 0 && (
+              {sizes?.length > 0 && name === "TMT Bars" && (
                 <Box sx={{ mt: 2 }}>
                   <Typography
                     variant="h6"
@@ -217,7 +216,7 @@ export default function SteelProductPage({ product ,brands,breadcrumbs}) {
                 </Box>
               )}
 
-              <Box sx={{ mt: 3, display: "flex", justifyContent: "center" }}>
+              {/* <Box sx={{ mt: 3, display: "flex", justifyContent: "center" }}>
                 <Button
                   variant="contained"
                   color="success"
@@ -235,7 +234,7 @@ export default function SteelProductPage({ product ,brands,breadcrumbs}) {
                 >
                   Get Best Price on WhatsApp
                 </Button>
-              </Box>
+              </Box> */}
 
               <ProductTabs
                 tabData={[
@@ -245,7 +244,7 @@ export default function SteelProductPage({ product ,brands,breadcrumbs}) {
                   },
                   {
                     label: "Features",
-                    content: features, // Already an array of strings
+                    content: [features], // Wrap as array
                   },
                   {
                     label: "FAQs",

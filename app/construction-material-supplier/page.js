@@ -143,7 +143,7 @@ export default function ConstructionPage() {
             borderTopLeftRadius: "10px",
             borderTopRightRadius: "10px",
             backgroundImage:
-              "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/steel-bg.jpg')",
+              "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/steel-bg.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -154,39 +154,6 @@ export default function ConstructionPage() {
             gap: 4,
           }}
         >
-          {/* Left text section */}
-         <Box sx={{ color: "#fff", maxWidth: 500 }}>
-  <Typography
-    variant="h5"
-    fontWeight="bold"
-    gutterBottom
-    sx={{ fontFamily: "Poppins" }}
-  >
-    Buy Construction Materials at Lowest Prices in AP & Telangana!
-  </Typography>
-  <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
-    Construction Steel & Structural Steel 
-  </Typography>
-<Box sx={{pl:3}}>
-  <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
-    ✅ Branded TMT Bars
-  </Typography>
-  <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
-    ✅ 24–48 Hrs Delivery
-  </Typography>
-  <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
-    ✅ Transparent Pricing
-  </Typography>
-  <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 2 }}>
-    ✅ Trusted by 150+ Top Builders
-  </Typography>
-  <Typography variant="body1" sx={{ fontFamily: "Poppins", fontWeight: 500 }}>
-    🎯 Still planning? Let us help you get the right quote.
-  </Typography>
-  </Box>
-</Box>
-
-          {/* Right box section */}
           <Box
             sx={{
               p: 4,
@@ -318,6 +285,40 @@ export default function ConstructionPage() {
               </Button>
             </Box>
           </Box>
+          {/* Left text section */}
+         <Box sx={{ color: "#fff", maxWidth: 500 }}>
+  <Typography
+    variant="h5"
+    fontWeight="bold"
+    gutterBottom
+    sx={{ fontFamily: "Poppins" }}
+  >
+    Buy Construction Materials at Lowest Prices in AP & Telangana!
+  </Typography>
+  <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
+    Construction Steel & Structural Steel 
+  </Typography>
+<Box sx={{pl:3}}>
+  <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
+    ✅ Branded TMT Bars
+  </Typography>
+  <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
+    ✅ 24–48 Hrs Delivery
+  </Typography>
+  <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
+    ✅ Transparent Pricing
+  </Typography>
+  <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 2 }}>
+    ✅ Trusted by 150+ Top Builders
+  </Typography>
+  <Typography variant="body1" sx={{ fontFamily: "Poppins", fontWeight: 500 }}>
+    🎯 Still planning? Let us help you get the right quote.
+  </Typography>
+  </Box>
+</Box>
+
+          {/* Right box section */}
+          
         </Box>
         <Box
           sx={{

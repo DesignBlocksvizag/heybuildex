@@ -24,7 +24,7 @@ export default function ReusableTabs({ tabData}) {
   // Render logic for JSON content
   const renderContent = (content,label) => {
     if (!Array.isArray(content)) return null;
-     if (label === "Description") {
+     if (label === "Description" || label === "Overview" || label === "Features") {
     return (
       <Box
          sx={{
@@ -59,9 +59,15 @@ export default function ReusableTabs({ tabData}) {
           <Typography variant="subtitle2" sx={{ fontWeight: 600, fontFamily: "Poppins",fontSize: 13, color: "#333", mb: 0.5 }}>
             Q: {item.question}
           </Typography>
-          <Typography variant="body2" sx={{ fontFamily: "Inter", color: "#444",fontSize: 12,fontWeight:400 }}>
-            {item.answer}
-          </Typography>
+         {item.answer.split('\n').map((line, idx) => (
+  <Typography
+    key={idx}
+    variant="body2"
+    sx={{ fontFamily: "Inter", color: "#444", fontSize: 12, fontWeight: 400 }}
+  >
+    {line}
+  </Typography>
+))}
         </Box>
       ));
     }

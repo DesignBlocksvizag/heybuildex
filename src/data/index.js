@@ -42,17 +42,18 @@ export const SteelData = [
   </p>
 </div>
 `,
-   features: [
-  "Multiple Brands",
-  "Competitive Pricing",
-  "High-quality certified steel",
-  "Project-specific supply solutions",
-  "Customized Solutions",
-  "100% weighment transparency",
-  "On-time, reliable delivery",
-  "Budget-friendly pricing",
-  "Expert support from order to site"
-   ],
+   features: `<ul>
+  <li>Multiple Brands</li>
+  <li>Competitive Pricing</li>
+  <li>High-quality certified steel</li>
+  <li>Project-specific supply solutions</li>
+  <li>Customized Solutions</li>
+  <li>100% weighment transparency</li>
+  <li>On-time, reliable delivery</li>
+  <li>Budget-friendly pricing</li>
+  <li>Expert support from order to site</li>
+</ul>
+`,
     faqs: [
   {
     question: "What brands of TMT bars are available at HeyBuildex?",
@@ -137,12 +138,13 @@ export const SteelData = [
     <li><strong>Packaging:</strong> Coils in 25kg or 50kg rolls</li>
   </ul>
 </div>`,
-    features: [
-  " High Flexibility – Easily bends and ties without breaking, ensuring a tight and secure fit around TMT bars and rebars.",
-  " Optimal Strength – Made from premium quality mild steel with a uniform diameter for consistent performance.",
-  " Corrosion Resistant – Special surface treatment ensures longer life and durability in all weather conditions.",
-  " Smooth Finish – Prevents damage to surrounding materials and ensures easy handling.",
-],
+    features:`<ul>
+  <li><strong>High Flexibility</strong> – Easily bends and ties without breaking, ensuring a tight and secure fit around TMT bars and rebars.</li>
+  <li><strong>Optimal Strength</strong> – Made from premium quality mild steel with a uniform diameter for consistent performance.</li>
+  <li><strong>Corrosion Resistant</strong> – Special surface treatment ensures longer life and durability in all weather conditions.</li>
+  <li><strong>Smooth Finish</strong> – Prevents damage to surrounding materials and ensures easy handling.</li>
+</ul>
+`,
     faqs: [
   {
     question: "What is the standard size of binding wire?",
@@ -187,8 +189,7 @@ export const SteelData = [
     brandImages: [
       { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
       { src: "/clients/sail.png", alt: "Sail" },
-      { src: "/clients/jindal-1.png", alt: "Jindal" },
-          { src: "/clients/tata.png", alt: "Tata" },
+       { src: "/clients/rolling.jpg", alt: "Rolling" },
     ],
     sizes: ["75x40 mm", "100x50 mm", "125x65 mm", "150x75 mm", "200x75 mm"],
     overview:
@@ -213,13 +214,14 @@ export const SteelData = [
     <li><strong>Material:</strong> High-quality Mild Steel (MS)</li>
   </ul>
 </div>`,
-   features: [
-  "Wide Inventory: All popular ISMC sizes and weights available for immediate dispatch.",
-  "Quality Assurance: Sourced from reputed mills for consistent quality and performance.",
-  "Competitive Pricing: Get the best MS Channel price per kg, with transparent quotes.",
-  "Timely Delivery: Fast, reliable supply chain for on-time project completion.",
-  "Expert Support: Our team helps you select the right MS Channel for your needs.",
-],
+   features: `<ul>
+  <li><strong>Wide Inventory:</strong> All popular ISMC sizes and weights available for immediate dispatch.</li>
+  <li><strong>Quality Assurance:</strong> Sourced from reputed mills for consistent quality and performance.</li>
+  <li><strong>Competitive Pricing:</strong> Get the best MS Channel price per kg, with transparent quotes.</li>
+  <li><strong>Timely Delivery:</strong> Fast, reliable supply chain for on-time project completion.</li>
+  <li><strong>Expert Support:</strong> Our team helps you select the right MS Channel for your needs.</li>
+</ul>
+`,
 faqs: [
   {
     question: "What is the standard length of an MS Channel?",
@@ -258,15 +260,10 @@ faqs: [
       "Searching for reliable MS Plate suppliers for your next construction or industrial project? At HeyBuildEx, we specialize in supplying a comprehensive range of Mild Steel (MS) Plates that meet the highest standards for quality, durability, and performance. Our extensive inventory ensures you get the right MS plate-in the grade, thickness, and dimensions you need-for any structural or fabrication requirement.",
     ],
     sizes: ["3mm", "5mm", "6mm", "8mm", "10mm", "12mm", "16mm", "25mm"],
-       brandImages: [
+      brandImages: [
       { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
       { src: "/clients/sail.png", alt: "Sail" },
-      { src: "/clients/tata.png", alt: "Tata" },
-      { src: "/clients/jsw.png", alt: "JSW" },
-      { src: "/clients/jindal-1.png", alt: "Jindal" },
-      { src: "/clients/radha.png", alt: "Radha" },
-      { src: "/clients/mangal.png", alt: "Mangal" },
-      { src: "/clients/simhadri.png", alt: "Simhadri" },
+       { src: "/clients/rolling.jpg", alt: "Rolling" },
     ],
     overview:
       `<div>
@@ -293,13 +290,14 @@ faqs: [
   </ul>
 </div>
 `,
-   features: [
-  "Wide Range of Sizes & Grades: From 5mm to 100mm thickness, cut to your specifications.",
-  "Assured Quality: Sourced from trusted mills, meeting IS and ASTM standards.",
-  "Competitive MS Plate Price: Transparent pricing and bulk order discounts.",
-  "Prompt Delivery: Fast shipping to keep your project on schedule.",
-  "Expert Support: Guidance to select the right plate for your application.",
-],
+   features: `<ul>
+  <li><strong>Wide Range of Sizes & Grades:</strong> From 5mm to 100mm thickness, cut to your specifications.</li>
+  <li><strong>Assured Quality:</strong> Sourced from trusted mills, meeting IS and ASTM standards.</li>
+  <li><strong>Competitive MS Plate Price:</strong> Transparent pricing and bulk order discounts.</li>
+  <li><strong>Prompt Delivery:</strong> Fast shipping to keep your project on schedule.</li>
+  <li><strong>Expert Support:</strong> Guidance to select the right plate for your application.</li>
+</ul>
+`,
 
 faqs: [
   {
@@ -342,7 +340,7 @@ faqs: [
     brandImages: [
       { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
       { src: "/clients/sail.png", alt: "Sail" },
-         { src: "/clients/jindal.png", alt: "Jindal" },
+       { src: "/clients/rolling.jpg", alt: "Rolling" },
     ],
     overview:
       `<div>
@@ -366,13 +364,14 @@ faqs: [
     <li><strong>Standards:</strong> IS 2062 compliant with ISI and mill test certificates upon request</li>
   </ul>
 </div>
-`,features: [
-  "Extensive Inventory: All popular sizes and thicknesses available for immediate supply.",
-  "Competitive MS Angle Price: Get the best MS angle price per kg or ton, with transparent quotes and bulk discounts.",
-  "Quality Assurance: Sourced from reputed mills, ensuring compliance with IS 2062 and consistent mechanical properties.",
-  "Prompt Delivery: Fast, reliable supply chain to keep your project on track.",
-  "Expert Support: Our team helps you select the right angle for your application.",
-],
+`,features: `<ul>
+  <li><strong>Extensive Inventory:</strong> All popular sizes and thicknesses available for immediate supply.</li>
+  <li><strong>Competitive MS Angle Price:</strong> Get the best MS angle price per kg or ton, with transparent quotes and bulk discounts.</li>
+  <li><strong>Quality Assurance:</strong> Sourced from reputed mills, ensuring compliance with IS 2062 and consistent mechanical properties.</li>
+  <li><strong>Prompt Delivery:</strong> Fast, reliable supply chain to keep your project on track.</li>
+  <li><strong>Expert Support:</strong> Our team helps you select the right angle for your application.</li>
+</ul>
+`,
 
 faqs: [
   {
@@ -415,12 +414,7 @@ faqs: [
       brandImages: [
       { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
       { src: "/clients/sail.png", alt: "Sail" },
-      { src: "/clients/tata.png", alt: "Tata" },
-      { src: "/clients/jsw.png", alt: "JSW" },
-      { src: "/clients/jindal-1.png", alt: "Jindal" },
-      { src: "/clients/radha.png", alt: "Radha" },
-      { src: "/clients/mangal.png", alt: "Mangal" },
-      { src: "/clients/simhadri.png", alt: "Simhadri" },
+       { src: "/clients/rolling.jpg", alt: "Rolling" },
     ],
     overview:
      `<div>
@@ -445,13 +439,14 @@ faqs: [
   </ul>
 </div>
 `,
-  features: [
-  "Extensive Inventory: Wide range of sizes and thicknesses in stock for immediate supply.",
-  "Quality Assurance: Sourced from reputed mills, conforming to IS 2062 Grade A standards.",
-  "Best MS Flat Price: Competitive MS flat price per kg with transparent quotes and bulk order discounts.",
-  "Prompt Delivery: Fast and reliable logistics to keep your project on schedule.",
-  "Expert Guidance: Professional support to help you choose the right MS flat for your needs.",
-],
+  features:`<ul>
+  <li><strong>Extensive Inventory:</strong> Wide range of sizes and thicknesses in stock for immediate supply.</li>
+  <li><strong>Quality Assurance:</strong> Sourced from reputed mills, conforming to IS 2062 Grade A standards.</li>
+  <li><strong>Best MS Flat Price:</strong> Competitive MS flat price per kg with transparent quotes and bulk order discounts.</li>
+  <li><strong>Prompt Delivery:</strong> Fast and reliable logistics to keep your project on schedule.</li>
+  <li><strong>Expert Guidance:</strong> Professional support to help you choose the right MS flat for your needs.</li>
+</ul>
+`,
 
 faqs: [
   {
@@ -504,7 +499,7 @@ faqs: [
       brandImages: [
       { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
       { src: "/clients/sail.png", alt: "Sail" },
-      { src: "/clients/jindal.png", alt: "Jindal" },
+       { src: "/clients/rolling.jpg", alt: "Rolling" },
     ],
     overview:
       `<div>
@@ -529,13 +524,14 @@ faqs: [
   </ul>
 </div>
 `,
-    features: [
-  "Extensive Inventory: Wide range of sizes and grades for immediate supply",
-  "Competitive I Beam Price: Transparent MS I Beam price per kg or ton, with bulk order discounts",
-  "Quality Assurance: Sourced from leading mills, meeting national and international standards",
-  "Prompt Delivery: Reliable logistics for on-time project completion",
-  "Expert Support: Professional guidance to select the right I Beam for your application",
-],
+    features: `<ul>
+  <li><strong>Extensive Inventory:</strong> Wide range of sizes and grades for immediate supply.</li>
+  <li><strong>Competitive I Beam Price:</strong> Transparent MS I Beam price per kg or ton, with bulk order discounts.</li>
+  <li><strong>Quality Assurance:</strong> Sourced from leading mills, meeting national and international standards.</li>
+  <li><strong>Prompt Delivery:</strong> Reliable logistics for on-time project completion.</li>
+  <li><strong>Expert Support:</strong> Professional guidance to select the right I Beam for your application.</li>
+</ul>
+`,
 
 faqs: [
   {
@@ -611,20 +607,16 @@ faqs: [
    brandImages: [
       { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
       { src: "/clients/sail.png", alt: "Sail" },
-      { src: "/clients/tata.png", alt: "Tata" },
-      { src: "/clients/jsw.png", alt: "JSW" },
-      { src: "/clients/jindal-1.png", alt: "Jindal" },
-      { src: "/clients/radha.png", alt: "Radha" },
-      { src: "/clients/mangal.png", alt: "Mangal" },
-      { src: "/clients/simhadri.png", alt: "Simhadri" },
+       { src: "/clients/rolling.jpg", alt: "Rolling" },
     ],
-    features: [
-  "Wide Range: Extensive inventory of sizes and grades for immediate supply",
-  "Competitive MS Round Rod Price: Best price per kg with transparent quotes and bulk order discounts",
-  "Quality Assurance: Sourced from reputed mills, meeting IS 2062 and international standards",
-  "Prompt Delivery: Reliable logistics for on-time project completion",
-  "Expert Guidance: Professional support to help you select the right MS round rod",
-],
+    features: `<ul>
+  <li><strong>Wide Range:</strong> Extensive inventory of sizes and grades for immediate supply.</li>
+  <li><strong>Competitive MS Round Rod Price:</strong> Best price per kg with transparent quotes and bulk order discounts.</li>
+  <li><strong>Quality Assurance:</strong> Sourced from reputed mills, meeting IS 2062 and international standards.</li>
+  <li><strong>Prompt Delivery:</strong> Reliable logistics for on-time project completion.</li>
+  <li><strong>Expert Guidance:</strong> Professional support to help you select the right MS round rod.</li>
+</ul>
+`,
 
 faqs: [
   {
@@ -677,12 +669,7 @@ faqs: [
       brandImages: [
       { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
       { src: "/clients/sail.png", alt: "Sail" },
-      { src: "/clients/tata.png", alt: "Tata" },
-      { src: "/clients/jsw.png", alt: "JSW" },
-      { src: "/clients/jindal-1.png", alt: "Jindal" },
-      { src: "/clients/radha.png", alt: "Radha" },
-      { src: "/clients/mangal.png", alt: "Mangal" },
-      { src: "/clients/simhadri.png", alt: "Simhadri" },
+       { src: "/clients/rolling.jpg", alt: "Rolling" },
     ],
     overview:
      `<div>
@@ -709,13 +696,14 @@ faqs: [
   </ul>
 </div>
 `,
-    features: [
-  "Extensive Inventory: Wide range of sizes and grades in stock for immediate dispatch",
-  "Competitive MS Round Pipe Price: Transparent price per kg with bulk order discounts",
-  "Quality Assurance: Sourced from reputed mills, meeting IS and ASTM standards",
-  "Prompt Delivery: Fast and reliable logistics for on-time project completion",
-  "Expert Support: Professional guidance to help you select the right pipe for your needs",
-],
+    features:`<ul>
+  <li><strong>Extensive Inventory:</strong> Wide range of sizes and grades in stock for immediate dispatch.</li>
+  <li><strong>Competitive MS Round Pipe Price:</strong> Transparent price per kg with bulk order discounts.</li>
+  <li><strong>Quality Assurance:</strong> Sourced from reputed mills, meeting IS and ASTM standards.</li>
+  <li><strong>Prompt Delivery:</strong> Fast and reliable logistics for on-time project completion.</li>
+  <li><strong>Expert Support:</strong> Professional guidance to help you select the right pipe for your needs.</li>
+</ul>
+`,
 
 faqs: [
   {
@@ -766,12 +754,7 @@ faqs: [
       brandImages: [
       { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
       { src: "/clients/sail.png", alt: "Sail" },
-      { src: "/clients/tata.png", alt: "Tata" },
-      { src: "/clients/jsw.png", alt: "JSW" },
-      { src: "/clients/jindal-1.png", alt: "Jindal" },
-      { src: "/clients/radha.png", alt: "Radha" },
-      { src: "/clients/mangal.png", alt: "Mangal" },
-      { src: "/clients/simhadri.png", alt: "Simhadri" },
+       { src: "/clients/rolling.jpg", alt: "Rolling" },
     ],
     overview:
    `<div>
@@ -798,13 +781,14 @@ faqs: [
   </ul>
 </div>
 `,
-    features: [
-  "Extensive Inventory: Wide range of sizes and grades for immediate supply",
-  "Best MS Square Pipe Price: Competitive price per kg with transparent quotes and bulk discounts",
-  "Quality Assurance: Pipes sourced from reputed mills, meeting IS and ASTM standards",
-  "Prompt Delivery: Reliable logistics for on-time project completion",
-  "Expert Support: Professional guidance to select the right pipe for your application",
-],
+    features: `<ul>
+  <li><strong>Extensive Inventory:</strong> Wide range of sizes and grades for immediate supply.</li>
+  <li><strong>Best MS Square Pipe Price:</strong> Competitive price per kg with transparent quotes and bulk discounts.</li>
+  <li><strong>Quality Assurance:</strong> Pipes sourced from reputed mills, meeting IS and ASTM standards.</li>
+  <li><strong>Prompt Delivery:</strong> Reliable logistics for on-time project completion.</li>
+  <li><strong>Expert Support:</strong> Professional guidance to select the right pipe for your application.</li>
+</ul>
+`,
 
 faqs: [
   {
@@ -853,15 +837,10 @@ faqs: [
       "120x60",
       "150x75",
     ],
-      brandImages: [
+     brandImages: [
       { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
       { src: "/clients/sail.png", alt: "Sail" },
-      { src: "/clients/tata.png", alt: "Tata" },
-      { src: "/clients/jsw.png", alt: "JSW" },
-      { src: "/clients/jindal-1.png", alt: "Jindal" },
-      { src: "/clients/radha.png", alt: "Radha" },
-      { src: "/clients/mangal.png", alt: "Mangal" },
-      { src: "/clients/simhadri.png", alt: "Simhadri" },
+       { src: "/clients/rolling.jpg", alt: "Rolling" },
     ],
     overview:
     `<div>
@@ -889,13 +868,14 @@ faqs: [
   </ul>
 </div>
 `,
-    features: [
-  "Extensive Inventory: Wide range of sizes and grades for immediate supply",
-  "Best MS Rectangle Pipe Price: Competitive price per kg with transparent quotes and bulk order discounts",
-  "Quality Assurance: Pipes sourced from reputed mills, meeting IS and ASTM standards",
-  "Prompt Delivery: Reliable logistics for on-time project completion",
-  "Expert Support: Professional guidance to help you select the right pipe for your application",
-],
+    features:`<ul>
+  <li><strong>Extensive Inventory:</strong> Wide range of sizes and grades for immediate supply.</li>
+  <li><strong>Best MS Rectangle Pipe Price:</strong> Competitive price per kg with transparent quotes and bulk order discounts.</li>
+  <li><strong>Quality Assurance:</strong> Pipes sourced from reputed mills, meeting IS and ASTM standards.</li>
+  <li><strong>Prompt Delivery:</strong> Reliable logistics for on-time project completion.</li>
+  <li><strong>Expert Support:</strong> Professional guidance to help you select the right pipe for your application.</li>
+</ul>
+`,
 
 faqs: [
   {
@@ -938,12 +918,7 @@ faqs: [
       brandImages: [
       { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
       { src: "/clients/sail.png", alt: "Sail" },
-      { src: "/clients/tata.png", alt: "Tata" },
-      { src: "/clients/jsw.png", alt: "JSW" },
-      { src: "/clients/jindal-1.png", alt: "Jindal" },
-      { src: "/clients/radha.png", alt: "Radha" },
-      { src: "/clients/mangal.png", alt: "Mangal" },
-      { src: "/clients/simhadri.png", alt: "Simhadri" },
+       { src: "/clients/rolling.jpg", alt: "Rolling" },
     ],
     overview:
     `<div>
@@ -970,13 +945,14 @@ faqs: [
   </ul>
 </div>
 `,
-   features: [
-  "Wide Range: All popular sizes and thicknesses available for immediate supply",
-  "Quality Assurance: Plates sourced from reputed mills, ensuring consistent quality",
-  "Competitive Pricing: Get the best MS Chequered Plate price per kg with transparent quotes",
-  "Bulk Supply: Ideal for contractors, builders, and industrial buyers",
-  "Expert Support: Assistance in selecting the right plate for your application",
-],
+   features: `<ul>
+  <li><strong>Wide Range:</strong> All popular sizes and thicknesses available for immediate supply.</li>
+  <li><strong>Quality Assurance:</strong> Plates sourced from reputed mills, ensuring consistent quality.</li>
+  <li><strong>Competitive Pricing:</strong> Get the best MS Chequered Plate price per kg with transparent quotes.</li>
+  <li><strong>Bulk Supply:</strong> Ideal for contractors, builders, and industrial buyers.</li>
+  <li><strong>Expert Support:</strong> Assistance in selecting the right plate for your application.</li>
+</ul>
+`,
 
 faqs: [
   {
@@ -1024,15 +1000,10 @@ faqs: [
       "0.80mm",
       "1.00mm",
     ],
-      brandImages: [
+     brandImages: [
       { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
       { src: "/clients/sail.png", alt: "Sail" },
-      { src: "/clients/tata.png", alt: "Tata" },
-      { src: "/clients/jsw.png", alt: "JSW" },
-      { src: "/clients/jindal-1.png", alt: "Jindal" },
-      { src: "/clients/radha.png", alt: "Radha" },
-      { src: "/clients/mangal.png", alt: "Mangal" },
-      { src: "/clients/simhadri.png", alt: "Simhadri" },
+       { src: "/clients/rolling.jpg", alt: "Rolling" },
     ],
     overview:`<div>
   <p>
@@ -1057,12 +1028,13 @@ faqs: [
   </ul>
 </div>
 `,
-   features: [
-  "Extensive Inventory: Immediate supply of popular sizes and profiles",
-  "Best Roofing Sheet Price: Competitive price per kg or per sheet, with bulk order discounts",
-  "Expert Guidance: Professional support to help you select the right roofing solution",
-  "Prompt Delivery: Reliable logistics for on-time project completion",
-],
+   features: `<ul>
+  <li><strong>Extensive Inventory:</strong> Immediate supply of popular sizes and profiles.</li>
+  <li><strong>Best Roofing Sheet Price:</strong> Competitive price per kg or per sheet, with bulk order discounts.</li>
+  <li><strong>Expert Guidance:</strong> Professional support to help you select the right roofing solution.</li>
+  <li><strong>Prompt Delivery:</strong> Reliable logistics for on-time project completion.</li>
+</ul>
+`,
 
 faqs: [
   {
@@ -1101,22 +1073,52 @@ export const CementData = [
     link: "ultratech-cement",
     image: "/ultratech-cement.jpeg",
     description: [
-      "Ultratech Cement is one of the most trusted brands in India.",
-      "Ideal for residential, commercial, and industrial construction.",
-      "Offers superior strength, durability, and workability.",
-      "Resists cracking and provides high bonding strength.",
-      "Suitable for RCC, plastering, and masonry works.",
+     "When it comes to building strong and sustainable structures, Ultratech Cement remains the top choice for homeowners, builders, and contractors. At HeyBuildex, you can easily and affordably buy Ultratech Cement online, with prompt delivery and expert support to ensure smooth project execution."
     ],
     sizes: ["50kg Bag"],
     overview:
-      "Ultratech Cement is known for its high-performance formulation, ensuring strength and durability in all construction applications. It is engineered for both large-scale infrastructure and individual home-building needs.",
-    features: [
-      "High compressive strength",
-      "Quick setting time",
-      "Smooth workability",
-      "Low heat of hydration",
-      "Resistant to moisture and corrosion",
-    ],
+    `<div>
+  <p>
+    <strong>Ultratech Cement (PPC and Super Grade)</strong> is engineered to deliver superior durability, workability, and long-term strength, making it the ideal choice for residential homes, commercial buildings, and infrastructure projects. At <strong>HeyBuildex</strong>, we supply fresh stock directly from Ultratech-authorized channels, ensuring top-quality cement for your every need—be it slab casting, plastering, masonry, or water-retaining structures.
+  </p>
+  <p>
+    Whether you're a builder, contractor, or homeowner, choose <strong>Ultratech PPC</strong> or <strong>Ultratech Super</strong> for crack-resistant, moisture-resistant, eco-friendly construction that stands the test of time.
+  </p>
+</div>`,
+    features: `<div>
+  <h4>Key Features of Ultratech PPC & Super Cement</h4>
+  <ul>
+    <li>
+      <strong>Superior Long-Term Strength:</strong>
+      Ultratech PPC and Super are blended cements made with fly ash, ensuring enhanced durability over time and reduced heat of hydration—ideal for mass concreting and hot weather concreting.
+    </li>
+    <li>
+      <strong>Improved Workability:</strong>
+      Smooth mix and easy application allow for better plastering and masonry work. Fewer voids mean denser concrete with a sleek finish.
+    </li>
+    <li>
+      <strong>Moisture & Crack Resistance:</strong>
+      Low permeability and shrinkage reduce the chances of surface cracks, making them perfect for coastal and high-humidity regions.
+    </li>
+    <li>
+      <strong>Eco-Friendly Composition:</strong>
+      Fly ash utilization reduces environmental impact and contributes to greener construction practices. A great choice for sustainable building.
+    </li>
+    <li>
+      <strong>Ideal for All Residential Applications:</strong>
+      Perfect for slabs, beams, columns, brickwork, and internal/external plaster. Widely used in independent houses and gated community developments.
+    </li>
+    <li>
+      <strong>Extended Setting Time:</strong>
+      Offers adequate time for mixing and placing, reducing construction errors and increasing quality control on-site.
+    </li>
+    <li>
+      <strong>Assured Quality with ISI Certification:</strong>
+      Conforms to IS 1489 (Part 1) for Portland Pozzolana Cement. Uniform packaging with clear branding and batch details ensures trust and traceability.
+    </li>
+  </ul>
+</div>
+`,
    types: [
   {
     type: "PPC",
@@ -1131,27 +1133,58 @@ export const CementData = [
     description: "Ultratech Super Cement is designed for superior strength and durability, making it perfect for high-performance structures and long-lasting constructions."
   }
 ],
-    faqs: [
-      {
-        question: "Is Ultratech Cement suitable for RCC work?",
-        answer:
-          "Yes, Ultratech Cement is perfect for RCC and other structural applications.",
-      },
-      {
-        question: "What is the packaging size available?",
-        answer: "Ultratech Cement is commonly available in 50kg bags.",
-      },
-      {
-        question: "Can I use it for plastering and masonry?",
-        answer:
-          "Absolutely! It offers smooth finish and good bonding for masonry and plastering.",
-      },
-      {
-        question: "Is this cement weather resistant?",
-        answer:
-          "Yes, it is designed to withstand harsh environmental conditions.",
-      },
-    ],
+ faqs : [
+  {
+    question: "What is the difference between Ultratech PPC and Ultratech Super?",
+    answer:
+      "Both are blended cements. Ultratech PPC contains fly ash and is ideal for general construction, while Ultratech Super is specially formulated for durability and crack resistance in high-moisture areas.",
+  },
+  {
+    question: "Which one is better for house construction – PPC or OPC?",
+    answer:
+      "For residential and general construction, PPC (like Ultratech PPC and Super) is better due to:\n• Higher long-term strength\n• Improved resistance to chemicals and weather\n• Smooth plaster finish",
+  },
+  {
+    question: "Where can I use Ultratech PPC or Super?",
+    answer:
+      "• RCC work (beams, slabs, columns)\n• Brick/block masonry\n• Wall plastering\n• Foundations and footing\n• Roofs and terraces\n• Water tanks and basements",
+  },
+  {
+    question: "Is Ultratech PPC suitable for water-logged or coastal areas?",
+    answer:
+      "Yes, absolutely. The dense matrix and blended fly ash content reduce permeability and protect against sulphate and chloride attacks—ideal for coastal or humid zones.",
+  },
+  {
+    question: "How much cement is needed for a 1000 sq ft house?",
+    answer:
+      "It typically takes 300 to 400 bags of PPC cement depending on design, layout, and material efficiency. We recommend consulting with your contractor for exact estimation.",
+  },
+  {
+    question: "How can I be sure I’m buying genuine Ultratech Cement?",
+    answer:
+      "At HeyBuildex, we ensure:\n• Direct sourcing from manufacturers\n• Machine-stitched, sealed packaging\n• ISI-certified bags with clear batch codes\nBuy with confidence—fresh stock delivered to your site.",
+  },
+  {
+    question: "What are the packaging options available?",
+    answer:
+      "Ultratech PPC and Super are generally available in:\n• 50 Kg HDPE tamper-proof bags",
+  },
+  {
+    question: "Can I place bulk orders on HeyBuildex?",
+    answer:
+      "Yes. Whether you need a few bags or full truckloads, we cater to individual buyers, contractors, and construction companies. Contact us for bulk discounts and delivery scheduling.",
+  },
+  {
+    question: "How is cement delivered from HeyBuildex?",
+    answer:
+      "We offer:\n• On-time delivery directly to your construction site\n• Loading/unloading assistance on request\n• Flexible payment modes (GST invoices provided)",
+  },
+  {
+    question: "Is Ultratech PPC cost-effective?",
+    answer:
+      "Yes. While it may have a slightly lower early strength than OPC, the overall performance, durability, and cost savings on finishing and long-term maintenance make it excellent value for money.",
+  },
+],
     pageLink: "/cement/ultratech-cement",
   },
   {
@@ -1160,22 +1193,50 @@ export const CementData = [
     link: "maha-cement",
     image: "/maha-cement.png",
     description: [
-      "Maha Cement is known for its premium quality and consistent performance.",
-      "Widely used in residential, commercial, and infrastructure projects.",
-      "Offers excellent compressive strength and workability.",
-      "Provides smooth finish and better water retention.",
-      "Suitable for both load-bearing and non-load-bearing applications.",
+      "When it comes to building strong, durable, and long-lasting structures, Maha Cement is the ideal choice. At HeyBuildex, we offer Maha Cement PPC (Portland Pozzolana Cement) and Maha Cement PSC (Portland Slag Cement) at competitive prices, ensuring that you get the best quality cement delivered right to your site. Trusted by engineers, contractors, and builders, Maha Cement is known for its exceptional strength, durability, and resistance to environmental wear and tear."
     ],
     sizes: ["50kg Bag"],
-    overview:
-      "Maha Cement is a trusted brand delivering superior quality cement ideal for various construction needs. It is engineered to provide strong bonding, reduced shrinkage, and long-lasting durability for all types of structures.",
-    features: [
-      "High early strength",
-      "Superior workability",
-      "Weather-resistant formulation",
-      "Uniform particle size for smooth finish",
-      "ISI certified and eco-friendly",
-    ],
+    overview: `
+<div>
+  <p>
+    <strong>Maha Cement</strong>, a premium product from My Home Industries, is a trusted name in the construction industry known for its superior quality, consistent performance, and long-term durability. Whether you’re constructing homes, commercial spaces, or infrastructure projects, Maha Cement offers the right variant for every stage of construction.
+  </p>
+  <p>
+    At <strong>HeyBuildex</strong>, we offer all three major variants of Maha Cement—<strong>PPC</strong> (Portland Pozzolana Cement), <strong>OPC 53 Grade</strong> (Ordinary Portland Cement), and <strong>PSC</strong> (Portland Slag Cement)—delivered fresh to your site, straight from authorized dealers.
+  </p>
+</div>
+`,
+
+    features:`
+<div>
+  <p><strong>Maha Cement Variants Available at HeyBuildex:</strong></p>
+
+  <p><strong> 1. Maha PPC (Portland Pozzolana Cement)</strong></p>
+  <ul>
+    <li>Excellent workability for plastering, masonry, and general construction.</li>
+    <li>High durability and low heat of hydration for long-term strength.</li>
+    <li>Enhanced resistance to chemical attacks and moisture—ideal for coastal or damp areas.</li>
+    <li>Eco-friendly composition with fly ash for greener buildings.</li>
+  </ul>
+
+  <p><strong> 2. Maha OPC 53 Grade (Ordinary Portland Cement)</strong></p>
+  <ul>
+    <li>Rapid strength gain for RCC structures, slabs, columns, and beams.</li>
+    <li>Suitable for time-sensitive construction projects.</li>
+    <li>Superior bond strength and performance in heavy-load applications.</li>
+    <li>IS 269 certified, machine-packed, and quality-tested.</li>
+  </ul>
+
+  <p><strong> 3. Maha PSC (Portland Slag Cement)</strong></p>
+  <ul>
+    <li>Made using granulated slag from steel plants—highly resistant to sulphates, chlorides, and other aggressive agents.</li>
+    <li>Ideal for marine structures, water tanks, basements, and sewage works.</li>
+    <li>Ensures dense, impermeable concrete with long life.</li>
+    <li>Excellent durability in harsh environmental conditions.</li>
+  </ul>
+</div>
+`,
+
     types: [
   {
     type: "PPC",
@@ -1196,27 +1257,58 @@ export const CementData = [
     description: "Maha Slag Cement enhances corrosion resistance and is ideal for coastal and chemical-exposed environments."
   }
 ],
-    faqs: [
-      {
-        question: "What is Maha Cement commonly used for?",
-        answer:
-          "It is widely used for foundations, columns, slabs, plastering, and masonry.",
-      },
-      {
-        question: "Does Maha Cement offer good water retention?",
-        answer:
-          "Yes, it ensures better curing and water retention for optimal strength.",
-      },
-      {
-        question: "Is it suitable for hot and humid regions?",
-        answer:
-          "Yes, it is formulated to perform well in diverse climates, including hot and humid areas.",
-      },
-      {
-        question: "What sizes are available?",
-        answer: "Maha Cement is available in standard 50kg bags.",
-      },
-    ],
+   faqs: [
+  {
+    question: "Which Maha Cement variant should I choose for my project?",
+    answer:
+      "• PPC: Best for residential buildings, plastering, and brickwork.\n• OPC 53: Ideal for structural elements like slabs, columns, and beams where early strength is critical.\n• PSC: Best suited for foundations, marine structures, or high-moisture zones due to its chemical resistance.",
+  },
+  {
+    question: "Is Maha PSC good for coastal or water-retaining structures?",
+    answer:
+      "Yes, PSC cement has excellent resistance to corrosion, chloride, and sulphate attacks—ideal for basements, tanks, and marine environments.",
+  },
+  {
+    question: "Can I use Maha PPC for RCC work?",
+    answer:
+      "Yes, PPC can be used for RCC, but for quicker strength development and time-sensitive projects, OPC 53 is generally preferred.",
+  },
+  {
+    question: "How much cement is required for a 1000 sq ft house?",
+    answer:
+      "Typically, 300–400 bags are needed depending on design, usage (RCC vs plastering), and materials used. For accurate estimation, contact our support team.",
+  },
+  {
+    question: "Is Maha Cement certified?",
+    answer:
+      "Yes, all variants of Maha Cement are ISI certified and conform to relevant BIS standards:\n• OPC: IS 269\n• PPC: IS 1489\n• PSC: IS 455",
+  },
+  {
+    question: "What is the shelf life of Maha Cement?",
+    answer:
+      "Cement should be used within 3 months from the date of manufacture. Store in a dry, covered space away from moisture.",
+  },
+  {
+    question: "How do I ensure I’m getting genuine Maha Cement?",
+    answer:
+      "Buy only from trusted platforms like HeyBuildex. Look for:\n• Machine-stitched packaging\n• IS code and batch number\n• Uniform branding and MRP on the bag",
+  },
+  {
+    question: "What are the packaging options?",
+    answer:
+      "Maha Cement is typically available in:\n• 50 kg HDPE bags\nCustom bulk orders are available upon request.",
+  },
+  {
+    question: "Does HeyBuildex deliver to all cities?",
+    answer:
+      "Yes. We deliver Maha Cement across major cities and towns. Bulk orders are fulfilled with proper logistics coordination and on-time delivery.",
+  },
+  {
+    question: "Can I get GST invoices for my purchases?",
+    answer:
+      "Absolutely. All orders placed through HeyBuildex come with valid GST billing, making it easier for contractors and businesses to manage procurement records.",
+  }
+],
     pageLink: "/cement/maha-cement",
   },
   {
@@ -1225,22 +1317,45 @@ export const CementData = [
     link: "ramco-cement",
     image: "/ramco-cement.png",
     description: [
-      "Ramco Cement is a premium cement brand known for its high quality.",
-      "Ideal for residential, commercial, and industrial construction.",
-      "Provides excellent strength and long-term durability.",
-      "Ensures smooth application and high bonding strength.",
-      "Resistant to sulfate attack and ideal for coastal areas.",
+      "Are you searching for a trusted Ramco Cement supplier for your residential, commercial, or industrial project? At HeyBuildEx, we supply the complete range of Ramco Cement products, including Ramco Supercrete and Ramco OPC 53 Grade, sourced directly from authorized distributors. Our focus is on delivering quality, reliability, and competitive pricing to ensure your construction stands the test of time.",
     ],
     sizes: ["50kg Bag"],
-    overview:
-      "Ramco Cement offers superior performance in construction with high strength and quick setting properties. It is perfect for building structures that demand longevity and structural stability.",
-    features: [
-      "Quick setting and high early strength",
-      "Sulfate and corrosion resistant",
-      "Smooth and workable mix",
-      "ISI and BIS certified",
-      "Suitable for RCC, plastering, and masonry",
-    ],
+    overview: `<div>
+  <p>
+    <strong>Ramco Cement</strong> is a flagship brand from Ramco Cements Limited, known for its high-quality blended cements, especially PPC and PSC grades. Trusted by engineers and builders across India, Ramco Cement ensures exceptional strength, smooth workability, and enhanced durability—making it ideal for a wide range of construction applications from homes to industrial projects.
+  </p>
+  <p>
+    At <strong>HeyBuildex</strong>, we deliver fresh stock of Ramco PPC and PSC directly to your site with guaranteed quality, timely delivery, and competitive pricing.
+  </p>
+</div>
+`,
+    features: `<div>
+  <h4> 1. Ramco PPC (Portland Pozzolana Cement)</h4>
+  <ul>
+    <li>Made by blending high-quality fly ash with clinker.</li>
+    <li>Delivers superior long-term strength and durability.</li>
+    <li>Reduces heat of hydration, making it ideal for mass concrete work.</li>
+    <li>Excellent workability and smoother surface finish—perfect for plastering, masonry, and residential RCC works.</li>
+  </ul>
+
+  <h4> 2. Ramco PSC (Portland Slag Cement)</h4>
+  <ul>
+    <li>Composed of clinker, gypsum, and high-grade granulated slag.</li>
+    <li>Offers outstanding resistance to chemical attacks, chlorides, and sulphates.</li>
+    <li>Best suited for structures exposed to water—basements, tanks, marine works, and foundations.</li>
+    <li>Eco-friendly composition supports sustainable construction practices.</li>
+  </ul>
+
+  <h4> Common Benefits of Both Grades</h4>
+  <ul>
+    <li> Ideal for all types of residential and commercial projects.</li>
+    <li> Excellent crack resistance and impermeability—suitable for damp-prone areas.</li>
+    <li> Higher final strength and longer life span than OPC.</li>
+    <li> Environmentally conscious—reduces carbon footprint by utilizing industrial byproducts (fly ash and slag).</li>
+    <li> Machine-packed, ISI-marked bags ensure quality and authenticity.</li>
+  </ul>
+</div>
+`,
     types: [
   {
     type: "PPC",
@@ -1256,24 +1371,47 @@ export const CementData = [
   }
 ],
     faqs: [
-      {
-        question: "Can Ramco Cement be used for RCC structures?",
-        answer: "Yes, it is highly suitable for RCC, foundations, and slabs.",
-      },
-      {
-        question: "Is Ramco Cement resistant to coastal weather?",
-        answer:
-          "Yes, its sulfate-resistant formulation makes it ideal for coastal and damp regions.",
-      },
-      {
-        question: "What packaging is available?",
-        answer: "Ramco Cement is typically available in 50kg bags.",
-      },
-      {
-        question: "Is it ISI certified?",
-        answer: "Yes, Ramco Cement complies with ISI standards.",
-      },
-    ],
+  {
+    question: "Which grade of Ramco Cement should I choose—PPC or PSC?",
+    answer:
+      "• Choose PPC for general construction, plastering, brickwork, and RCC in homes.\n• Choose PSC for foundations, basements, coastal areas, and projects exposed to moisture or chemicals.",
+  },
+  {
+    question: "Is Ramco PSC suitable for marine or water-retaining structures?",
+    answer:
+      "Yes. PSC is highly resistant to sulphate and chloride attacks, making it ideal for marine structures, water tanks, and sewage treatment plants.",
+  },
+  {
+    question: "Can Ramco PPC be used for RCC applications?",
+    answer:
+      "Absolutely. Ramco PPC is well-suited for RCC in homes and commercial buildings. It offers improved bonding, workability, and long-term strength.",
+  },
+  {
+    question: "How is Ramco Cement environmentally friendly?",
+    answer:
+      "Both PPC and PSC are blended cements that use fly ash or slag—industrial byproducts that reduce cement's carbon footprint and promote green building.",
+  },
+  {
+    question: "Is there any difference in curing time between PPC and PSC?",
+    answer:
+      "Both have slightly longer setting times than OPC, which actually benefits curing by reducing the risk of cracks. Ensure proper curing for 7–14 days for best results.",
+  },
+  {
+    question: "What is the shelf life of Ramco Cement?",
+    answer:
+      "For best results, use cement within 3 months of manufacture. Always store in a dry place on raised platforms, away from moisture.",
+  },
+  {
+    question: "Is Ramco Cement ISI certified?",
+    answer:
+      "Yes.\n• Ramco PPC: IS 1489\n• Ramco PSC: IS 455\nAll bags are machine-stitched, batch-coded, and quality-verified.",
+  },
+  {
+    question: "Where can I buy Ramco Cement at the best price?",
+    answer:
+      "You can buy Ramco Cement online at HeyBuildex with confidence. We provide:\n• Fresh stock\n• Direct-to-site delivery\n• GST billing\n• Support for bulk orders",
+  }
+],
     pageLink: "/cement/ramco-cement",
   },
   {
@@ -1282,22 +1420,49 @@ export const CementData = [
     link: "sagar-cement",
     image: "/sagar-cement.png",
     description: [
-      "Sagar Cement delivers reliable strength and durability for all types of construction.",
-      "Used widely in housing, roads, bridges, and industrial projects.",
-      "Blended for better workability and reduced cracks.",
-      "Provides consistent performance in all weather conditions.",
-      "Environment-friendly production process.",
+      "When it comes to choosing high-quality cement for your construction needs, Sagar Cement stands out as a reliable and durable option. At HeyBuildex, we are proud to offer a wide variety of Sagar Cement products, designed to meet the needs of both small and large-scale projects. Whether you are building a home, commercial space, or infrastructure, Sagar Cement provides the strength and longevity you require for every project."
     ],
     sizes: ["50kg Bag"],
-    overview:
-      "Sagar Cement is engineered for excellence with high compressive strength and superior finish. It is a reliable choice for quality construction across diverse applications, from homes to infrastructure.",
-    features: [
-      "Consistent strength and setting time",
-      "Improved workability and finish",
-      "Eco-friendly and low carbon footprint",
-      "Suitable for both RCC and non-structural works",
-      "ISI and BIS compliant",
-    ],
+    overview:`<div>
+  <p>
+    <strong>Sagar Cement (PSC)</strong> is a high-performance Portland Slag Cement designed to deliver exceptional durability, corrosion resistance, and long-term strength. Manufactured using a blend of high-quality clinker, gypsum, and granulated blast furnace slag, Sagar PSC is perfect for use in foundations, basements, water-retaining structures, and coastal constructions.
+  </p>
+  <p>
+    At <strong>HeyBuildex</strong>, we ensure fresh, ISI-certified Sagar Cement delivered directly to your construction site, with a focus on quality, affordability, and timely logistics.
+  </p>
+</div>
+`,
+    features: `<div>
+  <h4>1. Superior Durability</h4>
+  <ul>
+    <li>High resistance to chemical attacks (chlorides, sulphates, alkalis), making it ideal for marine and water-prone environments.</li>
+    <li>Long-term strength development ensures extended lifespan of structures.</li>
+  </ul>
+
+  <h4>2. Eco-Friendly Composition</h4>
+  <ul>
+    <li>Made with granulated blast furnace slag—an industrial byproduct—resulting in lower carbon emissions and energy consumption.</li>
+    <li>Supports green and sustainable building practices.</li>
+  </ul>
+
+  <h4>3. Crack & Moisture Resistance</h4>
+  <ul>
+    <li>Low heat of hydration minimizes thermal cracks during curing.</li>
+    <li>Offers excellent impermeability, reducing the ingress of moisture and corrosive agents.</li>
+  </ul>
+
+  <h4>4. Smooth Workability</h4>
+  <ul>
+    <li>Consistent fineness allows for easier mixing and application.</li>
+    <li>Provides superior finish in plastering and concrete surfaces.</li>
+  </ul>
+
+  <h4>5. Ideal for Harsh Conditions</h4>
+  <ul>
+    <li>Perfect for basements, water tanks, retaining walls, dams, bridges, and constructions in coastal/humid regions.</li>
+  </ul>
+</div>
+`,
    types: [
   {
     type: "Slag",
@@ -1307,24 +1472,42 @@ export const CementData = [
   }
 ],
     faqs: [
-      {
-        question: "Where can I use Sagar Cement?",
-        answer:
-          "It is ideal for all general construction including RCC, plastering, and brickwork.",
-      },
-      {
-        question: "What is the curing time for Sagar Cement?",
-        answer: "It offers standard setting and curing time as per ISI norms.",
-      },
-      {
-        question: "Is this cement suitable for hot climates?",
-        answer: "Yes, it performs well under various temperature conditions.",
-      },
-      {
-        question: "Is it eco-friendly?",
-        answer: "Yes, Sagar Cement is produced using sustainable practices.",
-      },
-    ],
+  {
+    question: "What is PSC Cement and why choose Sagar PSC?",
+    answer:
+      "PSC (Portland Slag Cement) is a blended cement made using slag. Sagar PSC is known for its excellent durability, corrosion resistance, and sustainability, making it a preferred choice for high-performance construction.",
+  },
+  {
+    question: "Where can I use Sagar PSC Cement?",
+    answer:
+      "• Foundations and footings\n• Water-retaining structures like tanks and pools\n• Marine and coastal constructions\n• Basements and damp areas\n• RCC and mass concrete works",
+  },
+  {
+    question: "Is Sagar PSC suitable for residential construction?",
+    answer:
+      "Yes. While particularly strong in aggressive environments, Sagar PSC is also great for general residential construction, offering a longer service life with minimal maintenance.",
+  },
+  {
+    question: "How does PSC compare to OPC and PPC?",
+    answer:
+      "• Better resistance to chemicals and moisture than OPC\n• Lower heat generation than OPC and PPC, reducing crack formation\n• Slower setting but higher long-term strength\n• More eco-friendly composition",
+  },
+  {
+    question: "Is Sagar PSC ISI certified?",
+    answer:
+      "Yes. Sagar PSC conforms to IS 455, ensuring high-quality standards and performance consistency.",
+  },
+  {
+    question: "What is the shelf life of Sagar Cement?",
+    answer:
+      "It’s best to use Sagar PSC within 90 days from the manufacturing date. Store in a dry, ventilated area, elevated off the ground.",
+  },
+  {
+    question: "How can I buy Sagar Cement from HeyBuildex?",
+    answer:
+      "Simply place your order online at HeyBuildex. We offer:\n• Fresh stock directly from the manufacturer\n• Timely site delivery\n• GST billing and bulk purchase support\n• Expert assistance for quantity estimation and usage guidance",
+  }
+],
     pageLink: "/cement/sagar-cement",
   },
 ];
@@ -1335,43 +1518,101 @@ export const OtherData = [
     link: "ready-mix-concrete",
     image: "/rmc.jpg",
     description: [
-      "Ready Mix Concrete (RMC) is a pre-mixed, high-quality concrete.",
-      "It is tailored to meet specific construction project requirements.",
-      "Ensures uniform quality and consistent performance.",
-      "Reduces on-site labor, material waste, and mixing time.",
-      "Speeds up project timelines and enhances construction efficiency.",
+      "Ready Mix Concrete (RMC) is a pre-mixed concrete delivered to construction sites in a ready-to-use form. It is produced in a batching plant, where cement, aggregates, water, and admixtures are combined to create a high-quality mix tailored to specific project requirements. RMC ensures consistent quality and minimizes construction delays, offering a cost-effective and reliable solution for all types of construction projects."
     ],
     sizes: ["M20", "M25", "M30", "M35", "M40"],
-    overview:
-      "Ready Mix Concrete (RMC) is manufactured in batching plants and delivered to site in transit mixers. It offers superior strength, workability, and durability for a wide range of construction applications. Ideal for modern, large-scale, and time-sensitive projects.",
-    features: [
-      "Consistent mix quality",
-      "High strength and durability",
-      "Reduces labor and material handling",
-      "Faster project completion",
-      "Eco-friendly with minimal site pollution",
-    ],
-    faqs: [
-      {
-        question: "What grades of RMC are available?",
-        answer: "Common grades include M20, M25, M30, M35, and M40.",
-      },
-      {
-        question: "Can RMC be customized for project needs?",
-        answer:
-          "Yes, RMC is designed based on specific strength and workability requirements.",
-      },
-      {
-        question: "How is RMC delivered to the site?",
-        answer:
-          "It is transported in specialized transit mixers to ensure quality and consistency.",
-      },
-      {
-        question: "Is RMC suitable for all types of construction?",
-        answer:
-          "Yes, it's ideal for residential, commercial, and infrastructure projects.",
-      },
-    ],
+    overview: `<div>
+  <p>
+    <strong>Ready Mix Concrete (RMC)</strong> is a tailor-made, factory-produced concrete blend delivered directly to your construction site in a ready-to-use state. Manufactured under controlled conditions in batching plants, RMC ensures consistent quality, precise mix proportions, and faster execution, eliminating the hassles of on-site mixing and material storage.
+  </p>
+  <p>
+    At <strong>HeyBuildex</strong>, we supply high-grade Ready Mix Concrete for all types of construction—from residential foundations to large-scale infrastructure projects. With a network of trusted RMC plants and logistics partners, we ensure on-time delivery, quality assurance, and site-specific customization.
+  </p>
+</div>
+`,
+    features: `<div>
+  <h4> 1. Consistent Quality</h4>
+  <ul>
+    <li>Produced in fully automated batching plants with precise water-cement ratios.</li>
+    <li>Adheres to IS 4926 standards and quality checks for slump, strength, and setting time.</li>
+  </ul>
+
+  <h4> 2. Time-Saving & Efficient</h4>
+  <ul>
+    <li>Delivered ready for placement—no need for on-site mixing or curing delays.</li>
+    <li>Accelerates project timelines and optimizes labor usage.</li>
+  </ul>
+
+  <h4> 3. Custom Mix Designs Available</h4>
+  <ul>
+    <li>Available in various grades: M5 to M50, tailored for residential, commercial, and industrial use.</li>
+    <li>Custom mixes available for waterproofing, self-compacting, and high-strength concrete.</li>
+  </ul>
+
+  <h4> 4. Reduced Wastage & Inventory Management</h4>
+  <ul>
+    <li>No excess cement, aggregates, or sand at the site—ensures clean and organized construction zones.</li>
+  </ul>
+
+  <h4> 5. Eco-Friendly</h4>
+  <ul>
+    <li>Minimizes dust, noise, and material wastage.</li>
+    <li>Lower carbon footprint due to optimized batching and minimal transportation waste.</li>
+  </ul>
+
+  <h4> 6. Versatile Applications</h4>
+  <ul>
+    <li>Suitable for slabs, columns, foundations, retaining walls, pavements, beams, industrial flooring, etc.</li>
+  </ul>
+</div>
+`,
+   faqs: [
+  {
+    question: "What is Ready Mix Concrete (RMC)?",
+    answer:
+      "RMC is pre-mixed concrete made in batching plants using controlled proportions of cement, aggregates, water, and additives. It is transported to the site via transit mixers and poured directly without on-site mixing.",
+  },
+  {
+    question: "What are the available grades of RMC?",
+    answer:
+      "• M5, M10, M15 – Non-structural use\n• M20, M25, M30 – General RCC works\n• M35 and above – Heavy-duty and high-rise construction\nCustom mix designs are also available on request.",
+  },
+  {
+    question: "What are the advantages of using RMC over traditional concrete?",
+    answer:
+      "• Faster project execution\n• Higher consistency and quality\n• Lower material wastage\n• Cleaner site and less labor\n• Certified strength and slump compliance",
+  },
+  {
+    question: "Can I customize the RMC mix as per site needs?",
+    answer:
+      "Yes. Based on your structural engineer’s specifications, we can provide custom mixes with desired slump values, setting times, additives (like retarders or accelerators), and strength levels.",
+  },
+  {
+    question: "How is RMC delivered to my site?",
+    answer:
+      "RMC is transported in transit mixers equipped with rotating drums. These keep the concrete in motion and prevent early setting during transit.",
+  },
+  {
+    question: "What is the ideal time to use RMC after delivery?",
+    answer:
+      "RMC should ideally be poured within 90 minutes of batching to ensure optimal workability and strength. Proper coordination with the site team is essential.",
+  },
+  {
+    question: "Is RMC more expensive than site-mixed concrete?",
+    answer:
+      "While the upfront cost per cubic meter may be higher, RMC offers better value through reduced labor, material waste, faster completion, and better structural integrity—saving costs in the long run.",
+  },
+  {
+    question: "Can I place small quantity orders of RMC?",
+    answer:
+      "Yes. We support both bulk and small-scale RMC orders based on your project requirement. Minimum order quantity may vary based on location and supplier.",
+  },
+  {
+    question: "How do I know what grade of concrete to use?",
+    answer:
+      "Grades are selected based on the type of structure:\n• M20–M25: Residential slabs, beams, and columns\n• M30–M35: Commercial and load-bearing structures\n• M40 and above: High-rise, industrial floors, bridges",
+  }
+],
     pageLink: "/concrete/ready-mix-concrete",
   },
   {
@@ -1380,11 +1621,7 @@ export const OtherData = [
     link: "infra-equipment-rentals",
     image: "/infra-rentals.jpg",
     description: [
-      "Reliable infra equipment rentals for all types of construction projects.",
-      "Includes piling rigs, transit mixers, concrete batching plants, scaffolding, and shuttering systems.",
-      "Ideal for residential buildings, commercial developments, and infrastructure-scale projects.",
-      "Reduces capital investment while ensuring efficiency and quality execution.",
-      "Supported by timely delivery, maintenance, and operational assistance.",
+      "At HeyBuildex, we provide a comprehensive range of infra equipment for rental, including state-of-the-art piling rigs, transit mixers, and concrete batching plants. Whether you're working on residential, commercial, or infrastructure projects, we offer the heavy machinery you need to ensure efficient, cost-effective, and timely project execution."
     ],
     sizes: [
       "Piling Rigs",
@@ -1393,37 +1630,89 @@ export const OtherData = [
       "Scaffolding",
       "Shuttering Systems",
     ],
-    overview:
-      "At HeyBuildex, we provide top-quality infra equipment on rent to meet diverse construction needs. From foundation works to structural support systems, our rental fleet is maintained for reliability, safety, and performance—enabling your project to progress smoothly and on time.",
-    features: [
-      "Wide range of infra and construction equipment",
-      "Flexible rental terms for different project durations",
-      "Regularly serviced and safety-inspected machines",
-      "Expert support and on-site logistics available",
-      "Cost-effective alternative to equipment purchase",
-    ],
+    overview:`<div>
+  <p>
+    <strong>HeyBuildex Infra Rentals</strong> offers a reliable and cost-effective solution for all your construction equipment needs. Whether you're managing a residential build, a commercial project, or an infrastructure development, we provide access to a wide range of modern, well-maintained construction machines and tools on rent—delivered directly to your project site.
+  </p>
+  <p>
+    From excavators, concrete mixers, scaffolding, vibrators, and bar bending machines to safety equipment and earth-moving tools, we ensure hassle-free rentals backed by timely service, flexible durations, and affordable pricing. Say goodbye to high equipment ownership costs and maintenance issues—rent with <strong>HeyBuildex</strong> and focus on what matters: building better, faster.
+  </p>
+</div>
+`,
+    features: `<div>
+  <h4>1. Wide Range of Construction Equipment</h4>
+  <ul>
+    <li>Earthmovers: Excavators, backhoe loaders, JCBs</li>
+    <li>Concrete machinery: Mixers, pumps, vibrators, batching plants</li>
+    <li>Material handling: Cranes, scaffolding, hoists</li>
+    <li>Bar processing: Bar cutting and bending machines</li>
+    <li>Road equipment: Rollers, compactors, plate tampers</li>
+    <li>Safety gear: Helmets, harnesses, barricades</li>
+  </ul>
+
+  <h4> 2. Flexible Rental Durations</h4>
+  <ul>
+    <li>Hourly, daily, weekly, or monthly rental options</li>
+    <li>Long-term rental contracts for large-scale infrastructure projects</li>
+    <li>One-time use or recurring hire—tailored to your project timelines</li>
+  </ul>
+
+  <h4> 3. Affordable Pricing & No Hidden Costs</h4>
+  <ul>
+    <li>Transparent pricing with no surprise charges</li>
+    <li>Competitive rates across regions</li>
+    <li>Cost-effective compared to ownership and depreciation</li>
+  </ul>
+
+  <h4> 4. Well-Maintained & Quality-Assured Equipment</h4>
+  <ul>
+    <li>All machines are regularly serviced and safety-checked</li>
+    <li>Delivered in ready-to-use condition with on-site support on request</li>
+    <li>Branded equipment from trusted manufacturers</li>
+  </ul>
+
+  <h4> 5. On-Time Site Delivery</h4>
+  <ul>
+    <li>Fast turnaround and doorstep delivery</li>
+    <li>Hassle-free pickup and return logistics coordinated by our team</li>
+    <li>24/7 service support for active rentals</li>
+  </ul>
+
+  <h4> 6. One-Stop Rental Partner</h4>
+  <ul>
+    <li>Serves builders, contractors, developers, and infrastructure companies</li>
+    <li>Available in Tier 1, Tier 2, and emerging construction hubs</li>
+    <li>Dedicated account managers for B2B clients</li>
+  </ul>
+</div>
+`,
     faqs: [
-      {
-        question: "What infra equipment do you offer for rent?",
-        answer:
-          "We provide piling rigs, batching plants, transit mixers, scaffolding, and shuttering systems.",
-      },
-      {
-        question: "Can I rent equipment for a short-term project?",
-        answer:
-          "Yes, we offer flexible daily, weekly, and monthly rental options.",
-      },
-      {
-        question: "Do you provide transportation and setup support?",
-        answer:
-          "Yes, we handle delivery, setup, and removal as part of our service.",
-      },
-      {
-        question: "Is the equipment maintained and certified?",
-        answer:
-          "Absolutely. All our equipment is well-maintained, regularly serviced, and safety certified.",
-      },
-    ],
+  {
+    question: "What types of infra equipment do you offer for rent?",
+    answer:
+      "At HeyBuildex, we offer a wide range of infra equipment for rent, including piling rigs, transit mixers, and concrete batching plants. We provide both mobile and stationary options based on your project needs.",
+  },
+  {
+    question: "How do I rent piling rigs for my construction project?",
+    answer:
+      "You can easily rent piling rigs through HeyBuildex by visiting our website, selecting the equipment, and requesting a quote or placing an order directly online. We ensure timely delivery to your construction site.",
+  },
+  {
+    question: "What are the benefits of renting transit mixers?",
+    answer:
+      "Renting transit mixers from HeyBuildex provides flexibility, cost savings, and access to high-performance machines. You avoid maintenance costs and can scale equipment according to project demands.",
+  },
+  {
+    question: "What is the difference between mobile and inline concrete batching plants?",
+    answer:
+      "Mobile concrete batching plants are compact, easy to relocate, and suitable for projects requiring on-site concrete production. Inline batching plants, on the other hand, offer high capacity and consistency, ideal for large-scale projects.",
+  },
+  {
+    question: "How is the pricing structured for infra equipment rentals?",
+    answer:
+      "The pricing for infra equipment rentals depends on factors like equipment type, rental duration, and project requirements. HeyBuildex offers competitive rates and customized quotes for bulk or long-term rentals.",
+  }
+],
     pageLink: "/services/infra-equipment-rentals",
   },
   {
@@ -1432,11 +1721,7 @@ export const OtherData = [
     link: "safety-equipment",
     image: "/safety.jpg",
     description: [
-      "High-quality safety equipment for complete on-site protection.",
-      "Ideal for construction, industrial, and infrastructure environments.",
-      "Includes personal protective gear and fire safety essentials.",
-      "Ensures worker safety, compliance, and reduced onsite risk.",
-      "Tested and certified to meet industry safety standards.",
+     "At HeyBuildex, we bring you a diverse range of high-quality safety equipment to ensure complete protection for your construction projects. Our catalog includes premium-grade safety gear like Hand Gloves, Safety Helmets, Face Shields, Safety Masks, Ear Protection, Reflective Jackets, Safety Belts, Industrial Fall Arresters, Safety Aprons, Hand Sleeves, PVC Chemical Suits, Boiler Suits, Industrial Safety Shoes, and Fire Extinguishers."
     ],
     sizes: [
       "Hand Gloves",
@@ -1454,38 +1739,84 @@ export const OtherData = [
       "Industrial Safety Shoes",
       "Fire Extinguishers",
     ],
-    overview:
-      "At HeyBuildex, we offer a wide range of certified safety equipment designed to protect workers in hazardous environments. From head-to-toe protective gear to fire safety tools, our products ensure compliance, minimize injury risks, and foster a culture of safety across all construction and industrial sites.",
-    features: [
-      "Comprehensive personal protection range",
-      "Certified and industry-compliant gear",
-      "Durable materials for rugged conditions",
-      "Comfortable and ergonomic designs",
-      "Ideal for daily use on active job sites",
-    ],
+    overview:`<div>
+  <p>
+    At <strong>HeyBuildex</strong>, we understand that safety is not optional—it’s essential. Our comprehensive range of construction safety equipment is designed to protect workers, prevent accidents, and ensure compliance with industry safety standards.
+  </p>
+  <p>
+    From helmets, gloves, and safety shoes to high-visibility jackets, harnesses, barricades, and fire protection gear, we provide IS-certified, durable, and field-tested products suitable for small residential jobs to large-scale infrastructure projects.
+  </p>
+  <p>
+    Whether you’re a site engineer, contractor, or infrastructure company, trust <strong>HeyBuildex</strong> for affordable, high-quality safety solutions delivered right to your site.
+  </p>
+</div>
+`,
+    features: `<div>
+  <h4>1. Complete Range of Site Safety Gear</h4>
+  <ul>
+    <li>Personal Protective Equipment (PPE): Helmets, gloves, face shields, safety goggles, ear protection, masks</li>
+    <li>Foot Protection: Anti-slip, steel-toe safety shoes in various sizes</li>
+    <li>Fall Protection: Safety harnesses, lifelines, fall arresters</li>
+    <li>Visibility Gear: Reflective jackets, armbands, site vests</li>
+    <li>Site Safety Tools: Barricades, cones, warning tapes, fire extinguishers</li>
+  </ul>
+
+  <h4>2. Certified & Compliant Products</h4>
+  <ul>
+    <li>Conforms to ISI, BIS, and OSHA safety standards</li>
+    <li>High-grade material tested for strength, comfort, and weather resistance</li>
+    <li>Suitable for high-risk work environments and regulatory inspections</li>
+  </ul>
+
+  <h4>3. Comfort-Focused Design</h4>
+  <ul>
+    <li>Ergonomically designed for long hours of use</li>
+    <li>Breathable fabrics, adjustable straps, and padded interiors for worker comfort</li>
+    <li>Lightweight yet impact-resistant materials</li>
+  </ul>
+
+  <h4>4. Bulk Supply for Projects</h4>
+  <ul>
+    <li>Ideal for contractors, infrastructure companies, and government tenders</li>
+    <li>Custom procurement for projects of all sizes</li>
+    <li>GST invoicing and brand flexibility available</li>
+  </ul>
+
+  <h4>5. Fast Delivery & Expert Support</h4>
+  <ul>
+    <li>Site-level delivery across cities and project zones</li>
+    <li>Assistance in selecting the right safety kit for your team</li>
+    <li>Option to bundle safety gear with equipment rentals and construction materials</li>
+  </ul>
+</div>
+`,
     faqs: [
-      {
-        question: "What types of safety equipment do you provide?",
-        answer:
-          "We offer helmets, gloves, face shields, safety shoes, reflective jackets, fire extinguishers, and more.",
-      },
-      {
-        question: "Are your products certified?",
-        answer:
-          "Yes, all our safety equipment meets national and international safety standards.",
-      },
-      {
-        question: "Can I place a bulk order for a construction site?",
-        answer:
-          "Absolutely! We support bulk orders with quick delivery options.",
-      },
-      {
-        question:
-          "Do you supply protective gear for chemical and high-risk environments?",
-        answer:
-          "Yes, we provide chemical suits, industrial fall arresters, and other high-risk protective gear.",
-      },
-    ],
+  {
+    question: "What types of safety equipment does HeyBuildex offer?",
+    answer:
+      "HeyBuildex provides a comprehensive range of safety gear including hand gloves, helmets, face shields, safety masks, ear protection, reflective jackets, industrial safety shoes, and more."
+  },
+  {
+    question: "Are your safety products compliant with international safety standards?",
+    answer:
+      "Yes, all our safety equipment meets or exceeds industry safety standards to ensure maximum protection."
+  },
+  {
+    question: "Do you offer bulk purchasing options for safety equipment?",
+    answer:
+      "Absolutely! HeyBuildex provides bulk order options at competitive prices for large-scale projects."
+  },
+  {
+    question: "Can I get customized safety solutions based on specific project requirements?",
+    answer:
+      "Yes, we can assist you in selecting the right safety equipment tailored to your project needs."
+  },
+  {
+    question: "How fast is the delivery for bulk safety equipment orders?",
+    answer:
+      "We ensure prompt delivery for all bulk orders to keep your project timelines on track."
+  }
+],
     pageLink: "/safety/safety-equipment",
   },
 ];
@@ -1652,91 +1983,92 @@ export const SteelMetaData = [
 export const CementMetaData = [
   {
     title:
-      "Buy Ultratech Cement Online – PPC, Super Cement for All Construction | HeyBuildex",
+      "Buy Ultratech PPC & Super Cement Online – Best Prices & Fast Delivery | HeyBuildex",
     link: "ultratech-cement",
     image: "/ultratech-cement.jpeg",
     description:
-      "Get Ultratech Cement online at best prices. Ideal for RCC, plastering, and masonry with high strength, durability, and smooth finish. Available in PPC and Super variants.",
+      "Get high-quality Ultratech PPC and Super Cement at competitive prices from HeyBuildex. Buy online and enjoy fast delivery across India for all your construction needs.",
     imageUrl: "/products/ultratech-cement.jpg",
-    keywords: [
-      "Ultratech Cement",
-      "buy Ultratech Cement online",
-      "Ultratech PPC",
-      "Ultratech Super Cement",
-      "cement for RCC",
-      "cement for plastering",
-      "construction cement",
-      "best cement for building",
-      "50kg cement bag",
-      "Durable cement",
-      "cement delivery India",
-    ],
+   keywords: [
+  "Ultratech PPC Cement",
+  "Ultratech Super Cement",
+  "buy Ultratech Cement online",
+  "PPC cement price",
+  "Super cement price",
+  "Ultratech Cement suppliers",
+  "construction cement",
+  "buy cement online",
+  "Ultratech cement for home construction",
+  "bulk cement supply",
+  "affordable cement prices",
+  "HeyBuildex"
+]
   },
   {
     title:
-      "Maha Cement – High Strength OPC, PPC & Slag Cement Online | HeyBuildex",
+      "Buy Maha Cement Online – PPC & PSC Cement at Best Prices | HeyBuildex",
     link: "maha-cement",
     image: "/maha-cement.png",
     description:
-      "Order Maha Cement for strong, long-lasting construction. Available in OPC, PPC, and Slag variants for residential, commercial, and infrastructure use.",
+      "Get Maha Cement PPC & PSC at the best prices from HeyBuildex. Buy online with fast delivery and superior quality. Request a quote for your construction needs!",
     imageUrl: "/products/maha-cement.jpg",
     keywords: [
-      "Maha Cement",
-      "buy Maha Cement online",
-      "Maha OPC",
-      "Maha PPC",
-      "Maha Slag Cement",
-      "best cement for slab",
-      "strong cement",
-      "50kg cement bag",
-      "cement for brickwork",
-      "premium cement brands",
-      "construction materials",
-    ],
+  "Buy Maha Cement Online",
+  "Maha Cement PPC",
+  "Maha Cement PSC",
+  "Maha Cement Price",
+  "Maha Cement Suppliers",
+  "Maha Cement Dealers",
+  "Maha Cement Near Me",
+  "Maha Cement Online Order",
+  "Best Price Maha Cement",
+  "Maha Cement for Construction",
+  "Bulk Maha Cement Supply",
+  "Maha Cement for Sale",
+  "Maha Cement Delivery",
+  "Maha Cement Wholesale"
+]
   },
   {
     title:
-      "Ramco Cement – Durable PPC & Slag Cement for Coastal & RCC Projects | HeyBuildex",
+      "Ramco Cement Supplier | Ramco OPC & Supercrete Price",
     link: "ramco-cement",
     image: "/ramco-cement.png",
     description:
-      "Shop Ramco Cement online – perfect for RCC, coastal and industrial projects. Available in PPC and Slag variants with sulfate resistance and fast setting.",
+      "Buy Ramco Cement at best price from trusted supplier. Full range of Ramco OPC 53 & Supercrete cement for construction. Request a quote from HeyBuildEx today!",
     imageUrl: "/products/ramco-cement.jpg",
-    keywords: [
-      "Ramco Cement",
-      "buy Ramco Cement online",
-      "Ramco PPC",
-      "Ramco Slag Cement",
-      "cement for coastal areas",
-      "cement for RCC",
-      "cement with sulfate resistance",
-      "construction grade cement",
-      "premium cement brands",
-      "fast setting cement",
-      "50kg cement bag",
-    ],
+    keywords:  [
+  "Ramco cement",
+  "Ramco cement supplier",
+  "Ramco OPC 53",
+  "Ramco Supercrete",
+  "Ramco cement price",
+  "buy Ramco cement",
+  "cement distributor",
+  "construction cement"
+]
   },
   {
     title:
-      "Sagar Cement – Reliable Slag Cement for Marine & Industrial Construction | HeyBuildex",
+      "Buy Sagar Cement Online - OPC, PPC, PSC for Construction | HeyBuildex",
     link: "sagar-cement",
     image: "/sagar-cement.png",
     description:
-      "Order Sagar Cement online – strong and eco-friendly slag cement for all-weather construction. Ideal for RCC, marine, and industrial structures.",
+      "Order high-quality Sagar Cement (OPC, PPC, PSC) online at competitive prices from HeyBuildex. Get fast delivery for all your construction needs.",
     imageUrl: "/products/sagar-cement.jpg",
-    keywords: [
-      "Sagar Cement",
-      "buy Sagar Cement online",
-      "Sagar Slag Cement",
-      "marine construction cement",
-      "cement for industrial projects",
-      "slag cement India",
-      "durable construction cement",
-      "eco-friendly cement",
-      "ISI certified cement",
-      "50kg cement bag",
-      "low heat cement",
-    ],
+    keywords:  [
+  "Sagar Cement",
+  "buy Sagar Cement online",
+  "Ordinary Portland Cement",
+  "Portland Pozzolana Cement",
+  "Portland Slag Cement",
+  "cement for construction",
+  "bulk cement supply",
+  "cement price India",
+  "Sagar Cement delivery",
+  "eco-friendly cement",
+  "cement suppliers in India"
+]
   },
 ];
 

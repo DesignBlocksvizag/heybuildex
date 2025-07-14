@@ -249,7 +249,7 @@ export default function CementProductPage({ product ,brands,breadcrumbs}) {
 </Grid>
 
 
-              <Box sx={{ mt: 3, display: "flex", justifyContent: "center" }}>
+              {/* <Box sx={{ mt: 3, display: "flex", justifyContent: "center" }}>
                 <Button
                   variant="contained"
                   color="success"
@@ -267,17 +267,17 @@ export default function CementProductPage({ product ,brands,breadcrumbs}) {
                 >
                   Get Best Price on WhatsApp
                 </Button>
-              </Box>
+              </Box> */}
 
               <ProductTabs
                 tabData={[
                   {
-                    label: "Overview",
+                    label: "Description",
                     content: [overview], // Wrap string as array
                   },
                   {
                     label: "Features",
-                    content: features, // Already an array of strings
+                    content: [features], // Wrap as array
                   },
                   {
                     label: "FAQs",
