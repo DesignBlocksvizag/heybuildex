@@ -7,14 +7,55 @@ header("Content-Type: application/json");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
+// Read JSON data
 $data = json_decode(file_get_contents('data.json'), true);
 $updated = false;
 
+$id = $_POST['id'] ?? null;
+
+if (!$id) {
+    echo json_encode(["status" => "error", "message" => "ID is required"]);
+    exit;
+}
+
 foreach ($data as &$blog) {
-    if ($blog['id'] == $_POST['id']) {
-        $blog['image'] = $_POST['image'];
-        $blog['heading'] = $_POST['heading'];
-        $blog['description'] = $_POST['description'];
+    if ($blog['id'] == $id) {
+
+        // Update heading if provided
+        if (!empty($_POST['heading'])) {
+            $blog['heading'] = $_POST['heading'];
+        }
+
+        // Update description if provided
+        if (!empty($_POST['description'])) {
+            $blog['description'] = $_POST['description'];
+        }
+
+        // Handle image update
+        if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
+            $uploadDir = 'uploads/';
+            $newImageName = uniqid() . '_' . basename($_FILES['image']['name']);
+            $targetFile = $uploadDir . $newImageName;
+
+            // Ensure upload directory exists
+            if (!is_dir($uploadDir)) {
+                mkdir($uploadDir, 0777, true);
+            }
+
+            if (move_uploaded_file($_FILES['image']['tmp_name'], $targetFile)) {
+                // Delete old image if it exists
+                if (!empty($blog['image']) && file_exists($blog['image'])) {
+                    unlink($blog['image']);
+                }
+
+                // Update image path
+                $blog['image'] = $targetFile;
+            } else {
+                echo json_encode(["status" => "error", "message" => "Image upload failed"]);
+                exit;
+            }
+        }
+
         $updated = true;
         break;
     }

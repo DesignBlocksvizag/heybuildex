@@ -53,7 +53,7 @@ const products = [
   {
     title: "Cement",
     image: "cement.png",
-    link: "/cement", // or redirect to a default cement page
+    link: "/cement/ultratech-cement",
   },
   {
     title: "RMC",

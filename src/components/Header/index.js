@@ -145,12 +145,12 @@ const Header = () => {
                 gap: 2,
               }}
             >
-              <Box>
+              <Box component={Link} href="/">
                 <Box
                   component="img"
                   src="/buildex_logo1.png"
                   alt="Buildex Logo"
-                  sx={{ height: 60 }}
+                  sx={{ height: 60,cursor:"pointer"}}
                 />
               </Box>
 

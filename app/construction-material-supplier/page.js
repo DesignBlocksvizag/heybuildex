@@ -33,7 +33,7 @@ const benefits = [
   "Delivery in 24–48 Hours",
   "Transparent Weighment & Billing",
   "Support for Bulk & Retail Orders",
-  "Trusted by Builders Across AP, Telangana & Odisha",
+  "Trusted by Infra Contractors and Builders across Andhra Pradesh, Telangana, Tamil Nadu, and Odisha.",
 ];
 
 export default function ConstructionPage() {

@@ -40,7 +40,7 @@ const BlogFormDialog = ({
   const validationSchema = Yup.object({
     heading: Yup.string().required("Heading is required"),
     description: Yup.string().required("Description is required"),
-    image: editStatus ? Yup.mixed() : Yup.mixed().required("Image is required"),
+    image: editStatus ? Yup.mixed().notRequired() : Yup.mixed().required("Image is required"),
   });
 
   const initialValues = {
@@ -316,6 +316,7 @@ export default function BlogTable() {
       <Snackbar
         open={snackbar.open}
         autoHideDuration={3000}
+        sx={{fontFamily:"Poppins"}}
         onClose={() => setSnackbar((prev) => ({ ...prev, open: false }))}
       >
         <Alert severity={snackbar.severity}>{snackbar.message}</Alert>
