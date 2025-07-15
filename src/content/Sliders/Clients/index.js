@@ -12,8 +12,6 @@ const Clients = () => {
     { src: "/clients/sri-chakra.png", alt: "sri-chakra" },
     { src: "/clients/pv.png", alt: "pv" },
     { src: "/clients/vaishno.png", alt: "vaishno" },
-       { src: "/clients/bhogapuram.jpg", alt: "bhogapuram" },
-        { src: "/clients/gopalpur-ports.jpg", alt: "gopalpur-ports" },
   ];
 
   const marqueeRef = useRef(null);
