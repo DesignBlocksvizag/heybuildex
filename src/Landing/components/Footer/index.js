@@ -8,7 +8,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 export default function Footer() {
   return (
     <Box sx={{     backgroundImage:
-      "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/footer-bg-land.jpg')",
+      "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/footer-bg-land_c.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",color: "#fff", py: 6, mt: 8 }}>

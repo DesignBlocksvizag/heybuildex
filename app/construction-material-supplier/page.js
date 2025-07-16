@@ -24,6 +24,7 @@ import TestimonialSlider from "@/src/Landing/components/Testimonials";
 import Footer from "@/src/Landing/components/Footer";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
 import * as Yup from "yup";
@@ -293,7 +294,7 @@ export default function ConstructionPage() {
     gutterBottom
     sx={{ fontFamily: "Poppins" }}
   >
-    Buy Construction Materials at Lowest Prices in AP & Telangana!
+    Buy Construction Materials at Lowest Prices
   </Typography>
   <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
     Construction Steel & Structural Steel 
@@ -322,7 +323,7 @@ export default function ConstructionPage() {
         </Box>
         <Box
           sx={{
-            backgroundColor: "#1c953f",
+            background: "linear-gradient(90deg, #1c953f 0%, #465a65 100%)",
             py: 2,
             px: 2,
             mt: 2,
@@ -530,7 +531,7 @@ export default function ConstructionPage() {
 
         <Box
           sx={{
-            background: "linear-gradient(90deg, #465a65 0%, #1c953f 100%)",
+            background: "linear-gradient(90deg, #1c953f 0%, #465a65  100%)",
             color: "#fff",
             py: { xs: 6, md: 8 },
             px: { xs: 3, md: 6 },
@@ -611,18 +612,27 @@ export default function ConstructionPage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Box
-              component={"img"}
-              src="/image.png" // Replace with your image path
-              alt="WhatsApp"
-              sx={{
-                width: { xs: 170, md: 200 },
-                height: { xs: 70, md: 80 },
-                cursor: "pointer",
-                objectFit: "contain",
-                marginTop: "10px",
-              }}
-            />
+            <Button
+  variant="outlined"
+  size="large"
+  startIcon={<WhatsAppIcon />}
+  sx={{
+    color: "#fff",
+    borderColor: "#fff",
+    fontWeight: "bold",
+    fontFamily: "Poppins",
+    px: 4,
+    py: 1.5,
+    mt:1,
+    borderRadius: "8px",
+    "&:hover": {
+      backgroundColor: "rgba(255,255,255,0.1)",
+      borderColor: "#fff",
+    },
+  }}
+>
+  WHATSAPP
+</Button>
           </a>
         </Box>
         <FaqSection />
