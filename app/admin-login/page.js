@@ -84,6 +84,7 @@ export default function AdminLogin() {
               textTransform: "none",
               fontFamily: "Poppins",
               width:"150px",
+              cursor:"pointer",
               "&:hover": {
                 background:
                   "linear-gradient(to right, #1c953f 0%, #465a65 100%)",
