@@ -40,7 +40,17 @@ export default function BlogsAdminLayout({ children }) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+  <Box
+    onClick={handleDrawerToggle}
+    sx={{
+      textAlign: "center",
+      height: "100%",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+    }}
+  >
+    <Box>
       <Toolbar sx={{ justifyContent: "center" }}>
         <Box
           component="img"
@@ -73,7 +83,51 @@ export default function BlogsAdminLayout({ children }) {
         ))}
       </List>
     </Box>
-  );
+
+    {/* Logout at Bottom */}
+    <Box sx={{ p: 2 }}>
+      <Divider sx={{ mb: 1 }} />
+      <ListItem
+        
+        onClick={() => {
+          localStorage.removeItem("loggedIn");
+          window.location.href = "/admin-login";
+        }}
+       
+          
+            sx={{
+              
+              mt:3,
+              fontWeight: 600,
+              fontSize: "1.1rem",
+              borderRadius: "30px",
+              background: "linear-gradient(to right, #465a65 0%, #1c953f 100%)",
+              color: "#fff",
+              textTransform: "none",
+              fontFamily: "Poppins",
+              "&:hover": {
+                background:
+                  "linear-gradient(to right, #1c953f 0%, #465a65 100%)",
+              },
+            }}
+      >
+        <ListItemText primary="Logout" slotProps={{
+          primary:{
+            sx:{
+              fontFamily: "Poppins",
+              fontSize: "14px",
+              fontWeight: 600,
+              color: "#fff",
+              textAlign: "center",
+              textTransform: "none",
+            }
+          }
+        }} />
+      </ListItem>
+    </Box>
+  </Box>
+);
+
 
   return (
     <Box sx={{ display: "flex" }}>

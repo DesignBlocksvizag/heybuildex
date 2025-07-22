@@ -78,7 +78,7 @@ export const navItems = [
   { name: "RMC", link: "/rmc", dropDown: false },
   { name: "INFRA RENTALS", link: "/infra-rentals", dropDown: false },
   { name: "SAFETY", link: "/safety", dropDown: false },
-  { name: "BLOG", link: "/blog", dropDown: false },
+  { name: "BLOG", link: "/blogs", dropDown: false },
   { name: "CONTACT", link: "/contact", dropDown: false },
 ];
 
