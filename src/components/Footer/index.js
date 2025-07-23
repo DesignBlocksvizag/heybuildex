@@ -42,8 +42,7 @@ export default function Footer() {
               variant="body2"
               sx={{ mt: 1, fontFamily: "Poppins", opacity: 0.9 }}
             >
-              Premium Structural & Construction Steel Solutions — Delivered On
-              Time, Every Time.
+              Simplifying Construction with End-to-End Material & Equipment Solutions.
             </Typography>
           </Grid>
 
@@ -106,11 +105,13 @@ export default function Footer() {
                   variant="body2"
                   sx={{ fontFamily: "Poppins", opacity: 0.9 }}
                 >
-                  2nd Floor, D.No.2-151/3/1, Plot No.719A, near Gandhi Statue,
+                  #31-27-65, 2nd Floor, Vijaya Complex,
                   <br />
-                  Midhilapuri Vuda Colony, Madhurawada,
+                  Opposite Annapurna Theatre Kurmannapalem,
                   <br />
-                  Visakhapatnam, Andhra Pradesh 530041, India
+                  Visakhapatnam, Andhra Pradesh
+                  <br />
+                  Pin - 530046
                 </Typography>
               </Box>
 
@@ -208,7 +209,8 @@ export default function Footer() {
             variant="body2"
             sx={{ fontFamily: "Poppins", opacity: 0.7 }}
           >
-            © {new Date().getFullYear()} Kalight Global Pvt. Ltd. All rights reserved.
+            © {new Date().getFullYear()} Kalight Global Pvt. Ltd. All rights
+            reserved.
           </Typography>
         </Box>
       </Container>

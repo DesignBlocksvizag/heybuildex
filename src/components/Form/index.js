@@ -23,17 +23,29 @@ export default function QuotationForm() {
 
   const formik = useFormik({
     initialValues: {
-      name: "",
-      phone: "",
-      steelType: "",
-      material: "",
-      message: "",
-    },
+  name: "",
+  phone: "",
+   steelType: "",
+   material: "",
+  selections: {
+    rmc: "",
+    cement: "",
+    infra: "",
+    safety: "",
+  },
+  message: "",
+},
     validationSchema: Yup.object({
       name: Yup.string().required("Required"),
       phone: Yup.string().required("Required"),
-      steelType: Yup.string().required("Required"),
+          steelType: Yup.string().required("Required"),
       material: Yup.string().required("Required"),
+      selections: Yup.object({
+        rmc: Yup.string().required("Required"),
+        cement: Yup.string().required("Required"),
+        infra: Yup.string().required("Required"),
+        safety: Yup.string().required("Required"),
+      }),
       message: Yup.string().required("Required"),
     }),
     onSubmit: async (values, { resetForm }) => {
@@ -98,7 +110,7 @@ export default function QuotationForm() {
       sx={{
         maxWidth: "900px",
         mx: "auto",
-        my: 6,
+        mt: 6,
         px: { xs: 2, md: 4 },
         py: 4,
         bgcolor: "#fff",
@@ -251,6 +263,124 @@ export default function QuotationForm() {
               </FormControl>
             </Grid>
           )}
+                {/* --- RMC Section --- */}
+<Grid size={{ xs: 12,md:6}}>
+  <Typography sx={{  fontWeight: 600, fontFamily: "Poppins" }}>
+    RMC
+  </Typography>
+  <FormControl fullWidth size="small" sx={{ fontFamily: "Poppins" }}>
+    <InputLabel sx={{ color: "#1c953f" }}>RMC Type</InputLabel>
+    <Select
+      name="selections.rmc"
+      value={formik.values.selections.rmc}
+      onChange={formik.handleChange}
+      label="RMC Type"
+      sx={{
+        fontFamily: "Poppins",
+        "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+          borderColor: "#1c953f",
+        },
+      }}
+    >
+      {["M10", "M20", "M30", "M40", "Other"].map((item) => (
+        <MenuItem key={item} value={item} sx={{ fontFamily: "Poppins" }}>
+          {item}
+        </MenuItem>
+      ))}
+    </Select>
+  </FormControl>
+</Grid>
+
+{/* --- Cement Section --- */}
+<Grid size={{ xs: 12,md:6}}>
+  <Typography sx={{  fontWeight: 600, fontFamily: "Poppins" }}>
+    Cement
+  </Typography>
+  <FormControl fullWidth size="small" sx={{ fontFamily: "Poppins" }}>
+    <InputLabel sx={{ color: "#1c953f" }}>Cement Type</InputLabel>
+    <Select
+      name="selections.cement"
+      value={formik.values.selections.cement}
+      onChange={formik.handleChange}
+      label="Cement Type"
+      sx={{
+        fontFamily: "Poppins",
+        "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+          borderColor: "#1c953f",
+        },
+      }}
+    >
+      {["PPC", "OPC", "Other"].map((item) => (
+        <MenuItem key={item} value={item} sx={{ fontFamily: "Poppins" }}>
+          {item}
+        </MenuItem>
+      ))}
+    </Select>
+  </FormControl>
+</Grid>
+
+{/* --- Infra Section --- */}
+<Grid size={{ xs: 12,md:6}}>
+  <Typography sx={{  fontWeight: 600, fontFamily: "Poppins" }}>
+    Infra
+  </Typography>
+  <FormControl fullWidth size="small" sx={{ fontFamily: "Poppins" }}>
+    <InputLabel sx={{ color: "#1c953f" }}>Infra Equipment</InputLabel>
+    <Select
+      name="selections.infra"
+      value={formik.values.selections.infra}
+      onChange={formik.handleChange}
+      label="Infra Equipment"
+      sx={{
+        fontFamily: "Poppins",
+        "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+          borderColor: "#1c953f",
+        },
+      }}
+    >
+      {[
+        "Equipment Need",
+        "Piling Rig",
+        "Batching Plant",
+        "Transit Mixture",
+        "Excavators",
+        "Other",
+      ].map((item) => (
+        <MenuItem key={item} value={item} sx={{ fontFamily: "Poppins" }}>
+          {item}
+        </MenuItem>
+      ))}
+    </Select>
+  </FormControl>
+</Grid>
+
+{/* --- Safety Section --- */}
+<Grid size={{ xs: 12,md:6}}>
+  <Typography sx={{  fontWeight: 600, fontFamily: "Poppins" }}>
+    Safety
+  </Typography>
+  <FormControl fullWidth size="small" sx={{ fontFamily: "Poppins" }}>
+    <InputLabel sx={{ color: "#1c953f" }}>Safety Item</InputLabel>
+    <Select
+      name="selections.safety"
+      value={formik.values.selections.safety}
+      onChange={formik.handleChange}
+      label="Safety Item"
+      sx={{
+        fontFamily: "Poppins",
+        "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+          borderColor: "#1c953f",
+        },
+      }}
+    >
+      {["Jackets", "Glose", "Shoes", "Glasses", "Other"].map((item) => (
+        <MenuItem key={item} value={item} sx={{ fontFamily: "Poppins" }}>
+          {item}
+        </MenuItem>
+      ))}
+    </Select>
+  </FormControl>
+</Grid>
 
           {/* Message Field */}
           <Grid size={{ xs: 12 }}>
@@ -280,6 +410,8 @@ export default function QuotationForm() {
               }}
             />
           </Grid>
+    
+
         </Grid>
         {loading && <LinearProgress sx={{ background: "#1c953f", mt: 1 }} />}
 
