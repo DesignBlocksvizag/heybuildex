@@ -38,14 +38,8 @@ export default function QuotationForm() {
     validationSchema: Yup.object({
       name: Yup.string().required("Required"),
       phone: Yup.string().required("Required"),
-          steelType: Yup.string().required("Required"),
+      steelType: Yup.string().required("Required"),
       material: Yup.string().required("Required"),
-      selections: Yup.object({
-        rmc: Yup.string().required("Required"),
-        cement: Yup.string().required("Required"),
-        infra: Yup.string().required("Required"),
-        safety: Yup.string().required("Required"),
-      }),
       message: Yup.string().required("Required"),
     }),
     onSubmit: async (values, { resetForm }) => {
@@ -80,6 +74,41 @@ export default function QuotationForm() {
       }
     },
   });
+  const categoryOptions = [
+     {
+    label: "Construction Steel",
+    values: ["TMT Bars", "Structural Steel", "Other"],
+  },
+  {
+    label: "Structural Steel",
+    values: ["TMT Bars", "Structural Steel", "Other"],
+  },
+
+  {
+    label: "RMC",
+    values: ["M10", "M20", "M30", "M40", "Other"],
+  },
+  {
+    label: "Cement",
+    values: ["PPC", "OPC", "Other"],
+  },
+  {
+    label: "Infra",
+    values: [
+      "Equipment Need",
+      "Piling Rig",
+      "Batching Plant",
+      "Transit Mixture",
+      "Excavators",
+      "Other",
+    ],
+  },
+  {
+    label: "Safety",
+    values: ["Jackets", "Glose", "Shoes", "Glasses", "Other"],
+  },
+];
+
   const getSubProducts = (product) => {
     switch (product) {
       case "Construction Steel":
@@ -98,6 +127,21 @@ export default function QuotationForm() {
           "MS Chequered plate",
           "Roofing sheet",
         ];
+         case "RMC":
+      return ["M10", "M20", "M30", "M40", "Other"];
+    case "Cement":
+      return ["PPC", "OPC", "Other"];
+    case "Infra":
+      return [
+        "Equipment Need",
+        "Piling Rig",
+        "Batching Plant",
+        "Transit Mixture",
+        "Excavators",
+        "Other",
+      ];
+    case "Safety":
+      return ["Jackets", "Glose", "Shoes", "Glasses", "Other"]
       default:
         return [];
     }
@@ -185,7 +229,7 @@ export default function QuotationForm() {
           <Grid size={{ xs: 12 }}>
             <FormControl fullWidth size="small" sx={{ fontFamily: "Poppins" }}>
               <InputLabel sx={{ fontFamily: "Poppins", color: "#1c953f" }}>
-                Steel Type
+                Material Type
               </InputLabel>
               <Select
                 name="steelType"
@@ -196,7 +240,7 @@ export default function QuotationForm() {
                   }
                   formik.handleChange(e);
                 }}
-                label="Steel Type"
+                label="Material Type"
                 sx={{
                   fontFamily: "Poppins",
                   "& .MuiInputLabel-root": {
@@ -214,15 +258,11 @@ export default function QuotationForm() {
                   formik.touched.steelType && Boolean(formik.errors.steelType)
                 }
               >
-                <MenuItem value="Construction Steel" sx={{ fontFamily: "Poppins" }}>
-                  Construction Steel
-                </MenuItem>
-                <MenuItem
-                  value="Structural Steel"
-                  sx={{ fontFamily: "Poppins" }}
-                >
-                  Structural Steel
-                </MenuItem>
+                  {categoryOptions.map((cat) => (
+              <MenuItem key={cat.label} value={cat.label} sx={{ fontFamily: "Poppins" }}>
+                {cat.label}
+              </MenuItem>
+            ))}
               </Select>
             </FormControl>
           </Grid>
@@ -263,124 +303,6 @@ export default function QuotationForm() {
               </FormControl>
             </Grid>
           )}
-                {/* --- RMC Section --- */}
-<Grid size={{ xs: 12,md:6}}>
-  <Typography sx={{  fontWeight: 600, fontFamily: "Poppins" }}>
-    RMC
-  </Typography>
-  <FormControl fullWidth size="small" sx={{ fontFamily: "Poppins" }}>
-    <InputLabel sx={{ color: "#1c953f" }}>RMC Type</InputLabel>
-    <Select
-      name="selections.rmc"
-      value={formik.values.selections.rmc}
-      onChange={formik.handleChange}
-      label="RMC Type"
-      sx={{
-        fontFamily: "Poppins",
-        "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-          borderColor: "#1c953f",
-        },
-      }}
-    >
-      {["M10", "M20", "M30", "M40", "Other"].map((item) => (
-        <MenuItem key={item} value={item} sx={{ fontFamily: "Poppins" }}>
-          {item}
-        </MenuItem>
-      ))}
-    </Select>
-  </FormControl>
-</Grid>
-
-{/* --- Cement Section --- */}
-<Grid size={{ xs: 12,md:6}}>
-  <Typography sx={{  fontWeight: 600, fontFamily: "Poppins" }}>
-    Cement
-  </Typography>
-  <FormControl fullWidth size="small" sx={{ fontFamily: "Poppins" }}>
-    <InputLabel sx={{ color: "#1c953f" }}>Cement Type</InputLabel>
-    <Select
-      name="selections.cement"
-      value={formik.values.selections.cement}
-      onChange={formik.handleChange}
-      label="Cement Type"
-      sx={{
-        fontFamily: "Poppins",
-        "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-          borderColor: "#1c953f",
-        },
-      }}
-    >
-      {["PPC", "OPC", "Other"].map((item) => (
-        <MenuItem key={item} value={item} sx={{ fontFamily: "Poppins" }}>
-          {item}
-        </MenuItem>
-      ))}
-    </Select>
-  </FormControl>
-</Grid>
-
-{/* --- Infra Section --- */}
-<Grid size={{ xs: 12,md:6}}>
-  <Typography sx={{  fontWeight: 600, fontFamily: "Poppins" }}>
-    Infra
-  </Typography>
-  <FormControl fullWidth size="small" sx={{ fontFamily: "Poppins" }}>
-    <InputLabel sx={{ color: "#1c953f" }}>Infra Equipment</InputLabel>
-    <Select
-      name="selections.infra"
-      value={formik.values.selections.infra}
-      onChange={formik.handleChange}
-      label="Infra Equipment"
-      sx={{
-        fontFamily: "Poppins",
-        "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-          borderColor: "#1c953f",
-        },
-      }}
-    >
-      {[
-        "Equipment Need",
-        "Piling Rig",
-        "Batching Plant",
-        "Transit Mixture",
-        "Excavators",
-        "Other",
-      ].map((item) => (
-        <MenuItem key={item} value={item} sx={{ fontFamily: "Poppins" }}>
-          {item}
-        </MenuItem>
-      ))}
-    </Select>
-  </FormControl>
-</Grid>
-
-{/* --- Safety Section --- */}
-<Grid size={{ xs: 12,md:6}}>
-  <Typography sx={{  fontWeight: 600, fontFamily: "Poppins" }}>
-    Safety
-  </Typography>
-  <FormControl fullWidth size="small" sx={{ fontFamily: "Poppins" }}>
-    <InputLabel sx={{ color: "#1c953f" }}>Safety Item</InputLabel>
-    <Select
-      name="selections.safety"
-      value={formik.values.selections.safety}
-      onChange={formik.handleChange}
-      label="Safety Item"
-      sx={{
-        fontFamily: "Poppins",
-        "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-          borderColor: "#1c953f",
-        },
-      }}
-    >
-      {["Jackets", "Glose", "Shoes", "Glasses", "Other"].map((item) => (
-        <MenuItem key={item} value={item} sx={{ fontFamily: "Poppins" }}>
-          {item}
-        </MenuItem>
-      ))}
-    </Select>
-  </FormControl>
-</Grid>
 
           {/* Message Field */}
           <Grid size={{ xs: 12 }}>
