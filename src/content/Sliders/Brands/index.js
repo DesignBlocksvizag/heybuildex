@@ -12,6 +12,10 @@ const ClientSlides = () => {
     { src: "/clients/radha.png", alt: "radha" },
     { src: "/clients/mangal.png", alt: "mangal" },
     { src: "/clients/simhadri.png", alt: "simhadri" },
+    { src: "/clients/ultratech-cement.png", alt: "ultratech" },
+    { src: "/clients/maha-cement.png", alt: "maha" },
+    { src: "/clients/ramco-cement.jpeg", alt: "ramco" },
+    { src: "/clients/sagar-cement.svg", alt: "sagar" },
   ];
 
   const marqueeRef = useRef(null);
