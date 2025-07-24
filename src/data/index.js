@@ -1822,7 +1822,7 @@ export const OtherData = [
 ];
 export const SteelMetaData = [
   {
-    title: "TMT Bars for Construction – Vizag Steel, Tata Tiscon, JSW & Jindal | HeyBuildex",
+    title: "Buy TMT Bars Online – Vizag, Tata, JSW & Jindal | HeyBuildex",
     link: "tmt-bars",
     image: "/tmt-bars.jpg",
     description:
@@ -1846,7 +1846,7 @@ export const SteelMetaData = [
 ],
   },
   {
-    title: "Buy Binding Wire Online – High-Quality Steel Wire for Construction | HeyBuildex",
+    title: "Buy Binding Wire Online – Durable Steel Wire | HeyBuildex",
     link: "binding-wire",
     image: "/binding-wire.jpg",
     description:
@@ -1983,7 +1983,7 @@ export const SteelMetaData = [
 export const CementMetaData = [
   {
     title:
-      "Buy Ultratech PPC & Super Cement Online – Best Prices & Fast Delivery | HeyBuildex",
+      "Buy Ultratech Cement Online – PPC & Super | HeyBuildex",
     link: "ultratech-cement",
     image: "/ultratech-cement.jpeg",
     description:

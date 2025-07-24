@@ -229,7 +229,7 @@ export default function QuotationForm() {
           <Grid size={{ xs: 12 }}>
             <FormControl fullWidth size="small" sx={{ fontFamily: "Poppins" }}>
               <InputLabel sx={{ fontFamily: "Poppins", color: "#1c953f" }}>
-                Material Type
+                Material or Service
               </InputLabel>
               <Select
                 name="steelType"
@@ -240,7 +240,7 @@ export default function QuotationForm() {
                   }
                   formik.handleChange(e);
                 }}
-                label="Material Type"
+                label="Material or Service"
                 sx={{
                   fontFamily: "Poppins",
                   "& .MuiInputLabel-root": {
@@ -270,13 +270,13 @@ export default function QuotationForm() {
             <Grid size={{ xs: 12 }}>
               <FormControl fullWidth size="small" sx={{ fontFamily: "Poppins" }}>
                 <InputLabel sx={{ fontFamily: "Poppins", color: "#1c953f" }}>
-                  Material
+                  Material Type
                 </InputLabel>
                 <Select
                   name="material"
                   value={formik.values.material}
                   onChange={formik.handleChange}
-                  label="Material"
+                  label="Material Type"
                   sx={{
                     fontFamily: "Poppins",
                     "& .MuiOutlinedInput-notchedOutline": {

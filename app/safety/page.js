@@ -5,7 +5,7 @@ import Header from "@/src/components/Header";
 import Footer from "@/src/components/Footer";
 import { notFound } from "next/navigation";
 export const metadata = {
-  title: "Safety Equipment for Construction – Buy Industrial Safety Gear Online | HeyBuildex",
+  title: " Buy Construction Safety Gear Online | HeyBuildex",
   description:
     "Explore HeyBuildex for high-quality safety equipment, including helmets, gloves, safety masks, and more. Get unbeatable prices and fast delivery for your construction projects.",
   keywords:

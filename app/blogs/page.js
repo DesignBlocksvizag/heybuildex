@@ -62,7 +62,7 @@ const BlogList = () => {
             }}
           >
             <Typography
-              variant="h3"
+              variant="h1"
               sx={{
                 color: "#FFFF00",
                 fontWeight: "bold",
