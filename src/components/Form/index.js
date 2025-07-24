@@ -16,10 +16,12 @@ import {
 import { useFormik } from "formik";
 import { useState } from "react";
 import * as Yup from "yup";
+import { useRouter } from "next/navigation";
 
 export default function QuotationForm() {
   const [loading, setLoading] = useState(false);
   const [openSnackbar, setOpenSnackbar] = useState(false);
+  const router = useRouter();
 
   const formik = useFormik({
     initialValues: {
@@ -66,6 +68,7 @@ export default function QuotationForm() {
         if (response.ok) {
           setOpenSnackbar(true);
           resetForm();
+          router.push("/thank-you");
         }
       } catch (error) {
         console.error("Error:", error);
@@ -93,9 +96,8 @@ export default function QuotationForm() {
     values: ["PPC", "OPC", "Other"],
   },
   {
-    label: "Infra",
+    label: "Infra Equipment",
     values: [
-      "Equipment Need",
       "Piling Rig",
       "Batching Plant",
       "Transit Mixture",
@@ -105,7 +107,7 @@ export default function QuotationForm() {
   },
   {
     label: "Safety",
-    values: ["Jackets", "Glose", "Shoes", "Glasses", "Other"],
+    values: ["Jackets", "Gloves", "Shoes", "Glasses", "Other"],
   },
 ];
 
@@ -131,9 +133,8 @@ export default function QuotationForm() {
       return ["M10", "M20", "M30", "M40", "Other"];
     case "Cement":
       return ["PPC", "OPC", "Other"];
-    case "Infra":
+    case "Infra Equipment":
       return [
-        "Equipment Need",
         "Piling Rig",
         "Batching Plant",
         "Transit Mixture",
@@ -141,7 +142,7 @@ export default function QuotationForm() {
         "Other",
       ];
     case "Safety":
-      return ["Jackets", "Glose", "Shoes", "Glasses", "Other"]
+      return ["Jackets", "Gloves", "Shoes", "Glasses", "Other"]
       default:
         return [];
     }

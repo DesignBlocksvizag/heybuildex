@@ -18,7 +18,7 @@ const contactInfo = [
   {
     icon: <LocationOn sx={{ fontSize: 40, color: "#01933e" }} />,
     title: "Our Location",
-    detail: "2nd Floor, D.No.2-151/3/1, Plot No.719A, near Gandhi Statue, Midhilapuri Vuda Colony, Madhurawada, Visakhapatnam, Andhra Pradesh 530041, India",
+    detail: "#31-27-65, 2nd Floor, Vijaya Complex, Opposite Annapurna Theatre Kurmannapalem, Visakhapatnam, Andhra Pradesh Pin - 530046",
   },
 ];
 
