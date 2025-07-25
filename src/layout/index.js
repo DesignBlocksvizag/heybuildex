@@ -17,6 +17,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import ArticleIcon from "@mui/icons-material/Article";
 import Link from "next/link";
+import RequestQuoteIcon from '@mui/icons-material/RequestQuote';
 
 const drawerWidth = 240;
 
@@ -29,6 +30,11 @@ const navItems = [
     label: "Blogs",
     href: "/blogs-admin",
     icon: <ArticleIcon sx={{ color: "#029441" }} />,
+  },
+   {
+    label: "Quotation",
+    href: "/quotation-admin",
+    icon: <RequestQuoteIcon sx={{ color: "#029441" }} />,
   },
 ];
 

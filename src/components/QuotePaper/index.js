@@ -12,7 +12,11 @@ import {
   Divider,
 } from '@mui/material';
 
-const QuotationPrintPage = () => {
+const QuotationPrint = ({ items, loadingCharges }) => {
+  const grandTotal = () => {
+    const totalItems = items.reduce((acc, item) => acc + parseFloat(item.totalAmount), 0);
+    return (totalItems + parseFloat(loadingCharges || 0)).toFixed(2);
+  };
   return (
     <Box sx={{ p: 4, bgcolor: '#fff', width: '210mm', minHeight: '297mm', m: 'auto' }}>
       {/* Header */}
@@ -64,17 +68,25 @@ const QuotationPrintPage = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {/* Sample Row */}
-            <TableRow>
-              <TableCell sx={{ fontFamily: 'Poppins' }}>1</TableCell>
-              <TableCell sx={{ fontFamily: 'Poppins' }}>Sample Item</TableCell>
-              <TableCell sx={{ fontFamily: 'Poppins' }}>TATA</TableCell>
-              <TableCell sx={{ fontFamily: 'Poppins' }}>5.00</TableCell>
-              <TableCell sx={{ fontFamily: 'Poppins' }}>₹50,000</TableCell>
-              <TableCell sx={{ fontFamily: 'Poppins' }}>₹59,000</TableCell>
-              <TableCell sx={{ fontFamily: 'Poppins' }}>₹2,95,000</TableCell>
+            {items.map((item, index) => (
+              <TableRow key={index}>
+                <TableCell sx={{ fontFamily: 'Poppins' }}>{index + 1}</TableCell>
+                <TableCell sx={{ fontFamily: 'Poppins' }}>{item.description}</TableCell>
+                <TableCell sx={{ fontFamily: 'Poppins' }}>{item.make}</TableCell>
+                <TableCell sx={{ fontFamily: 'Poppins' }}>{item.qty}</TableCell>
+                <TableCell sx={{ fontFamily: 'Poppins' }}>{item.basicPrice}</TableCell>
+              <TableCell sx={{ fontFamily: 'Poppins' }}>{item.priceIncGST}</TableCell>
+              <TableCell sx={{ fontFamily: 'Poppins' }}>{item.totalAmount}</TableCell>
             </TableRow>
-            {/* Add dynamic rows here */}
+            ))}
+            <TableRow>
+              <TableCell colSpan={6} align="right" sx={{ fontFamily: 'Poppins' }}><strong>Loading Charges</strong></TableCell>
+              <TableCell colSpan={7} sx={{ fontFamily: 'Poppins' }}>{parseFloat(loadingCharges || 0).toFixed(2)}</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell colSpan={6} align="right" sx={{ fontFamily: 'Poppins' }}><strong>Grand Total</strong></TableCell>
+              <TableCell colSpan={7} sx={{ fontFamily: 'Poppins' }}>{grandTotal()}</TableCell>
+            </TableRow>
           </TableBody>
         </Table>
       </Paper>
@@ -119,4 +131,4 @@ const QuotationPrintPage = () => {
   );
 };
 
-export default QuotationPrintPage;
+export default QuotationPrint;
