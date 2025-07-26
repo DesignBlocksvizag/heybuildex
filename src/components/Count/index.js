@@ -17,7 +17,7 @@ import CountUp from "react-countup";
       icon: <LocalShippingIcon sx={{ fontSize: 50, color: '#029441' }} />,
     },
     {
-      label: 'No. of States Served',
+      label: 'No. of States',
       value: 6,
       icon: <PublicIcon sx={{ fontSize: 50, color: '#029441' }} />,
     },
@@ -101,7 +101,10 @@ const StatsSection = () => {
                   fontFamily: 'Poppins',
                 }}
               >
-                {inView ? <CountUp end={stat.value} duration={2} /> : 0}
+                {index === 2 ? 0 : ''}
+                {inView ? <CountUp end={stat.value} duration={2} /> : 0 }
+                 {index < 2 && <Box component="span" sx={{ fontWeight: 'bold', ml: 0.5 }}>
+                  +</Box>}
               </Typography>
               <Typography
                 variant="subtitle1"
