@@ -13,37 +13,46 @@ import {
   Divider,
   Button
 } from '@mui/material';
-import html2pdf from 'html2pdf.js';
+// import html2pdf from 'html2pdf.js';
 import { useReactToPrint } from 'react-to-print';
 
-const QuotationPrint = ({ items, loadingCharges }) => {
+const QuotationPrint = ({ items, loadingCharges , quotationNumber, clientName, quotationDate, contact }) => {
   console.log(items, loadingCharges);
    const printRef = useRef();
       const handlePrint = useReactToPrint({
     contentRef: printRef,
+    documentTitle: `Quotation - ${quotationNumber}`,
+    onAfterPrint: () => console.log('Print successful!'),
+    removeAfterPrint: true,
+    pageStyle : `
+      @page {
+        size: A4;
+        margin-top: 0.2in;
+      }
+    `
   })
-   const handleDownload = () => {
-    const element = printRef.current;
+//    const handleDownload = () => {
+//     const element = printRef.current;
 
-const opt = {
-  margin: [10, 10, 10, 10],
-  filename: 'quotation.pdf',
-  image: { type: 'jpeg', quality: 0.98 },
-  html2canvas: {
-    scale: 1.5,
-    useCORS: true,
-  },
-  jsPDF: {
-    unit: 'mm',
-    format: 'a4',
-    orientation: 'portrait',
-  },
-};
+// const opt = {
+//   margin: [10, 10, 10, 10],
+//   filename: 'quotation.pdf',
+//   image: { type: 'jpeg', quality: 0.98 },
+//   html2canvas: {
+//     scale: 1.5,
+//     useCORS: true,
+//   },
+//   jsPDF: {
+//     unit: 'mm',
+//     format: 'a4',
+//     orientation: 'portrait',
+//   },
+// };
 
 
 
-    html2pdf().set(opt).from(element).save();
-  };
+//     html2pdf().set(opt).from(element).save();
+//   };
   const grandTotal = () => {
     const totalItems = items.reduce((acc, item) => acc + parseFloat(item.totalAmount), 0);
     return (totalItems + parseFloat(loadingCharges || 0)).toFixed(2);
@@ -51,8 +60,8 @@ const opt = {
   return (
     <Box>
       <Box textAlign="right" mb={2}>
-        <Button variant="contained" color="primary" onClick={handlePrint} sx={{ my: 1,mr:1 }}>
-          Download Quotation
+        <Button variant="contained" color="primary" onClick={handlePrint} sx={{ my: 1,mr:1,fontFamily: 'Poppins' }} size='small'>
+          Print
         </Button>
       </Box>
       <Box ref={printRef} sx={{
@@ -87,9 +96,10 @@ const opt = {
 
         <Grid  size={{xs:4}}>
           <Box textAlign="right">
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}><strong>Quotation No:</strong> ______</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}><strong>Date:</strong> ______</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}><strong>CLIENT:</strong> ______</Typography>
+            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}><strong>Quotation No:</strong>{quotationNumber}</Typography>
+            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}><strong>Date:</strong> {quotationDate}</Typography>
+            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}><strong>CLIENT:</strong> {clientName}</Typography>
+            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}><strong>Contact:</strong> {contact}</Typography>
           </Box>
         </Grid>
       </Grid>

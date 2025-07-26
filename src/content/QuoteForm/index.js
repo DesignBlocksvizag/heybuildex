@@ -25,6 +25,12 @@ const ItemForm = () => {
   const [items, setItems] = useState([]);
   const [editIndex, setEditIndex] = useState(null);
   const [loadingCharges, setLoadingCharges] = useState(0);
+  const [clientName, setClientName] = useState({
+    quotationNumber: '',
+    clientName: '',
+    contact: '',
+    quotationDate: ''
+  });
   const [openDialog, setOpenDialog] = useState(false);
   const handleCloseDialog = () => {
     setOpenDialog(false);
@@ -111,7 +117,59 @@ const ItemForm = () => {
       </Typography>
       <form onSubmit={formik.handleSubmit}>
         <Grid container spacing={2}>
-          <Grid size={{xs:12,md:6}}>
+            <Grid size={{xs:12,md:4}}>
+      <TextField
+        fullWidth
+        size="small"
+        label="Quotation Number"
+        name="quotationNumber"
+        value={clientName.quotationNumber}
+        onChange={(e) => setClientName({ ...clientName, quotationNumber: e.target.value })}
+        sx={{ fontFamily: 'Poppins' }}
+      />
+    </Grid>
+    <Grid size={{xs:12,md:4}}>
+      <TextField
+        fullWidth
+        size="small"
+        label="Client Name"
+        name="clientName"
+        value={clientName.clientName}
+        onChange={(e) => setClientName({ ...clientName, clientName: e.target.value })}
+        sx={{ fontFamily: 'Poppins' }}
+      />
+    </Grid>
+    
+    <Grid size={{xs:12,md:4}}>
+      <TextField
+        fullWidth
+        size="small"
+        label="Contact"
+        name="contact"
+        value={clientName.contact}
+        onChange={(e) => setClientName({ ...clientName, contact: e.target.value })}
+        sx={{ fontFamily: 'Poppins' }}
+      />
+    </Grid>
+    <Grid size={{xs:12,md:4}}>
+      <TextField
+        fullWidth
+        size="small"
+        label="Quotation Date"
+        name="quotationDate"
+        type="date"
+        slotProps={{
+          textField: {
+            InputLabelProps: { shrink: true }
+          }
+        }}
+
+        value={clientName.quotationDate}
+        onChange={(e) => setClientName({ ...clientName, quotationDate: e.target.value })}
+        sx={{ fontFamily: 'Poppins' }}
+      />
+    </Grid>
+          <Grid size={{xs:12,md:8}}>
             <TextField
               fullWidth
               size='small'
@@ -254,7 +312,12 @@ const ItemForm = () => {
       )}
       <Dialog open={openDialog} onClose={handleCloseDialog} fullWidth
       size='small' maxWidth="md">
-        <QuotationPrint items={items} loadingCharges={loadingCharges} />
+        <QuotationPrint items={items} loadingCharges={loadingCharges} 
+        quotationNumber={clientName.quotationNumber}
+  clientName={clientName.clientName}
+  quotationDate={clientName.quotationDate} 
+  contact={clientName.contact}
+  />
       </Dialog>
     </Paper>
        </Container>
