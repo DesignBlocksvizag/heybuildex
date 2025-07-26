@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+import React,{useRef} from 'react';
 import {
   Box,
   Typography,
@@ -10,19 +11,62 @@ import {
   TableRow,
   Paper,
   Divider,
+  Button
 } from '@mui/material';
+import html2pdf from 'html2pdf.js';
+import { useReactToPrint } from 'react-to-print';
 
 const QuotationPrint = ({ items, loadingCharges }) => {
+  console.log(items, loadingCharges);
+   const printRef = useRef();
+      const handlePrint = useReactToPrint({
+    contentRef: printRef,
+  })
+   const handleDownload = () => {
+    const element = printRef.current;
+
+const opt = {
+  margin: [10, 10, 10, 10],
+  filename: 'quotation.pdf',
+  image: { type: 'jpeg', quality: 0.98 },
+  html2canvas: {
+    scale: 1.5,
+    useCORS: true,
+  },
+  jsPDF: {
+    unit: 'mm',
+    format: 'a4',
+    orientation: 'portrait',
+  },
+};
+
+
+
+    html2pdf().set(opt).from(element).save();
+  };
   const grandTotal = () => {
     const totalItems = items.reduce((acc, item) => acc + parseFloat(item.totalAmount), 0);
     return (totalItems + parseFloat(loadingCharges || 0)).toFixed(2);
   };
   return (
-    <Box sx={{ p: 4, bgcolor: '#fff', width: '210mm', minHeight: '297mm', m: 'auto' }}>
-      {/* Header */}
-      <Grid container spacing={2}>
-        <Grid  size={{xs:4}}>
-          <Box>
+    <Box>
+      <Box textAlign="right" mb={2}>
+        <Button variant="contained" color="primary" onClick={handlePrint} sx={{ my: 1,mr:1 }}>
+          Download Quotation
+        </Button>
+      </Box>
+      <Box ref={printRef} sx={{
+    width: '210mm',          // A4 width
+    minHeight: '297mm',      // Minimum height for first page
+    bgcolor: '#fff',
+    p: 2,
+    boxSizing: 'border-box',
+    m: 'auto'
+  }}>
+        {/* Header */}
+        <Grid container spacing={2}>
+          <Grid  size={{xs:4}}>
+            <Box>
             {/* Replace with actual image path */}
             <img src="/quote-logo.png" alt="Logo" width={120} />
             <Typography variant="body2" mt={1} sx={{color: '#555', fontFamily:"Poppins", fontSize: '0.9rem'}}>
@@ -54,7 +98,8 @@ const QuotationPrint = ({ items, loadingCharges }) => {
       <Divider sx={{ my: 2 }} />
 
       {/* Table */}
-      <Paper variant="outlined" sx={{ mt: 2 }}>
+      <Paper  sx={{ mt: 2 ,       // manually define border
+    boxShadow: 'none !important', }}>
         <Table size="small">
           <TableHead sx={{ bgcolor: '#f5f5f5' }}>
             <TableRow sx={{ textAlign: 'center' }}>
@@ -79,10 +124,10 @@ const QuotationPrint = ({ items, loadingCharges }) => {
               <TableCell sx={{ fontFamily: 'Poppins' }}>{item.totalAmount}</TableCell>
             </TableRow>
             ))}
-            <TableRow>
+            {loadingCharges > 0 && (<TableRow>
               <TableCell colSpan={6} align="right" sx={{ fontFamily: 'Poppins' }}><strong>Loading Charges</strong></TableCell>
               <TableCell colSpan={7} sx={{ fontFamily: 'Poppins' }}>{parseFloat(loadingCharges || 0).toFixed(2)}</TableCell>
-            </TableRow>
+            </TableRow>)}
             <TableRow>
               <TableCell colSpan={6} align="right" sx={{ fontFamily: 'Poppins' }}><strong>Grand Total</strong></TableCell>
               <TableCell colSpan={7} sx={{ fontFamily: 'Poppins' }}>{grandTotal()}</TableCell>
@@ -95,7 +140,8 @@ const QuotationPrint = ({ items, loadingCharges }) => {
       <Grid container spacing={2} mt={3}>
         {/* Left Box - Bank & Contact */}
         <Grid  size={{xs:6}}>
-          <Paper variant="outlined" sx={{ p: 2, height:"100%" }}>
+          <Paper sx={{ p: 2, height:"100%",   border: '1px solid #ccc',        // manually define border
+    boxShadow: 'none !important',  }}>
             <Typography variant="subtitle1" fontWeight="bold" sx={{fontFamily:"Poppins", color: '#333'}}>Bank Details</Typography>
             <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>Kalight Global Pvt Ltd</Typography>
             <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>A/c No: 777705224559</Typography>
@@ -114,7 +160,8 @@ const QuotationPrint = ({ items, loadingCharges }) => {
 
         {/* Right Box - Terms & Conditions */}
         <Grid  size={{xs:6}}>
-          <Paper variant="outlined" sx={{ p: 2 ,height:"100%"}}>
+          <Paper sx={{ p: 2 ,height:"100%",   border: '1px solid #ccc',        // manually define border
+    boxShadow: 'none !important', }}>
             <Typography variant="subtitle1" fontWeight="bold" sx={{fontFamily:"Poppins", color: '#333'}}>Terms and Conditions</Typography>
             <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>• Prices are ex-stock point and inclusive of taxes; transportation charges are additional.</Typography>
             <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>• Payment terms shall be as mutually agreed upon.</Typography>
@@ -127,6 +174,8 @@ const QuotationPrint = ({ items, loadingCharges }) => {
           </Paper>
         </Grid>
       </Grid>
+    </Box>
+    
     </Box>
   );
 };

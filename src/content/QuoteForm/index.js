@@ -15,7 +15,8 @@ import {
   TableCell,
   TableBody,
   IconButton,
-  Dialog
+  Dialog,
+  Container
 } from '@mui/material';
 import { Edit, Delete } from '@mui/icons-material';
 import QuotationPrint from '@/src/components/QuotePaper';
@@ -102,7 +103,9 @@ const ItemForm = () => {
   };
 
   return (
-    <Paper elevation={3} sx={{ p: 3, fontFamily: 'Poppins' }}>
+    <Box>
+     <Container maxWidth="lg">
+    <Paper elevation={3} sx={{ p: 3, fontFamily: 'Poppins', overflow:"visible"}}>
       <Typography variant="h6" gutterBottom sx={{ fontFamily: 'Poppins' }}>
         Add Item Details
       </Typography>
@@ -111,6 +114,7 @@ const ItemForm = () => {
           <Grid size={{xs:12,md:6}}>
             <TextField
               fullWidth
+              size='small'
               label="Item Description"
               name="description"
               value={formik.values.description}
@@ -123,6 +127,7 @@ const ItemForm = () => {
           <Grid size={{xs:12,md:6}}>
             <TextField
               fullWidth
+              size='small'
               label="Make"
               name="make"
               value={formik.values.make}
@@ -135,6 +140,7 @@ const ItemForm = () => {
           <Grid size={{xs:12,md:6}}>
             <TextField
               fullWidth
+              size='small'
               label="Qty (in MT)"
               name="qty"
               type="number"
@@ -148,6 +154,7 @@ const ItemForm = () => {
           <Grid size={{xs:12,md:6}}>
             <TextField
               fullWidth
+              size='small'
               label="Basic/MT Price"
               name="basicPrice"
               type="number"
@@ -202,51 +209,56 @@ const ItemForm = () => {
           <Typography variant="h6" mt={4} sx={{ fontFamily: 'Poppins' }}>
             Item Summary
           </Typography>
-          <Table sx={{ mt: 2 }}>
-            <TableHead>
-              <TableRow>
-                <TableCell>S.No</TableCell>
-                <TableCell>Description</TableCell>
-                <TableCell>Make</TableCell>
-                <TableCell>Qty</TableCell>
-                <TableCell>Basic Price</TableCell>
-                <TableCell>Price (Inc GST)</TableCell>
-                <TableCell>Total</TableCell>
-                <TableCell>Actions</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {items.map((item, index) => (
-                <TableRow key={index}>
-                  <TableCell>{index + 1}</TableCell>
-                  <TableCell>{item.description}</TableCell>
-                  <TableCell>{item.make}</TableCell>
-                  <TableCell>{item.qty}</TableCell>
-                  <TableCell>{item.basicPrice}</TableCell>
-                  <TableCell>{item.priceIncGST}</TableCell>
-                  <TableCell>{item.totalAmount}</TableCell>
-                  <TableCell>
-                    <IconButton onClick={() => handleEdit(index)}><Edit /></IconButton>
-                    <IconButton onClick={() => handleDelete(index)}><Delete /></IconButton>
-                  </TableCell>
-                </TableRow>
-              ))}
-              <TableRow>
-                <TableCell colSpan={6} align="right"><strong>Loading Charges</strong></TableCell>
-                <TableCell colSpan={2}>{parseFloat(loadingCharges || 0).toFixed(2)}</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell colSpan={6} align="right"><strong>Grand Total</strong></TableCell>
-                <TableCell colSpan={2}><strong>{grandTotal()}</strong></TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
+           <Box sx={{ overflowX: 'auto' }}>
+    <Table sx={{ minWidth: 800 }}>
+      <TableHead>
+        <TableRow>
+          <TableCell>S.No</TableCell>
+          <TableCell>Description</TableCell>
+          <TableCell>Make</TableCell>
+          <TableCell>Qty</TableCell>
+          <TableCell>Basic Price</TableCell>
+          <TableCell>Price (Inc GST)</TableCell>
+          <TableCell>Total</TableCell>
+          <TableCell>Actions</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {items.map((item, index) => (
+          <TableRow key={index}>
+            <TableCell>{index + 1}</TableCell>
+            <TableCell>{item.description}</TableCell>
+            <TableCell>{item.make}</TableCell>
+            <TableCell>{item.qty}</TableCell>
+            <TableCell>{item.basicPrice}</TableCell>
+            <TableCell>{item.priceIncGST}</TableCell>
+            <TableCell>{item.totalAmount}</TableCell>
+            <TableCell>
+              <IconButton onClick={() => handleEdit(index)}><Edit /></IconButton>
+              <IconButton onClick={() => handleDelete(index)}><Delete /></IconButton>
+            </TableCell>
+          </TableRow>
+        ))}
+        <TableRow>
+          <TableCell colSpan={6} align="right"><strong>Loading Charges</strong></TableCell>
+          <TableCell colSpan={2}>{parseFloat(loadingCharges || 0).toFixed(2)}</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell colSpan={6} align="right"><strong>Grand Total</strong></TableCell>
+          <TableCell colSpan={2}><strong>{grandTotal()}</strong></TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </Box>
         </>
       )}
-      <Dialog open={openDialog} onClose={handleCloseDialog} fullWidth maxWidth="md">
+      <Dialog open={openDialog} onClose={handleCloseDialog} fullWidth
+      size='small' maxWidth="md">
         <QuotationPrint items={items} loadingCharges={loadingCharges} />
       </Dialog>
     </Paper>
+       </Container>
+       </Box>
   );
 };
 
