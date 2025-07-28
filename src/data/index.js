@@ -52,6 +52,9 @@ export const SteelData = [
   <li>On-time, reliable delivery</li>
   <li>Budget-friendly pricing</li>
   <li>Expert support from order to site</li>
+  <li>Direct-from-Manufacturer</li>
+  <li>Delivered in 48 hours</li>
+  <li>Lowest Market Price Guaranteed</li>
 </ul>
 `,
     faqs: [
