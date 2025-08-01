@@ -26,15 +26,15 @@ export const metadata = {
 };
 
 const navItems = [
-  {
-    label: "Blogs",
-    href: "/blogs-admin",
-    icon: <ArticleIcon sx={{ color: "#029441" }} />,
-  },
    {
     label: "Quotation",
     href: "/quotation-admin",
     icon: <RequestQuoteIcon sx={{ color: "#029441" }} />,
+  },
+  {
+    label: "Blogs",
+    href: "/blogs-admin",
+    icon: <ArticleIcon sx={{ color: "#029441" }} />,
   },
 ];
 

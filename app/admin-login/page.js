@@ -18,7 +18,7 @@ export default function AdminLogin() {
 
   useEffect(() => {
     if (localStorage.getItem('loggedIn') === 'true') {
-      router.push('/blogs-admin');
+      router.push('/quotation-admin');
     }
   }, []);
 
@@ -27,7 +27,7 @@ export default function AdminLogin() {
 
     if (username === 'admin@heybuildex.com' && password === 'admin@111') {
       localStorage.setItem('loggedIn', 'true');
-      router.push('/blogs-admin');
+      router.push('/quotation-admin');
     } else {
       setError('Invalid username or password');
     }
