@@ -1,5 +1,5 @@
-"use client"
-import React,{useRef} from 'react';
+"use client";
+import React, { useRef } from "react";
 import {
   Box,
   Typography,
@@ -11,144 +11,241 @@ import {
   TableRow,
   Paper,
   Divider,
-  Button
-} from '@mui/material';
-// import html2pdf from 'html2pdf.js';
-import { useReactToPrint } from 'react-to-print';
+  Button,
+} from "@mui/material";
+import { useReactToPrint } from "react-to-print";
 
-const QuotationPrint = ({ items, loadingCharges , quotationNumber, clientName, quotationDate, contact }) => {
-  console.log(items, loadingCharges);
-   const printRef = useRef();
-      const handlePrint = useReactToPrint({
+const QuotationPrint = ({
+  items,
+  loadingCharges, // Basic per MT loading charge
+  quotationNumber,
+  clientName,
+  quotationDate,
+  contact,
+}) => {
+  const printRef = useRef();
+
+  const totalQuantity = items.reduce(
+    (acc, item) => acc + parseFloat(item.qty || 0),
+    0
+  );
+
+  const loadingPriceIncGST = parseFloat(loadingCharges || 0) * 1.18;
+  const loadingTotalAmount = loadingPriceIncGST * totalQuantity;
+
+  const grandTotal = () => {
+    const totalItems = items.reduce(
+      (acc, item) => acc + parseFloat(item.totalAmount || 0),
+      0
+    );
+    return (totalItems + loadingTotalAmount).toFixed(2);
+  };
+
+  const handlePrint = useReactToPrint({
     contentRef: printRef,
     documentTitle: `Quotation - ${quotationNumber}`,
-    onAfterPrint: () => console.log('Print successful!'),
+    onAfterPrint: () => console.log("Print successful!"),
     removeAfterPrint: true,
-    pageStyle : `
+    pageStyle: `
       @page {
         size: A4;
         margin-top: 0.2in;
       }
-    `
-  })
-//    const handleDownload = () => {
-//     const element = printRef.current;
+    `,
+  });
 
-// const opt = {
-//   margin: [10, 10, 10, 10],
-//   filename: 'quotation.pdf',
-//   image: { type: 'jpeg', quality: 0.98 },
-//   html2canvas: {
-//     scale: 1.5,
-//     useCORS: true,
-//   },
-//   jsPDF: {
-//     unit: 'mm',
-//     format: 'a4',
-//     orientation: 'portrait',
-//   },
-// };
-
-
-
-//     html2pdf().set(opt).from(element).save();
-//   };
-  const grandTotal = () => {
-    const totalItems = items.reduce((acc, item) => acc + parseFloat(item.totalAmount), 0);
-    return (totalItems + parseFloat(loadingCharges || 0)).toFixed(2);
-  };
   return (
     <Box>
       <Box textAlign="right" mb={2}>
-        <Button variant="contained" color="primary" onClick={handlePrint} sx={{ my: 1,mr:1,fontFamily: 'Poppins' }} size='small'>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={handlePrint}
+          sx={{ my: 1, mr: 1, fontFamily: "Poppins" }}
+          size="small"
+        >
           Print
         </Button>
       </Box>
-      <Box ref={printRef} sx={{
-    width: '210mm',          // A4 width
-    minHeight: '297mm',      // Minimum height for first page
-    bgcolor: '#fff',
-    p: 2,
-    boxSizing: 'border-box',
-    m: 'auto'
-  }}>
+
+      <Box
+        ref={printRef}
+        sx={{
+          width: "210mm",
+          minHeight: "297mm",
+          bgcolor: "#fff",
+          p: 2,
+          boxSizing: "border-box",
+          m: "auto",
+        }}
+      >
         {/* Header */}
         <Grid container spacing={2}>
-          <Grid  size={{xs:4}}>
+          <Grid size={{ xs: 4 }}>
             <Box>
-            {/* Replace with actual image path */}
-            <img src="/quote-logo.png" alt="Logo" width={120} />
-            <Typography variant="body2" mt={1} sx={{color: '#555', fontFamily:"Poppins", fontSize: '0.9rem'}}>
-              <strong>GST NO:</strong> 37AALCK2949N1ZR
+              <img src="/quote-logo.png" alt="Logo" width={120} />
+              <Typography
+                variant="body2"
+                mt={1}
+                sx={{
+                  color: "#555",
+                  fontFamily: "Poppins",
+                  fontSize: "0.9rem",
+                }}
+              >
+                <strong>GST NO:</strong> 37AALCK2949N1ZR
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  color: "#555",
+                  fontFamily: "Poppins",
+                  fontSize: "0.9rem",
+                }}
+              >
+                #31-27-65, Vinayaka Veedhi, Opposite Annapurna Theatre,
+                Kurmannapalem,
+                <br />
+                Visakhapatnam, Andhra Pradesh - 530046
+              </Typography>
+            </Box>
+          </Grid>
+
+          <Grid size={{ xs: 4 }} textAlign="center">
+            <Typography
+              variant="h5"
+              fontWeight="bold"
+              sx={{ fontFamily: "Poppins", color: "#333" }}
+            >
+              QUOTATION
             </Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>
-              #31-27-65, Vinayaka Veedhi, Opposite Annapurna Theatre, Kurmannapalem,<br />
-              Visakhapatnam, Andhra Pradesh - 530046
-            </Typography>
-          </Box>
+          </Grid>
+
+          <Grid size={{ xs: 4 }}>
+            <Box textAlign="right">
+              <Typography
+                variant="body2"
+                sx={{
+                  color: "#555",
+                  fontFamily: "Poppins",
+                  fontSize: "0.9rem",
+                }}
+              >
+                <strong>Quotation No:</strong>
+                {quotationNumber}
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  color: "#555",
+                  fontFamily: "Poppins",
+                  fontSize: "0.9rem",
+                }}
+              >
+                <strong>Date:</strong> {quotationDate}
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  color: "#555",
+                  fontFamily: "Poppins",
+                  fontSize: "0.9rem",
+                }}
+              >
+                <strong>CLIENT:</strong> {clientName}
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  color: "#555",
+                  fontFamily: "Poppins",
+                  fontSize: "0.9rem",
+                }}
+              >
+                <strong>Contact:</strong> {contact}
+              </Typography>
+            </Box>
+          </Grid>
         </Grid>
 
-        <Grid  size={{xs:4}} textAlign="center">
-          <Typography variant="h5" fontWeight="bold" sx={{ fontFamily: 'Poppins', color: '#333' }}>
-            QUOTATION
-          </Typography>
-        </Grid>
+        <Divider sx={{ my: 2 }} />
 
-        <Grid  size={{xs:4}}>
-          <Box textAlign="right">
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}><strong>Quotation No:</strong>{quotationNumber}</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}><strong>Date:</strong> {quotationDate}</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}><strong>CLIENT:</strong> {clientName}</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}><strong>Contact:</strong> {contact}</Typography>
-          </Box>
-        </Grid>
-      </Grid>
+        {/* Table */}
+        <Paper sx={{ mt: 2, boxShadow: "none !important" }}>
+          <Table size="small">
+            <TableHead sx={{ bgcolor: "#f5f5f5" }}>
+              <TableRow sx={{ textAlign: "center" }}>
+                <TableCell sx={{ fontFamily: "Poppins" }}>
+                  <strong>S.No</strong>
+                </TableCell>
+                <TableCell sx={{ fontFamily: "Poppins" }}>
+                  <strong>Item Description</strong>
+                </TableCell>
+                <TableCell sx={{ fontFamily: "Poppins" }}>
+                  <strong>Make</strong>
+                </TableCell>
+                <TableCell sx={{ fontFamily: "Poppins" }}>
+                  <strong>Qty (in MT)</strong>
+                </TableCell>
+                <TableCell sx={{ fontFamily: "Poppins" }}>
+                  <strong>Basic/MT Price</strong>
+                </TableCell>
+                <TableCell sx={{ fontFamily: "Poppins" }}>
+                  <strong>Price (Inc 18% GST)</strong>
+                </TableCell>
+                <TableCell sx={{ fontFamily: "Poppins" }}>
+                  <strong>Total Amount</strong>
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {items.map((item, index) => (
+                <TableRow key={index}>
+                  <TableCell sx={{ fontFamily: "Poppins" }}>
+                    {index + 1}
+                  </TableCell>
+                  <TableCell sx={{ fontFamily: "Poppins" }}>
+                    {item.description}
+                  </TableCell>
+                  <TableCell sx={{ fontFamily: "Poppins" }}>
+                    {item.make}
+                  </TableCell>
+                  <TableCell sx={{ fontFamily: "Poppins" }}>
+                    {item.qty}
+                  </TableCell>
+                  <TableCell sx={{ fontFamily: "Poppins" }}>
+                    {item.basicPrice}
+                  </TableCell>
+                  <TableCell sx={{ fontFamily: "Poppins" }}>
+                    {item.priceIncGST}
+                  </TableCell>
+                  <TableCell sx={{ fontFamily: "Poppins" }}>
+                    {item.totalAmount}
+                  </TableCell>
+                </TableRow>
+              ))}
 
-      {/* Divider */}
-      <Divider sx={{ my: 2 }} />
-
-      {/* Table */}
-      <Paper  sx={{ mt: 2 ,       // manually define border
-    boxShadow: 'none !important', }}>
-        <Table size="small">
-          <TableHead sx={{ bgcolor: '#f5f5f5' }}>
-            <TableRow sx={{ textAlign: 'center' }}>
-              <TableCell sx={{ fontFamily: 'Poppins' }}><strong>S.No</strong></TableCell>
-              <TableCell sx={{ fontFamily: 'Poppins' }}><strong>Item Description</strong></TableCell>
-              <TableCell sx={{ fontFamily: 'Poppins' }}><strong>Make</strong></TableCell>
-              <TableCell sx={{ fontFamily: 'Poppins' }}><strong>Qty (in MT)</strong></TableCell>
-              <TableCell sx={{ fontFamily: 'Poppins' }}><strong>Basic/MT Price</strong></TableCell>
-              <TableCell sx={{ fontFamily: 'Poppins' }}><strong>Price (Inc 18% GST)</strong></TableCell>
-              <TableCell sx={{ fontFamily: 'Poppins' }}><strong>Total Amount</strong></TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {items.map((item, index) => (
-              <TableRow key={index}>
-                <TableCell sx={{ fontFamily: 'Poppins' }}>{index + 1}</TableCell>
-                <TableCell sx={{ fontFamily: 'Poppins' }}>{item.description}</TableCell>
-                <TableCell sx={{ fontFamily: 'Poppins' }}>{item.make}</TableCell>
-                <TableCell sx={{ fontFamily: 'Poppins' }}>{item.qty}</TableCell>
-                <TableCell sx={{ fontFamily: 'Poppins' }}>{item.basicPrice}</TableCell>
-              <TableCell sx={{ fontFamily: 'Poppins' }}>{item.priceIncGST}</TableCell>
-              <TableCell sx={{ fontFamily: 'Poppins' }}>{item.totalAmount}</TableCell>
-            </TableRow>
-            ))}
-            {loadingCharges > 0 && (
-  <TableRow>
-    <TableCell sx={{ fontFamily: 'Poppins' }}></TableCell>
-    <TableCell sx={{ fontFamily: 'Poppins' }}>Loading Charges</TableCell>
-    <TableCell sx={{ fontFamily: 'Poppins' }}></TableCell>
-    <TableCell sx={{ fontFamily: 'Poppins' }}></TableCell>
-    <TableCell sx={{ fontFamily: 'Poppins' }}></TableCell>
-    <TableCell sx={{ fontFamily: 'Poppins' }}>
-      {/* {(ratePerMT * 1.18).toFixed(2)} */}
-    </TableCell>
-    <TableCell sx={{ fontFamily: 'Poppins' }}>
-      {/* {(loadingCharges * 1.18).toFixed(2)} */}
-    </TableCell>
-  </TableRow>
-)}
+              {loadingCharges > 0 && (
+                <TableRow>
+                  <TableCell sx={{ fontFamily: "Poppins" }}></TableCell>
+                  <TableCell sx={{ fontFamily: "Poppins" }}>
+                    Loading Charges
+                  </TableCell>
+                  <TableCell sx={{ fontFamily: "Poppins" }}></TableCell>
+                  <TableCell sx={{ fontFamily: "Poppins" }}>
+                    {totalQuantity}
+                  </TableCell>
+                  <TableCell sx={{ fontFamily: "Poppins" }}>
+                    {parseFloat(loadingCharges || 0).toFixed(2)}
+                  </TableCell>
+                  <TableCell sx={{ fontFamily: "Poppins" }}>
+                    {loadingPriceIncGST.toFixed(2)}
+                  </TableCell>
+                  <TableCell sx={{ fontFamily: "Poppins" }}>
+                    {loadingTotalAmount.toFixed(2)}
+                  </TableCell>
+                </TableRow>
+              )}
 
             {loadingCharges > 0 && (<TableRow>
               <TableCell colSpan={6} align="right" sx={{ fontFamily: 'Poppins' }}><strong>Loading Charges</strong></TableCell>
