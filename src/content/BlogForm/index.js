@@ -30,6 +30,14 @@ import DeleteDialog from "@/src/components/DeleteDialog";
 const heading = {
   fontFamily : "Poppins"
 }
+function getBase64(file) {
+  return new Promise((res, rej) => {
+    const reader = new FileReader();
+    reader.onload = () => res(reader.result);
+    reader.onerror = err => rej(err);
+    reader.readAsDataURL(file);
+  });
+}
 const BlogFormDialog = ({
   open,
   handleClose,
@@ -40,12 +48,14 @@ const BlogFormDialog = ({
   const validationSchema = Yup.object({
     heading: Yup.string().required("Heading is required"),
     description: Yup.string().required("Description is required"),
+    slug : Yup.string().required("Slug is Required"),
     image: editStatus ? Yup.mixed().notRequired() : Yup.mixed().required("Image is required"),
   });
 
   const initialValues = {
     heading: editStatus ? editData.heading : "",
     description: editStatus ? editData.description : "",
+    slug : editStatus ? editData.slug : "",
     image: null,
   };
 
@@ -77,10 +87,20 @@ const BlogFormDialog = ({
                   error={touched.heading && Boolean(errors.heading)}
                   helperText={touched.heading && errors.heading}
                 />
+                 <TextField
+                  fullWidth
+                  label="Slug"
+                  name="slug"
+                  margin="normal"
+                  value={values.slug}
+                  onChange={handleChange}
+                  error={touched.slug && Boolean(errors.slug)}
+                  helperText={touched.slug && errors.slug}
+                />
                 <TextField
                   fullWidth
                   multiline
-                  rows={4}
+                  rows={8}
                   label="Description"
                   name="description"
                   margin="normal"
@@ -135,76 +155,99 @@ export default function BlogTable() {
   });
   const [loading, setLoading] = useState(false);
 
-  const API_BASE = "https://acharyachessacademy.com";
+ const API_BASE = "/api/blogs"; // Next.js API route
 
-  useEffect(() => {
-    fetchBlogs();
-  }, []);
+useEffect(() => {
+  fetchBlogs();
+}, []);
 
-  const fetchBlogs = async () => {
-    setLoading(true);
-    try {
-      const res = await fetch(`${API_BASE}/blog-api/read.php`,{
-        method : "GET"
-      });
-      const data = await res.json();
-      setBlogs(data);
-      setLoading(false);
-    } catch (err) {
-      console.error(err);
-      setLoading(false);
-    }
-  };
+const fetchBlogs = async () => {
+  setLoading(true);
+  try {
+    const res = await fetch(API_BASE, { method: "GET" });
+    const data = await res.json();
+    setBlogs(data.blogs); // Use .blogs based on your API response structure
+  } catch (err) {
+    console.error(err);
+  } finally {
+    setLoading(false);
+  }
+};
 
-  const handleCreateOrUpdate = async (values) => {
-    const formData = new FormData();
-    formData.append("heading", values.heading);
-    formData.append("description", values.description);
-    if (values.image) formData.append("image", values.image);
+// Convert image file → Base64 string
+function getBase64(file) {
+  return new Promise((resolve, reject) => {
+    if (!file) return resolve(null);
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = (error) => reject(error);
+  });
+}
 
+const handleCreateOrUpdate = async (values) => {
+  try {
+    // Convert image to Base64 if exists
+    const base64Image = values.image ? await getBase64(values.image) : null;
+
+    // Build request body
+    const payload = {
+      heading: values.heading,
+      description: values.description,
+      slug : values.slug,
+      imageBase64: base64Image, // Always send as Base64
+    };
+
+    // Choose URL
     const url = editStatus
-      ? `${API_BASE}/blog-api/update.php`
-      : `${API_BASE}/blog-api/create.php`;
-    if (editStatus) formData.append("id", editData.id);
+      ? `${API_BASE}?id=${editData._id}` // PUT for update
+      : API_BASE;                       // POST for create
 
-    try {
-      const res = await fetch(url, { method: "POST", body: formData });
-      const result = await res.json();
-      setSnackbar({
-        open: true,
-        message:
-          result.status === "success"
-            ? editStatus
-              ? "Blog updated!"
-              : "Blog created!"
-            : "Error: " + result.message,
-        severity: result.status === "success" ? "success" : "error",
-      });
-      fetchBlogs();
-    } catch (err) {
-      console.error(err);
-      setSnackbar({ open: true, message: "Request failed", severity: "error" });
-    }
-  };
+    // Send JSON request
+    const res = await fetch(url, {
+      method: editStatus ? "PUT" : "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
 
-  const handleDelete = async () => {
-    try {
-      const form = new FormData();
-      form.append("id", deleteId);
-      const res = await fetch(`${API_BASE}/blog-api/delete.php`, {
-        method: "POST",
-        body: form,
-      });
-      const result = await res.json();
-      setSnackbar({ open: true, message: "Deleted!", severity: "success" });
-      fetchBlogs();
-    } catch (err) {
-      setSnackbar({ open: true, message: "Delete failed", severity: "error" });
-    } finally {
-      setDeleteDialog(false);
-      setDeleteId(null);
+
+     if (res.ok) {
+    setSnackbar({
+      open: true,
+      message: editStatus ? "Blog updated!" : "Blog created!",
+      severity: "success",
+    });
+  }
+
+    fetchBlogs();
+  } catch (err) {
+        const errorData = await res.json(); // optional
+    setSnackbar({
+      open: true,
+      message: errorData.message || "Something went wrong",
+      severity: "error",
+    });
+  }
+};
+
+
+const handleDelete = async () => {
+  try {
+    const res = await fetch(`${API_BASE}?id=${deleteId}`, {
+      method: "DELETE",
+    });
+    const result = await res.json();
+    if(result.ok){
+         setSnackbar({ open: true, message: "Deleted!", severity: "success" });
     }
-  };
+    fetchBlogs();
+  } catch (err) {
+    setSnackbar({ open: true, message: "Delete failed", severity: "error" });
+  } finally {
+    setDeleteDialog(false);
+    setDeleteId(null);
+  }
+};
 
   return (
     <Container maxWidth="lg" sx={{ mt: 2 }}>
@@ -252,11 +295,11 @@ export default function BlogTable() {
                   </TableRow>
                 ))
               : blogs.map((blog) => (
-                  <TableRow key={blog.id}>
+                  <TableRow key={blog._id}>
                     <TableCell>
                       {blog.image && (
                         <img
-                          src={`${API_BASE}/blog-api/${blog.image}`}
+                          src={blog.image}
                           alt=""
                           width={100}
                         />
@@ -279,7 +322,7 @@ export default function BlogTable() {
                       <Tooltip title="Delete">
                         <IconButton
                           onClick={() => {
-                            setDeleteId(blog.id);
+                            setDeleteId(blog._id);
                             setDeleteDialog(true);
                           }}
                           color="error"

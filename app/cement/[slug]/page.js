@@ -5,9 +5,9 @@ import Footer from "@/src/components/Footer";
 import { notFound } from "next/navigation";
 import CementProductPage from "@/src/content/CementProduct";
 import { CementMetaData } from "@/src/data";
-export async function generateStaticParams() {
-  return CementData.map((cement)=>({slug: cement.link}))
-}
+// export async function generateStaticParams() {
+//   return CementData.map((cement)=>({slug: cement.link}))
+// }
 export async function generateMetadata({ params }) {
    const resolvedParams = await params;
   const { slug } = resolvedParams;

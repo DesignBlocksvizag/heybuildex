@@ -134,6 +134,22 @@ const QuotationPrint = ({ items, loadingCharges , quotationNumber, clientName, q
               <TableCell sx={{ fontFamily: 'Poppins' }}>{item.totalAmount}</TableCell>
             </TableRow>
             ))}
+            {loadingCharges > 0 && (
+  <TableRow>
+    <TableCell sx={{ fontFamily: 'Poppins' }}></TableCell>
+    <TableCell sx={{ fontFamily: 'Poppins' }}>Loading Charges</TableCell>
+    <TableCell sx={{ fontFamily: 'Poppins' }}></TableCell>
+    <TableCell sx={{ fontFamily: 'Poppins' }}></TableCell>
+    <TableCell sx={{ fontFamily: 'Poppins' }}></TableCell>
+    <TableCell sx={{ fontFamily: 'Poppins' }}>
+      {/* {(ratePerMT * 1.18).toFixed(2)} */}
+    </TableCell>
+    <TableCell sx={{ fontFamily: 'Poppins' }}>
+      {/* {(loadingCharges * 1.18).toFixed(2)} */}
+    </TableCell>
+  </TableRow>
+)}
+
             {loadingCharges > 0 && (<TableRow>
               <TableCell colSpan={6} align="right" sx={{ fontFamily: 'Poppins' }}><strong>Loading Charges</strong></TableCell>
               <TableCell colSpan={7} sx={{ fontFamily: 'Poppins' }}>{parseFloat(loadingCharges || 0).toFixed(2)}</TableCell>
@@ -147,43 +163,108 @@ const QuotationPrint = ({ items, loadingCharges , quotationNumber, clientName, q
       </Paper>
 
       {/* Footer Section */}
-      <Grid container spacing={2} mt={3}>
-        {/* Left Box - Bank & Contact */}
-        <Grid  size={{xs:6}}>
-          <Paper sx={{ p: 2, height:"100%",   border: '1px solid #ccc',        // manually define border
-    boxShadow: 'none !important',  }}>
-            <Typography variant="subtitle1" fontWeight="bold" sx={{fontFamily:"Poppins", color: '#333'}}>Bank Details</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>Kalight Global Pvt Ltd</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>A/c No: 777705224559</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>Bank: ICICI</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>Branch: Gajuwaka</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>IFSC: ICIC0001108</Typography>
+    <Paper
+  sx={{
+    p: 0,
+    border: '1px solid #ccc',
+    boxShadow: 'none !important',
+    mt: 3,
+  }}
+>
+  {/* Top Section - Terms and Conditions */}
+  <Box mb={2} sx={{p: 2}}>
+    <Typography
+      variant="subtitle1"
+      fontWeight="bold"
+      sx={{ fontFamily: 'Poppins', color: '#333'}}
+    >
+      Terms and Conditions
+    </Typography>
+    {[
+      'Prices are ex-stock point and inclusive of taxes; transportation charges are additional.',
+      'Payment terms shall be as mutually agreed upon.',
+      'Quotation is valid for 1 working day from the date of issue.',
+      'Materials will be dispatched within 3 working days. Unloading at the site is the responsibility of the customer.',
+      'A weighbridge tolerance of ±0.5% will be considered acceptable.',
+      'A quantity variation of ±5% against the Purchase Order is permissible.',
+      'Any balance amount will be refunded within 4 to 7 working days.',
+      'Test certificates will be provided for premium brands only.',
+    ].map((point, index) => (
+      <Typography
+        key={index}
+        variant="body2"
+        sx={{ color: '#555', fontFamily: 'Poppins', fontSize: '0.9rem' }}
+      >
+        • {point}
+      </Typography>
+    ))}
+  </Box>
 
-            <Box mt={2}>
-              <Typography variant="subtitle1" fontWeight="bold" sx={{fontFamily:"Poppins", color: '#333'}}>Contact Us</Typography>
-              <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>Name: R. Rohith</Typography>
-              <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>Designation: Sales Team Lead</Typography>
-              <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>Phone: 9281446109</Typography>
-            </Box>
-          </Paper>
-        </Grid>
+  {/* Horizontal line */}
+  <Box sx={{ borderBottom: '1px solid #ccc'}} />
 
-        {/* Right Box - Terms & Conditions */}
-        <Grid  size={{xs:6}}>
-          <Paper sx={{ p: 2 ,height:"100%",   border: '1px solid #ccc',        // manually define border
-    boxShadow: 'none !important', }}>
-            <Typography variant="subtitle1" fontWeight="bold" sx={{fontFamily:"Poppins", color: '#333'}}>Terms and Conditions</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>• Prices are ex-stock point and inclusive of taxes; transportation charges are additional.</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>• Payment terms shall be as mutually agreed upon.</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>• Quotation is valid for 1 working day from the date of issue.</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>• Materials will be dispatched within 3 working days. Unloading at the site is the responsibility of the customer.</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>• A weighbridge tolerance of ±0.5% will be considered acceptable.</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>• A quantity variation of ±5% against the Purchase Order is permissible.</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>• Any balance amount will be refunded within 4 to 7 working days.</Typography>
-            <Typography variant="body2" sx={{color: '#555',fontFamily:"Poppins", fontSize: '0.9rem'}}>• Test certificates will be provided for premium brands only.</Typography>
-          </Paper>
-        </Grid>
-      </Grid>
+  {/* Bottom Section - Bank Details | Contact Us */}
+  <Grid container>
+    {/* Left - Bank Details */}
+    <Grid
+      size={{xs:6}}
+      sx={{
+        p:2,
+        borderRight: { md: '1px solid #ccc' },
+         '@media print': {
+        borderRight: '1px solid #ccc', // force border in print
+      },
+        
+      }}
+    >
+      <Typography
+        variant="subtitle1"
+        fontWeight="bold"
+        sx={{ fontFamily: 'Poppins', color: '#333', mb: 1 }}
+      >
+        Bank Details
+      </Typography>
+      <Typography variant="body2" sx={{ color: '#555', fontFamily: 'Poppins', fontSize: '0.9rem' }}>
+        Kalight Global Pvt Ltd
+      </Typography>
+      <Typography variant="body2" sx={{ color: '#555', fontFamily: 'Poppins', fontSize: '0.9rem' }}>
+        A/c No: 777705224559
+      </Typography>
+      <Typography variant="body2" sx={{ color: '#555', fontFamily: 'Poppins', fontSize: '0.9rem' }}>
+        Bank: ICICI
+      </Typography>
+      <Typography variant="body2" sx={{ color: '#555', fontFamily: 'Poppins', fontSize: '0.9rem' }}>
+        Branch: Gajuwaka
+      </Typography>
+      <Typography variant="body2" sx={{ color: '#555', fontFamily: 'Poppins', fontSize: '0.9rem' }}>
+        IFSC: ICIC0001108
+      </Typography>
+    </Grid>
+
+    {/* Right - Contact Us */}
+    <Grid size={{xs:6}} sx={{p:2}}>
+      <Typography
+        variant="subtitle1"
+        fontWeight="bold"
+        sx={{ fontFamily: 'Poppins', color: '#333', mb: 1 }}
+      >
+        Contact Us
+      </Typography>
+      <Typography variant="body2" sx={{ color: '#555', fontFamily: 'Poppins', fontSize: '0.9rem' }}>
+        Name: R. Rohith
+      </Typography>
+      <Typography variant="body2" sx={{ color: '#555', fontFamily: 'Poppins', fontSize: '0.9rem' }}>
+        Designation: Sales Team Lead
+      </Typography>
+      <Typography variant="body2" sx={{ color: '#555', fontFamily: 'Poppins', fontSize: '0.9rem' }}>
+        Phone: 9281446109
+      </Typography>
+    </Grid>
+  </Grid>
+</Paper>
+
+
+
     </Box>
     
     </Box>
