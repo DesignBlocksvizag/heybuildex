@@ -18,6 +18,7 @@ import { useReactToPrint } from "react-to-print";
 const QuotationPrint = ({
   items,
   loadingCharges, // Basic per MT loading charge
+    transportationCharges,
   quotationNumber,
   clientName,
   quotationDate,
@@ -38,7 +39,7 @@ const QuotationPrint = ({
       (acc, item) => acc + parseFloat(item.totalAmount || 0),
       0
     );
-    return (totalItems + loadingTotalAmount).toFixed(2);
+    return (totalItems + loadingTotalAmount  + parseFloat(transportationCharges)).toFixed(2);
   };
 
   const handlePrint = useReactToPrint({
@@ -236,7 +237,7 @@ const QuotationPrint = ({
                     {totalQuantity}
                   </TableCell>
                   <TableCell sx={{ fontFamily: "Poppins" }}>
-                    {parseFloat(loadingCharges || 0).toFixed(2)}
+                    {parseFloat(loadingCharges)}
                   </TableCell>
                   <TableCell sx={{ fontFamily: "Poppins" }}>
                     {loadingPriceIncGST.toFixed(2)}
@@ -247,9 +248,9 @@ const QuotationPrint = ({
                 </TableRow>
               )}
 
-            {loadingCharges > 0 && (<TableRow>
-              <TableCell colSpan={6} align="right" sx={{ fontFamily: 'Poppins' }}><strong>Loading Charges</strong></TableCell>
-              <TableCell colSpan={7} sx={{ fontFamily: 'Poppins' }}>{parseFloat(loadingCharges || 0).toFixed(2)}</TableCell>
+            {transportationCharges > 0 && (<TableRow>
+              <TableCell colSpan={6} align="right" sx={{ fontFamily: 'Poppins' }}><strong>Transportation Charges</strong></TableCell>
+              <TableCell colSpan={7} sx={{ fontFamily: 'Poppins' }}>{parseFloat(transportationCharges || 0).toFixed(2)}</TableCell>
             </TableRow>)}
             <TableRow>
               <TableCell colSpan={6} align="right" sx={{ fontFamily: 'Poppins' }}><strong>Grand Total</strong></TableCell>

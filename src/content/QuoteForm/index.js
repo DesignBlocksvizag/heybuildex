@@ -25,6 +25,7 @@ const ItemForm = () => {
   const [items, setItems] = useState([]);
   const [editIndex, setEditIndex] = useState(null);
   const [loadingCharges, setLoadingCharges] = useState(0);
+  const [transportationCharges,setTransportationCharges] = useState(0);
   const [clientName, setClientName] = useState({
     quotationNumber: '',
     clientName: '',
@@ -105,7 +106,7 @@ const ItemForm = () => {
 
   const grandTotal = () => {
     const total = items.reduce((sum, item) => sum + parseFloat(item.totalAmount), 0);
-    return (total + parseFloat(loadingCharges || 0)).toFixed(2);
+    return (total + parseFloat(transportationCharges) + parseFloat(loadingCharges || 0)).toFixed(2);
   };
 
   return (
@@ -248,6 +249,15 @@ const ItemForm = () => {
           sx={{ fontFamily: 'Poppins', width: '100%' }}
         />
       </Box>
+        <Box mt={3}>
+        <TextField
+          label="Transportation Charges"
+          type="number"
+          value={transportationCharges}
+          onChange={(e) => setTransportationCharges(e.target.value)}
+          sx={{ fontFamily: 'Poppins', width: '100%' }}
+        />
+      </Box>
        <Box textAlign="right">
               <Button
                 variant="contained"
@@ -301,6 +311,10 @@ const ItemForm = () => {
           <TableCell colSpan={6} align="right"><strong>Loading Charges</strong></TableCell>
           <TableCell colSpan={2}>{parseFloat(loadingCharges || 0).toFixed(2)}</TableCell>
         </TableRow>
+         <TableRow>
+          <TableCell colSpan={6} align="right"><strong>Transportation Charges</strong></TableCell>
+          <TableCell colSpan={2}>{parseFloat(transportationCharges || 0).toFixed(2)}</TableCell>
+        </TableRow>
         <TableRow>
           <TableCell colSpan={6} align="right"><strong>Grand Total</strong></TableCell>
           <TableCell colSpan={2}><strong>{grandTotal()}</strong></TableCell>
@@ -317,6 +331,7 @@ const ItemForm = () => {
   clientName={clientName.clientName}
   quotationDate={clientName.quotationDate} 
   contact={clientName.contact}
+  transportationCharges={transportationCharges}
   />
       </Dialog>
     </Paper>
