@@ -11,6 +11,9 @@ const ProjectSlides = () => {
     { src: "/clients/jsw-port.png", alt: "jsw-port" },
       { src: "/clients/bhogapuram.jpg", alt: "bhogapuram" },
                 { src: "/clients/gopalpur-ports.jpg", alt: "gopalpur-ports" },
+                 { src: "/clients/ashoka.jpg", alt: "ashoka" },
+                    { src: "/clients/mip.jpg", alt: "mip" },
+                    { src: "/clients/nhai.png", alt: "nhai" },
   ];
 
   return (
