@@ -97,7 +97,6 @@ const AboutUs = () => {
             maxHeight:"300px",
             objectFit:"contain",
             borderRadius: 3,
-            boxShadow: "0 8px 30px rgba(0,0,0,0.1)",
           }}
         />
       </Grid>
