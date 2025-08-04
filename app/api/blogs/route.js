@@ -2,7 +2,7 @@ import connectDB from "@/config";
 import Blog from "@/models/blogSchema";
 import fs from "fs";
 import path from "path";
-
+// export const dynamic = "force-static"
 function saveBase64Image(base64, filename) {
   const folder = path.join(process.cwd(), "public/uploads");
   if (!fs.existsSync(folder)) fs.mkdirSync(folder, { recursive: true });

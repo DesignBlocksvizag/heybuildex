@@ -1,5 +1,3 @@
-"use client";
-import { useEffect, useState } from "react";
 import {
   Box,
   Typography,
@@ -10,29 +8,32 @@ import {
 } from "@mui/material";
 import Header from "@/src/components/Header";
 import Footer from "@/src/components/Footer";
-import { useRouter } from "next/navigation";
+const BlogList = async() => {
+ let loading = true;
+let blogs = [];
 
-const BlogList = () => {
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const router = useRouter();
+try {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/api/blogs`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    cache: "no-store", // avoid stale data
+  });
 
-  useEffect(() => {
-    fetch("https://acharyachessacademy.com/blog-api/read.php")
-      .then((res) => res.json())
-      .then((data) => {
-        setBlogs(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch blogs:", err);
-        setLoading(false);
-      });
-  }, []);
-  const handleViewBlog = (blogData) => {
-    sessionStorage.setItem("blogData", JSON.stringify(blogData));
-    router.push("/blog");
-  };
+  if (!res.ok) {
+    throw new Error(`HTTP error! status: ${res.status}`);
+  }
+
+  const data = await res.json();
+  blogs = data.blogs || [];
+} catch (error) {
+  console.error("Error fetching blogs:", error);
+} finally {
+  loading = false; // ensures it runs even if fetch fails
+}
+
+ 
   return (
     <>
       <Header />
@@ -97,7 +98,7 @@ const BlogList = () => {
                     <Box>
                       <Box
                         component="img"
-                        src={"https://acharyachessacademy.com/blog-api/" + blog.image}
+                        src={`${process.env.NEXT_PUBLIC_API_BASE}` + blog.image}
                         alt={blog.title}
                         sx={{
                           width: "100%",
@@ -136,7 +137,8 @@ const BlogList = () => {
                               backgroundColor: "#017d35",
                             },
                           }}
-                          onClick={() => handleViewBlog(blog)}
+                          href={"/blogs/" + `${blog.slug}`}
+                        
                         >
                           View Blog
                         </Button>
