@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Footer from "@/src/components/Footer";
 import Header from "@/src/components/Header";
-import SteelStructuresBlog from "@/src/content/Blogs/Blog1";
+import SteelStructuresBlog from "@/src/content/Blogs";
 
 export default function BlogPageView() {
   const [blog, setBlog] = useState(null);

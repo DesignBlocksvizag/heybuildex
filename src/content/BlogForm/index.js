@@ -299,7 +299,7 @@ const handleDelete = async () => {
                     <TableCell>
                       {blog.image && (
                         <img
-                          src={blog.image}
+                          src={`${process.env.NEXT_PUBLIC_API_BASE}` + blog.image}
                           alt=""
                           width={100}
                         />

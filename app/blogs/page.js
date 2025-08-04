@@ -8,32 +8,27 @@ import {
 } from "@mui/material";
 import Header from "@/src/components/Header";
 import Footer from "@/src/components/Footer";
-const BlogList = async() => {
- let loading = true;
-let blogs = [];
 
-try {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/api/blogs`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    cache: "no-store", // avoid stale data
-  });
+const BlogList = async () => {
+  let loading = true;
+  let blogs = [];
 
-  if (!res.ok) {
-    throw new Error(`HTTP error! status: ${res.status}`);
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/api/blogs`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      cache: "no-store", // always fresh data
+    });
+    const data = await res.json();
+    blogs = data.blogs || [];
+  } catch (error) {
+    console.error("Error fetching blogs:", error);
+  } finally {
+    loading = false; // ensures it runs even if fetch fails
   }
 
-  const data = await res.json();
-  blogs = data.blogs || [];
-} catch (error) {
-  console.error("Error fetching blogs:", error);
-} finally {
-  loading = false; // ensures it runs even if fetch fails
-}
-
- 
   return (
     <>
       <Header />
@@ -127,21 +122,20 @@ try {
                       >
                         {blog.description}
                       </Typography> */}
-                        <Button
-                          variant="contained"
-                          sx={{
-                            backgroundColor: "#01933e",
-                            fontFamily: "Inter, sans-serif",
-                            textTransform: "none",
-                            "&:hover": {
-                              backgroundColor: "#017d35",
-                            },
-                          }}
-                          href={"/blogs/" + `${blog.slug}`}
-                        
-                        >
-                          View Blog
-                        </Button>
+                      <Button
+                        variant="contained"
+                        sx={{
+                          backgroundColor: "#01933e",
+                          fontFamily: "Inter, sans-serif",
+                          textTransform: "none",
+                          "&:hover": {
+                            backgroundColor: "#017d35",
+                          },
+                        }}
+                        href={"/blogs/" + `${blog.slug}`}
+                      >
+                        View Blog
+                      </Button>
                     </Box>
                   </Grid>
                 ))}

@@ -1,68 +1,61 @@
-// BlogPage.tsx
-import React from "react";
-import { Container, Grid, Typography, Card, CardMedia, CardContent, Button } from "@mui/material";
-import { Article } from "@mui/icons-material";
+"use client";
+import { Box, Container, Typography,Divider } from "@mui/material";
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "Choosing the Right TMT Bars for Your Construction",
-    description:
-      "TMT bars form the backbone of any structure. Learn how to choose the right grade and brand for your needs.",
-    image: "/images/tmt-bars.jpg",
-  },
-  {
-    id: 2,
-    title: "Top Cement Brands Compared: Ultratech vs Maha vs Ramco",
-    description:
-      "A detailed comparison of leading cement brands to help you decide the best fit for your project.",
-    image: "/images/cement-comparison.jpg",
-  },
-  {
-    id: 3,
-    title: "Roofing Sheets: Which Type Is Best for Indian Weather?",
-    description:
-      "Explore various types of roofing sheets and how to choose one for your location and budget.",
-    image: "/images/roofing-sheets.jpg",
-  },
-];
-
-export default function BlogPage() {
+const SteelStructuresBlog = ({blog}) => {
   return (
-    <Container maxWidth="lg" sx={{ py: 5 }}>
-      <Typography variant="h4" gutterBottom textAlign="center" fontWeight="bold">
-        <Article sx={{ mr: 1 }} />
-        Hey Buildex Blog
-      </Typography>
-      <Typography variant="subtitle1" textAlign="center" color="text.secondary" mb={4}>
-        Insights, tips & updates on steel, cement, RMC, roofing sheets and more.
+    <Box
+      sx={{
+        pb: 4,
+        pt:{xs:4,md:6},
+        mx: "auto",
+        fontFamily: "Inter, sans-serif",
+        backgroundColor: "#fff",
+      }}
+    >
+      <Container maxWidth="md">
+      {/* Blog Image */}
+      <Box sx={{ mb: 3 }}>
+        <Box
+          src={`${process.env.NEXT_PUBLIC_API_BASE}` + blog.image}
+          alt={"Steel"}
+          component={"img"}
+          style={{ width: "100%", height: "300px", objectFit: "contain" }}
+        />
+      </Box>
+
+      {/* Title */}
+      <Typography
+        variant="h4"
+        sx={{
+          fontFamily: "Poppins, sans-serif",
+          color: "#333",
+          fontWeight: 700,
+          mb: 2,
+        }}
+      >
+        {blog.heading}
       </Typography>
 
-      <Grid container spacing={4}>
-        {blogPosts.map((post) => (
-          <Grid size={{xs:12,sm:6,md:4}} key={post.id}>
-            <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
-              <CardMedia
-                component="img"
-                image={post.image}
-                alt={post.title}
-                height="200"
-              />
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Typography variant="h6" gutterBottom>
-                  {post.title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {post.description}
-                </Typography>
-              </CardContent>
-              <Button size="small" sx={{ m: 2 }} variant="outlined">
-                Read More
-              </Button>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
+      <Divider sx={{ mb: 3 }} />
+
+            {/* HTML Blog Content */}
+            <Box
+                   sx={{
+    fontFamily: "Inter",
+    color: "#444",
+    fontSize: 13,
+    fontWeight: 400,
+    "& h3": { fontFamily: "Poppins", fontSize: 18, fontWeight: 600, mb: 1 },
+    "& h4": { fontFamily: "Poppins", fontSize: 16, fontWeight: 600, mt: 2, mb: 1 },
+    "& ul": { pl: 2, mb: 2 },
+    "& li": { mb: 0.5 },
+    "& p": { mb: 1.5 },
+  }}
+              dangerouslySetInnerHTML={{ __html: blog.description }}
+            />
+      </Container>
+    </Box>
   );
-}
+};
+
+export default SteelStructuresBlog;
