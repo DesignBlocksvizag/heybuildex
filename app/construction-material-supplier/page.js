@@ -20,6 +20,7 @@ import ApartmentIcon from "@mui/icons-material/Apartment";
 import ClientSlides from "@/src/Landing/components/Slider";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
+import LandingProductSlides from "@/src/Landing/components/Products";
 import TestimonialSlider from "@/src/Landing/components/Testimonials";
 import Footer from "@/src/Landing/components/Footer";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
@@ -294,7 +295,7 @@ export default function ConstructionPage() {
     gutterBottom
     sx={{ fontFamily: "Poppins" }}
   >
-    Buy Construction Materials at Lowest Prices
+    Buy Construction and Structural Steel Materials at Lowest Prices
   </Typography>
   <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
     Construction Steel & Structural Steel 
@@ -388,6 +389,7 @@ export default function ConstructionPage() {
         <Box sx={{mt:3}}>
         </Box>
         <ClientSlides />
+        <LandingProductSlides />
         <Box
           sx={{
             background: "linear-gradient(90deg, #465a65 0%, #1c953f 100%)",

@@ -212,6 +212,20 @@ export default function Footer() {
             © {new Date().getFullYear()} Kalight Global Pvt. Ltd. All rights
             reserved.
           </Typography>
+          <Link
+    href="/privacy-policy"
+    underline="hover"
+    color="inherit"
+    sx={{
+      fontFamily: "Poppins",
+      fontSize: "0.85rem",
+      opacity: 0.7,
+      display: "inline-block",
+      mt: 0.5,
+    }}
+  >
+    Privacy Policy
+  </Link>
         </Box>
       </Container>
     </Box>

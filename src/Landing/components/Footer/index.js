@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, IconButton } from "@mui/material";
+import { Box, Container, Grid, Typography, IconButton ,Link} from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import XIcon from '@mui/icons-material/X';
@@ -91,6 +91,21 @@ export default function Footer() {
           <Typography variant="body2" sx={{ fontFamily: "Poppins" }}>
             © {new Date().getFullYear()} Kalight Global Pvt. Ltd. All rights reserved.
           </Typography>
+          <Link
+    href="/privacy-policy"
+    underline="hover"
+    color="#fff"
+    sx={{
+      fontFamily: "Poppins",
+      fontSize: "0.85rem",
+      opacity: 1,
+      display: "inline-block",
+      mt: 0.5,
+  
+    }}
+  >
+    Privacy Policy
+  </Link>
         </Box>
       </Container>
     </Box>
