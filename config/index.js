@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-const DB_URL = process.env.MONGODB_URI
 let isConnected = false; // Track the connection state
 
 const connectDB = async () => {
@@ -9,7 +8,7 @@ const connectDB = async () => {
   }
 
   try {
-    await mongoose.connect('mongodb+srv://mkn:Jx0sexApTSjbpRZ3@cluster0.irzr9mk.mongodb.net/testdb');
+    await mongoose.connect('mongodb+srv://mkwebinsights:lkeou9k8fegmF9MF@designblocks.e7uoj.mongodb.net/heybuilex');
     isConnected = true;
     console.log('Mongodb connected');
     return true;

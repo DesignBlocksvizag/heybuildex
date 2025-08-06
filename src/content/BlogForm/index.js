@@ -166,7 +166,9 @@ const fetchBlogs = async () => {
   try {
     const res = await fetch(API_BASE, { method: "GET" });
     const data = await res.json();
-    setBlogs(data.blogs); // Use .blogs based on your API response structure
+    if (res.ok) {
+       setBlogs(data.blogs);
+    } 
   } catch (err) {
     console.error(err);
   } finally {

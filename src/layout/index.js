@@ -107,6 +107,7 @@ export default function BlogsAdminLayout({ children }) {
               fontWeight: 600,
               fontSize: "1.1rem",
               borderRadius: "30px",
+              cursor:"pointer",
               background: "linear-gradient(to right, #465a65 0%, #1c953f 100%)",
               color: "#fff",
               textTransform: "none",
