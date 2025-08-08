@@ -1,6 +1,4 @@
-"use client";
-import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 
 const ProjectSlides = () => {
   const images = [
@@ -9,14 +7,14 @@ const ProjectSlides = () => {
     { src: "/clients/vo-port.png", alt: "vo-port" },
     { src: "/clients/ks-port.png", alt: "ks-port" },
     { src: "/clients/jsw-port.png", alt: "jsw-port" },
-      { src: "/clients/bhogapuram.jpg", alt: "bhogapuram" },
-                { src: "/clients/gopalpur-ports.jpg", alt: "gopalpur-ports" },
-                    { src: "/clients/nhai.png", alt: "nhai" },
+    { src: "/clients/bhogapuram.jpg", alt: "bhogapuram" },
+    { src: "/clients/gopalpur-ports.jpg", alt: "gopalpur-ports" },
+    { src: "/clients/nhai.png", alt: "nhai" },
   ];
 
   return (
     <Box sx={{ py: "40px", backgroundColor: "#fff" }}>
-      <Box sx={{ maxWidth: "1200px", margin: "0 auto", padding: "0 15px" }}>
+      <Box sx={{ maxWidth: "1000px", margin: "0 auto", padding: "0 15px" }}>
         <Typography
           variant="h5"
           fontWeight="bold"
