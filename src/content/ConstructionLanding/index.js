@@ -301,7 +301,7 @@ export default function ConstructionPage() {
               gutterBottom
               sx={{ fontFamily: "Poppins" }}
             >
-              Buy Construction and Structural Steel Materials at Lowest Prices
+              Buy Construction and Structural Steel at Lowest Prices
             </Typography>
             <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
               Construction Steel & Structural Steel
