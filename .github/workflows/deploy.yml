@@ -23,6 +23,9 @@ jobs:
 
             git pull origin master
 
+            rm -rf .next
+
             npm install
             npm run build
+
             pm2 restart heybuildex
