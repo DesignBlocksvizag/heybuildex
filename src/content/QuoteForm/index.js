@@ -16,7 +16,8 @@ import {
   TableBody,
   IconButton,
   Dialog,
-  Container
+  Container,
+  MenuItem
 } from '@mui/material';
 import { Edit, Delete } from '@mui/icons-material';
 import QuotationPrint from '@/src/components/QuotePaper';
@@ -26,6 +27,7 @@ const ItemForm = () => {
   const [editIndex, setEditIndex] = useState(null);
   const [loadingCharges, setLoadingCharges] = useState(0);
   const [transportationCharges,setTransportationCharges] = useState(0);
+  const [typeofMaterial, setTypeofMaterial] = useState('Bend');
   const [clientName, setClientName] = useState({
     quotationNumber: '',
     clientName: '',
@@ -36,6 +38,10 @@ const ItemForm = () => {
   const handleCloseDialog = () => {
     setOpenDialog(false);
   };
+  const materialTypes = [
+  { value: "bend", label: "Bend" },
+  { value: "straight", label: "Straight" }
+];
 
 
   const formik = useFormik({
@@ -271,6 +277,21 @@ const ItemForm = () => {
           sx={{ fontFamily: 'Poppins', width: '100%' }}
         />
       </Box>
+       <Box sx={{ mt:3 }}>
+      <TextField
+        label="Types of Material"
+        select
+        value={typeofMaterial}
+        onChange={(e) => setTypeofMaterial(e.target.value)}
+        sx={{ fontFamily: 'Poppins', width: '100%' }}
+      >
+        {materialTypes.map((option) => (
+          <MenuItem key={option.value} value={option.label}>
+            {option.label}
+          </MenuItem>
+        ))}
+      </TextField>
+    </Box>
        <Box textAlign="right">
               <Button
                 variant="contained"
@@ -345,6 +366,7 @@ const ItemForm = () => {
   quotationDate={clientName.quotationDate} 
   contact={clientName.contact}
   transportationCharges={transportationCharges}
+  typeofMaterial={typeofMaterial}
   />
       </Dialog>
     </Paper>

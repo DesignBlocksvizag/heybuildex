@@ -23,6 +23,7 @@ const QuotationPrint = ({
   clientName,
   quotationDate,
   contact,
+  typeofMaterial
 }) => {
   const printRef = useRef();
 
@@ -247,7 +248,6 @@ const QuotationPrint = ({
                   </TableCell>
                 </TableRow>
               ))}
-
               {loadingCharges > 0 && (
                 <TableRow>
                   <TableCell sx={{ fontFamily: "Poppins" }}></TableCell>
@@ -269,6 +269,17 @@ const QuotationPrint = ({
                   </TableCell>
                   <TableCell sx={{ fontFamily: "Poppins" }}>
                     {loadingTotalAmount.toFixed(2)}
+                  </TableCell>
+                </TableRow>
+              )}
+                {typeofMaterial && (
+                <TableRow>
+                  <TableCell sx={{ fontFamily: "Poppins" }}></TableCell>
+                  <TableCell sx={{ fontFamily: "Poppins" }}>
+                    Type of Material
+                  </TableCell>
+                  <TableCell sx={{ fontFamily: "Poppins" }} colSpan={5}>
+                    {typeofMaterial}
                   </TableCell>
                 </TableRow>
               )}
