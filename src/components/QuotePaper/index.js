@@ -33,6 +33,13 @@ const QuotationPrint = ({
 
   const loadingPriceIncGST = parseFloat(loadingCharges || 0) * 1.18;
   const loadingTotalAmount = loadingPriceIncGST * totalQuantity;
+    const piecesTotal = () => {
+    const totalItems = items.reduce(
+      (acc, item) => acc + parseFloat(item.pieces || 0),
+      0
+    );
+    return totalItems;
+  };
 
   const grandTotal = () => {
     const totalItems = items.reduce(
@@ -102,6 +109,7 @@ const QuotationPrint = ({
                   color: "#555",
                   fontFamily: "Poppins",
                   fontSize: "0.9rem",
+                  mt:0.1
                 }}
               >
                 #31-27-65, Vinayaka Veedhi, Opposite Annapurna Theatre,
@@ -130,6 +138,7 @@ const QuotationPrint = ({
                   color: "#555",
                   fontFamily: "Poppins",
                   fontSize: "0.9rem",
+                  mt:0.1
                 }}
               >
                 <strong>Quotation No:</strong>
@@ -141,9 +150,10 @@ const QuotationPrint = ({
                   color: "#555",
                   fontFamily: "Poppins",
                   fontSize: "0.9rem",
+                  mt:0.1
                 }}
               >
-                <strong>Date:</strong> {quotationDate}
+                <strong>Date:</strong> {new Date(quotationDate).toLocaleDateString("en-GB")}
               </Typography>
               <Typography
                 variant="body2"
@@ -151,6 +161,7 @@ const QuotationPrint = ({
                   color: "#555",
                   fontFamily: "Poppins",
                   fontSize: "0.9rem",
+                  mt:0.1
                 }}
               >
                 <strong>CLIENT:</strong> {clientName}
@@ -161,6 +172,7 @@ const QuotationPrint = ({
                   color: "#555",
                   fontFamily: "Poppins",
                   fontSize: "0.9rem",
+                  mt:0.1
                 }}
               >
                 <strong>Contact:</strong> {contact}
@@ -174,27 +186,32 @@ const QuotationPrint = ({
         {/* Table */}
         <Paper sx={{ mt: 2, boxShadow: "none !important" }}>
           <Table size="small">
-            <TableHead sx={{ bgcolor: "#f5f5f5" }}>
+            <TableHead sx={{ bgcolor: "#029441" }}>
               <TableRow sx={{ textAlign: "center" }}>
-                <TableCell sx={{ fontFamily: "Poppins" }}>
+                <TableCell sx={{ fontFamily: "Poppins",color:"#fff" }}>
                   <strong>S.No</strong>
                 </TableCell>
-                <TableCell sx={{ fontFamily: "Poppins" }}>
+                <TableCell sx={{ fontFamily: "Poppins",color:"#fff" }}>
                   <strong>Item Description</strong>
                 </TableCell>
-                <TableCell sx={{ fontFamily: "Poppins" }}>
+                <TableCell sx={{ fontFamily: "Poppins",color:"#fff" }}>
                   <strong>Make</strong>
                 </TableCell>
-                <TableCell sx={{ fontFamily: "Poppins" }}>
+                {piecesTotal() > 0 && (
+                  <TableCell sx={{ fontFamily: "Poppins",color:"#fff" }}>
+                    <strong>Pieces</strong>
+                  </TableCell>
+                )}
+                <TableCell sx={{ fontFamily: "Poppins",color:"#fff" }}>
                   <strong>Qty (in MT)</strong>
                 </TableCell>
-                <TableCell sx={{ fontFamily: "Poppins" }}>
+                <TableCell sx={{ fontFamily: "Poppins",color:"#fff" }}>
                   <strong>Basic/MT Price</strong>
                 </TableCell>
-                <TableCell sx={{ fontFamily: "Poppins" }}>
+                <TableCell sx={{ fontFamily: "Poppins",color:"#fff" }}>
                   <strong>Price (Inc 18% GST)</strong>
                 </TableCell>
-                <TableCell sx={{ fontFamily: "Poppins" }}>
+                <TableCell sx={{ fontFamily: "Poppins",color:"#fff" }}>
                   <strong>Total Amount</strong>
                 </TableCell>
               </TableRow>
@@ -211,6 +228,11 @@ const QuotationPrint = ({
                   <TableCell sx={{ fontFamily: "Poppins" }}>
                     {item.make}
                   </TableCell>
+                   {piecesTotal() > 0 && (
+                      <TableCell sx={{ fontFamily: "Poppins" }}>
+                    {item.pieces > 0 ? item.pieces : 0}
+                  </TableCell>
+                  )}
                   <TableCell sx={{ fontFamily: "Poppins" }}>
                     {item.qty}
                   </TableCell>
@@ -232,6 +254,9 @@ const QuotationPrint = ({
                   <TableCell sx={{ fontFamily: "Poppins" }}>
                     Loading Charges
                   </TableCell>
+                  {piecesTotal() > 0 && (
+                    <TableCell sx={{ fontFamily: "Poppins" }}></TableCell>
+                  )}
                   <TableCell sx={{ fontFamily: "Poppins" }}></TableCell>
                   <TableCell sx={{ fontFamily: "Poppins" }}>
                     {totalQuantity}
@@ -249,12 +274,12 @@ const QuotationPrint = ({
               )}
 
             {transportationCharges > 0 && (<TableRow>
-              <TableCell colSpan={6} align="right" sx={{ fontFamily: 'Poppins' }}><strong>Transportation Charges</strong></TableCell>
-              <TableCell colSpan={7} sx={{ fontFamily: 'Poppins' }}>{parseFloat(transportationCharges || 0).toFixed(2)}</TableCell>
+              <TableCell colSpan={piecesTotal() > 0 ? 7 : 6} align="right" sx={{ fontFamily: 'Poppins' }}><strong>Transportation Charges</strong></TableCell>
+              <TableCell colSpan={piecesTotal() > 0 ? 8 : 7} sx={{ fontFamily: 'Poppins' }}>{parseFloat(transportationCharges || 0).toFixed(2)}</TableCell>
             </TableRow>)}
             <TableRow>
-              <TableCell colSpan={6} align="right" sx={{ fontFamily: 'Poppins' }}><strong>Grand Total</strong></TableCell>
-              <TableCell colSpan={7} sx={{ fontFamily: 'Poppins' }}>{grandTotal()}</TableCell>
+              <TableCell colSpan={piecesTotal() > 0 ? 7 : 6} align="right" sx={{ fontFamily: 'Poppins' }}><strong>Grand Total</strong></TableCell>
+              <TableCell colSpan={piecesTotal() > 0 ? 8 : 7} sx={{ fontFamily: 'Poppins' }}>{grandTotal()}</TableCell>
             </TableRow>
           </TableBody>
         </Table>
@@ -274,7 +299,7 @@ const QuotationPrint = ({
     <Typography
       variant="subtitle1"
       fontWeight="bold"
-      sx={{ fontFamily: 'Poppins', color: '#333'}}
+      sx={{ fontFamily: 'Poppins', color: '#029441'}}
     >
       Terms and Conditions
     </Typography>
@@ -318,7 +343,7 @@ const QuotationPrint = ({
       <Typography
         variant="subtitle1"
         fontWeight="bold"
-        sx={{ fontFamily: 'Poppins', color: '#333', mb: 1 }}
+        sx={{ fontFamily: 'Poppins', color: '#029441', mb: 1 }}
       >
         Bank Details
       </Typography>
@@ -344,7 +369,7 @@ const QuotationPrint = ({
       <Typography
         variant="subtitle1"
         fontWeight="bold"
-        sx={{ fontFamily: 'Poppins', color: '#333', mb: 1 }}
+        sx={{ fontFamily: 'Poppins', color: '#029441', mb: 1 }}
       >
         Contact Us
       </Typography>

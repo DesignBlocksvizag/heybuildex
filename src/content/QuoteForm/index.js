@@ -30,7 +30,7 @@ const ItemForm = () => {
     quotationNumber: '',
     clientName: '',
     contact: '',
-    quotationDate: ''
+    quotationDate:  new Date().toISOString().split('T')[0]
   });
   const [openDialog, setOpenDialog] = useState(false);
   const handleCloseDialog = () => {
@@ -43,6 +43,7 @@ const ItemForm = () => {
       description: '',
       make: '',
       qty: '',
+      pieces : 0,
       basicPrice: ''
     },
     validationSchema: Yup.object({
@@ -89,6 +90,7 @@ const ItemForm = () => {
       description: item.description,
       make: item.make,
       qty: item.qty,
+      pieces: item.pieces || 0,
       basicPrice: item.basicPrice
     });
     setEditIndex(index);
@@ -164,7 +166,6 @@ const ItemForm = () => {
             InputLabelProps: { shrink: true }
           }
         }}
-
         value={clientName.quotationDate}
         onChange={(e) => setClientName({ ...clientName, quotationDate: e.target.value })}
         sx={{ fontFamily: 'Poppins' }}
@@ -221,6 +222,18 @@ const ItemForm = () => {
               onChange={formik.handleChange}
               error={formik.touched.basicPrice && Boolean(formik.errors.basicPrice)}
               helperText={formik.touched.basicPrice && formik.errors.basicPrice}
+              sx={{ fontFamily: 'Poppins' }}
+            />
+          </Grid>
+          <Grid size={{xs:12,md:6}}>
+            <TextField
+              fullWidth
+              size='small'
+              label="Pieces"
+              name="pieces"
+              type="number"
+              value={formik.values.pieces}
+              onChange={formik.handleChange}
               sx={{ fontFamily: 'Poppins' }}
             />
           </Grid>
