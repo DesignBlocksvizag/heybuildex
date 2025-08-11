@@ -1,0 +1,31 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - master  # or your deployment branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /var/www/heybuildex
+
+            git update-index --assume-unchanged .env || true
+            git update-index --assume-unchanged ecosystem.config.js || true
+
+            git pull origin master
+
+            rm -rf .next
+            
+            npm install
+            npm run build
+
+            pm2 restart heybuildex
