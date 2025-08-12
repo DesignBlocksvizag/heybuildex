@@ -17,7 +17,11 @@ import {
   IconButton,
   Dialog,
   Container,
-  MenuItem
+  MenuItem,
+  FormControl,
+  InputLabel,
+  Select,
+  FormHelperText
 } from '@mui/material';
 import { Edit, Delete } from '@mui/icons-material';
 import QuotationPrint from '@/src/components/QuotePaper';
@@ -42,6 +46,44 @@ const ItemForm = () => {
   { value: "bend", label: "Bend" },
   { value: "straight", label: "Straight" }
 ];
+  const itemDescriptions = [
+    "6 mm - Rebar",
+    "7 mm - Rebar",
+    "8 mm - TMT",
+    "10 mm - TMT",
+    "12 mm - TMT",
+    "16 mm - TMT",
+    "20 mm - TMT",
+    "25 mm - TMT",
+    "32 mm - TMT",
+    "Binding Wire",
+  ];
+  const makes = [
+    "Beekay",
+    "Dill",
+    "Jairaj",
+    "Jindal",
+    "Jindal Panther",
+    "Kamadenu",
+    "Mangal",
+    "Nagarjuna",
+    "OMPL",
+    "Radha",
+    "Raja Ram",
+    "Rolling",
+    "SAIL",
+    "Sarvottam",
+    "SEL Tiger",
+    "Shree",
+    "Shristi",
+    "Simhadri",
+    "Suguna",
+    "TATA",
+    "Tirupati",
+    "Ultra TMT",
+    "Vinayaka",
+    "Vizag",
+  ];
 
 
   const formik = useFormik({
@@ -177,32 +219,46 @@ const ItemForm = () => {
         sx={{ fontFamily: 'Poppins' }}
       />
     </Grid>
-          <Grid size={{xs:12,md:8}}>
-            <TextField
-              fullWidth
-              size='small'
-              label="Item Description"
-              name="description"
-              value={formik.values.description}
-              onChange={formik.handleChange}
-              error={formik.touched.description && Boolean(formik.errors.description)}
-              helperText={formik.touched.description && formik.errors.description}
-              sx={{ fontFamily: 'Poppins' }}
-            />
-          </Grid>
-          <Grid size={{xs:12,md:6}}>
-            <TextField
-              fullWidth
-              size='small'
-              label="Make"
-              name="make"
-              value={formik.values.make}
-              onChange={formik.handleChange}
-              error={formik.touched.make && Boolean(formik.errors.make)}
-              helperText={formik.touched.make && formik.errors.make}
-              sx={{ fontFamily: 'Poppins' }}
-            />
-          </Grid>
+        <Grid size={{ xs: 12, md: 8 }}>
+                <FormControl fullWidth size="small" error={formik.touched.description && Boolean(formik.errors.description)}>
+                  <InputLabel>Item Description</InputLabel>
+                  <Select
+                    name="description"
+                    value={formik.values.description}
+                    onChange={formik.handleChange}
+                  >
+                    {itemDescriptions.map((item, index) => (
+                      <MenuItem key={index} value={item}>
+                        {item}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                  {formik.touched.description && formik.errors.description && (
+                    <FormHelperText error={true}>{formik.errors.description}</FormHelperText>
+                  )}
+                </FormControl>
+              </Grid>
+
+              {/* Make Dropdown */}
+              <Grid size={{ xs: 12, md: 6 }}>
+                <FormControl fullWidth size="small" error={formik.touched.make && Boolean(formik.errors.make)}>
+                  <InputLabel>Make</InputLabel>
+                  <Select
+                    name="make"
+                    value={formik.values.make}
+                    onChange={formik.handleChange}
+                  >
+                    {makes.map((brand, index) => (
+                      <MenuItem key={index} value={brand}>
+                        {brand}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                  {formik.touched.make && formik.errors.make && (
+                    <FormHelperText error={true} >{formik.errors.make}</FormHelperText>
+                  )}
+                </FormControl>
+              </Grid>
           <Grid size={{xs:12,md:6}}>
             <TextField
               fullWidth
