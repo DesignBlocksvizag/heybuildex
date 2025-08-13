@@ -66,7 +66,7 @@ export default function ConstructionPage() {
       };
 
       try {
-        const response = await fetch("https://heybuildex.com/submit-lead.php", {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/api/submit-lead`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),

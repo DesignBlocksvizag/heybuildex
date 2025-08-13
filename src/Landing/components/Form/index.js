@@ -52,7 +52,7 @@ export default function QuotationForm() {
 
       try {
   const response = await fetch(
-    "https://heybuildex.com/submit-lead.php",
+    `${process.env.NEXT_PUBLIC_API_BASE}/api/submit-lead`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
