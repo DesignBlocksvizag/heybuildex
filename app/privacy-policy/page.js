@@ -40,9 +40,6 @@ const PrivacyPolicy = () => (
       >
         Privacy Policy
       </Typography>
-      <Typography sx={{ ...paragraphStyle, fontWeight: 600, mb: 4, textAlign: 'center' }}>
-        Last updated: May 19, 2025
-      </Typography>
       <Typography sx={paragraphStyle}>
         This Privacy Policy describes Our policies and procedures on the collection, use and disclosure
         of Your information when You use the Service and tells You about Your privacy rights and how

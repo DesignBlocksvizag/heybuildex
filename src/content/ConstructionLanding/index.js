@@ -303,9 +303,6 @@ export default function ConstructionPage() {
             >
               Buy Construction and Structural Steel at Lowest Prices
             </Typography>
-            <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
-              Construction Steel & Structural Steel
-            </Typography>
             <Box sx={{ pl: 3 }}>
               <Typography variant="body1" sx={{ fontFamily: "Poppins", mb: 1 }}>
                 ✅ Branded TMT Bars

@@ -84,8 +84,19 @@ const AboutUs = () => {
       </Typography>
     </Box>
 
-    {/* What is Hey BuildEX */}
-    <SectionHeading title="What is Hey BuildEX" />
+    <Typography
+    variant="h5"
+    sx={{
+      fontWeight: 700,
+      color: "#1976d2",
+      mb: 3,
+      mt: 8,
+      fontFamily: "Poppins",
+      textAlign: "center",
+    }}
+  >
+    What is <Typography variant="span" sx={{ color:"#01933e" }}>Hey BuildEX</Typography>
+  </Typography>
     <Grid container spacing={6} alignItems="center">
       <Grid size={{xs:12,md:6}}>
         <Box
