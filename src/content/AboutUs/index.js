@@ -95,7 +95,7 @@ const AboutUs = () => {
       textAlign: "center",
     }}
   >
-    What is <Typography variant="span" sx={{ color:"#01933e" }}>HeyBuildEX</Typography>
+    What isHeyBuildEX
   </Typography>
     <Grid container spacing={6} alignItems="center">
       <Grid size={{xs:12,md:6}}>
