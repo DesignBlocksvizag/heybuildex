@@ -65,7 +65,7 @@ const AboutUs = () => {
           mb: 2,
         }}
       >
-        Hey Build
+        HeyBuild
         <Box component="span" sx={{ color: "#01933e" }}>EX</Box>
       </Typography>
       <Typography
@@ -88,21 +88,21 @@ const AboutUs = () => {
     variant="h5"
     sx={{
       fontWeight: 700,
-      color: "#1976d2",
+      color: "#01933e",
       mb: 3,
       mt: 8,
       fontFamily: "Poppins",
       textAlign: "center",
     }}
   >
-    What is <Typography variant="span" sx={{ color:"#01933e" }}>Hey BuildEX</Typography>
+    What is <Typography variant="span" sx={{ color:"#01933e" }}>HeyBuildEX</Typography>
   </Typography>
     <Grid container spacing={6} alignItems="center">
       <Grid size={{xs:12,md:6}}>
         <Box
           component="img"
           src="/about-us-hero.jpg"
-          alt="Hey BuildEX"
+          alt="HeyBuildEX"
           sx={{
             width: "100%",
             maxHeight:"300px",
@@ -156,7 +156,7 @@ const AboutUs = () => {
     </Grid>
 
     {/* Founders */}
-    <SectionHeading title="Who is Behind Hey BuildEX" />
+    <SectionHeading title="Who is Behind HeyBuildEX" />
     <Grid container spacing={4} justifyContent="center">
       {[
         { name: "Chaitanya Varma", role: "Co-Founder & CEO", img: "/chaitanya.jpg" },
@@ -223,7 +223,7 @@ const SectionHeading = ({ title }) => (
     variant="h5"
     sx={{
       fontWeight: 700,
-      color: "#1976d2",
+      color: "#01933e",
       mb: 3,
       mt: 8,
       fontFamily: "Poppins",

@@ -20,13 +20,13 @@ export default function WelcomeSection() {
             HeyBuild <Typography variant="span" sx={{color:"#01933e",position:"relative",left:"-5px"}}>EX</Typography>
           </Typography>
           <Typography variant="body1" sx={{mb: 2, fontFamily:"Inter", color:"#333"}}>
-            Hey Buildex is your go-to online source for high-quality steel and
+            HeyBuildex is your go-to online source for high-quality steel and
             construction materials. We offer a wide range of durable products,
             from structural steel to fabrication steel and fasteners, all at
             competitive prices.
           </Typography>
           <Typography variant="body1" sx={{fontFamily:"Inter", color:"#333"}}>
-            With easy navigation and prompt delivery, Hey Buildex makes it
+            With easy navigation and prompt delivery, HeyBuildex makes it
             simple to find everything you need, allowing you to focus on
             building your vision.
           </Typography>
@@ -63,7 +63,7 @@ export default function WelcomeSection() {
           <Box
             component="img"
             src="/large-steel-factory-warehouse.jpg" // Replace with your actual image path
-            alt="Hey Buildex"
+            alt="HeyBuildex"
             sx={{
               width: "100%",
               height: "auto",
