@@ -28,13 +28,13 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import DeleteDialog from "@/src/components/DeleteDialog";
 const heading = {
-  fontFamily : "Poppins"
-}
+  fontFamily: "Poppins",
+};
 function getBase64(file) {
   return new Promise((res, rej) => {
     const reader = new FileReader();
     reader.onload = () => res(reader.result);
-    reader.onerror = err => rej(err);
+    reader.onerror = (err) => rej(err);
     reader.readAsDataURL(file);
   });
 }
@@ -48,14 +48,16 @@ const BlogFormDialog = ({
   const validationSchema = Yup.object({
     heading: Yup.string().required("Heading is required"),
     description: Yup.string().required("Description is required"),
-    slug : Yup.string().required("Slug is Required"),
-    image: editStatus ? Yup.mixed().notRequired() : Yup.mixed().required("Image is required"),
+    slug: Yup.string().required("Slug is Required"),
+    image: editStatus
+      ? Yup.mixed().notRequired()
+      : Yup.mixed().required("Image is required"),
   });
 
   const initialValues = {
     heading: editStatus ? editData.heading : "",
     description: editStatus ? editData.description : "",
-    slug : editStatus ? editData.slug : "",
+    slug: editStatus ? editData.slug : "",
     image: null,
   };
 
@@ -63,7 +65,12 @@ const BlogFormDialog = ({
     <Dialog open={open} onClose={handleClose} fullWidth maxWidth="sm">
       <Card sx={{ py: 3 }}>
         <CardContent>
-          <Typography variant="h5" align="center" mb={2} sx={{color:"#029441",fontFamily:"Poppins"}}>
+          <Typography
+            variant="h5"
+            align="center"
+            mb={2}
+            sx={{ color: "#029441", fontFamily: "Poppins" }}
+          >
             {editStatus ? "Edit Blog" : "Add Blog"}
           </Typography>
           <Formik
@@ -75,7 +82,7 @@ const BlogFormDialog = ({
               handleClose();
             }}
           >
-            {({ errors, touched, handleChange, setFieldValue,values }) => (
+            {({ errors, touched, handleChange, setFieldValue, values }) => (
               <Form>
                 <TextField
                   fullWidth
@@ -87,7 +94,7 @@ const BlogFormDialog = ({
                   error={touched.heading && Boolean(errors.heading)}
                   helperText={touched.heading && errors.heading}
                 />
-                 <TextField
+                <TextField
                   fullWidth
                   label="Slug"
                   name="slug"
@@ -124,11 +131,16 @@ const BlogFormDialog = ({
                     onClick={handleClose}
                     variant="outlined"
                     color="error"
-                    sx={{fontFamily:"Poppins"}}
+                    sx={{ fontFamily: "Poppins" }}
                   >
                     Cancel
                   </Button>
-                  <Button type="submit" variant="contained" color="primary"    sx={{fontFamily:"Poppins"}}>
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    color="primary"
+                    sx={{ fontFamily: "Poppins" }}
+                  >
                     {editStatus ? "Update" : "Create"}
                   </Button>
                 </Box>
@@ -155,101 +167,99 @@ export default function BlogTable() {
   });
   const [loading, setLoading] = useState(false);
 
- const API_BASE = "/api/blogs"; // Next.js API route
+  const API_BASE = "/api/blogs"; // Next.js API route
 
-useEffect(() => {
-  fetchBlogs();
-}, []);
-
-const fetchBlogs = async () => {
-  setLoading(true);
-  try {
-    const res = await fetch(API_BASE, { method: "GET" });
-    const data = await res.json();
-    if (res.ok) {
-       setBlogs(data.blogs);
-    } 
-  } catch (err) {
-    console.error(err);
-  } finally {
-    setLoading(false);
-  }
-};
-
-// Convert image file → Base64 string
-function getBase64(file) {
-  return new Promise((resolve, reject) => {
-    if (!file) return resolve(null);
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = (error) => reject(error);
-  });
-}
-
-const handleCreateOrUpdate = async (values) => {
-  try {
-    // Convert image to Base64 if exists
-    const base64Image = values.image ? await getBase64(values.image) : null;
-
-    // Build request body
-    const payload = {
-      heading: values.heading,
-      description: values.description,
-      slug : values.slug,
-      imageBase64: base64Image, // Always send as Base64
-    };
-
-    // Choose URL
-    const url = editStatus
-      ? `${API_BASE}?id=${editData._id}` // PUT for update
-      : API_BASE;                       // POST for create
-
-    // Send JSON request
-    const res = await fetch(url, {
-      method: editStatus ? "PUT" : "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-
-
-     if (res.ok) {
-    setSnackbar({
-      open: true,
-      message: editStatus ? "Blog updated!" : "Blog created!",
-      severity: "success",
-    });
-  }
-
+  useEffect(() => {
     fetchBlogs();
-  } catch (err) {
-        const errorData = await res.json(); // optional
-    setSnackbar({
-      open: true,
-      message: errorData.message || "Something went wrong",
-      severity: "error",
-    });
-  }
-};
+  }, []);
 
-
-const handleDelete = async () => {
-  try {
-    const res = await fetch(`${API_BASE}?id=${deleteId}`, {
-      method: "DELETE",
-    });
-    const result = await res.json();
-    if(result.ok){
-         setSnackbar({ open: true, message: "Deleted!", severity: "success" });
+  const fetchBlogs = async () => {
+    setLoading(true);
+    try {
+      const res = await fetch(API_BASE, { method: "GET" });
+      const data = await res.json();
+      if (res.ok) {
+        setBlogs(data.blogs);
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
     }
-    fetchBlogs();
-  } catch (err) {
-    setSnackbar({ open: true, message: "Delete failed", severity: "error" });
-  } finally {
-    setDeleteDialog(false);
-    setDeleteId(null);
+  };
+
+  // Convert image file → Base64 string
+  function getBase64(file) {
+    return new Promise((resolve, reject) => {
+      if (!file) return resolve(null);
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
   }
-};
+
+  const handleCreateOrUpdate = async (values) => {
+    try {
+      // Convert image to Base64 if exists
+      const base64Image = values.image ? await getBase64(values.image) : null;
+
+      // Build request body
+      const payload = {
+        heading: values.heading,
+        description: values.description,
+        slug: values.slug,
+        imageBase64: base64Image, // Always send as Base64
+      };
+
+      // Choose URL
+      const url = editStatus
+        ? `${API_BASE}?id=${editData._id}` // PUT for update
+        : API_BASE; // POST for create
+
+      // Send JSON request
+      const res = await fetch(url, {
+        method: editStatus ? "PUT" : "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (res.ok) {
+        setSnackbar({
+          open: true,
+          message: editStatus ? "Blog updated!" : "Blog created!",
+          severity: "success",
+        });
+      }
+
+      fetchBlogs();
+    } catch (err) {
+      const errorData = await res.json(); // optional
+      setSnackbar({
+        open: true,
+        message: errorData.message || "Something went wrong",
+        severity: "error",
+      });
+    }
+  };
+
+  const handleDelete = async () => {
+    try {
+      const res = await fetch(`${API_BASE}?id=${deleteId}`, {
+        method: "DELETE",
+      });
+      const result = await res.json();
+      if (result.ok) {
+        setSnackbar({ open: true, message: "Deleted!", severity: "success" });
+      }
+      fetchBlogs();
+    } catch (err) {
+      setSnackbar({ open: true, message: "Delete failed", severity: "error" });
+    } finally {
+      setDeleteDialog(false);
+      setDeleteId(null);
+    }
+  };
 
   return (
     <Container maxWidth="lg" sx={{ mt: 2 }}>
@@ -258,9 +268,8 @@ const handleDelete = async () => {
           startIcon={<AddCircleRoundedIcon />}
           variant="contained"
           sx={{
-            background:"#029441",
-            fontFamily:"Poppins"
-            
+            background: "#029441",
+            fontFamily: "Poppins",
           }}
           onClick={() => setOpen(true)}
         >
@@ -275,7 +284,9 @@ const handleDelete = async () => {
               <TableCell sx={heading}>Image</TableCell>
               <TableCell sx={heading}>Heading</TableCell>
               <TableCell sx={heading}>Description</TableCell>
-              <TableCell align="center" sx={heading}>Actions</TableCell>
+              <TableCell align="center" sx={heading}>
+                Actions
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -301,7 +312,9 @@ const handleDelete = async () => {
                     <TableCell>
                       {blog.image && (
                         <img
-                          src={`${process.env.NEXT_PUBLIC_API_BASE}` + blog.image}
+                          src={
+                            `${process.env.NEXT_PUBLIC_API_BASE}` + blog.image
+                          }
                           alt=""
                           width={100}
                         />
@@ -361,7 +374,7 @@ const handleDelete = async () => {
       <Snackbar
         open={snackbar.open}
         autoHideDuration={3000}
-        sx={{fontFamily:"Poppins"}}
+        sx={{ fontFamily: "Poppins" }}
         onClose={() => setSnackbar((prev) => ({ ...prev, open: false }))}
       >
         <Alert severity={snackbar.severity}>{snackbar.message}</Alert>
