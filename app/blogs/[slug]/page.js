@@ -1,6 +1,7 @@
 import Footer from "@/src/components/Footer";
 import Header from "@/src/components/Header";
 import SteelStructuresBlog from "@/src/content/Blogs";
+import { Twitter } from "@mui/icons-material";
 import { notFound } from "next/navigation";
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -22,7 +23,16 @@ export async function generateMetadata({ params }) {
     const blogData = await res.json();
     return {
       title: blogData.blog?.heading || "Untitled Blog",
-      image: process.env.NEXT_PUBLIC_API_BASE + blogData.blog?.image || "/default-blog.jpg"
+      openGraph: {
+        title: blogData.blog?.heading || "Untitled Blog",
+        images: [
+          {
+            url: process.env.NEXT_PUBLIC_API_BASE + blogData.blog?.image || "/default-blog.jpg",
+            width: 800,
+            height: 600,
+          },
+        ],
+      },
     };
   } catch (error) {
     return { title: "Error Loading Blog" };
