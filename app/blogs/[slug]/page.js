@@ -8,7 +8,11 @@ export async function generateMetadata({ params }) {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE}/api/blogs/read?slug=${slug}`,
-      { cache: "no-store" }
+      {
+        next: {
+          revalidate: 0
+        }
+      }
     );
 
     if (!res.ok) {
@@ -18,6 +22,7 @@ export async function generateMetadata({ params }) {
     const blogData = await res.json();
     return {
       title: blogData.blog?.heading || "Untitled Blog",
+      image: process.env.NEXT_PUBLIC_API_BASE + blogData.blog?.image || "/default-blog.jpg"
     };
   } catch (error) {
     return { title: "Error Loading Blog" };
@@ -37,8 +42,10 @@ export default async function BlogPageView({ params }) {
         headers: {
           "Content-Type": "application/json",
         },
-        cache: "no-store", // Always get fresh data
-      }
+        next : {
+          revalidate : 0
+        }
+      },
     );
     blog = await res.json();
     if (!res.ok) {
