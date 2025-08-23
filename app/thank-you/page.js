@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React ,{useEffect} from 'react';
 import { Box, Typography, Card,CardContent,Stack,IconButton,Button } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -7,6 +8,12 @@ import XIcon from "@mui/icons-material/X";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const ThankYouPage = () => {
+    useEffect(() => {
+    // Fire conversion event when page loads
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'conversion_event_page_view', {});
+    }
+  }, []);
   return (<>
     <Box
       sx={{
