@@ -40,7 +40,7 @@ const sliderSettings = {
 
 export default function TestimonialSlider() {
   return (
-    <Box sx={{  py: 6, px: 2,   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url('/client-bg.jpg')`,
+    <Box sx={{  py: 6, px: 2,   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url('https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/client-bg.jpg?updatedAt=1756113786603')`,
          backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

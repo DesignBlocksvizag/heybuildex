@@ -4,12 +4,12 @@ import { Box, Typography } from "@mui/material";
 
 const SectorsWeServe = () => {
   const images = [
-    { src: "/clients/roads.png", alt: "roads" },
-    { src: "/clients/railways.png", alt: "railways" },
-    { src: "/clients/airports.png", alt: "airports" },
-    { src: "/clients/real-estate.png", alt: "real-estate" },
-    { src: "/clients/industries.jpg", alt: "industries" },
-    { src: "/clients/ports.png", alt: "ports" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/roads.png?updatedAt=1756115892833", alt: "roads" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/railways.png?updatedAt=1756115892772", alt: "railways" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/airports.png?updatedAt=1756115878241", alt: "airports" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/airports.png?updatedAt=1756115878241", alt: "real-estate" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/industries.jpg?updatedAt=1756115878258", alt: "industries" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/ports.png?updatedAt=1756115890454", alt: "ports" },
   ];
 
   return (

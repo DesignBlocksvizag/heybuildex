@@ -20,7 +20,7 @@ export default function Footer() {
     <Box
       sx={{
         backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/footer-bg.jpg')",
+          "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/footer-bg.jpg?updatedAt=1756113788081')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

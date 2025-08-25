@@ -4,18 +4,18 @@ import { Box, Typography } from "@mui/material";
 
 const ClientSlides = () => {
   const images = [
-    { src: "/clients/vizag_steel.png", alt: "Vizag Steel" },
-    { src: "/clients/sail.png", alt: "Sail" },
-    { src: "/clients/tata.png", alt: "Tata" },
-    { src: "/clients/jsw.png", alt: "jsw" },
-    { src: "/clients/jindal-1.png", alt: "jindal" },
-    { src: "/clients/radha.png", alt: "radha" },
-    { src: "/clients/mangal.png", alt: "mangal" },
-    { src: "/clients/simhadri.png", alt: "simhadri" },
-    { src: "/clients/ultratech-cement.png", alt: "ultratech" },
-    { src: "/clients/maha-cement.png", alt: "maha" },
-    { src: "/clients/ramco-cement.jpeg", alt: "ramco" },
-    { src: "/clients/sagar-cement.svg", alt: "sagar" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/vizag_steel.png?updatedAt=1756115900492", alt: "Vizag Steel" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/sail.png?updatedAt=1756115894420", alt: "Sail" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/tata.png?updatedAt=1756115901168", alt: "Tata" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/jsw.png?updatedAt=1756115884849", alt: "jsw" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/jindal-1.png?updatedAt=1756115878543", alt: "jindal" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/radha.png?updatedAt=1756115892233", alt: "radha" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/mangal.png?updatedAt=1756115886578", alt: "mangal" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/simhadri.png?updatedAt=1756115900656", alt: "simhadri" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/ultratech-cement.png?updatedAt=1756115901161", alt: "ultratech" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/maha-cement.png?updatedAt=1756115886032", alt: "maha" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/ramco-cement.jpeg?updatedAt=1756115892192", alt: "ramco" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/sagar-cement.svg?updatedAt=1756115892924", alt: "sagar" },
   ];
 
   const marqueeRef = useRef(null);

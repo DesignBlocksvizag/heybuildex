@@ -12,42 +12,42 @@ import Link from "next/link";
 const products = [
   {
     title: "TMT Bars",
-    image: "tmt-bars.jpg",
+    image: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/tmt-bars.jpg?updatedAt=1756113833934",
     link: "/steel/tmt-bars",
   },
   {
     title: "Binding Wire",
-    image: "binding-wire.jpg",
+    image: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/binding-wire.jpg?updatedAt=1756113782596",
     link: "/steel/binding-wire",
   },
   {
     title: "MS Channel",
-    image: "ms-channel.jpg",
+    image: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/ms-channel.jpg?updatedAt=1756112946924",
     link: "/steel/ms-channel",
   },
   {
     title: "MS Plate",
-    image: "ms-plate.jpg",
+    image: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/ms-plate.jpg?updatedAt=1756113796848",
     link: "/steel/ms-plate",
   },
   {
     title: "MS Angle",
-    image: "ms-angles.jpg",
+    image: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/ms-angles.jpg?updatedAt=1756113794270",
     link: "/steel/ms-angle",
   },
   {
     title: "I Beam",
-    image: "i-beam.jpg",
+    image: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/i-beam.jpg?updatedAt=1756113790576",
     link: "/steel/ms-i-beam",
   },
   {
     title: "MS Square Pipe",
-    image: "ms-square-pipe.jpg",
+    image: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/ms-square-pipe.jpg?updatedAt=1756113800974",
     link: "/steel/ms-square-pipe",
   },
   {
     title: "Roofing Sheets",
-    image: "roofing-sheets.jpg",
+    image: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/roofing-sheets.jpg?updatedAt=1756113827947",
     link: "/steel/roofing-sheet",
   },
   {

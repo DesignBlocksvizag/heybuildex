@@ -2,14 +2,14 @@ import { Box, Typography, Grid } from "@mui/material";
 
 const ProjectSlides = () => {
   const images = [
-    { src: "/clients/indian-navy.png", alt: "indian-navy" },
-    { src: "/clients/vizag-port.png", alt: "vizag-port" },
-    { src: "/clients/vo-port.png", alt: "vo-port" },
-    { src: "/clients/ks-port.png", alt: "ks-port" },
-    { src: "/clients/jsw-port.png", alt: "jsw-port" },
-    { src: "/clients/bhogapuram.jpg", alt: "bhogapuram" },
-    { src: "/clients/gopalpur-ports.jpg", alt: "gopalpur-ports" },
-    { src: "/clients/nhai.png", alt: "nhai" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/indian-navy.png?updatedAt=1756115878534", alt: "indian-navy" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/vizag-port.png?updatedAt=1756115900932", alt: "vizag-port" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/vo-port.png?updatedAt=1756115901536", alt: "vo-port" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/ks-port.png?updatedAt=1756115886108", alt: "ks-port" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/jsw-port.png?updatedAt=1756115884828", alt: "jsw-port" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/bhogapuram.jpg?updatedAt=1756115878459", alt: "bhogapuram" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/gopalpur-ports.jpg?updatedAt=1756115878402", alt: "gopalpur-ports" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/nhai.png?updatedAt=1756115886226", alt: "nhai" },
   ];
 
   return (

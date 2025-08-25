@@ -4,16 +4,16 @@ import { Box, Typography } from "@mui/material";
 
 const Clients = () => {
     const images = [
-    { src: "/clients/kims.png", alt: "Kims" },
-    { src: "/clients/aurobindo.png", alt: "aurobindo" },
-    { src: "/clients/pavilion.png", alt: "pavilion" },
-    { src: "/clients/vpr.png", alt: "vpr" },
-    { src: "/clients/mama-home.png", alt: "mama-home" },
-    { src: "/clients/sri-chakra.png", alt: "sri-chakra" },
-    { src: "/clients/pv.png", alt: "pv" },
-    { src: "/clients/vaishno.png", alt: "vaishno" },
-         { src: "/clients/ashoka.jpg", alt: "ashoka" },
-                    { src: "/clients/mip.jpg", alt: "mip" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/kims.png?updatedAt=1756115886005", alt: "Kims" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/aurobindo.png?updatedAt=1756115878307", alt: "aurobindo" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/pavilion.png?updatedAt=1756115886709", alt: "pavilion" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/vpr.png?updatedAt=1756115903261", alt: "vpr" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/mama-home.png?updatedAt=1756115886205", alt: "mama-home" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/sri-chakra.png?updatedAt=1756115900897", alt: "sri-chakra" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/pv.png?updatedAt=1756115892200", alt: "pv" },
+    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/vaishno.png?updatedAt=1756115901222", alt: "vaishno" },
+         { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/ashoka.jpg?updatedAt=1756115878251", alt: "ashoka" },
+                    { src: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/clients/mip.jpg?updatedAt=1756115886491", alt: "mip" },
   ];
 
   const marqueeRef = useRef(null);

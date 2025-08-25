@@ -62,7 +62,7 @@ export default function WelcomeSection() {
         <Grid size={{xs: 12, md: 6}}>
           <Box
             component="img"
-            src="/large-steel-factory-warehouse.jpg" // Replace with your actual image path
+            src="https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/large-steel-factory-warehouse.jpg?updatedAt=1756112793724" // Replace with your actual image path
             alt="HeyBuildex"
             sx={{
               width: "100%",
