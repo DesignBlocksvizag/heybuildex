@@ -278,7 +278,7 @@ const QuotationPrint = ({
                   <TableCell sx={{ fontFamily: "Poppins" }}>
                     Type of Material
                   </TableCell>
-                  <TableCell sx={{ fontFamily: "Poppins" }} colSpan={5}>
+                  <TableCell sx={{ fontFamily: "Poppins" }} colSpan={6}>
                     {typeofMaterial}
                   </TableCell>
                 </TableRow>
