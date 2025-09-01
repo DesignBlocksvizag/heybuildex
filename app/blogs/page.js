@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import Header from "@/src/components/Header";
 import Footer from "@/src/components/Footer";
+import Link from "next/link";
 
 const BlogList = async () => {
   let loading = true;
@@ -89,55 +90,57 @@ const BlogList = async () => {
                   </Grid>
                 ))
               : blogs.map((blog, index) => (
-                  <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
-                    <Box>
-                      <Box
-                        component="img"
-                        src={`${process.env.NEXT_PUBLIC_API_BASE}` + blog.image}
-                        alt={blog.title}
-                        sx={{
-                          width: "100%",
-                          maxHeight: "300px",
-                          borderRadius: 2,
-                          mb: 2,
-                        }}
-                      />
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          fontFamily: "Poppins, sans-serif",
-                          fontWeight: 600,
-                          color: "#000",
-                          mb: 1,
-                        }}
-                      >
-                        {blog.heading}
-                      </Typography>
-                      {/* <Typography
-                        sx={{
-                          fontFamily: "Inter, sans-serif",
-                          color: "#000",
-                          mb: 2,
-                        }}
-                      >
-                        {blog.description}
-                      </Typography> */}
-                      <Button
-                        variant="contained"
-                        sx={{
-                          backgroundColor: "#01933e",
-                          fontFamily: "Inter, sans-serif",
-                          textTransform: "none",
-                          "&:hover": {
-                            backgroundColor: "#017d35",
-                          },
-                        }}
-                        href={"/blogs/" + `${blog.slug}`}
-                      >
-                        View Blog
-                      </Button>
-                    </Box>
-                  </Grid>
+<Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+  <Link
+    href={`/blogs/${blog.slug}`}
+    style={{ textDecoration: "none" }}
+  >
+    <Box
+      sx={{
+        cursor: "pointer",
+        p: 2,
+        borderRadius: 2,
+        "&:hover": {
+          boxShadow: 3,
+        },
+      }}
+    >
+      <Box
+        component="img"
+        src={`${process.env.NEXT_PUBLIC_API_BASE}${blog.image}`}
+        alt={blog.title}
+        sx={{
+          width: "100%",
+          maxHeight: "300px",
+          borderRadius: 2,
+          mb: 2,
+        }}
+      />
+      <Typography
+        variant="h6"
+        sx={{
+          fontFamily: "Poppins, sans-serif",
+          fontWeight: 600,
+          color: "#000",
+          mb: 1,
+        }}
+      >
+        {blog.heading}
+      </Typography>
+      {/* If you want short desc back */}
+      {/* <Typography
+        sx={{
+          fontFamily: "Inter, sans-serif",
+          color: "#000",
+          mb: 2,
+        }}
+      >
+        {blog.description}
+      </Typography> */}
+    </Box>
+  </Link>
+</Grid>
+
                 ))}
           </Grid>
         </Container>
