@@ -1,7 +1,6 @@
 import Footer from "@/src/components/Footer";
 import Header from "@/src/components/Header";
 import SteelStructuresBlog from "@/src/content/Blogs";
-import { Twitter } from "@mui/icons-material";
 import { notFound } from "next/navigation";
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -22,9 +21,11 @@ export async function generateMetadata({ params }) {
 
     const blogData = await res.json();
     return {
-      title: blogData.blog?.heading || "Untitled Blog",
+      title: blogData.blog?.metaTitle || "Untitled Blog",
+      description: blogData.blog?.metaDescription || "No description available",
       openGraph: {
-        title: blogData.blog?.heading || "Untitled Blog",
+        title: blogData.blog?.metaTitle || "Untitled Blog",
+        description: blogData.blog?.metaDescription || "No description available",
         images: [
           {
             url: process.env.NEXT_PUBLIC_API_BASE + blogData.blog?.image || "/default-blog.jpg",

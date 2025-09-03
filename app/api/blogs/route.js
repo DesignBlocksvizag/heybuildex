@@ -46,6 +46,8 @@ export async function POST(req) {
     description: body.description,
     image: imageUrl,
     slug: body.slug,
+       metaTitle: body.metaTitle,
+    metaDescription: body.metaDescription,
   });
   return Response.json(blog);
 }
@@ -55,7 +57,8 @@ export async function PUT(req) {
   await connectDB();
   const id = new URL(req.url).searchParams.get("id");
   const body = await req.json(); // { heading, description, imageBase64 }
-  const data = { heading: body.heading, description: body.description ,slug:body.slug};
+  const data = { heading: body.heading, description: body.description ,slug:body.slug,   metaTitle: body.metaTitle,
+    metaDescription: body.metaDescription};
   if (body.imageBase64)
     data.image = saveBase64Image(body.imageBase64, `blog_${Date.now()}.jpg`);
   const blog = await Blog.findByIdAndUpdate(id, data, { new: true });

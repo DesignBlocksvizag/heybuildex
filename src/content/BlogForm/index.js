@@ -49,6 +49,8 @@ const BlogFormDialog = ({
     heading: Yup.string().required("Heading is required"),
     description: Yup.string().required("Description is required"),
     slug: Yup.string().required("Slug is Required"),
+    metaTitle: Yup.string().required("Meta Title is required"),
+    metaDescription: Yup.string().required("Meta Description is required"),
     image: editStatus
       ? Yup.mixed().notRequired()
       : Yup.mixed().required("Image is required"),
@@ -58,98 +60,132 @@ const BlogFormDialog = ({
     heading: editStatus ? editData.heading : "",
     description: editStatus ? editData.description : "",
     slug: editStatus ? editData.slug : "",
+    metaTitle: editStatus ? editData.metaTitle : "",
+    metaDescription: editStatus ? editData.metaDescription : "",
     image: null,
   };
 
   return (
-    <Dialog open={open} onClose={handleClose} fullWidth maxWidth="sm">
-      <Card sx={{ py: 3 }}>
-        <CardContent>
-          <Typography
-            variant="h5"
-            align="center"
-            mb={2}
-            sx={{ color: "#029441", fontFamily: "Poppins" }}
-          >
-            {editStatus ? "Edit Blog" : "Add Blog"}
-          </Typography>
-          <Formik
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-            onSubmit={(values, { resetForm }) => {
-              handleSubmit(values);
-              resetForm();
-              handleClose();
-            }}
-          >
-            {({ errors, touched, handleChange, setFieldValue, values }) => (
-              <Form>
-                <TextField
-                  fullWidth
-                  label="Heading"
-                  name="heading"
-                  margin="normal"
-                  value={values.heading}
-                  onChange={handleChange}
-                  error={touched.heading && Boolean(errors.heading)}
-                  helperText={touched.heading && errors.heading}
-                />
-                <TextField
-                  fullWidth
-                  label="Slug"
-                  name="slug"
-                  margin="normal"
-                  value={values.slug}
-                  onChange={handleChange}
-                  error={touched.slug && Boolean(errors.slug)}
-                  helperText={touched.slug && errors.slug}
-                />
-                <TextField
-                  fullWidth
-                  multiline
-                  rows={8}
-                  label="Description"
-                  name="description"
-                  margin="normal"
-                  value={values.description}
-                  onChange={handleChange}
-                  error={touched.description && Boolean(errors.description)}
-                  helperText={touched.description && errors.description}
-                />
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={(e) =>
-                    setFieldValue("image", e.currentTarget.files[0])
-                  }
-                />
-                {errors.image && (
-                  <Typography color="error">{errors.image}</Typography>
-                )}
-                <Box mt={2} display="flex" justifyContent="space-between">
-                  <Button
-                    onClick={handleClose}
-                    variant="outlined"
-                    color="error"
-                    sx={{ fontFamily: "Poppins" }}
-                  >
-                    Cancel
-                  </Button>
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                    sx={{ fontFamily: "Poppins" }}
-                  >
-                    {editStatus ? "Update" : "Create"}
-                  </Button>
-                </Box>
-              </Form>
+  <Dialog open={open} onClose={handleClose} fullWidth maxWidth="sm" scroll="paper">
+  <Card sx={{ py: 3,overflowY: 'auto', maxHeight: '90vh' }}>
+    <CardContent>
+      <Typography
+        variant="h5"
+        align="center"
+        mb={2}
+        sx={{ color: "#029441", fontFamily: "Poppins" }}
+      >
+        {editStatus ? "Edit Blog" : "Add Blog"}
+      </Typography>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={(values, { resetForm }) => {
+          handleSubmit(values);
+          resetForm();
+          handleClose();
+        }}
+      >
+        {({ errors, touched, handleChange, setFieldValue, values }) => (
+          <Form>
+            <TextField
+              fullWidth
+              label="Heading"
+              name="heading"
+              margin="normal"
+              value={values.heading}
+              onChange={handleChange}
+              error={touched.heading && Boolean(errors.heading)}
+              helperText={touched.heading && errors.heading}
+            />
+
+            <TextField
+              fullWidth
+              label="Slug"
+              name="slug"
+              margin="normal"
+              value={values.slug}
+              onChange={handleChange}
+              error={touched.slug && Boolean(errors.slug)}
+              helperText={touched.slug && errors.slug}
+            />
+
+            {/* Meta Title */}
+            <TextField
+              fullWidth
+              label="Meta Title"
+              name="metaTitle"
+              margin="normal"
+              value={values.metaTitle}
+              onChange={handleChange}
+              error={touched.metaTitle && Boolean(errors.metaTitle)}
+              helperText={touched.metaTitle && errors.metaTitle}
+            />
+
+            {/* Meta Description */}
+            <TextField
+              fullWidth
+              multiline
+              rows={3}
+              label="Meta Description"
+              name="metaDescription"
+              margin="normal"
+              value={values.metaDescription}
+              onChange={handleChange}
+              error={
+                touched.metaDescription && Boolean(errors.metaDescription)
+              }
+              helperText={touched.metaDescription && errors.metaDescription}
+            />
+
+            <TextField
+              fullWidth
+              multiline
+              rows={8}
+              label="Description"
+              name="description"
+              margin="normal"
+              value={values.description}
+              onChange={handleChange}
+              error={touched.description && Boolean(errors.description)}
+              helperText={touched.description && errors.description}
+            />
+
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) =>
+                setFieldValue("image", e.currentTarget.files[0])
+              }
+            />
+            {errors.image && (
+              <Typography color="error">{errors.image}</Typography>
             )}
-          </Formik>
-        </CardContent>
-      </Card>
-    </Dialog>
+
+            <Box mt={2} display="flex" justifyContent="space-between">
+              <Button
+                onClick={handleClose}
+                variant="outlined"
+                color="error"
+                sx={{ fontFamily: "Poppins" }}
+              >
+                Cancel
+              </Button>
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                sx={{ fontFamily: "Poppins" }}
+              >
+                {editStatus ? "Update" : "Create"}
+              </Button>
+            </Box>
+          </Form>
+        )}
+      </Formik>
+    </CardContent>
+  </Card>
+</Dialog>
   );
 };
 
@@ -210,6 +246,8 @@ export default function BlogTable() {
         description: values.description,
         slug: values.slug,
         imageBase64: base64Image, // Always send as Base64
+        metaTitle: values.metaTitle,
+        metaDescription: values.metaDescription,
       };
 
       // Choose URL
