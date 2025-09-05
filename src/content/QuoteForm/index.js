@@ -46,6 +46,17 @@ const ItemForm = () => {
   { value: "bend", label: "Bend" },
   { value: "straight", label: "Straight" }
 ];
+// TMT weight per piece (in kgs)
+const weightPerPiece = {
+  "8 mm - TMT": 4.8,
+  "10 mm - TMT": 7.8,
+  "12 mm - TMT": 10.7,
+  "16 mm - TMT": 19.5,
+  "20 mm - TMT": 30,
+  "25 mm - TMT": 45,
+  "32 mm - TMT": 77,
+};
+
   const itemDescriptions = [
     "6 mm - Rebar",
     "7 mm - Rebar",
@@ -295,7 +306,19 @@ const ItemForm = () => {
               name="pieces"
               type="number"
               value={formik.values.pieces}
-              onChange={formik.handleChange}
+              onChange={(e) => {
+      const pieces = Number(e.target.value);
+      formik.setFieldValue("pieces", pieces);
+
+      // calculate qty if description is selected
+      const desc = formik.values.description;
+      if (weightPerPiece[desc]) {
+        // convert to MT (1000 kgs = 1 MT)
+        const qtyInMT = (pieces * weightPerPiece[desc]) / 1000;
+        formik.setFieldValue("qty", qtyInMT.toFixed(3));
+      }
+    }}
+    
               sx={{ fontFamily: 'Poppins' }}
             />
           </Grid>
