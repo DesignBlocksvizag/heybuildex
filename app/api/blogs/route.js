@@ -2,6 +2,7 @@ import connectDB from "@/config";
 import Blog from "@/models/blogSchema";
 import fs from "fs";
 import path from "path";
+import imagekit from "@/config/imagekit";
 // export const dynamic = "force-static"
 export const dynamic = "force-dynamic";
 function saveBase64Image(base64, filename) {
@@ -38,9 +39,20 @@ export async function GET() {
 export async function POST(req) {
   await connectDB();
   const body = await req.json(); // { heading, description, imageBase64 }
-  const imageUrl = body.imageBase64
-    ? saveBase64Image(body.imageBase64, `blog_${Date.now()}.jpg`)
-    : null;
+    let imageUrl = null;
+    if (body.imageBase64) {
+    try {
+      const uploadResponse = await imagekit.upload({
+        file: body.imageBase64, // pass base64 string
+        fileName: `blog_${Date.now()}.jpg`,
+        folder: "/blogs", // this will create/use "blogs" folder in ImageKit
+      });
+      imageUrl = uploadResponse.url; // get the hosted URL
+    } catch (err) {
+      console.error("ImageKit upload failed:", err);
+    }
+  }
+
   const blog = await Blog.create({
     heading: body.heading,
     description: body.description,
@@ -59,8 +71,18 @@ export async function PUT(req) {
   const body = await req.json(); // { heading, description, imageBase64 }
   const data = { heading: body.heading, description: body.description ,slug:body.slug,   metaTitle: body.metaTitle,
     metaDescription: body.metaDescription};
-  if (body.imageBase64)
-    data.image = saveBase64Image(body.imageBase64, `blog_${Date.now()}.jpg`);
+  if (body.imageBase64) {
+    try {
+      const uploadResponse = await imagekit.upload({
+        file: body.imageBase64,
+        fileName: `blog_${Date.now()}.jpg`,
+        folder: "/blogs",
+      });
+      data.image = uploadResponse.url;
+    } catch (err) {
+      console.error("ImageKit upload failed:", err);
+    }
+  }
   const blog = await Blog.findByIdAndUpdate(id, data, { new: true });
   return Response.json(blog);
 }

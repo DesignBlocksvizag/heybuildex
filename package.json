@@ -17,6 +17,7 @@
     "formidable": "^3.5.4",
     "formik": "^2.4.6",
     "html2pdf.js": "^0.10.3",
+    "imagekit": "^6.0.0",
     "mongoose": "^8.16.5",
     "next": "15.1.8",
     "react": "^19.0.0",

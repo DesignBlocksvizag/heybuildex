@@ -350,10 +350,8 @@ export default function BlogTable() {
                     <TableCell>
                       {blog.image && (
                         <img
-                          src={
-                            `${process.env.NEXT_PUBLIC_API_BASE}` + blog.image
-                          }
-                          alt=""
+                          src={blog.image}
+                          alt="blog"
                           width={100}
                         />
                       )}

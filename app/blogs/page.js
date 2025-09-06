@@ -107,7 +107,7 @@ const BlogList = async () => {
     >
       <Box
         component="img"
-        src={`${process.env.NEXT_PUBLIC_API_BASE}${blog.image}`}
+        src={blog.image}
         alt={blog.title}
         sx={{
           width: "100%",

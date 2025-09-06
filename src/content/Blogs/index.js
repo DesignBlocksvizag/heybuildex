@@ -16,7 +16,7 @@ const SteelStructuresBlog = ({blog}) => {
       {/* Blog Image */}
       <Box sx={{ mb: 3 }}>
         <Box
-          src={`${process.env.NEXT_PUBLIC_API_BASE}` + blog.image}
+          src={blog.image}
           alt={"Steel"}
           component={"img"}
           style={{ width: "100%", height: "300px", objectFit: "contain" }}
