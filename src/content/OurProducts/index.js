@@ -52,22 +52,22 @@ const products = [
   },
   {
     title: "Cement",
-    image: "cement.png",
+    image: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/cement.png?updatedAt=1756113782731",
     link: "/cement/ultratech-cement",
   },
   {
     title: "RMC",
-    image: "rmc.jpg",
+    image: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/rmc.jpg?updatedAt=1756113827421",
     link: "/rmc",
   },
   {
     title: "Infra Equipment Rental",
-    image: "infra-rental.jpg",
+    image: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/infra-rental.jpg?updatedAt=1756113827947",
     link: "/infra-rentals",
   },
   {
     title: "Safety",
-    image: "safety.jpg",
+    image: "https://ik.imagekit.io/lfg7c6i9h/heybuildex%20website/safety.jpg?updatedAt=1756113782731",
     link: "/safety",
   },
 ];
