@@ -49,8 +49,8 @@ const BlogFormDialog = ({
     heading: Yup.string().required("Heading is required"),
     description: Yup.string().required("Description is required"),
     slug: Yup.string().required("Slug is Required"),
-    metaTitle: Yup.string().required("Meta Title is required"),
-    metaDescription: Yup.string().required("Meta Description is required"),
+    metaTitle: Yup.string().required("Meta Title is required").max(60, "Meta Title cannot exceed 60 characters"),
+    metaDescription: Yup.string().required("Meta Description is required").max(160, "Meta Description cannot exceed 160 characters"),
     image: editStatus
       ? Yup.mixed().notRequired()
       : Yup.mixed().required("Image is required"),
