@@ -21,12 +21,14 @@ import {
   TextField,
   Container,
   Alert,
+  CircularProgress
 } from "@mui/material";
 import AddCircleRoundedIcon from "@mui/icons-material/AddCircleRounded";
 import { Delete, Edit } from "@mui/icons-material";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import DeleteDialog from "@/src/components/DeleteDialog";
+import CloseIcon from "@mui/icons-material/Close";
 const heading = {
   fontFamily: "Poppins",
 };
@@ -44,13 +46,14 @@ const BlogFormDialog = ({
   handleSubmit,
   editStatus,
   editData,
+  loading
 }) => {
   const validationSchema = Yup.object({
     heading: Yup.string().required("Heading is required"),
     description: Yup.string().required("Description is required"),
     slug: Yup.string().required("Slug is Required"),
-    metaTitle: Yup.string().required("Meta Title is required").max(60, "Meta Title cannot exceed 60 characters"),
-    metaDescription: Yup.string().required("Meta Description is required").max(160, "Meta Description cannot exceed 160 characters"),
+    metaTitle: Yup.string().required("Meta Title is required"),
+    metaDescription: Yup.string().required("Meta Description is required"),
     image: editStatus
       ? Yup.mixed().notRequired()
       : Yup.mixed().required("Image is required"),
@@ -66,8 +69,16 @@ const BlogFormDialog = ({
   };
 
   return (
-  <Dialog open={open} onClose={handleClose} fullWidth maxWidth="sm" scroll="paper">
+  <Dialog open={open} fullWidth maxWidth="sm" scroll="paper">
   <Card sx={{ py: 3,overflowY: 'auto', maxHeight: '90vh' }}>
+      {!loading && (
+          <IconButton
+            onClick={handleClose}
+            sx={{ position: "absolute", top: 8, right: 20 }}
+          >
+            <CloseIcon />
+          </IconButton>
+        )}
     <CardContent>
       <Typography
         variant="h5"
@@ -82,8 +93,6 @@ const BlogFormDialog = ({
         validationSchema={validationSchema}
         onSubmit={(values, { resetForm }) => {
           handleSubmit(values);
-          resetForm();
-          handleClose();
         }}
       >
         {({ errors, touched, handleChange, setFieldValue, values }) => (
@@ -161,6 +170,21 @@ const BlogFormDialog = ({
             {errors.image && (
               <Typography color="error">{errors.image}</Typography>
             )}
+            {loading && (
+          <Box
+            sx={{
+              position: "absolute",
+              inset: 0,
+              backgroundColor: "#1c953f",
+              zIndex: 10,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <CircularProgress size={60} color="#000" />
+          </Box>
+        )}
 
             <Box mt={2} display="flex" justifyContent="space-between">
               <Button
@@ -202,8 +226,14 @@ export default function BlogTable() {
     severity: "info",
   });
   const [loading, setLoading] = useState(false);
+  const [formLoading, setFormLoading] = useState(false);
 
   const API_BASE = "/api/blogs"; // Next.js API route
+  const handleClose = () => {
+          setOpen(false);
+          setEditStatus(false);
+          setEditData(null);
+  }
 
   useEffect(() => {
     fetchBlogs();
@@ -236,6 +266,7 @@ export default function BlogTable() {
   }
 
   const handleCreateOrUpdate = async (values) => {
+    setFormLoading(true);
     try {
       // Convert image to Base64 if exists
       const base64Image = values.image ? await getBase64(values.image) : null;
@@ -272,12 +303,16 @@ export default function BlogTable() {
 
       fetchBlogs();
     } catch (err) {
-      const errorData = await res.json(); // optional
+      console.error(err);
       setSnackbar({
         open: true,
-        message: errorData.message || "Something went wrong",
+        message: "Something went wrong",
         severity: "error",
       });
+    }
+    finally {
+      setFormLoading(false);
+      handleClose();
     }
   };
 
@@ -392,12 +427,9 @@ export default function BlogTable() {
         open={open}
         editStatus={editStatus}
         editData={editData}
-        handleClose={() => {
-          setOpen(false);
-          setEditStatus(false);
-          setEditData(null);
-        }}
+        handleClose={handleClose}
         handleSubmit={handleCreateOrUpdate}
+        loading={formLoading}
       />
 
       <DeleteDialog

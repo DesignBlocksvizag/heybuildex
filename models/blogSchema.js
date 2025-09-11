@@ -6,8 +6,8 @@ const BlogSchema = new Schema(
     description: { type: String, required: true },
     image: { type: String },
     slug: { type: String, unique: true, required: true },
-    metaTitle: { type: String, required: true, maxlength: 60 },
-    metaDescription: { type: String, required: true, maxlength: 160 },
+    metaTitle: { type: String, required: true},
+    metaDescription: { type: String, required: true },
   },
   { timestamps: true }
 );
